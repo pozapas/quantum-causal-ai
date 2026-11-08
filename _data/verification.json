@@ -1,0 +1,919 @@
+{
+ "advantage": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=2011.01938",
+  "http": 200,
+  "fetched_title": "Power of data in quantum machine learning",
+  "jaccard": 0.875,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1038/s41467-021-22539-9.",
+  "arxiv_published": "2020-11-03",
+  "journal_ref": "Nature Communications, Vol.12, No. 2631 (2021)",
+  "doi": "10.1038/s41467-021-22539-9"
+ },
+ "allen": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=1609.09487",
+  "http": 200,
+  "fetched_title": "Quantum common causes and quantum causal models",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1103/PhysRevX.7.031021.",
+  "arxiv_published": "2016-09-29",
+  "journal_ref": "Phys. Rev. X 7, 031021 (2017)",
+  "doi": "10.1103/PhysRevX.7.031021"
+ },
+ "barrett": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=1906.10726",
+  "http": 200,
+  "fetched_title": "Quantum Causal Models",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "",
+  "arxiv_published": "2019-06-25",
+  "journal_ref": null,
+  "doi": null
+ },
+ "bell": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1103/PhysicsPhysiqueFizika.1.195",
+  "http": 200,
+  "fetched_title": "On the Einstein Podolsky Rosen paradox",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "",
+  "crossref_type": "journal-article"
+ },
+ "chaves": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=1407.3800",
+  "http": 200,
+  "fetched_title": "Information-Theoretic Implications of Quantum Causal Structures",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1038/ncomms6766.",
+  "arxiv_published": "2014-07-14",
+  "journal_ref": "Nature Communications 6, 5766 (2015)",
+  "doi": "10.1038/ncomms6766"
+ },
+ "chiribella": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=0904.4483",
+  "http": 200,
+  "fetched_title": "Theoretical framework for quantum networks",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1103/PhysRevA.80.022339.",
+  "arxiv_published": "2009-04-28",
+  "journal_ref": "Phys. Rev. A 80, 022339 (2009)",
+  "doi": "10.1103/PhysRevA.80.022339"
+ },
+ "chsh": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1103/PhysRevLett.23.880",
+  "http": 200,
+  "fetched_title": "Proposed Experiment to Test Local Hidden-Variable Theories",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "",
+  "crossref_type": "journal-article"
+ },
+ "costa": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=1512.07106",
+  "http": 200,
+  "fetched_title": "Quantum causal modelling",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1088/1367-2630/18/6/063032.",
+  "arxiv_published": "2015-12-22",
+  "journal_ref": "New J. Phys. 18 063032 (2016)",
+  "doi": "10.1088/1367-2630/18/6/063032"
+ },
+ "feynman": {
+  "status": "PASS",
+  "method": "Open Library search API (second source)",
+  "url_checked": "https://openlibrary.org/search.json?title=The%20Feynman%20Lectures%20on%20Physics%2C%20Volume%20III&author=Feynman&limit=10&fields=title,subtitle,author_name,first_publish_year,key",
+  "http": 200,
+  "fetched_title": "The Feynman Lectures on Physics. Volume III",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "primary HTTP 403; title confirmed by second source",
+  "attempts": [
+   {
+    "source": "HTTP GET",
+    "url": "https://www.feynmanlectures.caltech.edu/III_toc.html",
+    "final_url": "https://www.feynmanlectures.caltech.edu/III_toc.html",
+    "http": 403,
+    "fetched_title": null,
+    "jaccard": 0.0,
+    "error": null,
+    "method": "HTTP GET; page title/heading candidate"
+   },
+   {
+    "source": "Crossref query.bibliographic",
+    "url": "https://api.crossref.org/works?query.bibliographic=The%20Feynman%20Lectures%20on%20Physics%2C%20Volume%20III%20Feynman&rows=3",
+    "http": 200,
+    "fetched_title": "Feynman Lectures on Gravitation",
+    "jaccard": 0.375,
+    "note": ""
+   },
+   {
+    "source": "Google Books API",
+    "url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22The%20Feynman%20Lectures%20on%20Physics%2C%20Volume%20III%22%20inauthor%3AFeynman&maxResults=5",
+    "http": 429,
+    "fetched_title": null,
+    "jaccard": 0.0
+   },
+   {
+    "source": "Open Library search API",
+    "url": "https://openlibrary.org/search.json?title=The%20Feynman%20Lectures%20on%20Physics%2C%20Volume%20III&author=Feynman&limit=10&fields=title,subtitle,author_name,first_publish_year,key",
+    "http": 200,
+    "fetched_title": "The Feynman Lectures on Physics. Volume III",
+    "jaccard": 1.0
+   }
+  ],
+  "http_primary": 403
+ },
+ "frontdoor": {
+  "status": "PASS",
+  "method": "HTTP GET; full claimed title found as contiguous phrase in page text",
+  "url_checked": "https://ftp.cs.ucla.edu/pub/stat_ser/R218-B.pdf",
+  "http": 200,
+  "fetched_title": "Causal diagrams for empirical research",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "author names checked token-by-token against fetched page text (unconfirmed given names dropped); year 1995 found in fetched page text/URL",
+  "attempts": [
+   {
+    "source": "HTTP GET (PDF text, first pages)",
+    "url": "https://ftp.cs.ucla.edu/pub/stat_ser/R218-B.pdf",
+    "final_url": "https://ftp.cs.ucla.edu/pub/stat_ser/R218-B.pdf",
+    "http": 200,
+    "fetched_title": "Causal diagrams for empirical research",
+    "jaccard": 1.0,
+    "error": null,
+    "method": "HTTP GET; full claimed title found as contiguous phrase in page text"
+   }
+  ]
+ },
+ "hernan": {
+  "status": "PASS",
+  "method": "HTTP GET; page title/heading candidate",
+  "url_checked": "https://miguelhernan.org/whatifbook",
+  "http": 200,
+  "fetched_title": "Causal Inference: What If",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "author names checked token-by-token against fetched page text (unconfirmed given names dropped); year 2020 found in fetched page text/URL",
+  "attempts": [
+   {
+    "source": "HTTP GET",
+    "url": "https://miguelhernan.org/whatifbook",
+    "final_url": "https://miguelhernan.org/whatifbook",
+    "http": 200,
+    "fetched_title": "Causal Inference: What If",
+    "jaccard": 1.0,
+    "error": null,
+    "method": "HTTP GET; page title/heading candidate"
+   }
+  ]
+ },
+ "hypothesis": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=2303.10544",
+  "http": 200,
+  "fetched_title": "Quantum Causal Inference with Extremely Light Touch",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1038/s41534-024-00956-0.",
+  "arxiv_published": "2023-03-19",
+  "journal_ref": "npj Quantum Information 11, 54 (2025)",
+  "doi": "10.1038/s41534-024-00956-0"
+ },
+ "ibm": {
+  "status": "PASS",
+  "method": "HTTP GET; full claimed title found as contiguous phrase in page text",
+  "url_checked": "https://quantum.cloud.ibm.com/learning/en/courses/basics-of-quantum-information",
+  "http": 200,
+  "fetched_title": "Basics of quantum information",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "",
+  "attempts": [
+   {
+    "source": "HTTP GET",
+    "url": "https://quantum.cloud.ibm.com/learning/en/courses/basics-of-quantum-information",
+    "final_url": "https://quantum.cloud.ibm.com/learning/en/courses/basics-of-quantum-information",
+    "http": 200,
+    "fetched_title": "Basics of quantum information",
+    "jaccard": 1.0,
+    "error": null,
+    "method": "HTTP GET; full claimed title found as contiguous phrase in page text"
+   }
+  ]
+ },
+ "invariant": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=1501.01332",
+  "http": 200,
+  "fetched_title": "Causal inference using invariant prediction: identification and confidence intervals",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "claimed short title; Jaccard on fetched main title (before ':'); fetched full title kept in output",
+  "arxiv_published": "2015-01-06",
+  "journal_ref": "Journal of the Royal Statistical Society, Series B (with discussion) 78(5): 947-1012 (2016)",
+  "doi": null
+ },
+ "kernels": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=1804.11326",
+  "http": 200,
+  "fetched_title": "Supervised learning with quantum enhanced feature spaces",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1038/s41586-019-0980-2.",
+  "arxiv_published": "2018-04-30",
+  "journal_ref": "Nature. vol. 567, pp. 209-212 (2019)",
+  "doi": "10.1038/s41586-019-0980-2"
+ },
+ "leifer": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=1107.5849",
+  "http": 200,
+  "fetched_title": "Towards a Formulation of Quantum Theory as a Causally Neutral Theory of Bayesian Inference",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1103/PhysRevA.88.052130.",
+  "arxiv_published": "2011-07-29",
+  "journal_ref": "Phys. Rev. A 88, 052130 (2013)",
+  "doi": "10.1103/PhysRevA.88.052130"
+ },
+ "mitarai": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=1803.00745",
+  "http": 200,
+  "fetched_title": "Quantum Circuit Learning",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1103/PhysRevA.98.032309.",
+  "arxiv_published": "2018-03-02",
+  "journal_ref": "Phys. Rev. A 98, 032309 (2018)",
+  "doi": "10.1103/PhysRevA.98.032309"
+ },
+ "noise": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=2007.14384",
+  "http": 200,
+  "fetched_title": "Noise-Induced Barren Plateaus in Variational Quantum Algorithms",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1038/s41467-021-27045-6.",
+  "arxiv_published": "2020-07-28",
+  "journal_ref": "Nature Communications 12, 6961 (2021)",
+  "doi": "10.1038/s41467-021-27045-6"
+ },
+ "notears": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=1803.01422",
+  "http": 200,
+  "fetched_title": "DAGs with NO TEARS: Continuous Optimization for Structure Learning",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "",
+  "arxiv_published": "2018-03-04",
+  "journal_ref": null,
+  "doi": null
+ },
+ "ocb": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=1105.4464",
+  "http": 200,
+  "fetched_title": "Quantum correlations with no causal order",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1038/ncomms2076.",
+  "arxiv_published": "2011-05-23",
+  "journal_ref": "Nature Communications 3, 1092 (2012)",
+  "doi": "10.1038/ncomms2076"
+ },
+ "openstax": {
+  "status": "PASS",
+  "method": "HTTP GET; page title/heading candidate",
+  "url_checked": "https://openstax.org/books/introductory-statistics-2e/pages/1-introduction",
+  "http": 200,
+  "fetched_title": "Introductory Statistics 2e",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "authors from page meta tags; year 2023 found in fetched page text/URL",
+  "attempts": [
+   {
+    "source": "HTTP GET",
+    "url": "https://openstax.org/books/introductory-statistics-2e/pages/1-introduction",
+    "final_url": "https://openstax.org/books/introductory-statistics-2e/pages/1-introduction",
+    "http": 200,
+    "fetched_title": "Introductory Statistics 2e",
+    "jaccard": 1.0,
+    "error": null,
+    "method": "HTTP GET; page title/heading candidate"
+   }
+  ]
+ },
+ "pearl": {
+  "status": "PASS",
+  "method": "HTTP GET (PDF) + Crossref works/<doi> for DOI printed in PDF",
+  "url_checked": "https://api.crossref.org/works/10.1214/09-SS057",
+  "http": 200,
+  "fetched_title": "Causal inference in statistics: An overview",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "PDF HTTP 200; title in PDF J=1.0",
+  "attempts": [
+   {
+    "source": "HTTP GET (PDF text, first pages)",
+    "url": "https://ftp.cs.ucla.edu/pub/stat_ser/r350.pdf",
+    "final_url": "https://ftp.cs.ucla.edu/pub/stat_ser/r350.pdf",
+    "http": 200,
+    "fetched_title": "Causal inference in statistics: An overview∗†‡",
+    "jaccard": 1.0,
+    "error": null,
+    "method": "HTTP GET; page title/heading candidate"
+   },
+   {
+    "source": "Crossref works/<doi> (DOI printed in PDF)",
+    "url": "https://api.crossref.org/works/10.1214/09-SS057",
+    "http": 200,
+    "fetched_title": "Causal inference in statistics: An overview"
+   }
+  ]
+ },
+ "peters": {
+  "status": "PASS",
+  "method": "HTTP GET; page title/heading candidate",
+  "url_checked": "https://mitpress.mit.edu/9780262037310/elements-of-causal-inference/",
+  "http": 200,
+  "fetched_title": "Elements of Causal Inference",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "author names checked token-by-token against fetched page text (unconfirmed given names dropped); year 2017 found in fetched page text/URL",
+  "attempts": [
+   {
+    "source": "HTTP GET",
+    "url": "https://mitpress.mit.edu/9780262037310/elements-of-causal-inference/",
+    "final_url": "https://mitpress.mit.edu/9780262037310/elements-of-causal-inference/",
+    "http": 200,
+    "fetched_title": "Elements of Causal Inference",
+    "jaccard": 1.0,
+    "error": null,
+    "method": "HTTP GET; page title/heading candidate"
+   }
+  ]
+ },
+ "petz": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=1509.07127",
+  "http": 200,
+  "fetched_title": "Universal recovery maps and approximate sufficiency of quantum relative entropy",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1007/s00023-018-0716-0.",
+  "arxiv_published": "2015-09-23",
+  "journal_ref": "Annales Henri Poincare, vol. 19, no. 10, pages 2955--2978, October 2018",
+  "doi": "10.1007/s00023-018-0716-0"
+ },
+ "plateaus": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=1803.11173",
+  "http": 200,
+  "fetched_title": "Barren plateaus in quantum neural network training landscapes",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1038/s41467-018-07090-4.",
+  "arxiv_published": "2018-03-29",
+  "journal_ref": "Nature Communications, Volume 9, Article Number: 4812 (2018)",
+  "doi": "10.1038/s41467-018-07090-4"
+ },
+ "preskill": {
+  "status": "PASS",
+  "method": "HTTP GET; record retitled to the page's own heading",
+  "url_checked": "https://www.preskill.caltech.edu/ph219/",
+  "http": 200,
+  "fetched_title": "Course Information for Physics 219/Computer Science 219 Quantum Computation (Formerly Physics 229)",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:05:45+00:00",
+  "note": "Earlier claimed title 'Lecture Notes for Physics 219: Quantum Computation' was not on the page (J=0.45); <title> is 'Physics 219 Course Information'. Page names John Preskill and links lecture notes."
+ },
+ "process": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=1506.03776",
+  "http": 200,
+  "fetched_title": "Witnessing causal nonseparability",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1088/1367-2630/17/10/102001.",
+  "arxiv_published": "2015-06-11",
+  "journal_ref": "New J. Phys. 17 (2015) 102001",
+  "doi": "10.1088/1367-2630/17/10/102001"
+ },
+ "qml": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=1611.09347",
+  "http": 200,
+  "fetched_title": "Quantum Machine Learning",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1038/nature23474.",
+  "arxiv_published": "2016-11-28",
+  "journal_ref": "Nature 549, 195-202 (2017)",
+  "doi": "10.1038/nature23474"
+ },
+ "scholkopf": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=2102.11107",
+  "http": 200,
+  "fetched_title": "Towards Causal Representation Learning",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "",
+  "arxiv_published": "2021-02-22",
+  "journal_ref": null,
+  "doi": null
+ },
+ "schuld": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=1811.11184",
+  "http": 200,
+  "fetched_title": "Evaluating analytic gradients on quantum hardware",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1103/PhysRevA.99.032331.",
+  "arxiv_published": "2018-11-27",
+  "journal_ref": "Phys. Rev. A 99, 032331 (2019)",
+  "doi": "10.1103/PhysRevA.99.032331"
+ },
+ "seeing": {
+  "status": "PASS",
+  "method": "Crossref DOI",
+  "url_checked": "https://api.crossref.org/works/10.12987/9780300255881",
+  "http": 200,
+  "fetched_title": "Causal Inference: The Mixtape",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:05:45+00:00",
+  "note": "Old URL mixtape.scunning.com now serves the 2nd edition ('The Remix'); cite the 1st edition by DOI."
+ },
+ "shadows": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=2002.08953",
+  "http": 200,
+  "fetched_title": "Predicting Many Properties of a Quantum System from Very Few Measurements",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1038/s41567-020-0932-7.",
+  "arxiv_published": "2020-02-18",
+  "journal_ref": "Nature Physics 16, 1050--1057 (2020)",
+  "doi": "10.1038/s41567-020-0932-7"
+ },
+ "spirtes": {
+  "status": "PASS",
+  "method": "HTTP GET; page title/heading candidate",
+  "url_checked": "https://www.cs.cmu.edu/afs/cs.cmu.edu/project/learn-43/lib/photoz/.g/web/.g/scottd/fullbook.pdf",
+  "http": 200,
+  "fetched_title": "Causation, Prediction, and Search",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "author names checked token-by-token against fetched page text (unconfirmed given names dropped)",
+  "attempts": [
+   {
+    "source": "HTTP GET (PDF text, first pages)",
+    "url": "https://www.cs.cmu.edu/afs/cs.cmu.edu/project/learn-43/lib/photoz/.g/web/.g/scottd/fullbook.pdf",
+    "final_url": "http://download.srv.cs.cmu.edu/afs/cs.cmu.edu/project/learn-43/lib/photoz/.g/web/.g/scottd/fullbook.pdf",
+    "http": 200,
+    "fetched_title": "Causation, Prediction, and Search",
+    "jaccard": 1.0,
+    "error": null,
+    "method": "HTTP GET; page title/heading candidate"
+   }
+  ]
+ },
+ "switch": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=0912.0195",
+  "http": 200,
+  "fetched_title": "Quantum computations without definite causal structure",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1103/PhysRevA.88.022318.",
+  "arxiv_published": "2009-12-01",
+  "journal_ref": "Phys. Rev. A 88, 022318 (2013)",
+  "doi": "10.1103/PhysRevA.88.022318"
+ },
+ "watrous": {
+  "status": "PASS",
+  "method": "HTTP GET; page title/heading candidate",
+  "url_checked": "https://cs.uwaterloo.ca/~watrous/TQI/",
+  "http": 200,
+  "fetched_title": "The Theory of Quantum Information",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "author names checked token-by-token against fetched page text (unconfirmed given names dropped); year 2018 found in fetched page text/URL",
+  "attempts": [
+   {
+    "source": "HTTP GET",
+    "url": "https://cs.uwaterloo.ca/~watrous/TQI/",
+    "final_url": "https://cs.uwaterloo.ca/~watrous/TQI/",
+    "http": 200,
+    "fetched_title": "The Theory of Quantum Information",
+    "jaccard": 1.0,
+    "error": null,
+    "method": "HTTP GET; page title/heading candidate"
+   }
+  ]
+ },
+ "ried2015": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=1406.5036",
+  "http": 200,
+  "fetched_title": "Inferring causal structure: a quantum advantage",
+  "jaccard": 0.8571,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1038/nphys3266.",
+  "arxiv_published": "2014-06-19",
+  "journal_ref": "Nat Phys 11, 414-420 (2015)",
+  "doi": "10.1038/nphys3266"
+ },
+ "inflation": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=1609.00672",
+  "http": 200,
+  "fetched_title": "The Inflation Technique for Causal Inference with Latent Variables",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1515/jci-2017-0020.",
+  "arxiv_published": "2016-09-02",
+  "journal_ref": "J. Causal Inference 7(2), 2019",
+  "doi": "10.1515/jci-2017-0020"
+ },
+ "hlp2014": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=1405.2572",
+  "http": 200,
+  "fetched_title": "Theory-independent limits on correlations from generalised Bayesian networks",
+  "jaccard": 0.8,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1088/1367-2630/16/11/113043.",
+  "arxiv_published": "2014-05-11",
+  "journal_ref": "New J. Phys. 16, 113043 (2014)",
+  "doi": "10.1088/1367-2630/16/11/113043"
+ },
+ "woodspekkens": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=1208.4119",
+  "http": 200,
+  "fetched_title": "The lesson of causal discovery algorithms for quantum correlations: Causal explanations of Bell-inequality violations require fine-tuning",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "claimed title truncated with '...'; Jaccard on claimed prefix vs fetched main title (before ':') Venue/year from Crossref DOI 10.1088/1367-2630/17/3/033002.",
+  "arxiv_published": "2012-08-20",
+  "journal_ref": "New J. Phys. 17, 033002 (2015)",
+  "doi": "10.1088/1367-2630/17/3/033002"
+ },
+ "fritz2012": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=1206.5115",
+  "http": 200,
+  "fetched_title": "Beyond Bell's Theorem: Correlation Scenarios",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1088/1367-2630/14/10/103001.",
+  "arxiv_published": "2012-06-22",
+  "journal_ref": "New J. Phys. 14 103001 (2012)",
+  "doi": "10.1088/1367-2630/14/10/103001"
+ },
+ "pienaar": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=1406.0430",
+  "http": 200,
+  "fetched_title": "A graph-separation theorem for quantum causal models",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1088/1367-2630/17/7/073020.",
+  "arxiv_published": "2014-06-02",
+  "journal_ref": "2015 New J. Phys. 17 073020",
+  "doi": "10.1088/1367-2630/17/7/073020"
+ },
+ "giarmatzi": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=1704.00800",
+  "http": 200,
+  "fetched_title": "A quantum causal discovery algorithm",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1038/s41534-018-0062-6.",
+  "arxiv_published": "2017-04-03",
+  "journal_ref": "npj Quantum Information 4, 17 (2018)",
+  "doi": "10.1038/s41534-018-0062-6"
+ },
+ "unravelling": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=2109.13166",
+  "http": 200,
+  "fetched_title": "Quantum Causal Unravelling",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1038/s41534-022-00578-4.",
+  "arxiv_published": "2021-09-27",
+  "journal_ref": "npj Quantum Inf 8, 69 (2022)",
+  "doi": "10.1038/s41534-022-00578-4"
+ },
+ "procopio": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=1412.4006",
+  "http": 200,
+  "fetched_title": "Experimental Superposition of Orders of Quantum Gates",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1038/ncomms8913.",
+  "arxiv_published": "2014-12-12",
+  "journal_ref": "Nat. Commun. 6:7913 (2015)",
+  "doi": "10.1038/ncomms8913"
+ },
+ "rubino": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=1608.01683",
+  "http": 200,
+  "fetched_title": "Experimental Verification of an Indefinite Causal Order",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1126/sciadv.1602589.",
+  "arxiv_published": "2016-08-04",
+  "journal_ref": "Sci. Adv., 3: e1602589 (2017)",
+  "doi": "10.1126/sciadv.1602589"
+ },
+ "maclean": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=1606.04523",
+  "http": 200,
+  "fetched_title": "Quantum-coherent mixtures of causal relations",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1038/ncomms15149.",
+  "arxiv_published": "2016-06-14",
+  "journal_ref": "Nat. Commun. 8, 15149 (2017)",
+  "doi": "10.1038/ncomms15149"
+ },
+ "hensen": {
+  "status": "PASS",
+  "method": "arXiv API id_list + Crossref works/<doi from arXiv entry>",
+  "url_checked": "https://api.crossref.org/works/10.1038/nature15759",
+  "http": 200,
+  "fetched_title": "Loophole-free Bell inequality violation using electron spins separated by 1.3 kilometres",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "arXiv title 'Experimental loophole-free violation of a Bell inequality using entangled electron spins separated by 1.3 km' (J=0.6667) differs from published title; claimed title matches Crossref record of DOI 10.1038/nature15759 listed in the arXiv entry.",
+  "arxiv_title": "Experimental loophole-free violation of a Bell inequality using entangled electron spins separated by 1.3 km",
+  "arxiv_published": "2015-08-24",
+  "journal_ref": "Nature 526, 682-686 (2015)",
+  "doi": "10.1038/nature15759"
+ },
+ "vqa": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=2012.09265",
+  "http": 200,
+  "fetched_title": "Variational Quantum Algorithms",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1038/s42254-021-00348-9.",
+  "arxiv_published": "2020-12-16",
+  "journal_ref": "Nature Reviews Physics 3, 625-644 (2021)",
+  "doi": "10.1038/s42254-021-00348-9"
+ },
+ "encoding": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=2008.08605",
+  "http": 200,
+  "fetched_title": "The effect of data encoding on the expressive power of variational quantum machine learning models",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.1103/PhysRevA.103.032430.",
+  "arxiv_published": "2020-08-19",
+  "journal_ref": "Phys. Rev. A 103, 032430 (2021)",
+  "doi": "10.1103/PhysRevA.103.032430"
+ },
+ "nisq": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=1801.00862",
+  "http": 200,
+  "fetched_title": "Quantum Computing in the NISQ era and beyond",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "Venue/year from Crossref DOI 10.22331/q-2018-08-06-79.",
+  "arxiv_published": "2018-01-02",
+  "journal_ref": "Quantum 2, 79 (2018)",
+  "doi": "10.22331/q-2018-08-06-79"
+ },
+ "dowhy": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=2011.04216",
+  "http": 200,
+  "fetched_title": "DoWhy: An End-to-End Library for Causal Inference",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "",
+  "arxiv_published": "2020-11-09",
+  "journal_ref": null,
+  "doi": null
+ },
+ "causallearn": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=2307.16405",
+  "http": 200,
+  "fetched_title": "Causal-learn: Causal Discovery in Python",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "",
+  "arxiv_published": "2023-07-31",
+  "journal_ref": "Journal of Machine Learning Research 25 (2024)",
+  "doi": null
+ },
+ "pennylane": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "http://export.arxiv.org/api/query?id_list=1811.04968",
+  "http": 200,
+  "fetched_title": "PennyLane: Automatic differentiation of hybrid quantum-classical computations",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "",
+  "arxiv_published": "2018-11-12",
+  "journal_ref": null,
+  "doi": null
+ },
+ "nielsenchuang": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1017/CBO9780511976667",
+  "http": 200,
+  "fetched_title": "Quantum Computation and Quantum Information",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "",
+  "crossref_type": "monograph"
+ },
+ "pearlcausality": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1017/CBO9780511803161",
+  "http": 200,
+  "fetched_title": "Causality",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "",
+  "crossref_type": "monograph"
+ },
+ "pearlprimer": {
+  "status": "FAIL",
+  "method": "Crossref query.bibliographic",
+  "url_checked": "https://api.crossref.org/works?query.bibliographic=Causal%20Inference%20in%20Statistics%3A%20A%20Primer%20Pearl&rows=3",
+  "http": 200,
+  "fetched_title": "Causal inference in statistics: An overview",
+  "jaccard": 0.5,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "no exact title match of type book",
+  "candidates": [
+   {
+    "title": "Causal inference in statistics: An overview",
+    "subtitle": "",
+    "type": "journal-article",
+    "doi": "10.1214/09-ss057"
+   },
+   {
+    "title": "Causal Inference in Statistics: A Primer Judea Pearl, Maria Glymour, and Nicholas Jewell, John Wiley & Sons, Ltd., Chichester, UK.",
+    "subtitle": "",
+    "type": "journal-article",
+    "doi": "10.1111/biom.13079"
+   },
+   {
+    "title": "The Causal Foundations of Applied Probability and Statistics",
+    "subtitle": "",
+    "type": "book-chapter",
+    "doi": "10.1145/3501714.3501747"
+   }
+  ]
+ },
+ "aspect1982": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1103/PhysRevLett.49.91",
+  "http": 200,
+  "fetched_title": "Experimental Realization of Einstein-Podolsky-Rosen-Bohm Gedankenexperiment: A New Violation of Bell's Inequalities",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "",
+  "crossref_type": "journal-article"
+ },
+ "nobel2022": {
+  "status": "PASS",
+  "method": "HTTP GET; page title/heading candidate",
+  "url_checked": "https://www.nobelprize.org/prizes/physics/2022/press-release/",
+  "http": 200,
+  "fetched_title": "Nobel Prize in Physics 2022",
+  "jaccard": 0.8333,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "year 2022 found in fetched page text/URL",
+  "attempts": [
+   {
+    "source": "HTTP GET",
+    "url": "https://www.nobelprize.org/prizes/physics/2022/press-release/",
+    "final_url": "https://www.nobelprize.org/prizes/physics/2022/press-release/",
+    "http": 200,
+    "fetched_title": "Nobel Prize in Physics 2022",
+    "jaccard": 0.8333,
+    "error": null,
+    "method": "HTTP GET; page title/heading candidate"
+   }
+  ]
+ },
+ "bradyneal": {
+  "status": "PASS",
+  "method": "HTTP GET; page title/heading candidate",
+  "url_checked": "https://www.bradyneal.com/causal-inference-course",
+  "http": 200,
+  "fetched_title": "Introduction to Causal Inference",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "authors from page meta tags",
+  "attempts": [
+   {
+    "source": "HTTP GET",
+    "url": "https://www.bradyneal.com/causal-inference-course",
+    "final_url": "https://www.bradyneal.com/causal-inference-course",
+    "http": 200,
+    "fetched_title": "Introduction to Causal Inference",
+    "jaccard": 1.0,
+    "error": null,
+    "method": "HTTP GET; page title/heading candidate"
+   }
+  ]
+ },
+ "spekkens_contextuality": {
+  "status": "SKIPPED",
+  "method": "none",
+  "url_checked": null,
+  "http": null,
+  "fetched_title": null,
+  "jaccard": null,
+  "checked_at": "2026-11-08T16:01:51+00:00",
+  "note": "skipped: no independently confirmed arXiv entry (instruction: do not guess)"
+ },
+ "bareinboim": {
+  "status": "PASS",
+  "method": "HTTP GET; title and author found in page text; draft PDF HEAD 200",
+  "url_checked": "https://causalai-book.net/",
+  "http": 200,
+  "fetched_title": "Causal Artificial Intelligence A Roadmap for Building Causally Intelligent Systems",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-08T17:51:22+00:00",
+  "note": "Draft version (Oct/11/25); PDF https://causalai.net/r102.pdf HTTP 200, 11204607 bytes"
+ }
+}

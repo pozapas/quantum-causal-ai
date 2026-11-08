@@ -1,0 +1,3 @@
+#!/bin/bash
+# Binder: register the kernel name the notebooks use
+python -m ipykernel install --user --name qcai --display-name "Python 3 (qcai)"

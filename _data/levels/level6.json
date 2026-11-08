@@ -1,0 +1,357 @@
+{
+  "level": 6,
+  "title": "Quantum causal models",
+  "audience": "Graduate study and research entry",
+  "intro": "Connect operational quantum theory with causal questions, explicit assumptions, and testable model classes.",
+  "lessons": [
+    {
+      "id": "L6-01",
+      "title": "Quantum common causes",
+      "objective": "Explain why a quantum common cause differs from a classical hidden variable.",
+      "prerequisites": [
+        "L5-08",
+        "L4-01"
+      ],
+      "paragraphs": [
+        "A classical common cause can explain correlations through a shared variable. Given its complete value, the local response probabilities factorize in a local hidden-variable model. Bell correlations show that this classical explanation is insufficient under the Bell test assumptions.",
+        "A quantum common cause can distribute an entangled state to two laboratories. Each laboratory applies a local measurement. The joint probabilities follow the Born rule on the joint state. They need not admit a factorization over a measurement-independent classical common variable.",
+        "This does not require a direct influence between the laboratories. The preparation can be in their shared past. A quantum causal model describes allowed physical systems and transformations along causal connections. It changes the model class rather than granting permission to ignore experimental causal assumptions."
+      ],
+      "equation": "p(a,b|x,y) = Tr[(E_a|x tensor F_b|y) rho_AB]. Here x,y are settings, a,b are outcomes, and E,F are local POVM effects.",
+      "example": "A source distributes |Phi+>. Both laboratories measure Z. They obtain equal outcomes, with 00 and 11 each occurring with probability one half. This table alone also has a classical common-cause explanation. Additional incompatible settings are required to obtain a Bell test.",
+      "exercise": "A source emits the separable mixture of |00> and |11> with equal weights. Does perfect Z correlation establish that the source distributed entanglement? Give a reason.",
+      "solution": "No. The stated mixture already produces perfect Z correlation without entanglement. One correlation table is insufficient. Use additional settings and a valid entanglement or Bell criterion.",
+      "quiz": {
+        "question": "What changes in a quantum common-cause explanation?",
+        "options": [
+          "The model permits a shared quantum state",
+          "Probabilities can be negative",
+          "Every correlation becomes signalling"
+        ],
+        "answer": 0,
+        "explanation": "The shared cause can be a quantum system in an entangled state. Outcome probabilities remain ordinary nonnegative normalized probabilities."
+      },
+      "sources": [
+        "allen",
+        "bell"
+      ],
+      "lab": "bell",
+      "caution": "Bell conclusions require the specified locality, setting-independence, and sampling assumptions. Quantum common causes do not remove those assumptions."
+    },
+    {
+      "id": "L6-02",
+      "title": "Channels in the Choi representation",
+      "objective": "Use an explicit Choi convention to recover channel outputs.",
+      "prerequisites": [
+        "L5-06",
+        "L3-04"
+      ],
+      "paragraphs": [
+        "A Choi operator represents a linear map as an operator on input and output spaces. This representation makes channel constraints accessible through matrix tests. Several normalization and transpose conventions exist. State the convention before importing a formula from another paper.",
+        "Use the unnormalized maximally entangled vector sum_i |i>|i>. Apply the identity map to its first half and the channel to its second half. A channel has a positive Choi operator. Trace preservation requires that tracing out the output gives the input identity.",
+        "The channel action then contains a transpose on the input density operator. Omitting that transpose changes predictions for complex states. In causal networks, the same issue appears when connecting operators. A correct diagram must also specify the algebra used to connect its ports."
+      ],
+      "equation": "J_E = sum_ij |i><j| tensor E(|i><j|); E(rho) = Tr_in[(rho^T tensor I)J_E]; Tr_out J_E = I_in. T is transpose in the chosen input basis.",
+      "example": "For the identity qubit channel, J equals |Omega><Omega| with |Omega> = |00> + |11>. Its trace is two, not one. The output partial trace is I. Substitution into the recovery formula returns rho, including its complex off-diagonal entries.",
+      "exercise": "A replacement channel outputs a fixed qubit state sigma for every input. Write its Choi operator and check trace preservation.",
+      "solution": "Its Choi operator is I_in tensor sigma. Tracing out the output gives I_in times Tr(sigma), hence I_in. The recovery formula gives Tr(rho) sigma, which equals sigma for a state.",
+      "quiz": {
+        "question": "What is the trace of a trace-preserving qubit Choi operator in this convention?",
+        "options": [
+          "One half",
+          "One",
+          "Two"
+        ],
+        "answer": 2,
+        "explanation": "The output partial trace is the two-dimensional input identity. Taking the remaining trace therefore gives two in this unnormalized convention."
+      },
+      "sources": [
+        "watrous",
+        "allen"
+      ],
+      "lab": "qubit",
+      "caution": "Some authors normalize the Choi operator to trace one. Their formulas require matching dimension factors and possibly different transpose conventions."
+    },
+    {
+      "id": "L6-03",
+      "title": "Quantum DAGs and Markov assumptions",
+      "objective": "State a quantum causal model before using its graph.",
+      "prerequisites": [
+        "L6-01",
+        "L6-02",
+        "L4-02"
+      ],
+      "paragraphs": [
+        "A directed acyclic graph records candidate causal connections without directed cycles. In a quantum model, arrows can carry quantum systems. A node can represent a laboratory with input and output spaces. The graph alone does not specify its channel or measurement probabilities.",
+        "A quantum Markov condition connects the graph with a restricted operator structure. The exact condition depends on the formalism. Independent mechanisms and local operational choices must be defined. Do not replace all scalar probabilities in a classical factorization by arbitrary matrices and multiply them blindly.",
+        "An absent arrow states a restriction on possible influence within the model. An observed zero correlation does not prove an absent arrow. A mechanism can cancel or hide an influence for particular preparations. Model checks therefore require suitable interventions or a stated faithfulness assumption."
+      ],
+      "equation": "For a simple chain A -> B -> C, the intervention channel is E_C|A = E_C|B composed with E_B|A. This equation assumes no additional memory path or hidden common cause.",
+      "example": "A preparation feeds a qubit through a dephasing channel B and then an X-basis measurement C. Complete dephasing makes the outcomes independent of an input relative phase. This independence is a property of that channel. It does not prove that the physical wire from A is absent.",
+      "exercise": "A chain model predicts channel composition. Name two features that would make that simple composition description incomplete.",
+      "solution": "A hidden environment that retains memory across the two stages can break the description. An unmodelled common cause of the laboratories can also require a larger joint process.",
+      "quiz": {
+        "question": "Does one zero correlation prove that a causal edge is absent?",
+        "options": [
+          "Yes, by normalization",
+          "No, a mechanism can hide the influence",
+          "Yes, if the state is mixed"
+        ],
+        "answer": 1,
+        "explanation": "A present mechanism can give zero dependence for a particular state or setting. Structural conclusions require additional assumptions or informative interventions."
+      },
+      "sources": [
+        "allen",
+        "costa"
+      ],
+      "lab": "causal",
+      "caution": "The Allen and Costa-Shrapnel formalisms use related but distinct definitions. This lesson does not assert one universal quantum Markov factorization."
+    },
+    {
+      "id": "L6-04",
+      "title": "Operational interventions",
+      "objective": "Compare conditioning, measurement, and replacement interventions.",
+      "prerequisites": [
+        "L6-03",
+        "L5-07",
+        "L4-08"
+      ],
+      "paragraphs": [
+        "Conditioning selects records that already occurred. An intervention changes the physical operation that generates later data. In a quantum laboratory, an intervention can replace an instrument, prepare a new state, or route an incoming system through a selected channel.",
+        "A replacement map discards the input and prepares a chosen state. It removes dependence of that output state on the incoming system. This operation can break an incoming correlation. Merely selecting one measurement outcome usually does not perform the same physical change.",
+        "Measurement can disturb a quantum system. Its causal role must include both the outcome and the state transformation. A classical do expression does not by itself specify that transformation. Write the laboratory operation, its available setting, and its retained outcome before calculating effects."
+      ],
+      "equation": "R_sigma(tau) = Tr(tau) sigma. R_sigma is a replacement channel. For a normalized input tau, its output is sigma regardless of tau.",
+      "example": "Two qubits share |Phi+>. Conditioning on Z outcome 0 at A leaves B in |0>. If A instead discards its qubit and prepares |0> without selecting an outcome, B remains I/2. The preparation action does not select B records.",
+      "exercise": "Repeat this comparison with conditioning on A outcome 1. Give B after conditioning and B after an unselected replacement at A.",
+      "solution": "After conditioning on outcome 1, B is |1>. After an unselected local replacement, B is still I/2. The local action cannot change the remote unconditional marginal.",
+      "quiz": {
+        "question": "Which operation is an input-independent replacement?",
+        "options": [
+          "Keeping only outcome 0",
+          "Reading the input label",
+          "Discarding the input and preparing sigma"
+        ],
+        "answer": 2,
+        "explanation": "A replacement map has the same normalized output for every input. Selecting measurement records is conditioning and generally gives a different joint procedure."
+      },
+      "sources": [
+        "costa",
+        "leifer",
+        "watrous"
+      ],
+      "lab": "causal",
+      "caution": "Allowed interventions are part of the model. A result can change when the experimenter lacks access to the required laboratory operation."
+    },
+    {
+      "id": "L6-05",
+      "title": "Discovery and informational access",
+      "objective": "Identify the assumptions needed to infer a quantum causal structure.",
+      "prerequisites": [
+        "L6-03",
+        "L6-04",
+        "L4-08"
+      ],
+      "paragraphs": [
+        "Causal discovery infers a graph or an equivalence class from data and assumptions. A quantum discovery procedure also needs a specified set of preparations and instruments. Restricted operations can hide distinctions between candidate processes. More samples cannot resolve a distinction absent from the measurement design.",
+        "Informationally complete operations span the operator space needed for reconstruction. Their availability is a strong experimental condition. Reconstructed operators also carry statistical error and calibration error. A discovery result should distinguish algebraic identifiability from stable estimation at the available sample size.",
+        "Faithfulness rules out certain exact cancellations between mechanisms and observed independences. It is an assumption about the data-generating model. It is not guaranteed by quantum mechanics. Report hidden-system assumptions, dimensional bounds, trusted instruments, and candidate graph restrictions beside the recovered structure."
+      ],
+      "equation": "Two models are observationally indistinguishable for an operation set O when p_1(a|o) = p_2(a|o) for every allowed o in O and every recorded outcome a.",
+      "example": "A device receives only |0> preparations and is measured only in Z. The identity and Z gates give the same deterministic output. Adding |+> preparation and X measurement distinguishes them. The added operations improve identifiability; repeating the original setting does not.",
+      "exercise": "With only |1> input and Z output measurement, can identity and Z gates be distinguished? Specify one added preparation and measurement that can distinguish them.",
+      "solution": "They cannot be distinguished with that restricted design because the phase is global for |1>. Prepare |+> and measure X. Identity gives +, while Z gives -.",
+      "quiz": {
+        "question": "What can repair a lack of informational access?",
+        "options": [
+          "Only a larger count at the same uninformative setting",
+          "A suitable additional preparation or measurement",
+          "A smaller reported error bar"
+        ],
+        "answer": 1,
+        "explanation": "A new informative operation can separate previously identical predictions. Extra repetitions reduce uncertainty but cannot separate exactly equal predictions for the original design."
+      },
+      "sources": [
+        "costa",
+        "barrett"
+      ],
+      "lab": "qubit",
+      "caution": "No discovery claim is universal across all hidden systems, dimensions, instrument sets, and faithfulness conditions."
+    },
+    {
+      "id": "L6-06",
+      "title": "Bell inequalities and causal inequalities",
+      "objective": "Distinguish two tests of different model classes.",
+      "prerequisites": [
+        "L5-08",
+        "L6-05"
+      ],
+      "paragraphs": [
+        "A Bell inequality bounds correlations in a specified local hidden-variable model. A causal inequality instead constrains correlations under a stated class of causal orders and operational assumptions. The two names do not refer to the same bound or the same experimental question.",
+        "A process can lack a decomposition into fixed causal orders without violating a particular causal inequality. An operator witness and an observed probability inequality use different information. A witness can rely on trusted apparatus details that are unavailable in a device-independent correlation test.",
+        "Before interpreting either test, identify its allowed settings, outputs, communication routes, and independence assumptions. Then state the null model and its numerical bound. A value outside a bound has meaning only for that model. Experimental uncertainty must be evaluated separately."
+      ],
+      "equation": "A causal-order mixture has the form p = q p_(A before B) + (1-q) p_(B before A), with 0<=q<=1, for the stated operational scenario.",
+      "example": "A researcher observes CHSH S = 2.5 from spacelike local measurements. This challenges the relevant local hidden-variable class. It does not establish indefinite causal order. A different experiment and a different null-model bound would be needed for that claim.",
+      "exercise": "An operator witness detects causal nonseparability under trusted instruments. Can this alone be called a device-independent causal-inequality violation? Explain.",
+      "solution": "No. A trusted-instrument operator witness and a device-independent probability inequality impose different assumptions. The witness result alone does not establish that the observed distribution violates a causal inequality.",
+      "quiz": {
+        "question": "Which statement is valid?",
+        "options": [
+          "Every Bell violation proves indefinite causal order",
+          "Every nonseparable process violates every causal inequality",
+          "The tests constrain different specified model classes"
+        ],
+        "answer": 2,
+        "explanation": "Bell locality and definite causal order are distinct assumptions. A valid interpretation must state the relevant model class instead of substituting one test for another."
+      },
+      "sources": [
+        "process",
+        "ocb",
+        "switch"
+      ],
+      "lab": "bell",
+      "caution": "A causal inequality belongs to a defined operational scenario. Do not transfer its bound to another set of ports or communication rules."
+    },
+    {
+      "id": "L6-07",
+      "title": "Process matrices and validity",
+      "objective": "Check why positivity alone is insufficient for a process.",
+      "prerequisites": [
+        "L6-02",
+        "L6-04"
+      ],
+      "paragraphs": [
+        "A process matrix is an operator that assigns probabilities to local quantum instruments without first choosing one global causal order. Local laboratories still obey quantum mechanics. The global operator must satisfy positivity and normalization constraints for every permitted set of deterministic local operations.",
+        "In a compatible Choi convention, joint probabilities are a trace pairing of the process with local instrument Choi operators. This simple expression hides convention choices. Transposes can be absorbed into definitions. Import both the pairing and its constraints together, rather than mixing definitions across papers.",
+        "A positive operator with a convenient trace is not automatically a valid process matrix. The linear normalization conditions exclude operational loops that would give inconsistent probabilities. For a proposed example, test complete positivity and the full affine constraints of its named scenario."
+      ],
+      "equation": "p(a,b|x,y) = Tr[W (M_a|x tensor N_b|y)] in the standard process-matrix pairing convention. Deterministic maps require Tr[W(M tensor N)] = 1 for every local CPTP M,N.",
+      "example": "For laboratories with no outputs, a shared density operator rho_AB is a valid process. Local operations are POVM effects. Summing the Born probabilities gives Tr[rho_AB(I tensor I)] = 1. With nontrivial outputs, this state-only normalization argument is no longer sufficient.",
+      "exercise": "A candidate W is positive and gives normalized probabilities for one pair of deterministic maps. Does this establish process validity? Name the missing requirement.",
+      "solution": "No. Normalization must hold for every allowed pair of local deterministic maps. The scenario-specific linear constraints encode that universal requirement. One tested pair cannot establish it.",
+      "quiz": {
+        "question": "Which condition is required beyond positive semidefiniteness?",
+        "options": [
+          "Normalization for all permitted local deterministic operations",
+          "A large enough trace for one setting",
+          "A nonzero off-diagonal entry"
+        ],
+        "answer": 0,
+        "explanation": "A process must return a normalized probability distribution for any allowed deterministic local operations. Positivity by itself does not impose that universal normalization."
+      },
+      "sources": [
+        "process",
+        "ocb",
+        "costa"
+      ],
+      "lab": "causal",
+      "caution": "The trace pairing here follows the process-matrix convention. Do not combine it directly with an incompatible Choi transpose convention."
+    },
+    {
+      "id": "L6-08",
+      "title": "The quantum switch",
+      "objective": "Explain coherent order without overstating its certification.",
+      "prerequisites": [
+        "L6-06",
+        "L6-07"
+      ],
+      "paragraphs": [
+        "The quantum switch controls the order in which a target system passes through two operations. One control basis state selects A then B. The other selects B then A. A coherent control can preserve interference between these two ordered alternatives.",
+        "A coherent control differs from a classical random choice of order. Losing the control coherence can turn the procedure into a mixture. However, observing an order-dependent outcome alone does not certify causal nonseparability. A trusted witness needs its full operational and mathematical conditions.",
+        "Causal nonseparability does not automatically imply a causal-inequality violation. Standard quantum-switch scenarios require careful distinction between these properties. Describe the actual laboratory ports and timing. Do not present the switch as an experiment that sends a message to its own past."
+      ],
+      "equation": "|0>_c|psi> -> |0>_c BA|psi>; |1>_c|psi> -> |1>_c AB|psi>. For control |+>, linearity preserves the coherent sum when the implementation retains coherence.",
+      "example": "Choose A = X and B = Z. Then ZX = -XZ. With coherent |+> control, the relative sign between order branches changes the control to |->, apart from the common target transformation. A classical order mixture has no such control coherence.",
+      "exercise": "If A and B are both Z, compare AB and BA. What relative sign is produced by changing their order in this ideal example?",
+      "solution": "Both products equal Z squared, which is the identity. There is no order-dependent relative sign. The ideal coherent control stays |+> when no other effect changes it.",
+      "quiz": {
+        "question": "Which claim follows from the switch construction alone?",
+        "options": [
+          "It permits a message into the past",
+          "It coherently controls operation order when coherence is preserved",
+          "It violates every causal inequality"
+        ],
+        "answer": 1,
+        "explanation": "The construction preserves a coherent sum of ordered alternatives. Claims about witnesses or causal inequalities need additional scenario-specific results and assumptions."
+      },
+      "sources": [
+        "switch",
+        "chiribella",
+        "process"
+      ],
+      "lab": "interference",
+      "caution": "The gate example illustrates coherent order. It is not by itself a complete experimental certification of causal nonseparability."
+    },
+    {
+      "id": "L6-09",
+      "title": "Quantum counterfactual questions",
+      "objective": "State the additional structure needed for a counterfactual.",
+      "prerequisites": [
+        "L6-04",
+        "L4-09"
+      ],
+      "paragraphs": [
+        "A classical counterfactual asks what would have occurred under another action for the same relevant background. It requires a structural model that connects observed and alternative worlds. Observational probabilities alone do not generally determine that connection, even before quantum systems are introduced.",
+        "Quantum alternatives can involve incompatible measurements and different disturbances. There is no universal joint classical record of all unperformed outcomes. A proposed quantum counterfactual must specify its semantics, available operations, conditioning event, and physical model. Several research approaches make different commitments.",
+        "Do not assign simultaneous definite values to all incompatible measurements without an explicit additional model. For an operational question, often an intervention probability is sufficient and better defined. Clearly distinguish a repeatable experimental prediction from a claim about an unperformed event in a particular past trial."
+      ],
+      "equation": "An operational alternative is p(b | intervention J, preparation rho). This predicts a new procedure. It is not automatically the same quantity as a same-trial counterfactual conditioned on an incompatible observed outcome.",
+      "example": "Prepare |+> and measure Z, obtaining 0. A new trial with an X measurement gives + with certainty under the preparation model. That operational prediction does not mean the recorded Z trial also possessed a jointly observed X outcome.",
+      "exercise": "Prepare |0>. In one trial X gives -. State the prediction for Z in a fresh identically prepared trial, and identify the limit of this answer.",
+      "solution": "A fresh Z measurement gives 0 with probability one under the preparation model. This predicts a different procedure. It does not supply a joint observed record of incompatible X and Z outcomes in the original trial.",
+      "quiz": {
+        "question": "What must accompany a quantum counterfactual claim?",
+        "options": [
+          "Only an observed frequency",
+          "A statement that all measurements commute",
+          "Explicit semantics and a physical model"
+        ],
+        "answer": 2,
+        "explanation": "Counterfactual claims connect factual and alternative procedures. That connection needs a stated model and semantics beyond one observed frequency table."
+      },
+      "sources": [
+        "leifer",
+        "allen"
+      ],
+      "lab": "qubit",
+      "caution": "This lesson does not select one universal quantum counterfactual formalism. Treat competing definitions as research choices, not interchangeable formulas."
+    },
+    {
+      "id": "L6-10",
+      "title": "Design a quantum causal experiment",
+      "objective": "Specify an identifiable, testable causal comparison.",
+      "prerequisites": [
+        "L6-05",
+        "L6-07",
+        "L6-09"
+      ],
+      "paragraphs": [
+        "Start with a precise question and a list of candidate mechanisms. State which systems enter and leave each laboratory. Separate a direct channel from a common source where the question requires that distinction. List the operations and observations actually available to the experimenter.",
+        "Calculate predictions before collecting data. Find settings where the candidates differ, then allocate trials with a declared rule. Include calibration, drift controls, and a method for uncertainty. Reserve independent data for checking a fitted model. Report failures as evidence against the model assumptions.",
+        "A good design can return an inconclusive result. Two mechanisms may remain equivalent under restricted operations. In that case, report the equivalence or a bound rather than forcing a single graph. A larger model family needs its own identifiability and statistical analysis."
+      ],
+      "equation": "For two Bernoulli predictions p and q at one setting, a separation |p-q| must be compared with sampling uncertainty and calibration uncertainty. Structural identifiability requires p != q for at least one allowed setting.",
+      "example": "Candidate one is an identity channel. Candidate two completely dephases in Z. Preparing |0> and measuring Z cannot separate them. Preparing |+> and measuring X gives probability one for + under identity and one half under dephasing. This setting supplies an identifiable comparison.",
+      "exercise": "For those two candidates, use |-> preparation and X measurement. Give the probability of outcome - under each model and name one required control.",
+      "solution": "Identity predicts outcome - with probability one. Complete Z dephasing predicts one half. Calibrate the X measurement or verify preparation stability so apparatus error is not mistaken for channel dephasing.",
+      "quiz": {
+        "question": "What is the correct result when all allowed predictions match?",
+        "options": [
+          "Report an unresolved equivalence under the stated design",
+          "Choose the simpler graph as proven true",
+          "Increase decimal precision until they differ"
+        ],
+        "answer": 0,
+        "explanation": "Matching predictions imply no identifying evidence within that design. A preference for simplicity can be stated, but it cannot be reported as experimental identification."
+      },
+      "sources": [
+        "costa",
+        "barrett",
+        "watrous"
+      ],
+      "lab": "noise",
+      "caution": "This two-candidate example uses trusted preparations and measurements. General causal discovery can need stronger access and broader candidate models."
+    }
+  ]
+}

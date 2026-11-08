@@ -1,0 +1,967 @@
+[
+ {
+  "id": "advantage",
+  "title": "Power of data in quantum machine learning",
+  "authors": "Hsin-Yuan Huang, Michael Broughton, Masoud Mohseni, Ryan Babbush, Sergio Boixo, Hartmut Neven, Jarrod R. McClean",
+  "year": 2021,
+  "venue": "Nature Communications",
+  "doi": "10.1038/s41467-021-22539-9",
+  "arxiv": "2011.01938",
+  "url": "https://arxiv.org/abs/2011.01938",
+  "kind": "paper",
+  "scope": "Data-dependent comparisons with classical learning",
+  "levels": [
+   6,
+   7
+  ]
+ },
+ {
+  "id": "allen",
+  "title": "Quantum common causes and quantum causal models",
+  "authors": "John-Mark A. Allen, Jonathan Barrett, Dominic C. Horsman, Ciaran M. Lee, Robert W. Spekkens",
+  "year": 2017,
+  "venue": "Physical Review X",
+  "doi": "10.1103/PhysRevX.7.031021",
+  "arxiv": "1609.09487",
+  "url": "https://arxiv.org/abs/1609.09487",
+  "kind": "paper",
+  "scope": "Quantum common causes and quantum Markov structure",
+  "levels": [
+   6,
+   7
+  ]
+ },
+ {
+  "id": "aspect1982",
+  "title": "Experimental Realization of Einstein-Podolsky-Rosen-Bohm Gedankenexperiment: A New Violation of Bell's Inequalities",
+  "authors": "Alain Aspect, Philippe Grangier, Gérard Roger",
+  "year": 1982,
+  "venue": "Physical Review Letters",
+  "doi": "10.1103/physrevlett.49.91",
+  "arxiv": null,
+  "url": "https://doi.org/10.1103/PhysRevLett.49.91",
+  "kind": "paper",
+  "scope": "Early photonic Bell-inequality experiment",
+  "levels": [
+   3,
+   4,
+   5
+  ]
+ },
+ {
+  "id": "bareinboim",
+  "title": "Causal Artificial Intelligence: A Roadmap for Building Causally Intelligent Systems",
+  "authors": "Elias Bareinboim",
+  "year": 2025,
+  "venue": "Draft textbook (version of Oct 11, 2025), causalai-book.net",
+  "url": "https://causalai-book.net/",
+  "kind": "book",
+  "scope": "Core textbook for causal AI: SCMs, Pearl's causal hierarchy, identification, counterfactuals, fairness, transportability, causal decision-making and learning",
+  "levels": [
+   2,
+   4,
+   7
+  ]
+ },
+ {
+  "id": "barrett",
+  "title": "Quantum Causal Models",
+  "authors": "Jonathan Barrett, Robin Lorenz, Ognyan Oreshkov",
+  "year": 2019,
+  "venue": null,
+  "doi": null,
+  "arxiv": "1906.10726",
+  "url": "https://arxiv.org/abs/1906.10726",
+  "kind": "paper",
+  "scope": "Quantum processes, conditional independence, and causal structure",
+  "levels": [
+   6,
+   7
+  ]
+ },
+ {
+  "id": "bell",
+  "title": "On the Einstein Podolsky Rosen paradox",
+  "authors": "J. S. Bell",
+  "year": 1964,
+  "venue": "Physics Physique Fizika",
+  "doi": "10.1103/physicsphysiquefizika.1.195",
+  "arxiv": null,
+  "url": "https://doi.org/10.1103/PhysicsPhysiqueFizika.1.195",
+  "kind": "paper",
+  "scope": "Bell local causality and incompatible quantum correlations",
+  "levels": [
+   4,
+   5,
+   6
+  ]
+ },
+ {
+  "id": "bradyneal",
+  "title": "Introduction to Causal Inference",
+  "authors": "Brady Neal",
+  "year": null,
+  "venue": null,
+  "doi": null,
+  "arxiv": null,
+  "url": "https://www.bradyneal.com/causal-inference-course",
+  "kind": "notes",
+  "scope": "Free online course on causal inference",
+  "levels": [
+   3,
+   4,
+   5
+  ]
+ },
+ {
+  "id": "causallearn",
+  "title": "Causal-learn: Causal Discovery in Python",
+  "authors": "Yujia Zheng, Biwei Huang, Wei Chen, Joseph Ramsey, Mingming Gong, Ruichu Cai, Shohei Shimizu, Peter Spirtes, Kun Zhang",
+  "year": 2023,
+  "venue": "Journal of Machine Learning Research 25 (2024)",
+  "doi": null,
+  "arxiv": "2307.16405",
+  "url": "https://arxiv.org/abs/2307.16405",
+  "kind": "software",
+  "scope": "Python library for causal discovery",
+  "levels": [
+   4,
+   5,
+   6
+  ]
+ },
+ {
+  "id": "chaves",
+  "title": "Information-Theoretic Implications of Quantum Causal Structures",
+  "authors": "Rafael Chaves, Christian Majenz, David Gross",
+  "year": 2015,
+  "venue": "Nature Communications",
+  "doi": "10.1038/ncomms6766",
+  "arxiv": "1407.3800",
+  "url": "https://arxiv.org/abs/1407.3800",
+  "kind": "paper",
+  "scope": "Entropy constraints on quantum causal networks",
+  "levels": [
+   6,
+   7
+  ]
+ },
+ {
+  "id": "chiribella",
+  "title": "Theoretical framework for quantum networks",
+  "authors": "Giulio Chiribella, Giacomo M. D'Ariano, Paolo Perinotti",
+  "year": 2009,
+  "venue": "Physical Review A",
+  "doi": "10.1103/PhysRevA.80.022339",
+  "arxiv": "0904.4483",
+  "url": "https://arxiv.org/abs/0904.4483",
+  "kind": "paper",
+  "scope": "Quantum combs and higher-order transformations",
+  "levels": [
+   6,
+   7
+  ]
+ },
+ {
+  "id": "chsh",
+  "title": "Proposed Experiment to Test Local Hidden-Variable Theories",
+  "authors": "John F. Clauser, Michael A. Horne, Abner Shimony, Richard A. Holt",
+  "year": 1969,
+  "venue": "Physical Review Letters",
+  "doi": "10.1103/physrevlett.23.880",
+  "arxiv": null,
+  "url": "https://doi.org/10.1103/PhysRevLett.23.880",
+  "kind": "paper",
+  "scope": "The CHSH inequality and experimental assumptions",
+  "levels": [
+   4,
+   5,
+   6
+  ]
+ },
+ {
+  "id": "costa",
+  "title": "Quantum causal modelling",
+  "authors": "Fabio Costa, Sally Shrapnel",
+  "year": 2016,
+  "venue": "New Journal of Physics",
+  "doi": "10.1088/1367-2630/18/6/063032",
+  "arxiv": "1512.07106",
+  "url": "https://arxiv.org/abs/1512.07106",
+  "kind": "paper",
+  "scope": "Process-based causal modelling, Markov condition, and faithfulness",
+  "levels": [
+   6,
+   7
+  ]
+ },
+ {
+  "id": "dowhy",
+  "title": "DoWhy: An End-to-End Library for Causal Inference",
+  "authors": "Amit Sharma, Emre Kiciman",
+  "year": 2020,
+  "venue": null,
+  "doi": null,
+  "arxiv": "2011.04216",
+  "url": "https://arxiv.org/abs/2011.04216",
+  "kind": "software",
+  "scope": "Python library for causal effect estimation",
+  "levels": [
+   4,
+   5
+  ]
+ },
+ {
+  "id": "encoding",
+  "title": "The effect of data encoding on the expressive power of variational quantum machine learning models",
+  "authors": "Maria Schuld, Ryan Sweke, Johannes Jakob Meyer",
+  "year": 2021,
+  "venue": "Physical Review A",
+  "doi": "10.1103/PhysRevA.103.032430",
+  "arxiv": "2008.08605",
+  "url": "https://arxiv.org/abs/2008.08605",
+  "kind": "paper",
+  "scope": "Data encoding and expressivity of variational quantum models",
+  "levels": [
+   5,
+   6
+  ]
+ },
+ {
+  "id": "feynman",
+  "title": "The Feynman Lectures on Physics. Volume III",
+  "authors": "Richard Phillips Feynman",
+  "year": 1966,
+  "venue": null,
+  "doi": null,
+  "arxiv": null,
+  "url": "https://www.feynmanlectures.caltech.edu/III_toc.html",
+  "kind": "book",
+  "scope": "Quantum amplitudes and interference",
+  "levels": [
+   3,
+   4,
+   5
+  ]
+ },
+ {
+  "id": "fritz2012",
+  "title": "Beyond Bell's Theorem: Correlation Scenarios",
+  "authors": "Tobias Fritz",
+  "year": 2012,
+  "venue": "New Journal of Physics",
+  "doi": "10.1088/1367-2630/14/10/103001",
+  "arxiv": "1206.5115",
+  "url": "https://arxiv.org/abs/1206.5115",
+  "kind": "paper",
+  "scope": "Correlation scenarios beyond the Bell setting",
+  "levels": [
+   6,
+   7
+  ]
+ },
+ {
+  "id": "frontdoor",
+  "title": "Causal diagrams for empirical research",
+  "authors": "Judea Pearl",
+  "year": 1995,
+  "venue": null,
+  "doi": null,
+  "arxiv": null,
+  "url": "https://ftp.cs.ucla.edu/pub/stat_ser/R218-B.pdf",
+  "kind": "paper",
+  "scope": "Backdoor and frontdoor criteria, intervention calculus, and identification",
+  "levels": [
+   4,
+   5,
+   6
+  ]
+ },
+ {
+  "id": "giarmatzi",
+  "title": "A quantum causal discovery algorithm",
+  "authors": "Christina Giarmatzi, Fabio Costa",
+  "year": 2018,
+  "venue": "npj Quantum Information",
+  "doi": "10.1038/s41534-018-0062-6",
+  "arxiv": "1704.00800",
+  "url": "https://arxiv.org/abs/1704.00800",
+  "kind": "paper",
+  "scope": "Algorithm for discovering quantum causal structure from process matrices",
+  "levels": [
+   6,
+   7
+  ]
+ },
+ {
+  "id": "hensen",
+  "title": "Loophole-free Bell inequality violation using electron spins separated by 1.3 kilometres",
+  "authors": "B. Hensen, H. Bernien, A. E. Dréau, A. Reiserer, N. Kalb, M. S. Blok, J. Ruitenberg, R. F. L. Vermeulen, R. N. Schouten, C. Abellán, W. Amaya, V. Pruneri, M. W. Mitchell, M. Markham, D. J. Twitchen, D. Elkouss, S. Wehner, T. H. Taminiau, R. Hanson",
+  "year": 2015,
+  "venue": "Nature",
+  "doi": "10.1038/nature15759",
+  "arxiv": "1508.05949",
+  "url": "https://arxiv.org/abs/1508.05949",
+  "kind": "paper",
+  "scope": "Loophole-free Bell test",
+  "levels": [
+   3,
+   4,
+   5,
+   6
+  ]
+ },
+ {
+  "id": "hernan",
+  "title": "Causal Inference: What If",
+  "authors": "Miguel Hernan, James Robins",
+  "year": 2020,
+  "venue": null,
+  "doi": null,
+  "arxiv": null,
+  "url": "https://miguelhernan.org/whatifbook",
+  "kind": "book",
+  "scope": "Potential outcomes, exchangeability, consistency, positivity",
+  "levels": [
+   4,
+   5,
+   6
+  ]
+ },
+ {
+  "id": "hlp2014",
+  "title": "Theory-independent limits on correlations from generalised Bayesian networks",
+  "authors": "Joe Henson, Raymond Lal, Matthew F. Pusey",
+  "year": 2014,
+  "venue": "New Journal of Physics",
+  "doi": "10.1088/1367-2630/16/11/113043",
+  "arxiv": "1405.2572",
+  "url": "https://arxiv.org/abs/1405.2572",
+  "kind": "paper",
+  "scope": "Generalized Bayesian networks and theory-independent correlation limits",
+  "levels": [
+   6,
+   7
+  ]
+ },
+ {
+  "id": "hypothesis",
+  "title": "Quantum Causal Inference with Extremely Light Touch",
+  "authors": "Xiangjing Liu, Yixian Qiu, Oscar Dahlsten, Vlatko Vedral",
+  "year": 2025,
+  "venue": "npj Quantum Information",
+  "doi": "10.1038/s41534-024-00956-0",
+  "arxiv": "2303.10544",
+  "url": "https://arxiv.org/abs/2303.10544",
+  "kind": "paper",
+  "scope": "Inference within a specified two-time measurement setting",
+  "levels": [
+   6,
+   7
+  ]
+ },
+ {
+  "id": "ibm",
+  "title": "Basics of quantum information",
+  "authors": null,
+  "year": null,
+  "venue": null,
+  "doi": null,
+  "arxiv": null,
+  "url": "https://quantum.cloud.ibm.com/learning/en/courses/basics-of-quantum-information",
+  "kind": "notes",
+  "scope": "States, gates, measurement, and entanglement",
+  "levels": [
+   3,
+   4,
+   5
+  ]
+ },
+ {
+  "id": "inflation",
+  "title": "The Inflation Technique for Causal Inference with Latent Variables",
+  "authors": "Elie Wolfe, Robert W. Spekkens, Tobias Fritz",
+  "year": 2019,
+  "venue": "Journal of Causal Inference",
+  "doi": "10.1515/jci-2017-0020",
+  "arxiv": "1609.00672",
+  "url": "https://arxiv.org/abs/1609.00672",
+  "kind": "paper",
+  "scope": "Inflation technique for testing causal structures with latent variables",
+  "levels": [
+   6,
+   7
+  ]
+ },
+ {
+  "id": "invariant",
+  "title": "Causal inference using invariant prediction: identification and confidence intervals",
+  "authors": "Jonas Peters, Peter Bühlmann, Nicolai Meinshausen",
+  "year": 2015,
+  "venue": "Journal of the Royal Statistical Society, Series B (with discussion) 78(5): 947-1012 (2016)",
+  "doi": null,
+  "arxiv": "1501.01332",
+  "url": "https://arxiv.org/abs/1501.01332",
+  "kind": "paper",
+  "scope": "Invariance assumptions across environments",
+  "levels": [
+   5,
+   6,
+   7
+  ]
+ },
+ {
+  "id": "kernels",
+  "title": "Supervised learning with quantum enhanced feature spaces",
+  "authors": "Vojtech Havlicek, Antonio D. Córcoles, Kristan Temme, Aram W. Harrow, Abhinav Kandala, Jerry M. Chow, Jay M. Gambetta",
+  "year": 2019,
+  "venue": "Nature",
+  "doi": "10.1038/s41586-019-0980-2",
+  "arxiv": "1804.11326",
+  "url": "https://arxiv.org/abs/1804.11326",
+  "kind": "paper",
+  "scope": "Feature maps and quantum kernel estimation",
+  "levels": [
+   5,
+   6
+  ]
+ },
+ {
+  "id": "leifer",
+  "title": "Towards a Formulation of Quantum Theory as a Causally Neutral Theory of Bayesian Inference",
+  "authors": "M. S. Leifer, R. W. Spekkens",
+  "year": 2013,
+  "venue": "Physical Review A",
+  "doi": "10.1103/PhysRevA.88.052130",
+  "arxiv": "1107.5849",
+  "url": "https://arxiv.org/abs/1107.5849",
+  "kind": "paper",
+  "scope": "Quantum conditional states and causal neutrality",
+  "levels": [
+   6,
+   7
+  ]
+ },
+ {
+  "id": "maclean",
+  "title": "Quantum-coherent mixtures of causal relations",
+  "authors": "Jean-Philippe W. MacLean, Katja Ried, Robert W. Spekkens, Kevin J. Resch",
+  "year": 2017,
+  "venue": "Nature Communications",
+  "doi": "10.1038/ncomms15149",
+  "arxiv": "1606.04523",
+  "url": "https://arxiv.org/abs/1606.04523",
+  "kind": "paper",
+  "scope": "Experiment on coherent mixtures of common-cause and cause-effect relations",
+  "levels": [
+   6,
+   7
+  ]
+ },
+ {
+  "id": "mitarai",
+  "title": "Quantum Circuit Learning",
+  "authors": "Kosuke Mitarai, Makoto Negoro, Masahiro Kitagawa, Keisuke Fujii",
+  "year": 2018,
+  "venue": "Physical Review A",
+  "doi": "10.1103/PhysRevA.98.032309",
+  "arxiv": "1803.00745",
+  "url": "https://arxiv.org/abs/1803.00745",
+  "kind": "paper",
+  "scope": "Hybrid variational circuit learning",
+  "levels": [
+   5,
+   6
+  ]
+ },
+ {
+  "id": "nielsenchuang",
+  "title": "Quantum Computation and Quantum Information",
+  "authors": "Michael A. Nielsen, Isaac L. Chuang",
+  "year": 2012,
+  "venue": "Cambridge University Press",
+  "doi": "10.1017/cbo9780511976667",
+  "arxiv": null,
+  "url": "https://doi.org/10.1017/CBO9780511976667",
+  "kind": "book",
+  "scope": "Standard textbook on quantum computation and information",
+  "levels": [
+   4,
+   5,
+   6
+  ]
+ },
+ {
+  "id": "nisq",
+  "title": "Quantum Computing in the NISQ era and beyond",
+  "authors": "John Preskill",
+  "year": 2018,
+  "venue": "Quantum",
+  "doi": "10.22331/q-2018-08-06-79",
+  "arxiv": "1801.00862",
+  "url": "https://arxiv.org/abs/1801.00862",
+  "kind": "paper",
+  "scope": "Overview of noisy intermediate-scale quantum computing",
+  "levels": [
+   3,
+   4,
+   5
+  ]
+ },
+ {
+  "id": "nobel2022",
+  "title": "Nobel Prize in Physics 2022",
+  "authors": null,
+  "year": 2022,
+  "venue": null,
+  "doi": null,
+  "arxiv": null,
+  "url": "https://www.nobelprize.org/prizes/physics/2022/press-release/",
+  "kind": "web",
+  "scope": "Press release for the 2022 physics prize on entangled-photon experiments",
+  "levels": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "noise",
+  "title": "Noise-Induced Barren Plateaus in Variational Quantum Algorithms",
+  "authors": "Samson Wang, Enrico Fontana, M. Cerezo, Kunal Sharma, Akira Sone, Lukasz Cincio, Patrick J. Coles",
+  "year": 2021,
+  "venue": "Nature Communications",
+  "doi": "10.1038/s41467-021-27045-6",
+  "arxiv": "2007.14384",
+  "url": "https://arxiv.org/abs/2007.14384",
+  "kind": "paper",
+  "scope": "Noise-dependent trainability under explicit assumptions",
+  "levels": [
+   5,
+   6,
+   7
+  ]
+ },
+ {
+  "id": "notears",
+  "title": "DAGs with NO TEARS: Continuous Optimization for Structure Learning",
+  "authors": "Xun Zheng, Bryon Aragam, Pradeep Ravikumar, Eric P. Xing",
+  "year": 2018,
+  "venue": null,
+  "doi": null,
+  "arxiv": "1803.01422",
+  "url": "https://arxiv.org/abs/1803.01422",
+  "kind": "paper",
+  "scope": "Smooth acyclicity constraints and structure learning",
+  "levels": [
+   5,
+   6
+  ]
+ },
+ {
+  "id": "ocb",
+  "title": "Quantum correlations with no causal order",
+  "authors": "Ognyan Oreshkov, Fabio Costa, Caslav Brukner",
+  "year": 2012,
+  "venue": "Nature Communications",
+  "doi": "10.1038/ncomms2076",
+  "arxiv": "1105.4464",
+  "url": "https://arxiv.org/abs/1105.4464",
+  "kind": "paper",
+  "scope": "Process matrices and a causal inequality",
+  "levels": [
+   6,
+   7
+  ]
+ },
+ {
+  "id": "openstax",
+  "title": "Introductory Statistics 2e",
+  "authors": "Barbara Illowsky, Susan Dean",
+  "year": 2023,
+  "venue": null,
+  "doi": null,
+  "arxiv": null,
+  "url": "https://openstax.org/books/introductory-statistics-2e/pages/1-introduction",
+  "kind": "book",
+  "scope": "Probability, sampling, and estimation",
+  "levels": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "pearl",
+  "title": "Causal inference in statistics: An overview",
+  "authors": "Judea Pearl",
+  "year": 2009,
+  "venue": "Statistics Surveys",
+  "doi": "10.1214/09-ss057",
+  "arxiv": null,
+  "url": "https://ftp.cs.ucla.edu/pub/stat_ser/r350.pdf",
+  "kind": "paper",
+  "scope": "SCMs, adjustment, identification, and counterfactuals",
+  "levels": [
+   4,
+   5,
+   6
+  ]
+ },
+ {
+  "id": "pearlcausality",
+  "title": "Causality",
+  "authors": "Judea Pearl",
+  "year": 2009,
+  "venue": "Cambridge University Press",
+  "doi": "10.1017/cbo9780511803161",
+  "arxiv": null,
+  "url": "https://doi.org/10.1017/CBO9780511803161",
+  "kind": "book",
+  "scope": "Monograph on causal models, reasoning and inference",
+  "levels": [
+   5,
+   6,
+   7
+  ]
+ },
+ {
+  "id": "pennylane",
+  "title": "PennyLane: Automatic differentiation of hybrid quantum-classical computations",
+  "authors": "Ville Bergholm, Josh Izaac, Maria Schuld, Christian Gogolin, Shahnawaz Ahmed, Vishnu Ajith, M. Sohaib Alam, Guillermo Alonso-Linaje, B. AkashNarayanan, Ali Asadi, Juan Miguel Arrazola, Utkarsh Azad, Sam Banning, Carsten Blank, Thomas R Bromley, Benjamin A. Cordier, Jack Ceroni, Alain Delgado, Olivia Di Matteo, Amintor Dusko, Tanya Garg, Diego Guala, Anthony Hayes, Ryan Hill, Aroosa Ijaz, Theodor Isacsson, David Ittah, Soran Jahangiri, Prateek Jain, Edward Jiang, Ankit Khandelwal, Korbinian Kottmann, Robert A. Lang, Christina Lee, Thomas Loke, Angus Lowe, Keri McKiernan, Johannes Jakob Meyer, J. A. Montañez-Barrera, Romain Moyard, Zeyue Niu, Lee James O'Riordan, Steven Oud, Ashish Panigrahi, Chae-Yeun Park, Daniel Polatajko, Nicolás Quesada, Chase Roberts, Nahum Sá, Isidor Schoch, Borun Shi, Shuli Shu, Sukin Sim, Arshpreet Singh, Ingrid Strandberg, Jay Soni, Antal Száva, Slimane Thabet, Rodrigo A. Vargas-Hernández, Trevor Vincent, Nicola Vitucci, Maurice Weber, David Wierichs, Roeland Wiersema, Moritz Willmann, Vincent Wong, Shaoming Zhang, Nathan Killoran",
+  "year": 2018,
+  "venue": null,
+  "doi": null,
+  "arxiv": "1811.04968",
+  "url": "https://arxiv.org/abs/1811.04968",
+  "kind": "software",
+  "scope": "Python library for differentiable quantum programming",
+  "levels": [
+   4,
+   5
+  ]
+ },
+ {
+  "id": "peters",
+  "title": "Elements of Causal Inference",
+  "authors": "Jonas Peters, Dominik Janzing, Bernhard Scholkopf",
+  "year": 2017,
+  "venue": null,
+  "doi": null,
+  "arxiv": null,
+  "url": "https://mitpress.mit.edu/9780262037310/elements-of-causal-inference/",
+  "kind": "book",
+  "scope": "Causal discovery and structural models",
+  "levels": [
+   5,
+   6
+  ]
+ },
+ {
+  "id": "petz",
+  "title": "Universal recovery maps and approximate sufficiency of quantum relative entropy",
+  "authors": "Marius Junge, Renato Renner, David Sutter, Mark M. Wilde, Andreas Winter",
+  "year": 2018,
+  "venue": "Annales Henri Poincaré",
+  "doi": "10.1007/s00023-018-0716-0",
+  "arxiv": "1509.07127",
+  "url": "https://arxiv.org/abs/1509.07127",
+  "kind": "paper",
+  "scope": "Recovery and approximate sufficiency; advanced background",
+  "levels": [
+   7
+  ]
+ },
+ {
+  "id": "pienaar",
+  "title": "A graph-separation theorem for quantum causal models",
+  "authors": "Jacques Pienaar, Caslav Brukner",
+  "year": 2015,
+  "venue": "New Journal of Physics",
+  "doi": "10.1088/1367-2630/17/7/073020",
+  "arxiv": "1406.0430",
+  "url": "https://arxiv.org/abs/1406.0430",
+  "kind": "paper",
+  "scope": "Graph separation (d-separation analogue) for quantum causal models",
+  "levels": [
+   6,
+   7
+  ]
+ },
+ {
+  "id": "plateaus",
+  "title": "Barren plateaus in quantum neural network training landscapes",
+  "authors": "Jarrod R. McClean, Sergio Boixo, Vadim N. Smelyanskiy, Ryan Babbush, Hartmut Neven",
+  "year": 2018,
+  "venue": "Nature Communications",
+  "doi": "10.1038/s41467-018-07090-4",
+  "arxiv": "1803.11173",
+  "url": "https://arxiv.org/abs/1803.11173",
+  "kind": "paper",
+  "scope": "Gradient concentration for specified random circuit ensembles",
+  "levels": [
+   5,
+   6,
+   7
+  ]
+ },
+ {
+  "id": "preskill",
+  "title": "Course Information for Physics 219/Computer Science 219 Quantum Computation (Formerly Physics 229)",
+  "authors": "John Preskill",
+  "year": null,
+  "venue": "California Institute of Technology (course page with lecture notes)",
+  "url": "https://www.preskill.caltech.edu/ph219/",
+  "kind": "notes",
+  "scope": "Quantum information and quantum channels",
+  "levels": [
+   5,
+   6,
+   7
+  ]
+ },
+ {
+  "id": "process",
+  "title": "Witnessing causal nonseparability",
+  "authors": "Mateus Araújo, Cyril Branciard, Fabio Costa, Adrien Feix, Christina Giarmatzi, Časlav Brukner",
+  "year": 2015,
+  "venue": "New Journal of Physics",
+  "doi": "10.1088/1367-2630/17/10/102001",
+  "arxiv": "1506.03776",
+  "url": "https://arxiv.org/abs/1506.03776",
+  "kind": "paper",
+  "scope": "Causal witnesses and causal nonseparability",
+  "levels": [
+   6,
+   7
+  ]
+ },
+ {
+  "id": "procopio",
+  "title": "Experimental Superposition of Orders of Quantum Gates",
+  "authors": "Lorenzo M. Procopio, Amir Moqanaki, Mateus Araújo, Fabio Costa, Irati A. Calafell, Emma G. Dowd, Deny R. Hamel, Lee A. Rozema, Časlav Brukner, Philip Walther",
+  "year": 2015,
+  "venue": "Nature Communications",
+  "doi": "10.1038/ncomms8913",
+  "arxiv": "1412.4006",
+  "url": "https://arxiv.org/abs/1412.4006",
+  "kind": "paper",
+  "scope": "Photonic experiment on superposed gate orders",
+  "levels": [
+   5,
+   6,
+   7
+  ]
+ },
+ {
+  "id": "qml",
+  "title": "Quantum Machine Learning",
+  "authors": "Jacob Biamonte, Peter Wittek, Nicola Pancotti, Patrick Rebentrost, Nathan Wiebe, Seth Lloyd",
+  "year": 2017,
+  "venue": "Nature",
+  "doi": "10.1038/nature23474",
+  "arxiv": "1611.09347",
+  "url": "https://arxiv.org/abs/1611.09347",
+  "kind": "paper",
+  "scope": "Quantum learning task classes and resource assumptions",
+  "levels": [
+   5,
+   6
+  ]
+ },
+ {
+  "id": "ried2015",
+  "title": "Inferring causal structure: a quantum advantage",
+  "authors": "Katja Ried, Megan Agnew, Lydia Vermeyden, Dominik Janzing, Robert W. Spekkens, Kevin J. Resch",
+  "year": 2015,
+  "venue": "Nature Physics",
+  "doi": "10.1038/nphys3266",
+  "arxiv": "1406.5036",
+  "url": "https://arxiv.org/abs/1406.5036",
+  "kind": "paper",
+  "scope": "Quantum interventions and observations for inferring causal structure",
+  "levels": [
+   6,
+   7
+  ]
+ },
+ {
+  "id": "rubino",
+  "title": "Experimental Verification of an Indefinite Causal Order",
+  "authors": "Giulia Rubino, Lee A. Rozema, Adrien Feix, Mateus Araújo, Jonas M. Zeuner, Lorenzo M. Procopio, Časlav Brukner, Philip Walther",
+  "year": 2017,
+  "venue": "Science Advances",
+  "doi": "10.1126/sciadv.1602589",
+  "arxiv": "1608.01683",
+  "url": "https://arxiv.org/abs/1608.01683",
+  "kind": "paper",
+  "scope": "Experimental causal witness for indefinite causal order",
+  "levels": [
+   5,
+   6,
+   7
+  ]
+ },
+ {
+  "id": "scholkopf",
+  "title": "Towards Causal Representation Learning",
+  "authors": "Bernhard Schölkopf, Francesco Locatello, Stefan Bauer, Nan Rosemary Ke, Nal Kalchbrenner, Anirudh Goyal, Yoshua Bengio",
+  "year": 2021,
+  "venue": null,
+  "doi": null,
+  "arxiv": "2102.11107",
+  "url": "https://arxiv.org/abs/2102.11107",
+  "kind": "paper",
+  "scope": "Causal representations and open machine learning questions",
+  "levels": [
+   5,
+   6,
+   7
+  ]
+ },
+ {
+  "id": "schuld",
+  "title": "Evaluating analytic gradients on quantum hardware",
+  "authors": "Maria Schuld, Ville Bergholm, Christian Gogolin, Josh Izaac, Nathan Killoran",
+  "year": 2019,
+  "venue": "Physical Review A",
+  "doi": "10.1103/PhysRevA.99.032331",
+  "arxiv": "1811.11184",
+  "url": "https://arxiv.org/abs/1811.11184",
+  "kind": "paper",
+  "scope": "Conditions for exact parameter-shift gradient rules",
+  "levels": [
+   5,
+   6
+  ]
+ },
+ {
+  "id": "seeing",
+  "title": "Causal Inference: The Mixtape",
+  "authors": "Scott Cunningham",
+  "year": 2021,
+  "venue": "Yale University Press",
+  "doi": "10.12987/9780300255881",
+  "url": "https://doi.org/10.12987/9780300255881",
+  "kind": "book",
+  "scope": "Causal comparisons and research design",
+  "levels": [
+   2,
+   3,
+   4
+  ]
+ },
+ {
+  "id": "shadows",
+  "title": "Predicting Many Properties of a Quantum System from Very Few Measurements",
+  "authors": "Hsin-Yuan Huang, Richard Kueng, John Preskill",
+  "year": 2020,
+  "venue": "Nature Physics",
+  "doi": "10.1038/s41567-020-0932-7",
+  "arxiv": "2002.08953",
+  "url": "https://arxiv.org/abs/2002.08953",
+  "kind": "paper",
+  "scope": "Classical shadows and observable-dependent sample complexity",
+  "levels": [
+   6,
+   7
+  ]
+ },
+ {
+  "id": "spirtes",
+  "title": "Causation, Prediction, and Search",
+  "authors": "Spirtes, Glymour, Scheines",
+  "year": null,
+  "venue": null,
+  "doi": null,
+  "arxiv": null,
+  "url": "https://www.cs.cmu.edu/afs/cs.cmu.edu/project/learn-43/lib/photoz/.g/web/.g/scottd/fullbook.pdf",
+  "kind": "book",
+  "scope": "Conditional independence, Markov equivalence, and discovery",
+  "levels": [
+   5,
+   6,
+   7
+  ]
+ },
+ {
+  "id": "switch",
+  "title": "Quantum computations without definite causal structure",
+  "authors": "G. Chiribella, G. M. D'Ariano, P. Perinotti, B. Valiron",
+  "year": 2013,
+  "venue": "Physical Review A",
+  "doi": "10.1103/PhysRevA.88.022318",
+  "arxiv": "0912.0195",
+  "url": "https://arxiv.org/abs/0912.0195",
+  "kind": "paper",
+  "scope": "Quantum control of channel order",
+  "levels": [
+   6,
+   7
+  ]
+ },
+ {
+  "id": "unravelling",
+  "title": "Quantum Causal Unravelling",
+  "authors": "Ge Bai, Ya-Dong Wu, Yan Zhu, Masahito Hayashi, Giulio Chiribella",
+  "year": 2022,
+  "venue": "npj Quantum Information",
+  "doi": "10.1038/s41534-022-00578-4",
+  "arxiv": "2109.13166",
+  "url": "https://arxiv.org/abs/2109.13166",
+  "kind": "paper",
+  "scope": "Learning causal structure of quantum processes from interventions",
+  "levels": [
+   7
+  ]
+ },
+ {
+  "id": "vqa",
+  "title": "Variational Quantum Algorithms",
+  "authors": "M. Cerezo, Andrew Arrasmith, Ryan Babbush, Simon C. Benjamin, Suguru Endo, Keisuke Fujii, Jarrod R. McClean, Kosuke Mitarai, Xiao Yuan, Lukasz Cincio, Patrick J. Coles",
+  "year": 2021,
+  "venue": "Nature Reviews Physics",
+  "doi": "10.1038/s42254-021-00348-9",
+  "arxiv": "2012.09265",
+  "url": "https://arxiv.org/abs/2012.09265",
+  "kind": "paper",
+  "scope": "Review of variational quantum algorithms",
+  "levels": [
+   5,
+   6
+  ]
+ },
+ {
+  "id": "watrous",
+  "title": "The Theory of Quantum Information",
+  "authors": "John Watrous",
+  "year": 2018,
+  "venue": null,
+  "doi": null,
+  "arxiv": null,
+  "url": "https://cs.uwaterloo.ca/~watrous/TQI/",
+  "kind": "book",
+  "scope": "Operators, channels, entropy, and discrimination",
+  "levels": [
+   6,
+   7
+  ]
+ },
+ {
+  "id": "woodspekkens",
+  "title": "The lesson of causal discovery algorithms for quantum correlations: Causal explanations of Bell-inequality violations require fine-tuning",
+  "authors": "Christopher J. Wood, Robert W. Spekkens",
+  "year": 2015,
+  "venue": "New Journal of Physics",
+  "doi": "10.1088/1367-2630/17/3/033002",
+  "arxiv": "1208.4119",
+  "url": "https://arxiv.org/abs/1208.4119",
+  "kind": "paper",
+  "scope": "Classical causal discovery applied to Bell correlations and fine-tuning",
+  "levels": [
+   6,
+   7
+  ]
+ }
+]

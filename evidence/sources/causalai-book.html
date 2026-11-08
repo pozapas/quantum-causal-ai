@@ -1,0 +1,1340 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Causal Artificial Intelligence Book"> 
+    <meta name="keywords" content="Computer Science, Columbia University, Causal Inference, Artificial Intelligence, Causal Artificial Intelligence, Causal AI">
+    <meta name="author" content="Elias Bareinboim">
+    <title>Causal Artificial Intelligence Book</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <style>
+        /* Custom styles for increased width */
+        .container {
+            max-width: 1400px; /* Increased from default 1140px */
+        }
+        
+        /* Button styling for the expand/collapse all buttons */
+        .toggle-buttons {
+            margin-bottom: 15px;
+        }
+        
+        .toggle-buttons .btn {
+            margin-right: 10px;
+        }
+
+        /* Make sure accordion buttons are clickable */
+        .card-header button {
+            width: 100%;
+            text-align: left;
+        }
+
+        /* Add some visual indication for clickable headers */
+        .card-header:hover {
+            background-color: #f8f9fa;
+            cursor: pointer;
+        }
+
+        .book-header {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+        }
+
+        .book-header img {
+            width: 270px; /* Adjust the size here */
+            height: auto;
+    	}
+
+	a,
+	.btn-link {                         /* affects <a> and <button class="btn btn-link"> */
+   	 color: #0d3d99;                /* dark blue when idle */
+	}
+
+	a:hover,
+	.btn-link:hover,
+	a:focus,
+	.btn-link:focus {
+	    color: #0b2e73;                /* slightly darker on hover / focus */
+	    text-decoration: none;         /* keeps it consistent with Bootstrap */
+	}
+ 
+    </style>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-27875070-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body style="position: relative" data-spy="scroll" data-target="#menu" data-offset="0">
+    <nav id="menu" class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">CAI Book</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home<span class="sr-only">Home</span></a>
+                </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#teaching">Teaching<span class="sr-only">Teaching</span></a>
+                </li>
+		<li class="nav-item">
+                    <a class="nav-link" href="#summary">Structure<span class="sr-only">Structure</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#errata">Errata<span class="sr-only">Errata</span></a>
+                </li>
+   		<li class="nav-item">
+                    <a class="nav-link" href="#author">Author<span class="sr-only">Author</span></a>
+                </li>
+   		<li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact<span class="sr-only">Contact</span></a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container" style="margin-top:100px">
+            <div class="row">
+                <div class="col-sm-5 col-md-4 col-lg-3">
+                    <h2 id="about">
+                    </h2>
+  <div class="book-header">
+ <a href="cover-v1-resized.png" target="_blank">
+    <img src="cover-v1-resized.png" alt="Causal AI book cover">
+</a>
+</div> 
+                </div>
+                <div class="col-sm-7 col-md-8 col-lg-9">
+      <h1>Causal Artificial Intelligence</h1>
+      <h4> &nbsp; A Roadmap for Building Causally Intelligent Systems </h4> 
+      <h4> &nbsp; Elias Bareinboim</h4> 
+<br> 
+<h5> 
+Draft version (Oct/11/25): <a href="book.html" target="_blank" onclick="ga('send', 'pageview', {'page': '/book-oct11-25'});">
+link</a> 
+</h5> 
+
+
+<p>
+<br> 
+This textbook offers a comprehensive treatment of the principles, algorithms, and tools necessary for building causally intelligent systems.
+It bridges probability theory, causal inference, machine learning, and decision-making under uncertainty, providing a unified roadmap for addressing fundamental challenges in modern AI, including safety, generalization, robustness, and explainability.
+<!--
+This textbook offers a comprehensive foundation for building AI systems with causal intelligence. 
+It introduces the theoretical and computational principles necessary for causal reasoning, learning, decision-making, and generalization across environments. 
+The book is intended for graduate students, researchers, and practitioners interested in causal inference, artificial intelligence, and machine learning.
+-->
+</p>
+
+
+                    </p>
+                </div>
+            </div>
+
+<br> 
+<hr>
+<div class="d-flex align-items-center justify-content-between mb-2">
+  <h2 id="slides" class="mb-0">Teaching & Slides (coming soon) </h2>
+
+  <div class="toggle-buttons">
+    <button id="expandAll" class="btn btn-outline-primary">Expand All</button>
+    <button id="collapseAll" class="btn btn-outline-secondary">Collapse All</button>
+  </div>
+</div>
+                     <div class="accordion" id="lectureAccordion">
+                        <!-- Part I -->
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" 
+                                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" 
+                                        style="font-size: 24px; text-decoration: none; width: 100%; text-align: left;">
+                                        Part I. Foundations
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
+                                <div class="card-body p-1">
+                                    <div class="list-group">
+                                        <span class="list-group-item list-group-item-action">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h5 class="m-1 card-title">
+                                                    <span class="badge badge-secondary p-2">
+                                                        Lecture 1
+                                                    </span>
+                                                    &nbsp;
+                                                    Introduction
+                                                </h5>
+                                                <small>Ch. 1</small>
+                                            </div>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                    <span><strong></strong>Logistics; Motivation; Machine Learning. <br> Pearl's Causal Hierarchy. <br>
+<!--
+                                                        Readings: Ch. 1. <br>
+--> 
+                                                    </span>
+                                                    <span>
+<!--
+                                                        <a href="files/ci1-lecture1.pdf" target="_blank" title="1 per page">
+--> 
+<i class="far fa-file fa-2x color:gray"></i>
+<!--
+</a>
+--> 
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </span>
+
+                                        <span class="list-group-item list-group-item-action">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h5 class="m-1">
+                                                    <span class="badge badge-secondary p-2">
+                                                        Lecture 2
+                                                    </span>
+                                                    &nbsp;
+                                                    Structural Causal Models
+                                                </h5>
+                                                <small>Ch. 2</small>
+                                            </div>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                    <span><strong></strong>Structural Causal Models; Causal Diagrams.<br>
+<!--
+                                                        Readings: Ch. 2, Intro to Causal AI. <br>
+--> 
+                                                        Extra: 
+<!--								
+<a href="files/ci1-cht-extra.pdf">
+--> 
+								CHT notes
+<!--
+								</a> 
+--> 
+								<br>
+                                                    </span>
+                                                    <span>
+<!--
+                                                        <a href="files/ci1-lecture2.pdf" target="_blank" title="1 per page">
+--> 
+<i class="far fa-file fa-2x"></i>
+<!--
+</a>
+--> 
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </span>
+                                    </div>
+                                </div>
+                    </div>
+<!-- Part II -->
+<div class="card">
+    <div class="card-header" id="headingTwo">
+        <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" 
+                data-target="#collapsePartTwo" aria-expanded="false" aria-controls="collapseTwo" 
+                style="font-size: 24px; text-decoration: none; width: 100%; text-align: left;">
+                Part II. Causal Reasoning
+            </button>
+        </h2>
+    </div>
+    <div id="collapsePartTwo" class="collapse" aria-labelledby="partTwo">
+<div class="card ml-2">
+    <div class="card-header" id="headingTwoA">
+        <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" 
+                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" 
+                style="font-size: 24px; text-decoration: none; width: 100%; text-align: left;">
+                &nbsp; Interventional Reasoning
+            </button>
+        </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwoA">
+        <div class="card-body p-1">
+            <div class="list-group">
+                <span class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="m-1 card-title">
+                            <span class="badge badge-secondary p-2">
+                                Lecture 3
+                            </span>
+                            &nbsp;
+                            Identification of Causal Effects - Basics
+                        </h5>
+                        <small>Ch. 4, Sec. 4.1, 4.2 (< 4.2.1)</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong></strong> Intuition and Definition of Causal Effects.<br> 
+			The Truncated Factorization Product. <br> 
+			The Identification Problem
+<!--
+                                Readings: Ch. 4, Sec. 4.1, 4.2 (before 4.2.1).
+--> 
+                            </span>
+                            <span>
+                                <a href="files/ci1-lecture3.pdf" target="_blank" title="1 per page"><i
+                                        class="far fa-file fa-2x color:gray"></i></a>
+                            </span>
+                        </li>
+                    </ul>
+                </span>
+
+                <span class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="m-1">
+                            <span class="badge badge-secondary p-2">
+                                Lecture 4
+                            </span>
+                            &nbsp;
+                            The Problem of Confounding and the Back-door Criterion
+                        </h5>
+                        <small>Sec. 4.2.1</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong></strong>Identifiable and non-identifiable effects. Confounding Bias.<br> The Backdoor Criterion. Inverse probability Weighting/Propensity Score. <br>
+<!--
+                                Readings: Ch. 4, Sec. 4.2.1.
+--> 
+                            </span>
+                            <span>
+                                <a href="files/ci1-lecture4.pdf" target="_blank" title="1 per page"><i
+                                        class="far fa-file fa-2x"></i></a>
+                            </span>
+                        </li>
+                    </ul>
+                </span>
+
+                <span class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="m-1">
+                            <span class="badge badge-secondary p-2">
+                                Lecture 5
+                            </span>
+                            &nbsp;
+                            The Algorithmic Back-door Criterion
+                        </h5>
+                        <small>Sec. 4.2.2-4.2.3</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong></strong>The Conditional Backdoor Criterion.
+			<br> Adjustment-Backdoor Criterion. Poly-time delay Backdoor. 
+<!--
+                                Readings: Ch. 4, Sec. 4.2.2-4.2.3.
+--> 
+                            </span>
+                            <span>
+                                <a href="files/ci1-lecture5.pdf" target="_blank" title="1 per page"><i
+                                        class="far fa-file fa-2x"></i></a>
+                            </span>
+                        </li>
+                    </ul>
+                </span>
+
+                <span class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="m-1">
+                            <span class="badge badge-secondary p-2">
+                                Lecture 6
+                            </span>
+                            &nbsp;
+                            The Interventional Calculus
+                        </h5>
+                        <small>Sec. 4.2.5, 4.2.6, 4.3</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong></strong>The Generalized Truncated Product.<br>
+				 The Front-door Case.<br> 
+				 The interventional calculus (do-calculus).  <br>
+<!--
+                                Readings: Ch. 4, Sec. 4.2.5, 4.2.6, 4.3.
+--> 
+                            </span>
+                            <span>
+                                <a href="files/ci1-lecture6.pdf" target="_blank" title="1 per page"><i
+                                        class="far fa-file fa-2x"></i></a>
+                            </span>
+                        </li>
+                    </ul>
+                </span>
+
+                <span class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="m-1">
+                            <span class="badge badge-secondary p-2">
+                                Lecture 7
+                            </span>
+                            &nbsp;
+                            Causal Operators (L2) and Algorithmic Identification
+                        </h5>
+                        <small>Sec. 4.4</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong></strong>C-factors. C-Operators and Data Structure.<br> Systematic ID. <br>
+<!--
+                                Readings: Ch. 4, Sec. 4.4.
+-->
+                            </span>
+                            <span>
+                                <a href="files/ci1-lecture7.pdf" target="_blank" title="1 per page"><i
+                                        class="far fa-file fa-2x"></i></a>
+                            </span>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Part IIb -->
+<div class="card ml-2">
+    <div class="card-header" id="headingThree">
+        <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" 
+                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" 
+                style="font-size: 24px; text-decoration: none; width: 100%; text-align: left;">
+                &nbsp; Counterfactual Reasoning
+            </button>
+        </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
+        <div class="card-body p-1">
+            <div class="list-group">
+                <span class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="m-1">
+                            <span class="badge badge-secondary p-2">
+                                Lecture 8
+                            </span>
+                            &nbsp;
+                            Counterfactuals Foundations
+                        </h5>
+                        <small>Ch. 5, Sec. 5.1, 5.2</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong></strong>Counterfactual's definition. Motivation. Hinton's paradox.  <br> 
+                                Counterfactual Quantities &amp; the Structural Basis Theorem
+                                <br>
+<!--
+                                Readings: Ch. 5, Sec. 5.1, 5.2.
+--> 
+                            </span>
+                            <span>
+                                <a href="files/ci1-lecture8.pdf" target="_blank" title="1 per page"><i
+                                        class="far fa-file fa-2x"></i></a>
+                            </span>
+                        </li>
+                    </ul>
+                </span>
+
+                <span class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="m-1">
+                            <span class="badge badge-secondary p-2">
+                                Lecture 9
+                            </span>
+                            &nbsp; The Counterfactual Calculus
+                        </h5>
+                        <small>Sec. 5.3</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong></strong>Counterfactual Contraints.  
+                                 <br> Counterfactual Calculus.
+                                <br>
+<!--
+                                Readings: Ch. 5, Sec. 5.3.
+--> 
+                            </span>
+                            <span>
+                                <a href="files/ci1-lecture9.pdf" target="_blank" title="1 per page"><i
+                                        class="far fa-file fa-2x"></i></a>
+                            </span>
+                        </li>
+                    </ul>
+                </span>
+
+                <span class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="m-1">
+                            <span class="badge badge-secondary p-2">
+                                Lecture 10
+                            </span>
+                            &nbsp;
+                            Causal Operators (L3) and Algorithmic Identification
+                        </h5>
+                        <small>Sec. 5.4</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong></strong>Ctf-factors and operators. Consistent ctf-factors. Systematic ID.
+                                <br>
+<!--
+                                Readings: Ch. 5, Sec. 5.4.
+--> 
+                            </span>
+                            <span>
+                                <a href="files/ci1-lecture10.pdf" target="_blank" title="1 per page"><i
+                                        class="far fa-file fa-2x"></i></a>
+                            </span>
+                        </li>
+                    </ul>
+                </span>
+
+                 <span class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="m-1">
+                            <span class="badge badge-secondary p-2">
+                                Lecture 11
+                            </span>
+                            &nbsp;
+                            Partial Identification
+                        </h5>
+                        <small>Ch. 5, Sec. 5.5</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong></strong>Bounding interventional distributions (bow graph and IV model).<br>  Causal offline-to-online Learning (COOL).
+                                <br>
+<!--
+                                Readings: Ch. 5, Sec. 5.5.
+--> 
+                            </span>
+                            <span>
+                                <a href="files/ci1-lecture11.pdf" target="_blank" title="1 per page"><i
+                                        class="far fa-file fa-2x"></i></a>
+                            </span>
+                        </li>
+                    </ul>
+                </span>
+
+ 		<span class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="m-1">
+                            <span class="badge badge-secondary p-2">
+                                Lecture 12
+                            </span>
+                            &nbsp;
+                            The Sigma Calculus
+                        </h5>
+                        <small>Ch. 4, Sec. 4.6</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong></strong>Soft interventions. Sigma-Calculus.
+                                <br>
+<!--
+                                Readings: Ch. 4, Sec. 4.6.
+--> 
+                            </span>
+                            <span>
+                                <a href="files/ci1-lecture12.pdf" target="_blank" title="1 per page"><i
+                                        class="far fa-file fa-2x"></i></a>
+                            </span>
+                        </li>
+                    </ul>
+                </span>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Part IIc -->
+<div class="card ml-2">
+    <div class="card-header" id="headingThreeb">
+        <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" 
+                data-target="#collapseThreeb" aria-expanded="false" aria-controls="collapseThreeb" 
+                style="font-size: 24px; text-decoration: none; width: 100%; text-align: left;">
+                &nbsp; Fairness Analysis 
+            </button>
+        </h2>
+    </div>
+    <div id="collapseThreeb" class="collapse" aria-labelledby="headingThreeb">
+        <div class="card-body p-1">
+            <div class="list-group">
+                <span class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="m-1">
+                            <span class="badge badge-secondary p-2">
+                                Lecture 13
+                            </span>
+                            &nbsp;
+			    Fairness I
+                        </h5>
+                        <small>Ch. 6, Sec. 6.1-6.3</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong></strong>
+Theory of Decomposing Variations; Fundamental Problem of Causal Fairness; Explainability Plane.<br>
+TV-family; Using contrastive measures in practice; Structure of the TV-family; Towards the Fairness Map.
+                                <br>
+                            </span>
+                            <span>
+                                <a href="files/ci1-lecture8.pdf" target="_blank" title="1 per page"><i
+                                        class="far fa-file fa-2x"></i></a>
+                            </span>
+                        </li>
+                    </ul>
+                </span>
+
+                <span class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="m-1">
+                            <span class="badge badge-secondary p-2">
+                                Lecture 14 
+                            </span>
+                            &nbsp; Fairness II 
+                        </h5>
+                        <small>Sec. 6.4.1</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong></strong>Causal Interactions. Bias quantification (Task 1). 
+                                <br>
+                            </span>
+                            <span>
+                                <a href="files/ci1-lecture9.pdf" target="_blank" title="1 per page"><i
+                                        class="far fa-file fa-2x"></i></a>
+                            </span>
+                        </li>
+                    </ul>
+                </span>
+
+                <span class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="m-1">
+                            <span class="badge badge-secondary p-2">
+                                Lecture 15
+                            </span>
+                            &nbsp;
+                            Fairness III 
+                        </h5>
+                        <small>Sec. 6.4.1-6.4.3</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong></strong>Fair Predictions (Task 2). Fair Decision-Making (Task 3). 
+                                <br>
+<!--
+                                Readings: Ch. 5, Sec. 5.4.
+--> 
+                            </span>
+                            <span>
+                                <a href="files/ci1-lecture10.pdf" target="_blank" title="1 per page"><i
+                                        class="far fa-file fa-2x"></i></a>
+                            </span>
+                        </li>
+                    </ul>
+                </span>
+
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+
+<!-- Part III -->
+<div class="card">
+    <div class="card-header" id="headingFour">
+        <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" 
+                data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" 
+                style="font-size: 24px; text-decoration: none; width: 100%; text-align: left;">
+                Part III. Decision-Making
+            </button>
+        </h2>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour">
+        <div class="card-body p-1">
+            <div class="list-group">
+                <span class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="m-1">
+                            <span class="badge badge-secondary p-2">
+                                Lecture 16
+                            </span>
+                            &nbsp;
+                            Decision-Making I
+                        </h5>
+                        <small>Ch. 7-8</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong></strong>
+                                Causal Decision Model. Comparison w/ MDPs. Causal RL Tasks. <br>
+                                Off-police Learning. Online Learning. Causal identification.
+                                <br>
+<!--
+                                Readings: Ch. 7-8.
+--> 
+                            </span>
+                            <span>
+                                <a href="files/cai-slides8.pdf" target="_blank" title="1 per page"><i
+                                        class="far fa-file fa-2x color:gray"></i></a>
+                            </span>
+                        </li>
+                    </ul>
+                </span>
+
+                <span class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="m-1">
+                            <span class="badge badge-secondary p-2">
+                                Lecture 17
+                            </span>
+                            &nbsp;
+                            Decision-Making II
+                        </h5>
+                        <small> Sec. 9.1, 9.2, 9.5</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong></strong>
+                                Causal-offline-to-online Learning (COOL).<br> Causal Imitation Learning.<br> Causally-aligned Curriculum Learning.
+                                <br>
+<!--
+                                Readings: Sec. 9.1, 9.2, 9.5. 
+--> 
+				<!-- <a href="https://causalai.net/r102.pdf">ICLR'24.</a> --> 
+                            </span>
+                            <span>
+                                <a href="files/cai-slides9.pdf" target="_blank" title="1 per page"><i
+                                        class="far fa-file fa-2x color:gray"></i></a>
+                            </span>
+                        </li>
+                    </ul>
+                </span>
+
+                <span class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="m-1">
+                            <span class="badge badge-secondary p-2">
+                                Lecture 18
+                            </span>
+                            &nbsp;
+                            Decision-Making III
+                        </h5>
+                        <small>Sec. 9.3, 9.4, 9.6</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong></strong>
+                                Where to intervene.<br> Counterfactual Decision-Making.<br> Causal Game Theory.
+                                <br>
+<!--
+                                Readings: Sec. 9.3, 9.4, 9.6.
+--> 
+                            </span>
+                            <span>
+<i class="far fa-file fa-2x color:gray"></i>
+                            </span>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Part IV -->
+<div class="card">
+    <div class="card-header" id="headingFive">
+        <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" 
+                data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" 
+                style="font-size: 24px; text-decoration: none; width: 100%; text-align: left;">
+                Part IV. Generalizability
+            </button>
+        </h2>
+    </div>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingFive">
+        <div class="card-body p-1">
+            <div class="list-group">
+                <span class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="m-1">
+                            <span class="badge badge-secondary p-2">
+                                Lecture 19
+                            </span>
+                            &nbsp;
+                            Generalizability I
+                        </h5>
+                        <small> Ch. 10, Sec. 11.1-11.2</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong></strong>
+                                Transportability Foundations; Direct Transportability; the Score TR algorithm.
+                                <br>
+                                Transportable Representations; Causal Mechanistic Stability & invariance learning; Overview of the DG literature.
+                                <br>
+<!--
+                                Readings: Ch. 10, Sec. 11.1-11.2.
+--> 
+                            </span>
+                            <span>
+                                <a href="files/cai-slides8.pdf" target="_blank" title="1 per page"><i
+                                        class="far fa-file fa-2x color:gray"></i></a>
+                            </span>
+                        </li>
+                    </ul>
+                </span>
+
+                <span class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="m-1">
+                            <span class="badge badge-secondary p-2">
+                                Lecture 20 
+                            </span>
+                            &nbsp;
+                            Generalizability II
+                        </h5>
+                        <small> Ch. 11.3, 11.4.</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong></strong>
+				Partial Transportability & Adaptation. 
+                                <br>
+<!--
+                                Readings: Ch. 11.3, 11.4.
+--> 
+                            </span>
+                            <span>
+                                <a href="files/cai-slides9.pdf" target="_blank" title="1 per page"><i
+                                        class="far fa-file fa-2x color:gray"></i></a>
+                            </span>
+                        </li>
+                    </ul>
+                </span>
+
+	 	<span class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="m-1">
+                            <span class="badge badge-secondary p-2">
+                                Lecture 21 
+                            </span>
+                            &nbsp;
+                            Generalizability III
+                        </h5>
+                        <small>Ch. 12</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong></strong>
+                                Interventional & Counterfactual Transportability. 
+                                <br>
+<!--
+                                Readings: Ch. 12.
+--> 
+                            </span>
+                            <span>
+                                <a href="files/cai-slides9.pdf" target="_blank" title="1 per page"><i
+                                        class="far fa-file fa-2x color:gray"></i></a>
+                            </span>
+                        </li>
+                    </ul>
+                </span>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Part V -->
+<div class="card">
+    <div class="card-header" id="headingSix">
+        <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" 
+                data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" 
+                style="font-size: 24px; text-decoration: none; width: 100%; text-align: left;">
+                Part V. Generative Modeling
+            </button>
+        </h2>
+    </div>
+    <div id="collapseSix" class="collapse" aria-labelledby="headingSix">
+        <div class="card-body p-1">
+            <div class="list-group">
+                <span class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="m-1">
+                            <span class="badge badge-secondary p-2">
+                                Lecture 22 
+                            </span>
+                            &nbsp;
+                            Generative I
+                        </h5>
+                        <small>Ch. 13</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong></strong>
+                                Neural Causal Models. Structural Constraints. <br> 
+				Causal Generative Modeling. Practical Implementation.
+                                <br>
+<!--
+                                Readings: Ch. 13.
+--> 
+                            </span>
+                            <span>
+                                <a href="files/cai-slides8.pdf" target="_blank" title="1 per page"><i
+                                        class="far fa-file fa-2x color:gray"></i></a>
+                            </span>
+                        </li>
+                    </ul>
+                </span>
+
+                <span class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="m-1">
+                            <span class="badge badge-secondary p-2">
+                                Lecture 23
+                            </span>
+                            &nbsp;
+                            Generative II
+                        </h5>
+                        <small>Ch. 14</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong></strong>
+                                Modeling and ACMs. Impossibility results.<br>
+				 Ctf-consistent estimators. Experimental results.
+                                <br>
+<!--
+                                Readings: Ch. 14.
+--> 
+                            </span>
+                            <span>
+                                <a href="files/cai-slides9.pdf" target="_blank" title="1 per page"><i
+                                        class="far fa-file fa-2x color:gray"></i></a>
+                            </span>
+                        </li>
+                    </ul>
+                </span>
+
+                <span class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="m-1">
+                            <span class="badge badge-secondary p-2">
+                                Lecture 24
+                            </span>
+                            &nbsp;
+                            Generative III
+                        </h5>
+                        <small>Ch. 15</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong></strong>
+                                PCH's Abstraction. Inferences across Abstractions. Representation Learning.
+                                <br>
+<!--
+                                Readings: Ch. 15.
+--> 
+                            </span>
+                            <span>
+                                <a href="files/cai-slides10.pdf" target="_blank" title="1 per page"><i
+                                        class="far fa-file fa-2x color:gray"></i></a>
+                            </span>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Part VI -->
+<div class="card">
+    <div class="card-header" id="headingSeven">
+        <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" 
+                data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven" 
+                style="font-size: 24px; text-decoration: none; width: 100%; text-align: left;">
+                Part VI. Learning
+            </button>
+        </h2>
+    </div>
+    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven">
+        <div class="card-body p-1">
+            <div class="list-group">
+                <span class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="m-1">
+                            <span class="badge badge-secondary p-2">
+                                Lecture 25
+                            </span>
+                            &nbsp;
+                            Learning I
+                        </h5>
+                        <small>Ch. 16</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong></strong>
+                                Observational Equivalence Class.
+                                <br>
+                                Interventional Equivalence Class.
+                            </span>
+                            <span>
+                            </span>
+                        </li>
+                    </ul>
+                </span>
+
+                <span class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="m-1">
+                            <span class="badge badge-secondary p-2">
+                                Lecture 26
+                            </span>
+                            &nbsp;
+                            Learning II
+                        </h5>
+                        <small>Ch. 17</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong></strong>
+                                Multi-domain Structural Learning.
+                            </span>
+                            <span>
+                            </span>
+                        </li>
+                    </ul>
+                </span>
+
+                <span class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="m-1">
+                            <span class="badge badge-secondary p-2">
+                                Lecture 27
+                            </span>
+                            &nbsp;
+                            Learning III
+                        </h5>
+                        <small>Ch. 18</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong></strong>
+                                Causal Representation Learning.
+                            </span>
+                            <span>
+                            </span>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Part VII -->
+<div class="card">
+    <div class="card-header" id="headingSeven">
+        <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" 
+                data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight" 
+                style="font-size: 24px; text-decoration: none; width: 100%; text-align: left;">
+                Part VII. Misc 
+            </button>
+        </h2>
+    </div>
+    <div id="collapseEight" class="collapse" aria-labelledby="headingEight">
+        <div class="card-body p-1">
+            <div class="list-group">
+                <span class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="m-1">
+                            <span class="badge badge-secondary p-2">
+                                Lecture 28
+                            </span>
+                            &nbsp;
+			    Parametric Identification 
+                        </h5>
+                        <small>Ch. 19</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong></strong>
+                                Foundations of Linear SCMs. Causal Regression.<br> 
+				 Instrumental Variables. Instrumental Sets. Decompositions. 
+                                <br>
+				Monotonic Identification. LATE. 
+                            </span>
+                            <span>
+                            </span>
+                        </li>
+                    </ul>
+                </span>
+
+                <span class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="m-1">
+                            <span class="badge badge-secondary p-2">
+                                Lecture 29
+                            </span>
+                            &nbsp;
+			    Causal Estimation
+                        </h5>
+                        <small>Ch. 20</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong></strong>
+                                Double Robutness. 
+                            </span>
+                            <span>
+                            </span>
+                        </li>
+                    </ul>
+                </span>
+
+                <span class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="m-1">
+                            <span class="badge badge-secondary p-2">
+                                Lecture 30
+                            </span>
+                            &nbsp;
+			    A Hierarchy of Graphical Models
+                        </h5>
+                        <small>Ch. 21</small>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong></strong>
+                                Other Inferential Systems. 
+                            </span>
+                            <span>
+                            </span>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+                </div>
+
+<br> 
+<hr> 
+<!--
+<div class="d-flex align-items-center justify-content-between mb-2">
+--> 
+<div class="mb-2">
+  <h2 id="summary" class="mb-0">Structure & Audience</h2>
+  <br>
+  <div>
+    <span style="display: block; text-align: left;">
+      
+      <p><strong>Audience:</strong><br>
+      Graduate students, researchers, and advanced undergraduates in computer science, statistics, artificial intelligence, and related fields. A basic background in probability, statistics, and machine learning is recommended, though key concepts are introduced from first principles.</p>
+
+      <p><strong>Book Structure:</strong></p>
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead class="thead-light">
+            <tr>
+              <th>Part</th>
+              <th>Key Concepts and Highlights</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>I. Foundations</strong></td>
+              <td>Causal graphs, Structural Causal Models (SCMs), Pearlâs Causal Hierarchy (PCH)</td>
+            </tr>
+            <tr>
+              <td><strong>II. Causal Reasoning & Understanding</strong></td>
+              <td>Interventions, Counterfactual reasoning, Fairness analysis</td>
+            </tr>
+            <tr>
+              <td><strong>III. Causal Decision-Making</strong></td>
+              <td>Causal reinforcement learning (CRL), Counterfactual decision-making, Causal game theory</td>
+            </tr>
+            <tr>
+              <td><strong>IV. Causal Generalizations</strong></td>
+              <td>Transportability, Domain adaptation, Generalization of counterfactuals</td>
+            </tr>
+            <tr>
+              <td><strong>V. Causal Generative Modeling</strong></td>
+              <td>Neural causal models, Structural constraints, Causal generative modeling</td>
+            </tr>
+            <tr>
+              <td><strong>VI. Causal Learning</strong></td>
+              <td>Multi-domain structural learning, Causal representation learning</td>
+            </tr>
+            <tr>
+              <td><strong>VII. Advanced Topics</strong></td>
+              <td>Parametric identification, Causal estimation, Hierarchies of graphical models</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>Usage:</strong><br>
+      The book supports multiple curricular pathways depending on course goals:<br><br>
+
+      <strong>Year-long Curriculum:</strong><br>
+      - <strong>Semester 1: Foundations of Causal AI</strong> â Chapters 1â7 provide a complete foundation suitable for a one-semester graduate-level course.<br>
+      - <strong>Semester 2: Causal AI Research Topics</strong> â Chapters 8â18 explore advanced areas such as decision-making, fairness, generalization, generative modeling, and causal learning.<br><br>
+
+      <strong>Streamlined and Modular Tracks:</strong><br>
+      - <strong>Rapid Foundations Track:</strong> Focus on Parts IâII to cover core principles quickly, enabling faster transition to advanced topics.<br>
+      - <strong>Topical Focus Tracks:</strong><br>
+      &nbsp;&nbsp;&nbsp;â¢ <em>Causal Decision-Making and Reinforcement Learning</em> (Parts IIIâIV)<br>
+      &nbsp;&nbsp;&nbsp;â¢ <em>Causal Generalization and Robustness</em> (Part IV)<br>
+      &nbsp;&nbsp;&nbsp;â¢ <em>Causal Generative Modeling and Representation Learning</em> (Parts VâVI)
+      </p>
+
+    </span>
+  </div>
+</div>
+
+
+<br> 
+<hr> 
+<div class="mb-2"> 
+  <h2 id="errata" class="mb-0">Errata </h2>
+<br> 
+ <div>
+    <span style="display: block; text-align: left;">
+<p>
+An initial list of errata will be posted here shortly here.
+Thank you for your patience and interest in improving the material.
+</p>
+
+    </span>
+  </div>
+</div>
+<br>  
+<hr>
+<div class="mb-2">
+  <h2 id="author" class="mb-0">About the Author</h2>
+  <br>
+  <div>
+    <span style="display: block; text-align: left;">
+      <p><strong>Elias Bareinboim</strong> is a Professor of Computer Science at Columbia University and the founding director of the Causal Artificial Intelligence Lab.</p>
+      <p>His research focuses on causal and counterfactual inference, and their role in building more general, robust, and explainable AI systems. He is a leading advocate for the causal approach to AI, pioneering solutions to challenges such as decision-making, fairness, and generalization under uncertainty.</p>
+      <p>Bareinboim serves as the Editor-in-Chief of the Journal of Causal Inference and has received multiple honors, including being named an AAAI Fellow, the NSF CAREER Award, the DARPA Young Faculty Award, the ONR Young Investigator Award, and recognition as one of IEEE's "AI's 10 to Watch." For more information, visit his <a href="https://causalai.net/" target="_blank">group homepage</a>.</p>
+    </span>
+  </div>
+</div>
+
+ 
+<hr>
+<br> 
+
+<div class="mb-2">
+  <h2 id="contact" class="mb-0">Contact & FAQ</h2>
+  <br>
+  <div>
+    <span style="display: block; text-align: left;">
+
+      <p>
+      For questions, feedback, or to report errata related to <em>Causal Artificial Intelligence</em>, please feel free to contact us.
+      </p>
+
+      <p>
+      Contact: <a href="mailto:book@causalai.net">book@causalai.net</a>
+      </p>
+
+      <h5>Frequently Asked Questions</h5>
+
+      <p><strong>Will lecture slides be available for all chapters?</strong><br>
+      Yes, slides are being progressively posted in the Teaching & Slides section. Please check back for updates.</p>
+
+      <p><strong>Will a final version of the textbook be published?</strong><br>
+      Yes, a finalized edition is planned. Updates will be shared through this website as they become available.</p>
+
+      <p><strong>Can I use the slides and materials for teaching?</strong><br>
+      Yes â you are welcome to use the slides and materials for educational purposes with appropriate attribution.</p>
+
+    </span>
+  </div>
+</div>
+ 
+
+<!-- Closing tags for main page structure -->
+            </div>
+            <hr>
+        </div>
+
+
+    </main>
+
+    <footer class="footer mt-4 py-3 bg-light">
+        <div class="container text-center">
+            <small class="text-muted">October 11, 2025</small>
+        </div>
+    </footer>
+
+    <!-- Make sure to include jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" 
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" 
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+
+    <!-- JavaScript for Expand/Collapse All buttons -->
+<script>
+  $(function () {
+    $("#expandAll").click(function () {
+      // open only panels that are currently closed
+      $('.collapse:not(.show)').collapse('show');
+    });
+    $("#collapseAll").click(function () {
+      $('.collapse.show').collapse('hide');
+    });
+  });
+</script>
+</body>
+</html>
+

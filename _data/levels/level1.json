@@ -1,0 +1,145 @@
+{
+  "level": 1, "title": "Chance, waves, and fair tests", "audience": "Upper primary school: grades 4 to 6", "intro": "Use fractions and repeated tests to describe uncertain results. Learn why observations, actions, and wave effects need different explanations.",
+  "lessons": [
+    {
+      "id":"L1-01", "title":"Fractions describe part of a whole", "objective":"Compute a fraction from an explicit count and denominator.", "prerequisites":["L0-01","L0-05"],
+      "paragraphs":[
+        "A fraction describes a part relative to a whole. The numerator is the count of the selected part. The denominator is the total count in the whole. State what belongs to the whole before you calculate.",
+        "If three of twelve counters are blue, the blue fraction is three over twelve. This is the same number as one quarter. Dividing both counts by three changes the written form but keeps the same proportion.",
+        "A fraction without its group can mislead. Three blue counters among twelve differ from three blue counters among six. The selected count is the same, but the second group has a larger blue fraction because its total is smaller."
+      ],
+      "equation":"fraction = selected count / total count. The total must be greater than zero.",
+      "example":"A tray has eight apples and two pears. There are ten fruits in all. The pear fraction is 2/10, which equals 1/5. The apple fraction is 8/10. The two fractions add to one because the groups cover the tray.",
+      "exercise":"A box has six red blocks and nine blue blocks. Find the red fraction and simplify it.",
+      "solution":"The total is fifteen blocks. The red fraction is 6/15. Divide numerator and denominator by three to get 2/5. The denominator counts all blocks, not only blue blocks.",
+      "quiz":{"question":"A class has five left-handed pupils among twenty pupils. What is the fraction?","options":["5/15","20/5","5/20"],"answer":2,"explanation":"The selected count is five and the whole class contains twenty. The fraction therefore uses five over twenty, or one quarter."},
+      "sources":["openstax"],"lab":"chance","caution":"A proportion describes a specified group. It does not automatically describe another population."
+    },
+    {
+      "id":"L1-02", "title":"Build a probability model", "objective":"Calculate probability for a draw when all individual counters are equally likely.", "prerequisites":["L1-01"],
+      "paragraphs":[
+        "Probability is a number that describes uncertainty in a model. Zero means impossible and one means certain. A value between them describes an uncertain event. The model must state the possible outcomes and how the trial works.",
+        "If each counter has an equal chance of selection, count the counters that satisfy the event. Divide by the total number of counters. Equal chance is an assumption about the draw method, not a result of using fractions.",
+        "The complement of an event means that the event does not occur. For a red draw, the complement is a non-red draw. Their probabilities add to one when every draw gives exactly one of these two results."
+      ],
+      "equation":"P(red) = number of red counters / total counters. P(not red) = 1 - P(red).",
+      "example":"A mixed bag contains three red counters and seven white counters of the same size. Under equal selection chances, P(red)=3/10=0.3. The non-red probability is 7/10=0.7. These values add to one, as required for the two exhaustive events.",
+      "exercise":"A bag contains four green counters and one orange counter. Find P(green) and P(not green) for an equal-chance draw.",
+      "solution":"There are five counters. P(green)=4/5=0.8 and P(not green)=1/5=0.2. The values add to one because green and not green cover every possible draw.",
+      "quiz":{"question":"When can favourable-count divided by total-count be used directly?","options":["When individual outcomes are equally likely","Whenever outcome names differ","Only when a result is certain"],"answer":0,"explanation":"The counting rule requires equal probabilities for the counted individual outcomes. Unequal chances require a model that assigns their different weights."},
+      "sources":["openstax"],"lab":"chance","caution":"Equal-sized counters still require a draw method that does not favour a colour."
+    },
+    {
+      "id":"L1-03", "title":"Repeat and record", "objective":"Separate a probability from a frequency measured in finitely many trials.", "prerequisites":["L1-02","L0-06"],
+      "paragraphs":[
+        "A relative frequency is the event count divided by the number of trials. It is a measured result. A probability belongs to a model. The measured frequency can differ from the model probability even when the model is suitable.",
+        "To keep bag trials comparable, replace the drawn counter after each trial and mix again. Without replacement, the bag changes. If you draw a red counter and keep it out, later red draws can become less likely.",
+        "Many independent trials can make large frequency errors less likely. They do not force an exact balance in every small block of trials. A fair coin does not need to produce a tail because several heads occurred before it."
+      ],
+      "equation":"relative frequency = event count / trial count. A trial count must be positive.",
+      "example":"A fair-coin model gives P(heads)=0.5. In ten tosses you record seven heads, so the relative frequency is 7/10=0.7. This short record differs from the model value. It does not by itself prove that the coin model is wrong.",
+      "exercise":"A simulation records eighteen blue draws in sixty independent replacement trials. Compute the blue relative frequency. Does it determine the next draw?",
+      "solution":"The relative frequency is 18/60=0.3. It summarizes these sixty results. It does not determine the next draw, whose probability depends on the trial model and unchanged draw conditions.",
+      "quiz":{"question":"A fair coin gives four heads in a row. What is P(heads) on the next independent toss?","options":["Zero","One half","One"],"answer":1,"explanation":"Independence means the earlier tosses do not change the next toss probability. The fair-coin model still assigns one half to heads."},
+      "sources":["openstax"],"lab":"chance","caution":"Real trials can be dependent. Independence must be justified by the setup."
+    },
+    {
+      "id":"L1-04", "title":"Count within a condition", "objective":"Use the correct denominator when the question restricts a group.", "prerequisites":["L1-01","L1-02"],
+      "paragraphs":[
+        "A conditional question first selects a group and then asks about results within it. Suppose the question asks about red objects among squares. Only the squares belong in the denominator. Circles are outside the selected group for this question.",
+        "The phrase given that marks a condition. The chance of red given square can differ from the chance of square given red. They select different groups. Read the whole question before you choose a numerator or denominator.",
+        "Conditional frequencies are useful for prediction. They can also reveal that groups differ. A difference between selected groups does not by itself explain a cause. The way the groups were selected and other shared causes can matter."
+      ],
+      "equation":"P(red given square) = red-square count / square count, when square count is positive.",
+      "example":"A tray has four red squares, two blue squares, and six red circles. Among squares, four of six are red, so the red fraction is 4/6. Among red objects, four of ten are squares, so that fraction is 4/10.",
+      "exercise":"A club has three girls with bikes, five girls without bikes, and two boys with bikes. What fraction of the girls have bikes?",
+      "solution":"There are eight girls, and three of them have bikes. The requested fraction is 3/8. The boys are outside the conditioning group, so they are not in this denominator.",
+      "quiz":{"question":"For the fraction of blue objects among circles, which total is the denominator?","options":["All blue objects","All objects in the room","All circles"],"answer":2,"explanation":"The word among restricts the group to circles. Count blue circles in the numerator and all circles in the denominator."},
+      "sources":["openstax"],"lab":"bayes","caution":"A conditional frequency is an association in the selected data, not automatically an intervention effect."
+    },
+    {
+      "id":"L1-05", "title":"Assign a fair comparison", "objective":"Explain how random assignment can reduce systematic group differences.", "prerequisites":["L0-04","L1-03"],
+      "paragraphs":[
+        "Random assignment uses a chance process to choose a treatment for each participant. For example, a fair coin can select between two study methods. The assignment must happen before the result is measured, using the planned rule.",
+        "Random assignment can prevent the experimenter from deliberately placing stronger learners in one group. It balances other causes on average across repeated assignments. One small experiment can still have groups that differ by chance, so record group sizes and uncertainty.",
+        "A fair experiment also needs a clear outcome and similar measurement. If one group receives extra practice and a different test, two changes occur together. Random assignment alone cannot repair a badly defined comparison or a missing result."
+      ],
+      "equation":"Planned comparison: average result under method A minus average result under method B.",
+      "example":"Twelve learners receive method A or B by a planned random rule. Both groups study for twenty minutes and take the same test. This setup is clearer than letting the teacher give A only to learners who already score well.",
+      "exercise":"Two garden plots receive different plant foods. Suggest a random assignment rule and one outcome measured in the same way for every plant.",
+      "solution":"Randomly assign similar plants to the two foods before growth is measured. Record height change over the same time interval with the same measuring method. Use enough plants to study variation.",
+      "quiz":{"question":"What does random assignment guarantee in one small experiment?","options":["Use of the stated chance rule, not identical groups","Exactly equal starting ability","A large treatment effect"],"answer":0,"explanation":"A correctly applied chance rule defines random assignment. It does not guarantee identical groups or any particular treatment effect in one small experiment."},
+      "sources":["hernan","seeing"],"lab":"causal","caution":"Experiments with people require suitable consent and oversight. Use the course simulation for this exercise."
+    },
+    {
+      "id":"L1-06", "title":"Look for a common cause", "objective":"Draw a shared-cause explanation for an observed association.", "prerequisites":["L0-09","L1-04"],
+      "paragraphs":[
+        "A common cause is a factor that can affect two other factors. Hot weather can increase ice cream sales and swimming visits. The two activities can occur together because both respond to the weather, even without either causing the other.",
+        "A causal diagram uses arrows to state proposed direct influences. Draw weather pointing to sales and weather pointing to swimming. These arrows express a model. They need scientific support and are not created merely by drawing lines between recorded quantities.",
+        "A shared cause can make a prediction useful while making an action claim wrong. If sales predict swimming, increasing sales alone might still fail to increase swimming. The action removes the usual reason that high sales were observed."
+      ],
+      "equation":"Shared-cause diagram: sales <- weather -> swimming. An arrow points from proposed cause to effect.",
+      "example":"On ten warm days, a pool sells many tickets and a shop sells many cold drinks. On cool days both totals fall. Warm weather is a plausible shared cause. The record alone does not show that selling a drink sends someone to the pool.",
+      "exercise":"Roads are wet and umbrellas are common. Propose a common cause. What extra question would you ask before saying umbrellas make roads wet?",
+      "solution":"Rain is a plausible common cause of wet roads and umbrella use. Ask whether deliberately opening umbrellas without rain changes road wetness under a suitable controlled comparison.",
+      "quiz":{"question":"Which diagram represents Z as a common cause of X and Y?","options":["X -> Z <- Y","X <- Z -> Y","X -> Y -> Z"],"answer":1,"explanation":"Both arrows leave Z and enter the other variables. The diagram therefore states that Z directly influences X and Y in this model."},
+      "sources":["pearl","seeing"],"lab":"causal","caution":"A plausible common cause is a hypothesis. The diagram requires evidence and stated assumptions."
+    },
+    {
+      "id":"L1-07", "title":"Track a wave", "objective":"Identify wave height, wavelength, and phase in a simple wave model.", "prerequisites":["L0-07","L1-01"],
+      "paragraphs":[
+        "A wave describes a change that extends across space or time. A water surface can have crests and troughs. A crest is a high point, and a trough is a low point relative to the resting surface.",
+        "Amplitude measures the size of the disturbance from its resting value. Wavelength is the distance between repeating points, such as adjacent crests. Phase describes where a wave is within its repeated cycle. Two equal waves can have different phases.",
+        "A drawing of a water wave is a useful first model of combination. It is not a drawing of a qubit. Quantum amplitudes have their own rules and need not describe a physical water height or a particle moving in a visible loop."
+      ],
+      "equation":"One full cycle has phase 360 degrees. Half a cycle has phase 180 degrees.",
+      "example":"Two water-wave drawings have crests four centimetres apart. Each has wavelength four centimetres. One drawing is shifted by two centimetres, so its crest matches the other trough. The shift is half a wavelength, or half a cycle.",
+      "exercise":"A wave has crests at positions 1, 7, and 13 centimetres. Find the wavelength. What distance is half a wavelength?",
+      "solution":"The distance between adjacent crests is six centimetres, so the wavelength is six centimetres. Half a wavelength is three centimetres. Use adjacent matching points, not crest height, for this distance.",
+      "quiz":{"question":"What does a half-cycle phase shift align for equal sinusoidal waves?","options":["Every crest with another crest","No points at all","A crest with the other wave's trough"],"answer":2,"explanation":"A half cycle moves the wave from a crest to a trough. Equal wave heights then have opposite signs at corresponding positions."},
+      "sources":["feynman"],"lab":"interference","caution":"The wave picture is an analogy. Quantum state amplitudes are not water heights."
+    },
+    {
+      "id":"L1-08", "title":"Combine waves, then square", "objective":"Explain why interference cannot be modelled by adding only positive path probabilities.", "prerequisites":["L1-07","L1-02"],
+      "paragraphs":[
+        "When two simple wave disturbances meet, their signed heights can add. Two upward disturbances can make a larger upward disturbance. An upward and an equal downward disturbance can cancel at one point. The phase relation decides how they combine.",
+        "Quantum interference also depends on combining amplitudes before finding probabilities. An amplitude is a mathematical quantity used by the quantum rules. It can include a phase. The probability comes from the squared magnitude of the total amplitude for an outcome.",
+        "Adding ordinary positive path probabilities misses this cancellation. Interference does not mean that a probability is negative. A probability remains between zero and one. The quantities that combine first are amplitudes, which are different from the final probabilities."
+      ],
+      "equation":"Equal opposite amplitudes: 1/2 + (-1/2) = 0; squared magnitude of the total is 0.",
+      "example":"At one output, two model path amplitudes are one half and minus one half. Their sum is zero, so that output probability is zero. Adding the separate squared values would give one half and would lose the cancellation.",
+      "exercise":"At an output, the model amplitudes are 1/2 and 1/2. Add them first, then square the result. Compare with squaring each first.",
+      "solution":"The amplitude sum is one, whose square is one. Squaring each one-half first gives one-quarter plus one-quarter, or one-half. The missing cross term explains the difference.",
+      "quiz":{"question":"Which order follows the quantum interference rule for indistinguishable alternatives?","options":["Add amplitudes, then take squared magnitude","Square probabilities, then subtract one","Add only the path probabilities"],"answer":0,"explanation":"Indistinguishable alternatives combine at the amplitude level. Taking the squared magnitude afterward includes the interference term that separate probability addition misses."},
+      "sources":["feynman","ibm"],"lab":"interference","caution":"These are contributions to one output. A complete physical experiment must give normalized probabilities across all outputs."
+    },
+    {
+      "id":"L1-09", "title":"Unknown is not the same as quantum", "objective":"Distinguish classical hidden information from a quantum state with observable phase effects.", "prerequisites":["L0-08","L1-08"],
+      "paragraphs":[
+        "A coin under a cup can have a fixed face that you do not know. Your uncertainty is about missing information. A probability model can describe that uncertainty without saying that the coin follows quantum information rules in this task.",
+        "A qubit state can give the same measurement probabilities as a classical random bit for one chosen measurement. That agreement does not make the models identical. Other measurement choices or controlled operations can expose different predictions, including effects of relative phase.",
+        "Do not picture a qubit as merely a secret ordinary bit. Also do not claim that one measurement reveals its whole state. State learning requires suitable preparations and many measurement results. A model is tested through its predictions across allowed experiments."
+      ],
+      "equation":"Same test probabilities can hide different states. Different tests can distinguish their predictions.",
+      "example":"The quantum states called plus and minus both give zero or one with equal probabilities in the usual computational-basis measurement. A different basis can distinguish them perfectly in the ideal model. Their relative phases differ even though the first probabilities match.",
+      "exercise":"Two devices each give half zeros in one test. Can that result alone prove that they prepare the same quantum state? Explain what is missing.",
+      "solution":"No. One test supplies only limited probabilities. Different quantum states can share those probabilities. Additional suitable measurement settings and repeated preparations are necessary to compare their other predictions.",
+      "quiz":{"question":"Why is an unknown classical bit not a full model of a qubit?","options":["Classical bits cannot be recorded","Qubit predictions also depend on phase and measurement basis","Every qubit gives a certain answer"],"answer":1,"explanation":"Quantum states include phase relations that affect results after suitable operations or measurements. An unknown fixed bit does not supply those quantum prediction rules."},
+      "sources":["ibm","preskill"],"lab":"qubit","caution":"This distinction is operational. It does not settle philosophical interpretations of quantum theory."
+    },
+    {
+      "id":"L1-10", "title":"Keep a model testable", "objective":"State a model, its assumptions, a prediction, and a possible failure observation.", "prerequisites":["L1-03","L1-05","L1-09"],
+      "paragraphs":[
+        "A model is a limited description used to answer a question. A fair-coin model assigns equal probabilities to two outcomes. It leaves out many physical details. Those omissions can be useful if the model still predicts the results needed for the task.",
+        "Write the assumptions before you use the model. For repeated coin trials, you might assume unchanged conditions and independent tosses. A useful test compares predictions with new results. It also states how much random variation is compatible with the planned check.",
+        "A failed check is information. It can reveal a recording error, a broken assumption, or an unsuitable model. Do not change the rule only to hide a failure. Record the original prediction, inspect the setup, and explain any revised model."
+      ],
+      "equation":"Model record: question + assumptions + prediction + check + limits.",
+      "example":"A learner models a spinner as four equally likely colours and predicts roughly one quarter red over many trials. The spinner repeatedly sticks near red. This suggests that equal chances may be a poor assumption. The learner records the issue instead of discarding red results.",
+      "exercise":"Write a model record for drawing a blue counter from a bag with two blue and six white counters, with replacement and mixing.",
+      "solution":"The model assumes equal selection chances, replacement, mixing, and unchanged contents. It predicts P(blue)=2/8=1/4. Record repeated outcomes and use a planned variation-aware check rather than demanding exactly one quarter every time.",
+      "quiz":{"question":"What should happen when a planned check fails?","options":["Delete results that disagree","Claim success without a record","Record the failure and examine assumptions"],"answer":2,"explanation":"A recorded failure supports diagnosis and honest revision. Deleting inconvenient results changes the evidence and prevents a valid assessment of the original prediction."},
+      "sources":["openstax","hernan"],"lab":"chance","caution":"A model can pass a limited test and still fail outside the tested conditions."
+    }
+  ]
+}

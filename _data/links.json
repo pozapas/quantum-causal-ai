@@ -1,0 +1,284 @@
+{
+ "https://causalai-book.net/": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://causalai-book.net/",
+  "status": "PASS"
+ },
+ "https://colab.research.google.com/assets/colab-badge.svg": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://colab.research.google.com/assets/colab-badge.svg",
+  "status": "PASS"
+ },
+ "https://colab.research.google.com/github/pozapas/quantum-causal-ai/blob/main/labs/01-chance.ipynb": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://colab.research.google.com/github/pozapas/quantum-causal-ai/blob/main/labs/01-chance.ipynb",
+  "status": "PASS"
+ },
+ "https://colab.research.google.com/github/pozapas/quantum-causal-ai/blob/main/labs/02-bayes.ipynb": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://colab.research.google.com/github/pozapas/quantum-causal-ai/blob/main/labs/02-bayes.ipynb",
+  "status": "PASS"
+ },
+ "https://colab.research.google.com/github/pozapas/quantum-causal-ai/blob/main/labs/03-causal-inference.ipynb": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://colab.research.google.com/github/pozapas/quantum-causal-ai/blob/main/labs/03-causal-inference.ipynb",
+  "status": "PASS"
+ },
+ "https://colab.research.google.com/github/pozapas/quantum-causal-ai/blob/main/labs/04-interference.ipynb": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://colab.research.google.com/github/pozapas/quantum-causal-ai/blob/main/labs/04-interference.ipynb",
+  "status": "PASS"
+ },
+ "https://colab.research.google.com/github/pozapas/quantum-causal-ai/blob/main/labs/05-qubit-bloch.ipynb": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://colab.research.google.com/github/pozapas/quantum-causal-ai/blob/main/labs/05-qubit-bloch.ipynb",
+  "status": "PASS"
+ },
+ "https://colab.research.google.com/github/pozapas/quantum-causal-ai/blob/main/labs/06-entanglement-bell.ipynb": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://colab.research.google.com/github/pozapas/quantum-causal-ai/blob/main/labs/06-entanglement-bell.ipynb",
+  "status": "PASS"
+ },
+ "https://colab.research.google.com/github/pozapas/quantum-causal-ai/blob/main/labs/07-noise-channels.ipynb": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://colab.research.google.com/github/pozapas/quantum-causal-ai/blob/main/labs/07-noise-channels.ipynb",
+  "status": "PASS"
+ },
+ "https://colab.research.google.com/github/pozapas/quantum-causal-ai/blob/main/labs/08-variational-gradients.ipynb": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://colab.research.google.com/github/pozapas/quantum-causal-ai/blob/main/labs/08-variational-gradients.ipynb",
+  "status": "PASS"
+ },
+ "https://colab.research.google.com/github/pozapas/quantum-causal-ai/blob/main/labs/09-quantum-switch.ipynb": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://colab.research.google.com/github/pozapas/quantum-causal-ai/blob/main/labs/09-quantum-switch.ipynb",
+  "status": "PASS"
+ },
+ "https://colab.research.google.com/github/pozapas/quantum-causal-ai/blob/main/labs/10-classical-shadows.ipynb": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://colab.research.google.com/github/pozapas/quantum-causal-ai/blob/main/labs/10-classical-shadows.ipynb",
+  "status": "PASS"
+ },
+ "https://colab.research.google.com/github/pozapas/quantum-causal-ai/blob/main/labs/11-quantum-causal-inference.ipynb": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://colab.research.google.com/github/pozapas/quantum-causal-ai/blob/main/labs/11-quantum-causal-inference.ipynb",
+  "status": "PASS"
+ },
+ "https://github.com/pozapas/quantum-causal-ai": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://github.com/pozapas/quantum-causal-ai",
+  "status": "PASS"
+ },
+ "https://github.com/pozapas/quantum-causal-ai.git": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://github.com/pozapas/quantum-causal-ai",
+  "status": "PASS"
+ },
+ "https://jupyterbook.org": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://jupyterbook.org/",
+  "status": "PASS"
+ },
+ "https://mybinder.org": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://mybinder.org/",
+  "status": "PASS"
+ },
+ "https://mystmd.org": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://mystmd.org/",
+  "status": "PASS"
+ },
+ "https://open.spotify.com/episode/1OVkpXRALANG3DZoPc9q9p": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://open.spotify.com/episode/1OVkpXRALANG3DZoPc9q9p",
+  "status": "PASS"
+ },
+ "https://open.spotify.com/episode/2CQ7mLuX7XpNHGeqDZjNMX": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://open.spotify.com/episode/2CQ7mLuX7XpNHGeqDZjNMX",
+  "status": "PASS"
+ },
+ "https://open.spotify.com/episode/3Bchlql1C5pRfSu6oArUkt": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://open.spotify.com/episode/3Bchlql1C5pRfSu6oArUkt",
+  "status": "PASS"
+ },
+ "https://open.spotify.com/episode/3vJJNCdtotb3WWTak1oW13": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://open.spotify.com/episode/3vJJNCdtotb3WWTak1oW13",
+  "status": "PASS"
+ },
+ "https://open.spotify.com/episode/4XrnLDGvJZBN2TAza6VrCu": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://open.spotify.com/episode/4XrnLDGvJZBN2TAza6VrCu",
+  "status": "PASS"
+ },
+ "https://open.spotify.com/episode/4iiPLwWoXq4TdGy0qPmGla": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://open.spotify.com/episode/4iiPLwWoXq4TdGy0qPmGla",
+  "status": "PASS"
+ },
+ "https://open.spotify.com/episode/5D1Sbm80tpOy05jUB7p3qH": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://open.spotify.com/episode/5D1Sbm80tpOy05jUB7p3qH",
+  "status": "PASS"
+ },
+ "https://open.spotify.com/episode/5nyqFj3QdEkTNW5yEs0AOz": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://open.spotify.com/episode/5nyqFj3QdEkTNW5yEs0AOz",
+  "status": "PASS"
+ },
+ "https://open.spotify.com/episode/6gXdZ6jQhUm2xND0mfAS30": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://open.spotify.com/episode/6gXdZ6jQhUm2xND0mfAS30",
+  "status": "PASS"
+ },
+ "https://open.spotify.com/episode/6s4vONEdxmI3eEUYWS8VYc": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://open.spotify.com/episode/6s4vONEdxmI3eEUYWS8VYc",
+  "status": "PASS"
+ },
+ "https://open.spotify.com/episode/7C1YCvYz4NAEOuJ19LrNvn": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://open.spotify.com/episode/7C1YCvYz4NAEOuJ19LrNvn",
+  "status": "PASS"
+ },
+ "https://podcasts.apple.com/us/podcast/72-scott-aaronson-quantum-computing/id1434243584?i=1000465877765&uo=4": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://podcasts.apple.com/us/podcast/72-scott-aaronson-quantum-computing/id1434243584?i=1000465877765&uo=4",
+  "status": "PASS"
+ },
+ "https://podcasts.apple.com/us/podcast/721-quantum-machine-learning-with-dr-amira-abbas/id1163599059?i=1000662769630&uo=4": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://podcasts.apple.com/us/podcast/721-quantum-machine-learning-with-dr-amira-abbas/id1163599059?i=1000662769630&uo=4",
+  "status": "PASS"
+ },
+ "https://podcasts.apple.com/us/podcast/bonus-episode-a-quantum-machine-learning-algorithm/id1116303051?i=1000433910924&uo=4": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://podcasts.apple.com/us/podcast/bonus-episode-a-quantum-machine-learning-algorithm/id1116303051?i=1000433910924&uo=4",
+  "status": "PASS"
+ },
+ "https://podcasts.apple.com/us/podcast/branden-fitelson-on-the-logic-and-use-of-probability/id1406534739?i=1000708995363&uo=4": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://podcasts.apple.com/us/podcast/branden-fitelson-on-the-logic-and-use-of-probability/id1406534739?i=1000708995363&uo=4",
+  "status": "PASS"
+ },
+ "https://podcasts.apple.com/us/podcast/causal-inference-clinical-trials-randomization-stephen/id1715913595?i=1000649609807&uo=4": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://podcasts.apple.com/us/podcast/causal-inference-clinical-trials-randomization-stephen/id1715913595?i=1000649609807&uo=4",
+  "status": "PASS"
+ },
+ "https://podcasts.apple.com/us/podcast/causality-101-with-robert-osazuwa-ness/id1116303051?i=1000463832600&uo=4": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://podcasts.apple.com/us/podcast/causality-101-with-robert-osazuwa-ness/id1116303051?i=1000463832600&uo=4",
+  "status": "PASS"
+ },
+ "https://podcasts.apple.com/us/podcast/glow-for-it-how-do-creatures-make-light/id703720228?i=1000600784145&uo=4": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://podcasts.apple.com/us/podcast/glow-for-it-how-do-creatures-make-light/id703720228?i=1000600784145&uo=4",
+  "status": "PASS"
+ },
+ "https://podcasts.apple.com/us/podcast/graphs-for-causal-ai/id890348705?i=1000709692552&uo=4": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://podcasts.apple.com/us/podcast/graphs-for-causal-ai/id890348705?i=1000709692552&uo=4",
+  "status": "PASS"
+ },
+ "https://podcasts.apple.com/us/podcast/how-do-lightbulbs-work/id703720228?i=1000773852958&uo=4": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://podcasts.apple.com/us/podcast/how-do-lightbulbs-work/id703720228?i=1000773852958&uo=4",
+  "status": "PASS"
+ },
+ "https://podcasts.apple.com/us/podcast/judea-pearl-causal-reasoning-counterfactuals-bayesian/id1434243584?i=1000459318976&uo=4": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://podcasts.apple.com/us/podcast/judea-pearl-causal-reasoning-counterfactuals-bayesian/id1434243584?i=1000459318976&uo=4",
+  "status": "PASS"
+ },
+ "https://podcasts.apple.com/us/podcast/judea-pearl-on-cause-and-effect/id1406534739?i=1000560068180&uo=4": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://podcasts.apple.com/us/podcast/judea-pearl-on-cause-and-effect/id1406534739?i=1000560068180&uo=4",
+  "status": "PASS"
+ },
+ "https://podcasts.apple.com/us/podcast/pragmatic-quantum-machine-learning-with-peter-wittek/id1116303051?i=1000433910923&uo=4": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://podcasts.apple.com/us/podcast/pragmatic-quantum-machine-learning-with-peter-wittek/id1116303051?i=1000433910923&uo=4",
+  "status": "PASS"
+ },
+ "https://podcasts.apple.com/us/podcast/rob-spekkens-why-the-quantum-wave-function-is-not-real/id1521758802?i=1000747749302&uo=4": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://podcasts.apple.com/us/podcast/rob-spekkens-why-the-quantum-wave-function-is-not-real/id1521758802?i=1000747749302&uo=4",
+  "status": "PASS"
+ },
+ "https://podcasts.apple.com/us/podcast/weakly-supervised-causal-representation-learning-with/id1116303051?i=1000590314852&uo=4": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://podcasts.apple.com/us/podcast/weakly-supervised-causal-representation-learning-with/id1116303051?i=1000590314852&uo=4",
+  "status": "PASS"
+ },
+ "https://pozapas.github.io/": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://pozapas.github.io/",
+  "status": "PASS"
+ },
+ "https://pozapas.github.io/podcasts/decoding-causality/": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://pozapas.github.io/podcasts/decoding-causality/",
+  "status": "PASS"
+ },
+ "https://pozapas.github.io/quantum-causal-ai/": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://pozapas.github.io/quantum-causal-ai/",
+  "status": "PASS"
+ },
+ "https://www.youtube.com/playlist?list=PLHU8z2HGsZgYCjYki2tRmCFdRejf7VV4K": {
+  "checked_at": "2026-11-08T18:38:09+00:00",
+  "http": 200,
+  "final_url": "https://www.youtube.com/playlist?list=PLHU8z2HGsZgYCjYki2tRmCFdRejf7VV4K",
+  "status": "PASS"
+ }
+}

@@ -1,0 +1,158 @@
+{
+  "level": 4,
+  "title": "Classical causal AI",
+  "audience": "Undergraduate causal inference and machine learning",
+  "intro": "Use causal models to define the effect of an action. Separate identification from estimation. Study graphs, experiments, hidden causes, discovery, and counterfactual reasoning before connecting these ideas to quantum systems.",
+  "lessons": [
+    {
+      "id": "L4-01", "title": "Structural causal models", "objective": "Replace a structural equation to calculate an intervention and compare it with observation.",
+      "prerequisites": ["L2-08", "L3-07"],
+      "paragraphs": [
+        "A structural causal model gives a mechanism for each modeled variable. A mechanism maps its direct causes and background inputs to its value. Background inputs represent factors outside the modeled system. Their joint distribution is part of the model and can include dependence.",
+        "An ideal intervention replaces one mechanism with a fixed assignment. Write do(X=x) when an external action sets X to x. Keep the other mechanisms and background distribution unchanged. This modular replacement defines the intervention within the model. It differs from selecting records where X happened to equal x.",
+        "Prediction asks what outcomes accompany observed inputs. Causal inference asks what outcomes follow a specified change to a mechanism. A model can answer both questions differently. Its causal answers depend on the mechanism assumptions, which cannot generally be validated from predictive accuracy alone."
+      ],
+      "equation": "X = U; Y = 2X + U; P(U=1)=P(U=0)=1/2. Under do(X=x), replace X=U by X=x, so E[Y|do(X=x)] = 2x + 1/2.",
+      "example": "In this model, observed X = 1 means U = 1, so Y = 3. Observed X = 0 means U = 0, so Y = 0. The observed contrast is three. Under interventions, the means are 2.5 and 0.5, so the causal contrast is two.",
+      "exercise": "Change the outcome equation to Y = 3X + 2U. Keep X = U and the same background distribution. Find the observed contrast and the intervention contrast.",
+      "solution": "The observed outcomes are five when X is one and zero when X is zero. The observed contrast is five. Intervened means are four and one, so the causal contrast is three.",
+      "quiz": {"question": "What does an ideal do(X=x) operation replace?", "options": ["Only the outcome data", "The mechanism that normally assigns X", "Every mechanism in the model"], "answer": 1, "explanation": "The intervention replaces the assignment mechanism for X. Other mechanisms stay fixed under the stated modular intervention assumption."},
+      "sources": ["pearl", "peters"], "lab": "causal", "caution": "A real action may change several mechanisms. Model that action explicitly instead of assuming a single ideal intervention."
+    },
+    {
+      "id": "L4-02", "title": "DAGs and d-separation", "objective": "Use path rules to decide which conditional independences a causal graph implies.",
+      "prerequisites": ["L4-01", "L2-07"],
+      "paragraphs": [
+        "A directed acyclic graph, or DAG, contains directed edges and no directed cycle. Each node names a variable. An edge points from a direct cause to its child in the modeled system. A missing edge is a modeling claim, rather than proof that no relationship exists.",
+        "A path ignores edge direction while tracing connections. A noncollider on a path blocks it when conditioned on. A collider has two arrowheads meeting at that node. It blocks the path unless the collider or one of its descendants is conditioned on. Apply the rules to every path.",
+        "Two node sets are d-separated by a conditioning set when every connecting path is blocked. Under the causal Markov assumption, this graphical relation implies a conditional independence in the distribution. The reverse implication requires more assumptions, such as faithfulness. Hidden causes can require a graph with additional nodes."
+      ],
+      "equation": "For the chain X→M→Y with no other paths, X ⟂ Y | M under the Markov assumption. The symbol ⟂ means statistical independence.",
+      "example": "Consider rainfall R, soil moisture M, and plant response Y in the graph R→M→Y. If this graph is complete for the question and the Markov assumption holds, conditioning on M blocks the only path from R to Y. The graph therefore implies R and Y are conditionally independent given M.",
+      "exercise": "In the graph A←Z→B, with no other edges, are A and B d-separated without conditioning? What changes when you condition on Z?",
+      "solution": "Without conditioning, the fork path is open, so A and B are not d-separated. Conditioning on the noncollider Z blocks the only path and d-separates them.",
+      "quiz": {"question": "What does d-separation guarantee under the Markov assumption?", "options": ["A conditional independence", "A nonzero causal effect", "A unique causal graph from data"], "answer": 0, "explanation": "D-separation implies the corresponding conditional independence under the Markov assumption. It does not establish a nonzero effect or identify a unique graph."},
+      "sources": ["pearl", "spirtes"], "lab": "causal", "caution": "The path rules apply to the stated DAG. Missing hidden variables or selection mechanisms can change the relevant paths."
+    },
+    {
+      "id": "L4-03", "title": "Confounders, mediators, and colliders", "objective": "Choose adjustment variables by their graph role instead of adjusting for every available variable.",
+      "prerequisites": ["L4-02"],
+      "paragraphs": [
+        "A confounder can create an open backdoor path from treatment to outcome. A mediator lies on a directed path from treatment to outcome. A collider has two arrows pointing into it along a particular path. These are graph roles relative to a question, rather than permanent labels for every use.",
+        "Conditioning on a suitable confounder can block a noncausal path. Conditioning on a mediator can remove part of the total effect that you intend to measure. Conditioning on a collider can open a path that was previously blocked. More adjustment is therefore not always better adjustment.",
+        "Selection is a common source of collider bias. Suppose two independent factors can each cause inclusion in a dataset. Among included cases, learning that one factor is absent can make the other more likely. This association comes from the inclusion rule and does not establish a causal link between the factors."
+      ],
+      "equation": "A→C←B is a collider path. With independent fair binary A and B and C = max(A,B), P(A=1|C=1)=2/3, while P(A=1,B=1|C=1)=1/3.",
+      "example": "Let A and B be independent fair binary variables. Include a record when at least one is one. The retained pairs are 01, 10, and 11, each equally likely. Within these records, A and B are dependent: the joint probability of both being one is 1/3, not (2/3)².",
+      "exercise": "Under the same inclusion rule, calculate P(B=1|A=0,C=1) and P(B=1|A=1,C=1).",
+      "solution": "If A is zero and the record is included, B must be one, so the first probability is one. If A is one, both B values remain equally likely, so the second probability is one half.",
+      "quiz": {"question": "Which adjustment can create a new noncausal association?", "options": ["Conditioning on a blocked collider", "Recording a treatment definition", "Increasing the number of independent trials"], "answer": 0, "explanation": "Conditioning on a collider can open its path. The resulting association can appear even when the original causes were independent."},
+      "sources": ["hernan", "pearl"], "lab": "causal", "caution": "A variable can play different roles on different paths. Check the full graph and the exact causal target."
+    },
+    {
+      "id": "L4-04", "title": "Backdoor adjustment", "objective": "Standardize outcome risks across a valid adjustment set to calculate an intervention effect.",
+      "prerequisites": ["L4-02", "L4-03", "L3-07"],
+      "paragraphs": [
+        "The backdoor criterion gives a sufficient graphical condition for adjustment. A valid set contains no descendants of treatment and blocks every path that enters treatment through an incoming arrow. It removes noncausal paths while leaving the directed treatment-to-outcome paths needed for the total effect.",
+        "Calculate each outcome risk within a treatment and adjustment stratum. Then average those risks using the population distribution of the adjustment variables. Use the same population weights for every treatment value. Treatment-specific weights can preserve the selection difference that caused the original bias.",
+        "The formula also needs suitable data support. Positivity requires observations at each treatment value in the strata used for the target population. Consistency connects the recorded treatment with the intervention definition. Correct measurement and a sufficient causal model remain essential even when the arithmetic is exact."
+      ],
+      "equation": "P(Y=y|do(X=x)) = Σz P(Y=y|X=x,Z=z)P(Z=z), when Z satisfies the backdoor criterion and the required probabilities are defined.",
+      "example": "Let Z be zero or one with equal population probability. Risks under X = 1 are 0.2 and 0.8 in those strata. Risks under X = 0 are 0.1 and 0.6. Standardized risks are 0.5 and 0.35. The risk difference is 0.15 under the stated identification assumptions.",
+      "exercise": "Keep equal population weights. Risks under X = 1 are 0.25 and 0.65. Risks under X = 0 are 0.15 and 0.35. Find both adjusted risks and their difference.",
+      "solution": "The adjusted risk under one is (0.25+0.65)/2 = 0.45. Under zero it is (0.15+0.35)/2 = 0.25. The adjusted risk difference is 0.20.",
+      "quiz": {"question": "Which weights appear in the ordinary backdoor formula?", "options": ["The outcome distribution", "The population distribution P(Z)", "Only the treated group's distribution P(Z|X=1)"], "answer": 1, "explanation": "Both intervention risks are standardized to the same target distribution P(Z). Treatment-specific weights can retain differences caused by confounding."},
+      "sources": ["pearl", "hernan"], "lab": "causal", "caution": "Adjustment cannot remove bias from an omitted common cause unless another justified identification strategy applies."
+    },
+    {
+      "id": "L4-05", "title": "Frontdoor identification", "objective": "Calculate a frontdoor effect and state all three graphical conditions that justify it.",
+      "prerequisites": ["L4-04"],
+      "paragraphs": [
+        "Sometimes treatment and outcome have an unmeasured common cause, so ordinary backdoor adjustment is unavailable. A measured mediator can still permit identification in a special graph. The frontdoor criterion requires that the mediator intercept every directed path from treatment to outcome.",
+        "Two further path conditions are required. There must be no open backdoor path from treatment to mediator. Treatment must block every backdoor path from mediator to outcome. A measured mediator alone is insufficient. A direct treatment-to-outcome path or an unblocked mediator-outcome common cause can invalidate the ordinary formula.",
+        "First estimate the mediator distribution for each treatment. Then calculate a standardized mediator-outcome response by averaging over the observed treatment distribution. Combine these two quantities. This derivation separates the treatment-to-mediator effect from the mediator-to-outcome effect using different path conditions, rather than pretending the hidden cause was observed."
+      ],
+      "equation": "P(y|do(x)) = Σm P(m|x) Σx′ P(y|m,x′)P(x′). Here x′ is an averaging index, m is the mediator value, and the frontdoor conditions and positivity must hold.",
+      "example": "Suppose P(X=1)=0.5. For M=1, outcome risks at X=0 and X=1 are 0.7 and 0.9, giving standardized response 0.8. For M=0, risks 0.1 and 0.3 give response 0.2. If mediator probabilities under X=1 and X=0 are 0.8 and 0.2, intervention risks are 0.68 and 0.32.",
+      "exercise": "Assume a valid frontdoor graph. The standardized responses for M=1 and M=0 are 0.6 and 0.2. The probabilities of M=1 at X=1 and X=0 are 0.75 and 0.25. Find the intervention risks and difference.",
+      "solution": "At X=1, the risk is 0.75(0.6)+0.25(0.2)=0.50. At X=0, it is 0.25(0.6)+0.75(0.2)=0.30. Subtract the second intervention risk from the first to obtain the risk difference of 0.20.",
+      "quiz": {"question": "Which condition is required by the ordinary frontdoor criterion?", "options": ["The mediator may omit a directed X-to-Y path", "The mediator must intercept every directed X-to-Y path", "All hidden causes must be measured"], "answer": 1, "explanation": "The mediator must intercept every directed treatment-to-outcome path. Hidden treatment-outcome confounding can remain when the other frontdoor conditions hold."},
+      "sources": ["frontdoor", "pearl"], "lab": "causal", "caution": "These conditions describe the ordinary frontdoor criterion. They are sufficient, and they are not necessary for every possible identification method."
+    },
+    {
+      "id": "L4-06", "title": "Potential outcomes and randomization", "objective": "Define an average treatment effect and identify the assumptions that connect it to an observed contrast.",
+      "prerequisites": ["L4-01", "L3-10"],
+      "paragraphs": [
+        "A potential outcome describes the outcome a unit would have under a specified treatment. Write Y(1) and Y(0) for two treatment options. The individual effect is their difference. Only the potential outcome corresponding to the received treatment is usually observed for each unit.",
+        "The average treatment effect is the population average of those individual differences. Random assignment makes treatment independent of potential outcomes in the assignment distribution. Together with consistency, positivity, and an appropriate treatment and interference definition, this permits identification by a comparison of treatment groups.",
+        "Randomization does not make every realized sample perfectly balanced. It supports uncertainty calculations based on the assignment design. Missing outcomes, treatment nonadherence, or interference can change the target and the analysis. Distinguish the effect of assignment from the effect of treatment actually received."
+      ],
+      "equation": "ATE = E[Y(1)-Y(0)] = E[Y(1)]-E[Y(0)]. Under random assignment and the stated assumptions, ATE = E[Y|X=1]-E[Y|X=0].",
+      "example": "Consider a model population whose mean score would be six under option one and two under option zero. Its average treatment effect is four score units. A randomized sample estimates this difference, but sampling variation can make the observed difference larger or smaller than four.",
+      "exercise": "Four model units have potential outcome pairs (Y(0),Y(1)) of (1,3), (2,2), (4,7), and (3,2). Calculate the population average treatment effect.",
+      "solution": "The individual effects are two, zero, three, and minus one. Their sum is four across four units, so the average treatment effect is one outcome unit.",
+      "quiz": {"question": "What does random assignment establish in its assignment distribution?", "options": ["Treatment is independent of potential outcomes", "Every finite sample is perfectly balanced", "Every participant receives the assigned treatment"], "answer": 0, "explanation": "Random assignment provides independence by design. Perfect realized balance and full adherence are different properties and do not follow automatically."},
+      "sources": ["hernan"], "lab": "causal", "caution": "A treatment with several materially different versions needs a clear definition. Interference requires outcomes indexed by more than one unit's treatment."
+    },
+    {
+      "id": "L4-07", "title": "Identification before estimation", "objective": "Show how two models can fit the same observations and disagree about an intervention.",
+      "prerequisites": ["L4-01", "L4-04", "L4-05"],
+      "paragraphs": [
+        "Identification asks whether the target causal quantity is uniquely determined by the available distributions and assumptions. Estimation asks how to approximate an identified quantity from finite data. A larger dataset can improve estimation, but cannot resolve a causal ambiguity that remains even with exact observational probabilities.",
+        "In a fully observed causal DAG with suitable independent disturbances, an intervention removes the factors for the intervened variables from the observational factorization. This is called the truncated factorization. With hidden variables, this simple observed-variable calculation may fail. Identification then needs another justified argument or additional information.",
+        "Do-calculus provides graphical rules for exchanging observations, actions, and irrelevant terms under specified separation conditions. It is not permission to delete a do symbol whenever convenient. State the graph, target, available distributions, and assumptions first. A valid derivation must justify every transformation."
+      ],
+      "equation": "For a fully observed Markovian DAG, P(v\u005c{x}|do(x)) = ∏i:Vi∉X P(vi|pa_i), with the intervened values substituted. Here pa_i are the parents of Vi.",
+      "example": "Let U be a fair binary variable. Model A has X=U and Y=X. Model B has X=U and Y=U. Both give only observed pairs 00 and 11, each with probability one half. Under do(X=1), model A gives Y=1 certainly, while model B gives Y=1 with probability one half.",
+      "exercise": "For these same two models, calculate P(Y=1|do(X=0)). Can an unlimited observational sample choose between their answers?",
+      "solution": "Model A gives probability zero because Y follows the set value of X. Model B gives probability one half because U stays fair. Their observational distributions are identical, so observations alone cannot choose between them.",
+      "quiz": {"question": "What can solve an identification failure caused by observationally equivalent causal models?", "options": ["Only increasing the same observational sample", "Removing all uncertainty intervals", "Adding justified assumptions or informative interventions"], "answer": 2, "explanation": "Different models can agree on an exact observational distribution. New causal assumptions or relevant intervention data can distinguish their causal answers."},
+      "sources": ["pearl", "peters"], "lab": "causal", "caution": "The truncated formula assumes the stated fully observed causal structure. It cannot simply ignore hidden common causes."
+    },
+    {
+      "id": "L4-08", "title": "Causal discovery and its limits", "objective": "Explain Markov equivalence, faithfulness, and the limits of discovering directions from observational data.",
+      "prerequisites": ["L4-02", "L4-07", "L3-09"],
+      "paragraphs": [
+        "Causal discovery uses data and assumptions to constrain possible graphs. Constraint-based methods test conditional independences. Score-based methods compare graph scores under a model class. Functional-model methods use additional restrictions on mechanisms and noise. Every approach needs assumptions beyond a correlation matrix.",
+        "Markov-equivalent DAGs imply the same conditional independences. Without extra information, conditional independence tests can identify an equivalence class rather than one unique DAG. A collider can distinguish graphs that share a skeleton, but many edge directions remain unresolved even when all tests are exact.",
+        "Faithfulness excludes independences produced by exact parameter cancellation rather than graph separation. Finite samples can also hide weak dependencies. Continuous optimization methods such as NOTEARS impose an acyclicity constraint, but a converged objective does not remove assumptions about functional form, hidden causes, measurement, or identifiability."
+      ],
+      "equation": "For a real weighted adjacency matrix W with d nodes, NOTEARS uses h(W)=tr(exp(W∘W))-d=0 to encode acyclicity. The symbol ∘ means elementwise multiplication.",
+      "example": "The graphs A→B→C and A←B←C have the same three-node chain skeleton and no collider. Both imply A and C are independent given B under the Markov assumption. Observing that independence alone therefore cannot determine which end of this chain is the first cause.",
+      "exercise": "Compare A→B→C with A→B←C, assuming no hidden variables and faithful distributions. Which graph implies A and C are independent without conditioning?",
+      "solution": "The collider graph A→B←C blocks the only A-to-C path without conditioning, so it implies marginal independence. The directed chain leaves that path open and does not imply marginal independence.",
+      "quiz": {"question": "What does a DAG optimization solver returning one graph establish by itself?", "options": ["That no hidden common cause exists", "That the graph is the unique physical truth", "That it returned a solution under its model and objective"], "answer": 2, "explanation": "An optimization result is conditional on its objective and assumptions. It does not itself prove causal sufficiency or a unique physical explanation."},
+      "sources": ["spirtes", "peters", "notears"], "lab": "causal", "caution": "Discovery guarantees depend on assumptions and test accuracy. Report unresolved directions instead of forcing a single causal story."
+    },
+    {
+      "id": "L4-09", "title": "Counterfactual reasoning", "objective": "Use abduction, action, and prediction to answer a counterfactual in an explicit structural model.",
+      "prerequisites": ["L4-01", "L4-06", "L4-07"],
+      "paragraphs": [
+        "A counterfactual asks what would have happened to the same unit under a different action. It links an observed situation to an alternative situation through shared background factors. An interventional population average alone does not usually specify this cross-situation link for one observed individual.",
+        "Structural models answer counterfactual questions in three steps. Abduction updates beliefs about background variables using the observed evidence. Action replaces the mechanism specified by the alternative intervention. Prediction computes the outcome under the modified model using the updated background beliefs from the original situation.",
+        "The answer can depend on untestable details of the structural functions. Two models can agree on observed data and even on some intervention distributions, yet disagree on individual counterfactuals. Report the model and evidence explicitly. A fitted predictor with one input edited is not automatically a counterfactual model."
+      ],
+      "equation": "For Y=2X+U, evidence X=1,Y=5 implies U=3. Under the alternative do(X=0), the same-unit counterfactual is Y0=2(0)+3=3.",
+      "example": "Use the deterministic model Y=2X+U and observe X=1,Y=5. First infer U=3 from the observed equation. Next replace the X mechanism with X=0. Finally apply the unchanged Y equation with U=3. The counterfactual Y is three for this modeled unit.",
+      "exercise": "Use Y=3X+U. Observe X=2,Y=10. Under this exact structural model, what would Y have been if X had been zero?",
+      "solution": "Abduction gives U=10-3(2)=4. The alternative action sets X to zero. Prediction with the same U gives Y=3(0)+4=4 for this modeled unit.",
+      "quiz": {"question": "Which step uses the factual evidence to update background variables?", "options": ["Action", "Abduction", "Prediction"], "answer": 1, "explanation": "Abduction infers background information from factual evidence. Action changes the mechanism, and prediction evaluates the changed model with that information."},
+      "sources": ["pearl", "peters"], "lab": "causal", "caution": "This calculation assumes an exact structural equation and shared background variable. Observational regression alone does not establish those assumptions."
+    },
+    {
+      "id": "L4-10", "title": "Causal machine learning, transport, and fairness", "objective": "Define a causal learning target and explain the additional assumptions needed for transport and fairness claims.",
+      "prerequisites": ["L4-04", "L4-06", "L4-08", "L4-09", "L3-09"],
+      "paragraphs": [
+        "Causal machine learning can estimate outcome regressions, treatment probabilities, or treatment effect variation. Flexible prediction methods do not create identification. Start with a defined population, intervention, outcome, and time horizon. Then state exchangeability, consistency, positivity, and any other assumptions required for the chosen target.",
+        "Transport asks whether results from one population or environment apply to another. If only the distribution of measured effect modifiers changes, valid stratum effects can sometimes be reweighted to the target distribution. This requires stable relevant mechanisms and enough source data in target strata. Unmeasured mechanism changes can defeat this strategy.",
+        "Fairness is partly a choice of social objective. Equal predictive error rates and counterfactual fairness are different criteria and can conflict. A causal fairness claim needs a justified graph and normative decisions about acceptable paths. Removing a protected attribute from inputs does not remove its information from correlated variables."
+      ],
+      "equation": "τ(z)=E[Y(1)-Y(0)|Z=z]. If these conditional effects transport and strata have support, ATEtarget=Σz τ(z)Ptarget(z). Here Z contains the stated effect modifiers.",
+      "example": "Suppose justified effects in two strata are one and three outcome units. The source weights are one half each, giving an average effect of two. The target weights are 0.8 and 0.2. If the conditional effects transport, the target average is 0.8(1)+0.2(3)=1.4.",
+      "exercise": "Conditional effects in two strata are two and minus one. Target weights are 0.25 and 0.75. Calculate the transported average under the stated stability assumptions. Does that number establish fairness?",
+      "solution": "The weighted effect is 0.25(2)+0.75(-1)=-0.25. This is a target-population causal average under the assumptions. It does not establish fairness, which needs a stated criterion and further justification.",
+      "quiz": {"question": "What must come before fitting a causal effect learner?", "options": ["A guarantee that all populations share one effect", "A choice to remove every demographic variable", "A defined causal target and justified identification assumptions"], "answer": 2, "explanation": "A learner estimates quantities within a causal analysis. The intervention target and identification assumptions determine whether its estimates answer the intended causal question."},
+      "sources": ["hernan", "scholkopf", "invariant"], "lab": "causal", "caution": "Predictive invariance can support causal reasoning under explicit assumptions. It is not a universal proof of mechanism stability or fairness."
+    }
+  ]
+}

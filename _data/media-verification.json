@@ -1,0 +1,1050 @@
+{
+ "generated_at": "2026-11-08T16:09:21+00:00",
+ "videos": [
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=OinudV2LWlo&format=json",
+   "checked_at": "2026-11-08T16:09:21+00:00",
+   "status": 200,
+   "fetched_title": "Count to 10 | Counting 1-10 | Khan Academy Kids",
+   "author_name": "Khan Academy Kids",
+   "author_url": "https://www.youtube.com/@KhanAcademyKids",
+   "id": "OinudV2LWlo",
+   "watch_page": {
+    "duration_s": 36,
+    "published": "2022-10-03"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=BXFU86GNmrg&format=json",
+   "checked_at": "2026-11-08T16:09:24+00:00",
+   "status": 200,
+   "fetched_title": "Bowled Over - Isolating Variables: Crash Course Kids #39.1",
+   "author_name": "Crash Course Kids",
+   "author_url": "https://www.youtube.com/@crashcoursekids",
+   "id": "BXFU86GNmrg",
+   "watch_page": {
+    "duration_s": 278,
+    "published": "2016-01-06"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=DJDBTNbAWOE&format=json",
+   "checked_at": "2026-11-08T16:09:28+00:00",
+   "status": 200,
+   "fetched_title": "How Do We See Color?",
+   "author_name": "SciShow Kids",
+   "author_url": "https://www.youtube.com/@SciShowKids",
+   "id": "DJDBTNbAWOE",
+   "watch_page": {
+    "duration_s": 256,
+    "published": "2018-02-08"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=bcVr13Fw7w8&format=json",
+   "checked_at": "2026-11-08T16:09:31+00:00",
+   "status": 200,
+   "fetched_title": "Why Is the Sky Blue? | Physics for Kids",
+   "author_name": "SciShow Kids",
+   "author_url": "https://www.youtube.com/@SciShowKids",
+   "id": "bcVr13Fw7w8",
+   "watch_page": {
+    "duration_s": 170,
+    "published": "2017-07-13"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=E6iB5B3Lz9I&format=json",
+   "checked_at": "2026-11-08T16:09:35+00:00",
+   "status": 200,
+   "fetched_title": "Be a Field Scientist! - #sciencegoals",
+   "author_name": "SciShow Kids",
+   "author_url": "https://www.youtube.com/@SciShowKids",
+   "id": "E6iB5B3Lz9I",
+   "watch_page": {
+    "duration_s": 186,
+    "published": "2017-03-28"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=kZzoVCmUyKg&format=json",
+   "checked_at": "2026-11-08T16:09:38+00:00",
+   "status": 200,
+   "fetched_title": "Introduction to fractions",
+   "author_name": "Khan Academy",
+   "author_url": "https://www.youtube.com/@khanacademy",
+   "id": "kZzoVCmUyKg",
+   "watch_page": {
+    "duration_s": 341,
+    "published": "2013-08-02"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=KFgvOQtH0Z0&format=json",
+   "checked_at": "2026-11-08T16:09:41+00:00",
+   "status": 200,
+   "fetched_title": "Intuitive sense of probabilities | Statistics and probability | 7th grade | Khan Academy",
+   "author_name": "Khan Academy",
+   "author_url": "https://www.youtube.com/@khanacademy",
+   "id": "KFgvOQtH0Z0",
+   "watch_page": {
+    "duration_s": 530,
+    "published": "2015-02-17"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=IAiNqQi30-Y&format=json",
+   "checked_at": "2026-11-08T16:09:45+00:00",
+   "status": 200,
+   "fetched_title": "The coin flip conundrum - Po-Shen Loh",
+   "author_name": "TED-Ed",
+   "author_url": "https://www.youtube.com/@TEDEd",
+   "id": "IAiNqQi30-Y",
+   "watch_page": {
+    "duration_s": 262,
+    "published": "2018-02-15"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=jL9en6NvQfk&format=json",
+   "checked_at": "2026-11-08T16:09:48+00:00",
+   "status": 200,
+   "fetched_title": "Randomness: Crash Course Statistics #17",
+   "author_name": "CrashCourse",
+   "author_url": "https://www.youtube.com/@crashcourse",
+   "id": "jL9en6NvQfk",
+   "watch_page": {
+    "duration_s": 727,
+    "published": "2018-05-23"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=kkBDa-ICvyY&format=json",
+   "checked_at": "2026-11-08T16:09:52+00:00",
+   "status": 200,
+   "fetched_title": "Controlled Experiments: Crash Course Statistics #9",
+   "author_name": "CrashCourse",
+   "author_url": "https://www.youtube.com/@crashcourse",
+   "id": "kkBDa-ICvyY",
+   "watch_page": {
+    "duration_s": 746,
+    "published": "2018-03-21"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=V2yO8biphSo&format=json",
+   "checked_at": "2026-11-08T16:09:55+00:00",
+   "status": 200,
+   "fetched_title": "What Are Waves? | Science at the Beach! | SciShow Kids",
+   "author_name": "SciShow Kids",
+   "author_url": "https://www.youtube.com/@SciShowKids",
+   "id": "V2yO8biphSo",
+   "watch_page": {
+    "duration_s": 316,
+    "published": "2023-02-27"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=HZGCoVF3YvM&format=json",
+   "checked_at": "2026-11-08T16:09:58+00:00",
+   "status": 200,
+   "fetched_title": "Bayes theorem, the geometry of changing beliefs",
+   "author_name": "3Blue1Brown",
+   "author_url": "https://www.youtube.com/@3blue1brown",
+   "id": "HZGCoVF3YvM",
+   "watch_page": {
+    "duration_s": 911,
+    "published": "2019-12-22"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=lG4VkPoG3ko&format=json",
+   "checked_at": "2026-11-08T16:10:02+00:00",
+   "status": 200,
+   "fetched_title": "The medical test paradox, and redesigning Bayes' rule",
+   "author_name": "3Blue1Brown",
+   "author_url": "https://www.youtube.com/@3blue1brown",
+   "id": "lG4VkPoG3ko",
+   "watch_page": {
+    "duration_s": 1273,
+    "published": "2020-12-22"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=GtV-VYdNt_g&format=json",
+   "checked_at": "2026-11-08T16:10:05+00:00",
+   "status": 200,
+   "fetched_title": "Correlation Doesn't Equal Causation: Crash Course Statistics #8",
+   "author_name": "CrashCourse",
+   "author_url": "https://www.youtube.com/@crashcourse",
+   "id": "GtV-VYdNt_g",
+   "watch_page": {
+    "duration_s": 737,
+    "published": "2018-03-14"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=DXBPtpBhGqo&format=json",
+   "checked_at": "2026-11-08T16:10:09+00:00",
+   "status": 200,
+   "fetched_title": "1 - A Brief Introduction to Causal Inference (Course Preview)",
+   "author_name": "Brady Neal - Causal Inference",
+   "author_url": "https://www.youtube.com/@BradyNealCausalInference",
+   "id": "DXBPtpBhGqo",
+   "watch_page": {
+    "duration_s": 2531,
+    "published": "2020-08-23"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=5PcpBw5Hbwo&format=json",
+   "checked_at": "2026-11-08T16:10:12+00:00",
+   "status": 200,
+   "fetched_title": "Complex number fundamentals | Ep. 3 Lockdown live math",
+   "author_name": "3Blue1Brown",
+   "author_url": "https://www.youtube.com/@3blue1brown",
+   "id": "5PcpBw5Hbwo",
+   "watch_page": {
+    "duration_s": 4930,
+    "published": "2020-04-24"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=fNk_zzaMoSs&format=json",
+   "checked_at": "2026-11-08T16:10:16+00:00",
+   "status": 200,
+   "fetched_title": "Vectors | Chapter 1, Essence of linear algebra",
+   "author_name": "3Blue1Brown",
+   "author_url": "https://www.youtube.com/@3blue1brown",
+   "id": "fNk_zzaMoSs",
+   "watch_page": {
+    "duration_s": 591,
+    "published": "2016-08-05"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=kYB8IZa5AuE&format=json",
+   "checked_at": "2026-11-08T16:10:19+00:00",
+   "status": 200,
+   "fetched_title": "Linear transformations and matrices | Chapter 3, Essence of linear algebra",
+   "author_name": "3Blue1Brown",
+   "author_url": "https://www.youtube.com/@3blue1brown",
+   "id": "kYB8IZa5AuE",
+   "watch_page": {
+    "duration_s": 658,
+    "published": "2016-08-07"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=f5liqUk0ZTw&format=json",
+   "checked_at": "2026-11-08T16:10:23+00:00",
+   "status": 200,
+   "fetched_title": "What's a Tensor?",
+   "author_name": "Dan Fleisch",
+   "author_url": "https://www.youtube.com/@dfleisch",
+   "id": "f5liqUk0ZTw",
+   "watch_page": {
+    "duration_s": 741,
+    "published": "2011-11-20"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=WUvTyaaNkzM&format=json",
+   "checked_at": "2026-11-08T16:10:26+00:00",
+   "status": 200,
+   "fetched_title": "The essence of calculus",
+   "author_name": "3Blue1Brown",
+   "author_url": "https://www.youtube.com/@3blue1brown",
+   "id": "WUvTyaaNkzM",
+   "watch_page": {
+    "duration_s": 1024,
+    "published": "2017-04-28"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=v68zYyaEmEA&format=json",
+   "checked_at": "2026-11-08T16:10:30+00:00",
+   "status": 200,
+   "fetched_title": "Solving Wordle using information theory",
+   "author_name": "3Blue1Brown",
+   "author_url": "https://www.youtube.com/@3blue1brown",
+   "id": "v68zYyaEmEA",
+   "watch_page": {
+    "duration_s": 1838,
+    "published": "2022-02-06"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=AuZu0L0PEgk&format=json",
+   "checked_at": "2026-11-08T16:10:33+00:00",
+   "status": 200,
+   "fetched_title": "4 - Causal Models",
+   "author_name": "Brady Neal - Causal Inference",
+   "author_url": "https://www.youtube.com/@BradyNealCausalInference",
+   "id": "AuZu0L0PEgk",
+   "watch_page": {
+    "duration_s": 2909,
+    "published": "2020-09-21"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=M-mF6bXlxHI&format=json",
+   "checked_at": "2026-11-08T16:10:36+00:00",
+   "status": 200,
+   "fetched_title": "5.4 - Pearl’s do-calculus",
+   "author_name": "Brady Neal - Causal Inference",
+   "author_url": "https://www.youtube.com/@BradyNealCausalInference",
+   "id": "M-mF6bXlxHI",
+   "watch_page": {
+    "duration_s": 771,
+    "published": "2020-09-28"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=mujOFx5oZUQ&format=json",
+   "checked_at": "2026-11-08T16:10:40+00:00",
+   "status": 200,
+   "fetched_title": "Introduction to Causal Graphical Models: Graphs, d-separation, do-calculus",
+   "author_name": "Simons Institute for the Theory of Computing",
+   "author_url": "https://www.youtube.com/@SimonsInstitute",
+   "id": "mujOFx5oZUQ",
+   "watch_page": {
+    "duration_s": 3985,
+    "published": "2022-01-18"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=fvQJ9gelUg0&format=json",
+   "checked_at": "2026-11-08T16:10:43+00:00",
+   "status": 200,
+   "fetched_title": "Classical Strategies and Concepts in Causal Discovery",
+   "author_name": "Simons Institute for the Theory of Computing",
+   "author_url": "https://www.youtube.com/@SimonsInstitute",
+   "id": "fvQJ9gelUg0",
+   "watch_page": {
+    "duration_s": 3935,
+    "published": "2022-01-20"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=ZaPV1OSEpHw&format=json",
+   "checked_at": "2026-11-08T16:10:47+00:00",
+   "status": 200,
+   "fetched_title": "Keynote: Judea Pearl - The New Science of Cause and Effect",
+   "author_name": "PyData",
+   "author_url": "https://www.youtube.com/@PyDataTV",
+   "id": "ZaPV1OSEpHw",
+   "watch_page": {
+    "duration_s": 3969,
+    "published": "2018-11-29"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=13idxIjOdNQ&format=json",
+   "checked_at": "2026-11-08T16:10:50+00:00",
+   "status": 200,
+   "fetched_title": "Causal Representation Learning: A Natural Fit for Mechanistic Interpretability",
+   "author_name": "Mila - Institut québécois d'IA",
+   "author_url": "https://www.youtube.com/@Mila-Quebec-AI-Institute",
+   "id": "13idxIjOdNQ",
+   "watch_page": {
+    "duration_s": 3716,
+    "published": "2026-02-10"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=btmJtThWmhA&format=json",
+   "checked_at": "2026-11-08T16:10:54+00:00",
+   "status": 200,
+   "fetched_title": "Causality, part 1 - Bernhard Schölkopf - MLSS 2020, Tübingen",
+   "author_name": "virtual mlss2020",
+   "author_url": "https://www.youtube.com/@virtualmlss",
+   "id": "btmJtThWmhA",
+   "watch_page": {
+    "duration_s": 5730,
+    "published": "2020-06-29"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=3-c4xJa7Flk&format=json",
+   "checked_at": "2026-11-08T16:10:58+00:00",
+   "status": 200,
+   "fetched_title": "Single Systems | Understanding Quantum Information & Computation | Lesson 01",
+   "author_name": "Qiskit",
+   "author_url": "https://www.youtube.com/@qiskit",
+   "id": "3-c4xJa7Flk",
+   "watch_page": {
+    "duration_s": 4202,
+    "published": "2022-11-01"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=DfZZS8Spe7U&format=json",
+   "checked_at": "2026-11-08T16:11:01+00:00",
+   "status": 200,
+   "fetched_title": "Multiple Systems | Understanding Quantum Information & Computation | Lesson 02",
+   "author_name": "Qiskit",
+   "author_url": "https://www.youtube.com/@qiskit",
+   "id": "DfZZS8Spe7U",
+   "watch_page": {
+    "duration_s": 3892,
+    "published": "2022-12-06"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=CeK9ry8G8HQ&format=json",
+   "checked_at": "2026-11-08T16:11:04+00:00",
+   "status": 200,
+   "fetched_title": "Density Matrices | Understanding Quantum Information & Computation | Lesson 09",
+   "author_name": "Qiskit",
+   "author_url": "https://www.youtube.com/@qiskit",
+   "id": "CeK9ry8G8HQ",
+   "watch_page": {
+    "duration_s": 4375,
+    "published": "2024-03-27"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=GSsElSQgMbU&format=json",
+   "checked_at": "2026-11-08T16:11:08+00:00",
+   "status": 200,
+   "fetched_title": "Entanglement in Action |Understanding Quantum Information & Computation | Lesson 04",
+   "author_name": "Qiskit",
+   "author_url": "https://www.youtube.com/@qiskit",
+   "id": "GSsElSQgMbU",
+   "watch_page": {
+    "duration_s": 4122,
+    "published": "2023-03-02"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=Xi9YTYzQErY&format=json",
+   "checked_at": "2026-11-08T16:11:11+00:00",
+   "status": 200,
+   "fetched_title": "General measurements | Understanding Quantum Information & Computation | Lesson 11",
+   "author_name": "Qiskit",
+   "author_url": "https://www.youtube.com/@qiskit",
+   "id": "Xi9YTYzQErY",
+   "watch_page": {
+    "duration_s": 2734,
+    "published": "2024-07-31"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=cMl-xIDSmXI&format=json",
+   "checked_at": "2026-11-08T16:11:14+00:00",
+   "status": 200,
+   "fetched_title": "Quantum Channels | Understanding Quantum Information & Computation | Lesson 10",
+   "author_name": "Qiskit",
+   "author_url": "https://www.youtube.com/@qiskit",
+   "id": "cMl-xIDSmXI",
+   "watch_page": {
+    "duration_s": 3592,
+    "published": "2024-06-05"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=9OM0jSTeeBg&format=json",
+   "checked_at": "2026-11-08T16:11:18+00:00",
+   "status": 200,
+   "fetched_title": "Bell's Inequality: The weirdest theorem in the world | Nobel Prize 2022",
+   "author_name": "Qiskit",
+   "author_url": "https://www.youtube.com/@qiskit",
+   "id": "9OM0jSTeeBg",
+   "watch_page": {
+    "duration_s": 802,
+    "published": "2022-10-07"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=mKpURUtQgZ4&format=json",
+   "checked_at": "2026-11-08T16:11:21+00:00",
+   "status": 200,
+   "fetched_title": "Theory of quantum noise and decoherence, Lecture 1",
+   "author_name": "Tobias Osborne",
+   "author_url": "https://www.youtube.com/@tobiasjosborne",
+   "id": "mKpURUtQgZ4",
+   "watch_page": {
+    "duration_s": 5015,
+    "published": "2015-10-15"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=1qzA-SKb4AM&format=json",
+   "checked_at": "2026-11-08T16:11:25+00:00",
+   "status": 200,
+   "fetched_title": "The Quantum Physicist as Causal Detective: Robert Spekkens and Elie Wolfe Public Lecture",
+   "author_name": "Perimeter Institute for Theoretical Physics",
+   "author_url": "https://www.youtube.com/@PIOutreach",
+   "id": "1qzA-SKb4AM",
+   "watch_page": {
+    "duration_s": 3845,
+    "published": "2020-10-08"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=-ul2XJ1-1Rc&format=json",
+   "checked_at": "2026-11-08T16:11:29+00:00",
+   "status": 200,
+   "fetched_title": "Robert Spekkens: Causal Inference: Classical and Quantum - Class 1",
+   "author_name": "ICTP-SAIFR",
+   "author_url": "https://www.youtube.com/@SAIFRResearch",
+   "id": "-ul2XJ1-1Rc",
+   "watch_page": {
+    "duration_s": 4787,
+    "published": "2026-07-07"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=D2N3M9-QWk0&format=json",
+   "checked_at": "2026-11-08T16:11:33+00:00",
+   "status": 200,
+   "fetched_title": "Quantum causal models -- an introduction and overview | Robin Lorenz",
+   "author_name": "CausalWorlds",
+   "author_url": "https://www.youtube.com/@CausalWorlds",
+   "id": "D2N3M9-QWk0",
+   "watch_page": {
+    "duration_s": 2917,
+    "published": "2023-07-05"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=V356Lb5RH8c&format=json",
+   "checked_at": "2026-11-08T16:11:37+00:00",
+   "status": 200,
+   "fetched_title": "Indefinite causal order in quantum mechanics, Ognyan Oreshkov",
+   "author_name": "Worlds of Entanglement Symposium",
+   "author_url": "https://www.youtube.com/@worldsofentanglementsympos2729",
+   "id": "V356Lb5RH8c",
+   "watch_page": {
+    "duration_s": 2844,
+    "published": "2018-11-23"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=vLLw_uQNR8s&format=json",
+   "checked_at": "2026-11-08T16:11:40+00:00",
+   "status": 200,
+   "fetched_title": "Timothée Hoffreumon - The multi round process matrix",
+   "author_name": "QPL 2020",
+   "author_url": "https://www.youtube.com/@QPL-ro6bf",
+   "id": "vLLw_uQNR8s",
+   "watch_page": {
+    "duration_s": 1475,
+    "published": "2020-06-02"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=LLDaoLdwyrk&format=json",
+   "checked_at": "2026-11-08T16:11:43+00:00",
+   "status": 200,
+   "fetched_title": "QISS HKU 2020 - Giulio Chiribella - Ten years of the quantum SWITCH",
+   "author_name": "WithOut SpaceTime / QISS",
+   "author_url": "https://www.youtube.com/@wost-qiss",
+   "id": "LLDaoLdwyrk",
+   "watch_page": {
+    "duration_s": 2718,
+    "published": "2020-03-03"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=NSUCVJdLtto&format=json",
+   "checked_at": "2026-11-08T16:11:47+00:00",
+   "status": 200,
+   "fetched_title": "Caslav Brukner, \"Quantum Correlations with Indefinite Causal Order\" FQXi conference 2014 in Vieques",
+   "author_name": "FQxI",
+   "author_url": "https://www.youtube.com/@FQxI",
+   "id": "NSUCVJdLtto",
+   "watch_page": {
+    "duration_s": 1193,
+    "published": "2014-02-25"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=qiRtUUZ5s9s&format=json",
+   "checked_at": "2026-11-08T16:11:50+00:00",
+   "status": 200,
+   "fetched_title": "Variational Quantum Eigensolver (VQE) | PennyLane Tutorial",
+   "author_name": "PennyLane",
+   "author_url": "https://www.youtube.com/@PennyLaneAI",
+   "id": "qiRtUUZ5s9s",
+   "watch_page": {
+    "duration_s": 1060,
+    "published": "2023-09-12"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=VVY8xcps3N4&format=json",
+   "checked_at": "2026-11-08T16:11:54+00:00",
+   "status": 200,
+   "fetched_title": "Maria Schuld - How to rethink quantum machine learning - IPAM at UCLA",
+   "author_name": "Institute for Pure & Applied Mathematics (IPAM)",
+   "author_url": "https://www.youtube.com/@IPAMUCLA",
+   "id": "VVY8xcps3N4",
+   "watch_page": {
+    "duration_s": 2583,
+    "published": "2023-10-16"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=zw3JYUrS-v8&format=json",
+   "checked_at": "2026-11-08T16:11:57+00:00",
+   "status": 200,
+   "fetched_title": "Lecture 6.2 - Quantum Feature Spaces and Kernels",
+   "author_name": "Qiskit",
+   "author_url": "https://www.youtube.com/@qiskit",
+   "id": "zw3JYUrS-v8",
+   "watch_page": {
+    "duration_s": 4603,
+    "published": "2021-10-05"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=Q0XEvj0GsaE&format=json",
+   "checked_at": "2026-11-08T16:12:01+00:00",
+   "status": 200,
+   "fetched_title": "Barren plateau landscapes in variational quantum algorithms, Patrick Coles, #QRST",
+   "author_name": "Quantum Research Seminars Toronto",
+   "author_url": "https://www.youtube.com/@quantumresearchseminarstor9269",
+   "id": "Q0XEvj0GsaE",
+   "watch_page": {
+    "duration_s": 1837,
+    "published": "2020-10-06"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=XwfLGq6f5_A&format=json",
+   "checked_at": "2026-11-08T16:12:04+00:00",
+   "status": 200,
+   "fetched_title": "Avoiding Barren Plateaus using Classical Shadows: Stefan Sack #QRST",
+   "author_name": "Quantum Research Seminars Toronto",
+   "author_url": "https://www.youtube.com/@quantumresearchseminarstor9269",
+   "id": "XwfLGq6f5_A",
+   "watch_page": {
+    "duration_s": 1559,
+    "published": "2022-04-06"
+   },
+   "result": "PASS"
+  },
+  {
+   "endpoint": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=CUHIa_O06Dg&format=json",
+   "checked_at": "2026-11-08T16:12:08+00:00",
+   "status": 200,
+   "fetched_title": "Causal Discovery in the Quantum Context",
+   "author_name": "Simons Institute for the Theory of Computing",
+   "author_url": "https://www.youtube.com/@SimonsInstitute",
+   "id": "CUHIa_O06Dg",
+   "watch_page": {
+    "duration_s": 2905,
+    "published": "2022-04-30"
+   },
+   "result": "PASS"
+  }
+ ],
+ "podcasts": [
+  {
+   "trackId": 1000773852958,
+   "search_term": "How do lightbulbs work? Brains On",
+   "endpoint": "https://itunes.apple.com/search?term=How%20do%20lightbulbs%20work%3F%20Brains%20On&media=podcast&entity=podcastEpisode&limit=50",
+   "status": 200,
+   "checked_at": "2026-11-08T16:12:12+00:00",
+   "result": "PASS",
+   "fetched_title": "How do lightbulbs work?",
+   "collectionName": "Brains On! Science podcast for kids",
+   "releaseDate": "2026-06-23T07:30:00Z",
+   "trackViewUrl": "https://podcasts.apple.com/us/podcast/how-do-lightbulbs-work/id703720228?i=1000773852958&uo=4",
+   "episodeUrl": "https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/claritaspod.com/measure/pscrb.fm/rss/p/mgln.ai/e/491/traffic.megaphone.fm/LEME6893405676.mp3",
+   "feedUrl": "https://feeds.megaphone.fm/LEME2532531912",
+   "trackTimeMillis": 1787000
+  },
+  {
+   "trackId": 1000600784145,
+   "search_term": "Glow for it! How do creatures make light? Brains On",
+   "endpoint": "https://itunes.apple.com/search?term=Glow%20for%20it%21%20How%20do%20creatures%20make%20light%3F%20Brains%20On&media=podcast&entity=podcastEpisode&limit=50",
+   "status": 200,
+   "checked_at": "2026-11-08T16:12:14+00:00",
+   "result": "PASS",
+   "fetched_title": "Glow for it! How do creatures make light?",
+   "collectionName": "Brains On! Science podcast for kids",
+   "releaseDate": "2023-02-21T09:00:00Z",
+   "trackViewUrl": "https://podcasts.apple.com/us/podcast/glow-for-it-how-do-creatures-make-light/id703720228?i=1000600784145&uo=4",
+   "episodeUrl": "https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/claritaspod.com/measure/pscrb.fm/rss/p/mgln.ai/e/491/traffic.megaphone.fm/LEME5725762046.mp3?updated=1776090577",
+   "feedUrl": "https://feeds.megaphone.fm/LEME2532531912",
+   "trackTimeMillis": 2158000
+  },
+  {
+   "trackId": 1000649609807,
+   "search_term": "Causal Inference, Clinical Trials & Randomization Stephen Senn",
+   "endpoint": "https://itunes.apple.com/search?term=Causal%20Inference%2C%20Clinical%20Trials%20%26%20Randomization%20Stephen%20Senn&media=podcast&entity=podcastEpisode&limit=50",
+   "status": 200,
+   "checked_at": "2026-11-08T16:12:15+00:00",
+   "result": "PASS",
+   "fetched_title": "Causal Inference, Clinical Trials & Randomization || Stephen Senn || Causal Bandits Ep. 012 (2024)",
+   "collectionName": "Causal Bandits Podcast",
+   "releaseDate": "2024-03-18T16:00:00Z",
+   "trackViewUrl": "https://podcasts.apple.com/us/podcast/causal-inference-clinical-trials-randomization-stephen/id1715913595?i=1000649609807&uo=4",
+   "episodeUrl": "https://www.buzzsprout.com/2272512/episodes/14712446-causal-inference-clinical-trials-randomization-stephen-senn-causal-bandits-ep-012-2024.mp3",
+   "feedUrl": "https://rss.buzzsprout.com/2272512.rss",
+   "trackTimeMillis": 4685000
+  },
+  {
+   "trackId": 1000708995363,
+   "search_term": "Branden Fitelson on the Logic and Use of Probability",
+   "endpoint": "https://itunes.apple.com/search?term=Branden%20Fitelson%20on%20the%20Logic%20and%20Use%20of%20Probability&media=podcast&entity=podcastEpisode&limit=50",
+   "status": 200,
+   "checked_at": "2026-11-08T16:12:16+00:00",
+   "result": "PASS",
+   "fetched_title": "Branden Fitelson on the Logic and Use of Probability",
+   "collectionName": "Sean Carroll's Mindscape: Science, Society, Philosophy, Culture, Arts, and Ideas",
+   "releaseDate": "2025-05-19T12:18:19Z",
+   "trackViewUrl": "https://podcasts.apple.com/us/podcast/branden-fitelson-on-the-logic-and-use-of-probability/id1406534739?i=1000708995363&uo=4",
+   "episodeUrl": "https://dts.podtrac.com/redirect.mp3/pscrb.fm/rss/p/traffic.libsyn.com/secure/1d1ac211-8392-45fe-82db-99fa7f77076e/branden20fitelson.mp3?dest-id=5264190",
+   "feedUrl": "https://rss.libsyn.com/shows/604590/destinations/5264190.xml",
+   "trackTimeMillis": 5337000
+  },
+  {
+   "trackId": 1000463832600,
+   "search_term": "Causality 101 with Robert Osazuwa Ness",
+   "endpoint": "https://itunes.apple.com/search?term=Causality%20101%20with%20Robert%20Osazuwa%20Ness&media=podcast&entity=podcastEpisode&limit=50",
+   "status": 200,
+   "checked_at": "2026-11-08T16:12:18+00:00",
+   "result": "PASS",
+   "fetched_title": "Causality 101 with Robert Osazuwa Ness",
+   "collectionName": "The TWIML AI Podcast (formerly This Week in Machine Learning & Artificial Intelligence)",
+   "releaseDate": "2020-01-27T20:30:27Z",
+   "trackViewUrl": "https://podcasts.apple.com/us/podcast/causality-101-with-robert-osazuwa-ness/id1116303051?i=1000463832600&uo=4",
+   "episodeUrl": "https://pscrb.fm/rss/p/traffic.megaphone.fm/MLN6136802313.mp3?updated=1629244751",
+   "feedUrl": "https://feeds.megaphone.fm/MLN2155636147",
+   "trackTimeMillis": 2372000
+  },
+  {
+   "trackId": 1000560068180,
+   "search_term": "Judea Pearl on Cause and Effect",
+   "endpoint": "https://itunes.apple.com/search?term=Judea%20Pearl%20on%20Cause%20and%20Effect&media=podcast&entity=podcastEpisode&limit=50",
+   "status": 200,
+   "checked_at": "2026-11-08T16:12:19+00:00",
+   "result": "PASS",
+   "fetched_title": "Judea Pearl on Cause and Effect",
+   "collectionName": "Sean Carroll's Mindscape: Science, Society, Philosophy, Culture, Arts, and Ideas",
+   "releaseDate": "2022-05-09T15:15:16Z",
+   "trackViewUrl": "https://podcasts.apple.com/us/podcast/judea-pearl-on-cause-and-effect/id1406534739?i=1000560068180&uo=4",
+   "episodeUrl": "https://dts.podtrac.com/redirect.mp3/pscrb.fm/rss/p/traffic.libsyn.com/secure/1d1ac211-8392-45fe-82db-99fa7f77076e/judea20pearl.mp3?dest-id=5264190",
+   "feedUrl": "https://rss.libsyn.com/shows/604590/destinations/5264190.xml",
+   "trackTimeMillis": 4611000
+  },
+  {
+   "trackId": 1000459318976,
+   "search_term": "Judea Pearl: Causal Reasoning, Counterfactuals, Bayesian Networks, and the Path to AGI",
+   "endpoint": "https://itunes.apple.com/search?term=Judea%20Pearl%3A%20Causal%20Reasoning%2C%20Counterfactuals%2C%20Bayesian%20Networks%2C%20and%20the%20Path%20to%20AGI&media=podcast&entity=podcastEpisode&limit=50",
+   "status": 200,
+   "checked_at": "2026-11-08T16:12:20+00:00",
+   "result": "PASS",
+   "fetched_title": "Judea Pearl: Causal Reasoning, Counterfactuals, Bayesian Networks, and the Path to AGI",
+   "collectionName": "Lex Fridman Podcast",
+   "releaseDate": "2019-12-11T16:33:31Z",
+   "trackViewUrl": "https://podcasts.apple.com/us/podcast/judea-pearl-causal-reasoning-counterfactuals-bayesian/id1434243584?i=1000459318976&uo=4",
+   "episodeUrl": "https://media.blubrry.com/takeituneasy/content.blubrry.com/takeituneasy/lex_ai_judea_pearl.mp3",
+   "feedUrl": "https://lexfridman.com/feed/podcast/",
+   "trackTimeMillis": 5001000
+  },
+  {
+   "trackId": 1000590314852,
+   "search_term": "Weakly Supervised Causal Representation Learning with Johann Brehmer",
+   "endpoint": "https://itunes.apple.com/search?term=Weakly%20Supervised%20Causal%20Representation%20Learning%20with%20Johann%20Brehmer&media=podcast&entity=podcastEpisode&limit=50",
+   "status": 200,
+   "checked_at": "2026-11-08T16:12:22+00:00",
+   "result": "PASS",
+   "fetched_title": "Weakly Supervised Causal Representation Learning with Johann Brehmer",
+   "collectionName": "The TWIML AI Podcast (formerly This Week in Machine Learning & Artificial Intelligence)",
+   "releaseDate": "2022-12-15T18:57:13Z",
+   "trackViewUrl": "https://podcasts.apple.com/us/podcast/weakly-supervised-causal-representation-learning-with/id1116303051?i=1000590314852&uo=4",
+   "episodeUrl": "https://pscrb.fm/rss/p/traffic.megaphone.fm/MLN6256253212.mp3?updated=1671130544",
+   "feedUrl": "https://feeds.megaphone.fm/MLN2155636147",
+   "trackTimeMillis": 2804000
+  },
+  {
+   "trackId": 1000709692552,
+   "search_term": "Graphs for Causal AI Data Skeptic",
+   "endpoint": "https://itunes.apple.com/search?term=Graphs%20for%20Causal%20AI%20Data%20Skeptic&media=podcast&entity=podcastEpisode&limit=50",
+   "status": 200,
+   "checked_at": "2026-11-08T16:12:23+00:00",
+   "result": "PASS",
+   "fetched_title": "Graphs for Causal AI",
+   "collectionName": "Data Skeptic",
+   "releaseDate": "2025-05-24T15:21:00Z",
+   "trackViewUrl": "https://podcasts.apple.com/us/podcast/graphs-for-causal-ai/id890348705?i=1000709692552&uo=4",
+   "episodeUrl": "https://pscrb.fm/rss/p/mgln.ai/e/35/traffic.libsyn.com/secure/dataskeptic/graphs-for-causal-ai.mp3?dest-id=201630",
+   "feedUrl": "https://rss.libsyn.com/shows/54799/destinations/201630.xml",
+   "trackTimeMillis": 2460000
+  },
+  {
+   "trackId": 1000465877765,
+   "search_term": "Scott Aaronson: Quantum Computing Lex Fridman",
+   "endpoint": "https://itunes.apple.com/search?term=Scott%20Aaronson%3A%20Quantum%20Computing%20Lex%20Fridman&media=podcast&entity=podcastEpisode&limit=50",
+   "status": 200,
+   "checked_at": "2026-11-08T16:12:25+00:00",
+   "result": "PASS",
+   "fetched_title": "#72 – Scott Aaronson: Quantum Computing",
+   "collectionName": "Lex Fridman Podcast",
+   "releaseDate": "2020-02-17T21:21:56Z",
+   "trackViewUrl": "https://podcasts.apple.com/us/podcast/72-scott-aaronson-quantum-computing/id1434243584?i=1000465877765&uo=4",
+   "episodeUrl": "https://media.blubrry.com/takeituneasy/content.blubrry.com/takeituneasy/lex_ai_scott_aaronson.mp3",
+   "feedUrl": "https://lexfridman.com/feed/podcast/",
+   "trackTimeMillis": 5649000
+  },
+  {
+   "trackId": 1000747749302,
+   "search_term": "Rob Spekkens: Why the Quantum Wave Function Is Not Real",
+   "endpoint": "https://itunes.apple.com/search?term=Rob%20Spekkens%3A%20Why%20the%20Quantum%20Wave%20Function%20Is%20Not%20Real&media=podcast&entity=podcastEpisode&limit=50",
+   "status": 200,
+   "checked_at": "2026-11-08T16:12:26+00:00",
+   "result": "PASS",
+   "fetched_title": "Rob Spekkens: Why the Quantum Wave Function Is Not Real",
+   "collectionName": "Theories of Everything with Curt Jaimungal",
+   "releaseDate": "2026-02-02T19:11:00Z",
+   "trackViewUrl": "https://podcasts.apple.com/us/podcast/rob-spekkens-why-the-quantum-wave-function-is-not-real/id1521758802?i=1000747749302&uo=4",
+   "episodeUrl": "https://s.gum.fm/s-62d83916a854b1cc0031878d/pscrb.fm/rss/p/mgln.ai/e/p346854/traffic.megaphone.fm/TEMI9779067749.mp3?updated=1770060827",
+   "feedUrl": "https://feeds.megaphone.fm/TOE4643226064",
+   "trackTimeMillis": 10076000
+  },
+  {
+   "trackId": 1000433910923,
+   "search_term": "Pragmatic Quantum Machine Learning with Peter Wittek",
+   "endpoint": "https://itunes.apple.com/search?term=Pragmatic%20Quantum%20Machine%20Learning%20with%20Peter%20Wittek&media=podcast&entity=podcastEpisode&limit=50",
+   "status": 200,
+   "checked_at": "2026-11-08T16:12:27+00:00",
+   "result": "PASS",
+   "fetched_title": "Pragmatic Quantum Machine Learning with Peter Wittek",
+   "collectionName": "The TWIML AI Podcast (formerly This Week in Machine Learning & Artificial Intelligence)",
+   "releaseDate": "2019-04-01T21:27:12Z",
+   "trackViewUrl": "https://podcasts.apple.com/us/podcast/pragmatic-quantum-machine-learning-with-peter-wittek/id1116303051?i=1000433910923&uo=4",
+   "episodeUrl": "https://pscrb.fm/rss/p/traffic.megaphone.fm/MLN5517938176.mp3?updated=1629243573",
+   "feedUrl": "https://feeds.megaphone.fm/MLN2155636147",
+   "trackTimeMillis": 3903000
+  },
+  {
+   "trackId": 1000433910924,
+   "search_term": "A Quantum Machine Learning Algorithm Takedown with Ewin Tang",
+   "endpoint": "https://itunes.apple.com/search?term=A%20Quantum%20Machine%20Learning%20Algorithm%20Takedown%20with%20Ewin%20Tang&media=podcast&entity=podcastEpisode&limit=50",
+   "status": 200,
+   "checked_at": "2026-11-08T16:12:28+00:00",
+   "result": "PASS",
+   "fetched_title": "*Bonus Episode* A Quantum Machine Learning Algorithm Takedown with Ewin Tang",
+   "collectionName": "The TWIML AI Podcast (formerly This Week in Machine Learning & Artificial Intelligence)",
+   "releaseDate": "2019-04-01T18:40:41Z",
+   "trackViewUrl": "https://podcasts.apple.com/us/podcast/bonus-episode-a-quantum-machine-learning-algorithm/id1116303051?i=1000433910924&uo=4",
+   "episodeUrl": "https://pscrb.fm/rss/p/traffic.megaphone.fm/MLN2138030989.mp3?updated=1629243413",
+   "feedUrl": "https://feeds.megaphone.fm/MLN2155636147",
+   "trackTimeMillis": 2427000
+  },
+  {
+   "trackId": 1000662769630,
+   "search_term": "Quantum Machine Learning, with Dr. Amira Abbas",
+   "endpoint": "https://itunes.apple.com/search?term=Quantum%20Machine%20Learning%2C%20with%20Dr.%20Amira%20Abbas&media=podcast&entity=podcastEpisode&limit=50",
+   "status": 200,
+   "checked_at": "2026-11-08T16:12:30+00:00",
+   "result": "PASS",
+   "fetched_title": "721: Quantum Machine Learning, with Dr. Amira Abbas",
+   "collectionName": "Super Data Science: ML & AI Podcast with Jon Krohn",
+   "releaseDate": "2023-10-10T11:00:00Z",
+   "trackViewUrl": "https://podcasts.apple.com/us/podcast/721-quantum-machine-learning-with-dr-amira-abbas/id1163599059?i=1000662769630&uo=4",
+   "episodeUrl": "https://www.podtrac.com/pts/redirect.mp3/chrt.fm/track/E581B9/arttrk.com/p/VI4CS/pscrb.fm/rss/p/traffic.megaphone.fm/SUPERDATASCIENCEPTYLTD7039425462.mp3?updated=1716819009",
+   "feedUrl": "https://feeds.megaphone.fm/SUPERDATASCIENCEPTYLTD9836501887",
+   "trackTimeMillis": 6167000
+  },
+  {
+   "source": "spotify-oembed-author",
+   "endpoint": "https://open.spotify.com/oembed?url=https%3A%2F%2Fopen.spotify.com%2Fepisode%2F6gXdZ6jQhUm2xND0mfAS30",
+   "status": 200,
+   "result": "PASS",
+   "fetched_title": "S1E01. From Data to Discovery: How We Learned to Ask Why",
+   "episodeUrl": "https://open.spotify.com/episode/6gXdZ6jQhUm2xND0mfAS30",
+   "show_page": "https://pozapas.github.io/podcasts/decoding-causality/",
+   "checked_at": "2026-11-08T18:14:08+00:00"
+  },
+  {
+   "source": "spotify-oembed-author",
+   "endpoint": "https://open.spotify.com/oembed?url=https%3A%2F%2Fopen.spotify.com%2Fepisode%2F3vJJNCdtotb3WWTak1oW13",
+   "status": 200,
+   "result": "PASS",
+   "fetched_title": "S1E02. The Causality Quest: From Superstition to Science",
+   "episodeUrl": "https://open.spotify.com/episode/3vJJNCdtotb3WWTak1oW13",
+   "show_page": "https://pozapas.github.io/podcasts/decoding-causality/",
+   "checked_at": "2026-11-08T18:14:08+00:00"
+  },
+  {
+   "source": "spotify-oembed-author",
+   "endpoint": "https://open.spotify.com/oembed?url=https%3A%2F%2Fopen.spotify.com%2Fepisode%2F5nyqFj3QdEkTNW5yEs0AOz",
+   "status": 200,
+   "result": "PASS",
+   "fetched_title": "S1E03. The Detective’s Dilemma: How We Infer Causes from Evidence",
+   "episodeUrl": "https://open.spotify.com/episode/5nyqFj3QdEkTNW5yEs0AOz",
+   "show_page": "https://pozapas.github.io/podcasts/decoding-causality/",
+   "checked_at": "2026-11-08T18:14:08+00:00"
+  },
+  {
+   "source": "spotify-oembed-author",
+   "endpoint": "https://open.spotify.com/oembed?url=https%3A%2F%2Fopen.spotify.com%2Fepisode%2F5D1Sbm80tpOy05jUB7p3qH",
+   "status": 200,
+   "result": "PASS",
+   "fetched_title": "S1E04. Untangling the Web: How to Overcome Hidden Bias in Data",
+   "episodeUrl": "https://open.spotify.com/episode/5D1Sbm80tpOy05jUB7p3qH",
+   "show_page": "https://pozapas.github.io/podcasts/decoding-causality/",
+   "checked_at": "2026-11-08T18:14:08+00:00"
+  },
+  {
+   "source": "spotify-oembed-author",
+   "endpoint": "https://open.spotify.com/oembed?url=https%3A%2F%2Fopen.spotify.com%2Fepisode%2F4iiPLwWoXq4TdGy0qPmGla",
+   "status": 200,
+   "result": "PASS",
+   "fetched_title": "S1E05. Breaking the Illusion: How to Prove Causation Without Experiments",
+   "episodeUrl": "https://open.spotify.com/episode/4iiPLwWoXq4TdGy0qPmGla",
+   "show_page": "https://pozapas.github.io/podcasts/decoding-causality/",
+   "checked_at": "2026-11-08T18:14:08+00:00"
+  },
+  {
+   "source": "spotify-oembed-author",
+   "endpoint": "https://open.spotify.com/oembed?url=https%3A%2F%2Fopen.spotify.com%2Fepisode%2F7C1YCvYz4NAEOuJ19LrNvn",
+   "status": 200,
+   "result": "PASS",
+   "fetched_title": "S1E06. The Paradox Problem: When Data Misleads Our Intuition",
+   "episodeUrl": "https://open.spotify.com/episode/7C1YCvYz4NAEOuJ19LrNvn",
+   "show_page": "https://pozapas.github.io/podcasts/decoding-causality/",
+   "checked_at": "2026-11-08T18:14:08+00:00"
+  },
+  {
+   "source": "spotify-oembed-author",
+   "endpoint": "https://open.spotify.com/oembed?url=https%3A%2F%2Fopen.spotify.com%2Fepisode%2F3Bchlql1C5pRfSu6oArUkt",
+   "status": 200,
+   "result": "PASS",
+   "fetched_title": "S1E07. Climbing the Causal Mountain: How to Predict the Impact of Interventions",
+   "episodeUrl": "https://open.spotify.com/episode/3Bchlql1C5pRfSu6oArUkt",
+   "show_page": "https://pozapas.github.io/podcasts/decoding-causality/",
+   "checked_at": "2026-11-08T18:14:08+00:00"
+  },
+  {
+   "source": "spotify-oembed-author",
+   "endpoint": "https://open.spotify.com/oembed?url=https%3A%2F%2Fopen.spotify.com%2Fepisode%2F1OVkpXRALANG3DZoPc9q9p",
+   "status": 200,
+   "result": "PASS",
+   "fetched_title": "S1E08. Imagining the Impossible: How Counterfactuals Shape Our World",
+   "episodeUrl": "https://open.spotify.com/episode/1OVkpXRALANG3DZoPc9q9p",
+   "show_page": "https://pozapas.github.io/podcasts/decoding-causality/",
+   "checked_at": "2026-11-08T18:14:08+00:00"
+  },
+  {
+   "source": "spotify-oembed-author",
+   "endpoint": "https://open.spotify.com/oembed?url=https%3A%2F%2Fopen.spotify.com%2Fepisode%2F2CQ7mLuX7XpNHGeqDZjNMX",
+   "status": 200,
+   "result": "PASS",
+   "fetched_title": "S1E09. Tracing the Invisible: How Causes Travel Through the World",
+   "episodeUrl": "https://open.spotify.com/episode/2CQ7mLuX7XpNHGeqDZjNMX",
+   "show_page": "https://pozapas.github.io/podcasts/decoding-causality/",
+   "checked_at": "2026-11-08T18:14:08+00:00"
+  },
+  {
+   "source": "spotify-oembed-author",
+   "endpoint": "https://open.spotify.com/oembed?url=https%3A%2F%2Fopen.spotify.com%2Fepisode%2F4XrnLDGvJZBN2TAza6VrCu",
+   "status": 200,
+   "result": "PASS",
+   "fetched_title": "S1E10. Can AI Ask Why? The Final Frontier of Causal Reasoning",
+   "episodeUrl": "https://open.spotify.com/episode/4XrnLDGvJZBN2TAza6VrCu",
+   "show_page": "https://pozapas.github.io/podcasts/decoding-causality/",
+   "checked_at": "2026-11-08T18:14:08+00:00"
+  },
+  {
+   "source": "spotify-oembed-author",
+   "endpoint": "https://open.spotify.com/oembed?url=https%3A%2F%2Fopen.spotify.com%2Fepisode%2F6s4vONEdxmI3eEUYWS8VYc",
+   "status": 200,
+   "result": "PASS",
+   "fetched_title": "Closing the Loop: What We Learned About Causality",
+   "episodeUrl": "https://open.spotify.com/episode/6s4vONEdxmI3eEUYWS8VYc",
+   "show_page": "https://pozapas.github.io/podcasts/decoding-causality/",
+   "checked_at": "2026-11-08T18:14:08+00:00"
+  }
+ ],
+ "rejected": [
+  {
+   "kind": "video",
+   "id": "_Qh0F3B6kOU",
+   "reason": "irrelevant (fan clip, not educational)",
+   "result": "SCREENED_OUT",
+   "checked_at": null
+  },
+  {
+   "kind": "video",
+   "id": "42OiBzfdE2o",
+   "reason": "series trailer only (0:39); full lessons preferred",
+   "result": "SCREENED_OUT",
+   "checked_at": null
+  },
+  {
+   "kind": "video",
+   "id": "ub98C4OUD0E",
+   "reason": "short podcast clip; full Pearl talks/podcasts preferred",
+   "result": "SCREENED_OUT",
+   "checked_at": null
+  },
+  {
+   "kind": "video",
+   "id": "B3U1NDUiwSA",
+   "reason": "not from a preferred reputable educational source",
+   "result": "SCREENED_OUT",
+   "checked_at": null
+  },
+  {
+   "kind": "podcast",
+   "id": "1000788652587",
+   "reason": "unknown show (The Quantum Computing Revolution Podcast); provenance/quality unclear",
+   "result": "SCREENED_OUT",
+   "checked_at": null
+  }
+ ]
+}

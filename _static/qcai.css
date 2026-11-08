@@ -1,0 +1,75 @@
+/* Quantum Causal AI theme layer on top of the MyST book-theme. */
+:root {
+  --qcai-violet: #7c3aed; --qcai-cyan: #06b6d4; --qcai-ink: #1e1b4b;
+  --qcai-grad: linear-gradient(135deg, #7c3aed 0%, #4f46e5 45%, #06b6d4 100%);
+}
+html { scroll-behavior: smooth; }
+
+/* Hero on the landing page */
+.qcai-hero {
+  position: relative; overflow: hidden; border-radius: 1.25rem; padding: 2.5rem 2rem;
+  background: radial-gradient(1200px 400px at 10% -10%, rgba(124,58,237,.35), transparent 60%),
+              radial-gradient(900px 400px at 110% 120%, rgba(6,182,212,.35), transparent 60%), #0f0a2e;
+  color: #eef2ff; margin: 0 0 2rem 0; box-shadow: 0 20px 60px -20px rgba(79,70,229,.55);
+}
+.qcai-hero h2, .qcai-hero p, .qcai-hero strong { color: #eef2ff !important; }
+.qcai-hero h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1.1; margin-top: 0; border: 0; }
+.qcai-hero a { color: #a5f3fc !important; font-weight: 600; }
+.qcai-hero::after {
+  content: ""; position: absolute; inset: auto -60px -60px auto; width: 260px; height: 260px;
+  border-radius: 50%; border: 2px solid rgba(165,243,252,.25);
+  box-shadow: 0 0 0 30px rgba(124,58,237,.08), 0 0 0 60px rgba(6,182,212,.06);
+  animation: qcai-orbit 14s linear infinite; pointer-events: none;
+}
+@keyframes qcai-orbit { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .qcai-hero::after { animation: none; } }
+
+/* Level cards */
+.qcai-levels .myst-card, .qcai-levels > div > div {
+  transition: transform .18s ease, box-shadow .18s ease; border-radius: .9rem;
+}
+.qcai-levels .myst-card:hover, .qcai-levels > div > div:hover {
+  transform: translateY(-3px); box-shadow: 0 14px 30px -14px rgba(79,70,229,.45);
+}
+.qcai-level-hero { border-left: 6px solid var(--qcai-violet) !important; }
+
+/* Lesson meta card and equation box */
+.qcai-meta { border-left: 5px solid var(--qcai-cyan) !important; }
+.qcai-equation { font-family: "JetBrains Mono", Consolas, monospace; }
+
+/* Gradient headings */
+article h1 { background: var(--qcai-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+/* Media cards */
+.qcai-video iframe { border-radius: .75rem; aspect-ratio: 16/9; width: 100%; height: auto; }
+.qcai-badge { display: inline-block; font-size: .75rem; font-weight: 700; padding: .1rem .55rem;
+  border-radius: 999px; background: rgba(124,58,237,.12); color: var(--qcai-violet); margin-right: .35rem; }
+
+/* Plotly figures must never cause horizontal page scroll */
+.js-plotly-plot, .plotly, [id^="qcai-"] { max-width: 100%; }
+article table { display: block; overflow-x: auto; }
+.qcai-meta, .qcai-level-hero {
+  border: 1px solid rgba(124,58,237,.25); border-radius: .9rem; padding: 1rem 1.25rem; margin: 1rem 0 1.5rem;
+  background: linear-gradient(135deg, rgba(124,58,237,.06), rgba(6,182,212,.06));
+}
+/* Keep wide interactive figures inside the column on phones */
+.cell-output, .jp-OutputArea-output, [class*="output"] { max-width: 100%; overflow-x: auto; }
+.js-plotly-plot .updatemenu-container { max-width: 100%; }
+
+/* Accessibility and phone-width fixes found by the browser check */
+@media (max-width: 640px) {
+  .myst-code-body pre, .myst-code-body code { white-space: pre-wrap; word-break: break-word; }
+}
+.js-plotly-plot .svg-container { overflow: hidden; max-width: 100%; }
+a[href*="mystmd.org"], a[href*="mystmd.org"] span { color: #374151 !important; opacity: 1 !important; }
+html.dark a[href*="mystmd.org"], html.dark a[href*="mystmd.org"] span { color: #e5e7eb !important; }
+@media (max-width: 640px) {
+  article h1, article h2, article h3 { overflow-wrap: anywhere; }
+  article h1 > a.no-underline, article h2 > a.no-underline, article h3 > a.no-underline { display: none; }
+}
+
+/* SVG icon set (replaces emoji) */
+img[src*="qicon-"] { width: 1.6rem; height: 1.6rem; display: inline-block; vertical-align: -0.45rem; margin: 0 .35rem 0 0; border-radius: .45rem; }
+.qcai-levels img[src*="qicon-"], .myst-card img[src*="qicon-"] { width: 3rem; height: 3rem; display: block; margin: 0 0 .6rem; border-radius: .8rem; }
+.qcai-level-hero img[src*="qicon-"] { width: 2.4rem; height: 2.4rem; vertical-align: middle; }
+li > img[src*="qicon-"] { width: 1.25rem; height: 1.25rem; vertical-align: -0.3rem; }

@@ -1,0 +1,145 @@
+{
+  "level":2,"title":"Algebra, evidence, and causal maps","audience":"Lower secondary school: grades 7 to 9","intro":"Turn verbal questions into variables and models. Calculate conditional probabilities, examine misleading comparisons, and prepare for formal causal and quantum mathematics.",
+  "lessons":[
+    {
+      "id":"L2-01","title":"Name quantities with variables","objective":"Translate a simple relationship into an equation and evaluate it.","prerequisites":["L1-01","L0-06"],
+      "paragraphs":[
+        "A variable is a named quantity whose value can change. Let x be the number of tickets purchased. Let y be the total price in dollars. Naming the quantities and their units prevents confusion when an equation is used.",
+        "An equation states equality between two expressions. If each ticket costs three dollars and there is a two-dollar fee, write y=3x+2. The coefficient three gives the price per ticket, and the constant two gives the fixed fee.",
+        "An equation can describe an observed pattern without being a causal law. A fitted line connecting two measurements does not prove that changing the first will change the second. Its interpretation depends on the mechanism and assumptions behind the model."
+      ],
+      "equation":"y = 3x + 2, where x is ticket count and y is total price in dollars.",
+      "example":"For four tickets, substitute x=4 into y=3x+2. First multiply three by four to get twelve. Then add the fixed fee of two. The total is fourteen dollars under this stated pricing rule.",
+      "exercise":"A service costs five dollars per item plus a fixed fee of four dollars. Write the rule and find the price for three items.",
+      "solution":"Let x be item count and y be price in dollars. The rule is y=5x+4. For three items, y=15+4=19 dollars. The fixed fee is added once.",
+      "quiz":{"question":"In y=5x+4, what does the four represent in the stated price model?","options":["The item count","The fixed fee","The cost of every item"],"answer":1,"explanation":"The constant is added once regardless of item count. The coefficient five multiplies the count and represents the per-item cost."},
+      "sources":["openstax"],"lab":"causal","caution":"A numerical relationship needs an explicit interpretation before it can support a causal claim."
+    },
+    {
+      "id":"L2-02","title":"Functions map inputs to outputs","objective":"Read a function rule and distinguish a model output from an observed outcome.","prerequisites":["L2-01"],
+      "paragraphs":[
+        "A function assigns one output to each allowed input. We write f(x) for the output associated with input x. The domain is the set of allowed inputs. The domain can be restricted by mathematics or by the intended application.",
+        "A prediction function takes recorded features and produces an estimate. Its output can differ from the measured result. Write the prediction and observation separately so that you can calculate an error instead of silently treating the model as the real system.",
+        "Some outcomes vary even when the recorded input is unchanged. A deterministic prediction can summarize a typical value while missing that variation. A probability model can represent multiple possible results. Later lessons combine functions with unobserved inputs to model such variation."
+      ],
+      "equation":"f(x)=2x+1. Prediction error here means observed value minus predicted value.",
+      "example":"A model predicts f(3)=2 times 3 plus 1, which is 7. The observed result is 9, so the signed error is 9-7=2. The calculation checks this prediction only; it does not prove that the whole function is suitable.",
+      "exercise":"Let g(x)=4x-2. Find g(5). If the observed result is 16, compute observed minus predicted.",
+      "solution":"The predicted value is g(5)=20-2=18. The signed error is 16-18=-2. A negative error means the prediction is larger than the observation under this error convention.",
+      "quiz":{"question":"What must a function assign to each input in its domain?","options":["Every possible output at once","No defined output","Exactly one output"],"answer":2,"explanation":"A function has one output for each allowed input. A stochastic model can instead describe a distribution, or include additional random inputs."},
+      "sources":["openstax"],"lab":"gradient","caution":"One small prediction error does not establish generalization or a causal mechanism."
+    },
+    {
+      "id":"L2-03","title":"Read plots without inventing causes","objective":"Interpret axes, trends, and extrapolation limits in a plotted relationship.","prerequisites":["L2-01","L2-02"],
+      "paragraphs":[
+        "A coordinate plot places one quantity on each axis. Each point represents a recorded pair. Read the axis labels, units, and scale before describing a trend. A steep-looking line can result from an axis range rather than a large effect.",
+        "A positive association means that larger values of one quantity tend to occur with larger values of the other in the records. It does not establish an arrow of causation. Shared causes, reverse influence, or selection can produce an association.",
+        "Interpolation estimates within the observed range. Extrapolation estimates beyond that range. A straight line can be useful locally but fail far away. Keep the data range visible and state where a prediction depends on an untested extension of the model."
+      ],
+      "equation":"Slope = change in vertical quantity / change in horizontal quantity, with both units stated.",
+      "example":"A line passes through two recorded points: one hour and four tasks, then three hours and ten tasks. Its slope is (10-4)/(3-1)=3 tasks per hour. This summary does not show that adding any hour always causes three completed tasks.",
+      "exercise":"A line passes through (2,5) and (6,13). Find its slope. If all data lie between x=2 and x=6, classify a prediction at x=20.",
+      "solution":"The slope is (13-5)/(6-2)=8/4=2 vertical units per horizontal unit. A prediction at x=20 is extrapolation because twenty is outside the observed input range.",
+      "quiz":{"question":"What does a positive trend in an observational scatter plot establish by itself?","options":["An association in the recorded data","A guaranteed intervention effect","The absence of hidden causes"],"answer":0,"explanation":"The plot describes how recorded values vary together. Causal effects require further assumptions or suitable experimental evidence beyond the visual trend."},
+      "sources":["openstax","seeing"],"lab":"causal","caution":"Axis choices and restricted samples can change the apparent pattern. Always inspect the data definition."
+    },
+    {
+      "id":"L2-04","title":"Calculate conditional probability","objective":"Compute conditional probabilities and test a simple independence claim.","prerequisites":["L1-04","L1-02"],
+      "paragraphs":[
+        "For events A and B, conditional probability P(A given B) restricts attention to cases where B occurs. Divide the probability of both events by the probability of B. This formula requires P(B) to be greater than zero.",
+        "Events are independent when learning that one occurred does not change the probability of the other. For a positive-probability B, this gives P(A given B)=P(A). Independence is a property of the specified probability distribution and is not the same as no causal relation.",
+        "A two-way table helps keep the counts visible. Label rows and columns, include their totals, and check that every case appears once. Reversing the condition changes the denominator, which can change the answer even when the intersection count stays the same."
+      ],
+      "equation":"P(A | B)=P(A and B)/P(B), for P(B)>0. The vertical bar means given.",
+      "example":"In forty records, twelve have both A and B, twenty have B, and twenty-four have A. Thus P(A given B)=12/20=0.6 and P(A)=24/40=0.6. For these binary events in this table, the equality is consistent with independence.",
+      "exercise":"In fifty records, fifteen have both A and B, twenty-five have B, and twenty have A. Find P(A given B) and P(A). Are the events independent in this table?",
+      "solution":"P(A given B)=15/25=0.6, while P(A)=20/50=0.4. They differ, so A and B are not independent in this empirical table. This conclusion does not itself identify a cause.",
+      "quiz":{"question":"When is P(A given B) undefined by the elementary ratio formula?","options":["When A is possible","When P(B)=0","When the events are independent"],"answer":1,"explanation":"The elementary formula divides by P(B). A zero denominator is undefined, so the positive-probability condition is necessary for this formula."},
+      "sources":["openstax"],"lab":"bayes","caution":"An empirical table estimates a population relationship. Sampling uncertainty remains outside this exact table calculation."
+    },
+    {
+      "id":"L2-05","title":"Reverse a condition with Bayes' rule","objective":"Use base rates and error rates to calculate a reversed conditional probability.","prerequisites":["L2-04","L1-01"],
+      "paragraphs":[
+        "Bayes' rule connects a conditional probability to its reversed condition. P(flag given defect) is not P(defect given flag). The first describes detector behaviour among defective items. The second asks how many flagged items are actually defective and depends on how common defects are.",
+        "Use a large imaginary batch to make the denominators clear. Split the batch into defective and non-defective items first. Then apply the flag rate within each group. Combine both kinds of flags before calculating the fraction that came from defective items.",
+        "A low base rate can make false flags numerous even when the false-flag rate is modest. This is arithmetic, not a paradox. A flag is evidence that updates a probability under the model; it is not automatically a certain conclusion about the item."
+      ],
+      "equation":"P(D | F)=P(F | D)P(D)/[P(F | D)P(D)+P(F | not D)P(not D)], for a positive denominator.",
+      "example":"In a model batch of 1000 items, ten are defective. A detector flags 80 percent of defects, giving eight true flags. It also flags ten percent of 990 sound items, giving 99 false flags. Only 8/107, about 7.48 percent, of flags indicate defects.",
+      "exercise":"A model batch has 1000 items, including 100 defects. A detector flags 90 percent of defects and 20 percent of sound items. What fraction of flags are true defects?",
+      "solution":"There are ninety true flags and 180 false flags because 20 percent of 900 is 180. The desired fraction is 90/270=1/3. The detector sensitivity alone is not the answer.",
+      "quiz":{"question":"What additional quantity is necessary to reverse a detector's conditional probability?","options":["Only the detector name","The colour of the display","The base rate of defects"],"answer":2,"explanation":"The base rate sets the relative sizes of the defective and sound groups. Both groups contribute flags and determine the reversed conditional probability."},
+      "sources":["openstax"],"lab":"bayes","caution":"These are fictional manufacturing counts. The model assumes the stated rates apply to this batch."
+    },
+    {
+      "id":"L2-06","title":"See a reversed comparison","objective":"Calculate a Simpson reversal and explain why group composition matters.","prerequisites":["L2-04","L1-06"],
+      "paragraphs":[
+        "A combined comparison can point in the opposite direction from comparisons within groups. This is called a Simpson reversal. Different mixtures of easier and harder cases can change the combined rates even when each within-group comparison has the same direction.",
+        "Consider an observational study of training success. If one method is used mostly for harder tasks, its combined success rate can look worse. Compare the counts within task difficulty as well as the totals. Never average group percentages without their correct weights.",
+        "The reversal does not tell you automatically which comparison is causal. The answer depends on the question and the causal role of the grouping variable. A cause measured before treatment can require different handling from a variable caused by the treatment."
+      ],
+      "equation":"Combined success rate = total successes across groups / total cases across groups.",
+      "example":"For easy tasks, method A succeeds in 90/100 cases and B in 80/100. For hard tasks, A succeeds in 10/100 and B in 1/20. A has the higher rate in each group. Combined, A gives 100/200=0.5 and B gives 81/120=0.675.",
+      "exercise":"For mild cases, A succeeds in 8/10 and B in 35/50. For severe cases, A succeeds in 20/50 and B in 3/10. Compare each group and the combined totals.",
+      "solution":"A exceeds B within mild cases, 0.8 versus 0.7, and severe cases, 0.4 versus 0.3. Combined A is 28/60, while B is 38/60. Unequal case mixtures reverse the comparison.",
+      "quiz":{"question":"What does a Simpson reversal require you to inspect?","options":["Group counts, weights, and causal roles","Only the largest percentage","Only the method names"],"answer":0,"explanation":"The group counts explain the weighting. A causal interpretation also needs the role of the grouping variable, not merely a preferred numerical comparison."},
+      "sources":["pearl","seeing"],"lab":"causal","caution":"Stratification is not always valid adjustment. The causal graph must support the chosen comparison."
+    },
+    {
+      "id":"L2-07","title":"Read a causal graph","objective":"Distinguish a chain, a common cause, and a collider in a proposed directed graph.","prerequisites":["L1-06","L2-04"],
+      "paragraphs":[
+        "A directed graph contains nodes and arrows. A node represents a variable. An arrow X to Y proposes a direct causal influence relative to the variables included in the model. A directed acyclic graph has no path of arrows that returns to its starting node.",
+        "Three small patterns matter. In a chain X to M to Y, influence can pass through M. In a common-cause pattern X from Z to Y, Z affects both endpoints. In a collider X to C from Y, both endpoints affect C.",
+        "Conditioning has different effects on these patterns. In suitable simple models, conditioning on a common cause can remove an association. Conditioning on a collider can create one. Graphs make these distinctions explicit, but their arrows and missing arrows require substantive assumptions."
+      ],
+      "equation":"Chain: X -> M -> Y. Common cause: X <- Z -> Y. Collider: X -> C <- Y.",
+      "example":"Suppose battery failure and bulb failure can each make a lamp stay dark. The model has battery failure pointing to darkness and bulb failure pointing to darkness. Darkness is a collider. Studying only dark lamps can associate two otherwise independent failure causes.",
+      "exercise":"Classify these proposed patterns: rain -> wet road -> slipping; age -> shoe size and age -> reading skill; skill -> selection <- luck.",
+      "solution":"The first is a chain through wet road. The second is a common-cause pattern through age. The third is a collider at selection. Classification describes the proposed arrows, not proof that they are correct.",
+      "quiz":{"question":"Which node is the collider in X -> C <- Y?","options":["X","C","Y"],"answer":1,"explanation":"Both arrows enter C, so C is the collider on this path. Conditioning on it can create association under suitable model assumptions."},
+      "sources":["pearl","seeing"],"lab":"causal","caution":"A graph is a causal assumption, not a decoration inferred from correlation alone."
+    },
+    {
+      "id":"L2-08","title":"Observe or intervene","objective":"Explain how setting a variable differs from selecting records where it has a value.","prerequisites":["L2-07","L2-04","L1-05"],
+      "paragraphs":[
+        "Observation asks about records in which a variable takes a value through its ordinary causes. An intervention sets a variable according to a specified action. These can produce different populations because the usual reasons for that variable's value no longer apply in the same way.",
+        "The notation do(X=x) describes an ideal intervention that replaces the mechanism generating X with a fixed value x. In the graph, remove arrows entering X. Keep the other mechanisms unchanged. This is a precise model operation, not a guarantee about every practical action.",
+        "If a shared cause affects X and Y, observing X can give information about that cause. Setting X need not give the same information. This difference explains why an observational conditional probability is not generally the probability of Y after an intervention."
+      ],
+      "equation":"P(Y | X=x) is observational. P(Y | do(X=x)) is interventional. They need not be equal.",
+      "example":"Let a hidden binary Z be equally likely zero or one. Set X=Z and Y=Z in the observational model. Observing X=1 implies Y=1. Under do(X=1), the rule for X is replaced but Z remains balanced, so P(Y=1)=1/2.",
+      "exercise":"In the same model, compare P(Y=1 given X=0) with P(Y=1 given do(X=0)). Explain the difference.",
+      "solution":"Observing X=0 implies Z=0, so Y=1 has probability zero. Setting X=0 leaves Z unchanged, so Y=1 has probability one half. The intervention breaks the Z-to-X mechanism only.",
+      "quiz":{"question":"Which arrows are removed by the ideal operation do(X=x)?","options":["All arrows leaving Y","Every arrow in the graph","Arrows entering X"],"answer":2,"explanation":"The intervention replaces X's ordinary generating mechanism. Its incoming arrows are removed while other mechanisms and outgoing causal influences remain as specified."},
+      "sources":["pearl","hernan"],"lab":"causal","caution":"Real actions can have side effects. The ideal intervention model must be matched to the actual action."
+    },
+    {
+      "id":"L2-09","title":"Use vectors for two outcomes","objective":"Represent a two-outcome probability distribution as a normalized vector and distinguish it from a state-amplitude vector.","prerequisites":["L1-01","L1-09","L2-01"],
+      "paragraphs":[
+        "A vector is an ordered list of numbers. The order matters because each entry has a stated meaning. For two recorded outcomes zero and one, the vector (0.3,0.7) can list their probabilities in that order.",
+        "A classical probability vector has nonnegative entries that add to one. This is normalization. A quantum state vector instead lists amplitudes in a chosen basis. Its squared amplitude magnitudes add to one, and relative phase can affect predictions in other measurements.",
+        "Do not switch these normalization rules. The amplitude vector (1 divided by square root of two, 1 divided by square root of two) gives equal measurement probabilities after squaring magnitudes. The amplitude sum itself is not required to equal one."
+      ],
+      "equation":"Classical: p0+p1=1. Pure qubit: |a0|^2+|a1|^2=1. Here p are probabilities and a are amplitudes.",
+      "example":"The probability vector (0.2,0.8) is normalized because both entries are nonnegative and their sum is one. The real amplitude vector (0.6,0.8) is normalized under the quantum rule because 0.6 squared plus 0.8 squared equals 0.36+0.64=1.",
+      "exercise":"Check whether (0.4,0.6) is a probability vector. Then use the normalized real amplitude vector (0,1) to find computational-basis outcome probabilities.",
+      "solution":"The first vector is a probability vector because its nonnegative entries sum to one. For amplitudes (0,1), squared magnitudes give probabilities (0,1), so outcome one is certain in that basis.",
+      "quiz":{"question":"Which rule normalizes a pure quantum state vector?","options":["Squared magnitudes of amplitudes sum to one","Amplitudes must be positive integers","The raw amplitude sum is always one"],"answer":0,"explanation":"Quantum measurement probabilities are squared magnitudes. Their total must be one, while amplitudes themselves can be negative or complex and need not sum to one."},
+      "sources":["ibm","preskill"],"lab":"qubit","caution":"This lesson uses pure states in a stated basis. Mixed states require density matrices in later lessons."
+    },
+    {
+      "id":"L2-10","title":"Build an evidence record","objective":"State a claim with its source, assumptions, test, uncertainty, and scope.","prerequisites":["L2-03","L2-05","L2-06","L2-08","L2-09"],
+      "paragraphs":[
+        "A scientific claim needs a clear meaning and supporting evidence. Record the question, the model, and the data or derivation used to answer it. A title or an impressive diagram is not enough to establish that the claim follows.",
+        "Separate a mathematical result from an empirical result. A theorem follows from stated assumptions. An experiment measures a real setup with uncertainty and possible systematic errors. A simulation checks a programmed model and can be wrong because of either model assumptions or implementation errors.",
+        "For Quantum Causal AI, ask three separate questions. Is the causal effect identified under the assumptions? Does the quantum model represent the system and data access? Does the learning method improve a specified outcome against suitable alternatives? Evidence for one answer does not establish the others."
+      ],
+      "equation":"Evidence record: claim; assumptions; source; method; result; uncertainty; tested scope.",
+      "example":"A simulation shows that a chosen qubit rotation produces a predicted probability curve. This supports agreement between the code and that model over tested inputs. It does not prove that real hardware is noiseless, that a causal effect is identified, or that training is faster.",
+      "exercise":"A report says a quantum predictor has 90 percent accuracy. Name three missing details before judging a claim that it makes better causal decisions.",
+      "solution":"Ask how new test data were separated from training, which classical baselines were compared, and what evidence identifies the action effect. Also ask about uncertainty, data access, hardware costs, and the exact decision objective.",
+      "quiz":{"question":"What does a successful numerical simulation establish most directly?","options":["Universal real-world advantage","Agreement with a specified implemented model on tested cases","Every causal assumption is true"],"answer":1,"explanation":"A simulation tests computations within an implemented model. Claims about real systems, causal identification, or advantage require further evidence beyond numerical agreement."},
+      "sources":["pearl","hernan","preskill"],"lab":"gradient","caution":"No finite test establishes every future use. Keep claims inside the scope of the evidence."
+    }
+  ]
+}

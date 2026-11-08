@@ -1,0 +1,73 @@
+{
+ "source": "bareinboim",
+ "url": "https://causalai-book.net/",
+ "pdf": "https://causalai.net/r102.pdf",
+ "snapshot": "evidence/sources/causalai-book.html",
+ "lessons": [
+  {
+   "lesson": "L2-07",
+   "chapters": "Ch. 2: structural causal models and causal diagrams",
+   "evidence": "Ch. 2 Structural Causal Models; Causal Diagrams."
+  },
+  {
+   "lesson": "L2-08",
+   "chapters": "Ch. 1: Pearl's causal hierarchy (seeing, doing, imagining)",
+   "evidence": "Pearl's Causal Hierarchy."
+  },
+  {
+   "lesson": "L4-01",
+   "chapters": "Ch. 2: structural causal models",
+   "evidence": "Ch. 2 Structural Causal Models; Causal Diagrams."
+  },
+  {
+   "lesson": "L4-02",
+   "chapters": "Ch. 2: causal diagrams",
+   "evidence": "Ch. 2 Structural Causal Models; Causal Diagrams."
+  },
+  {
+   "lesson": "L4-03",
+   "chapters": "Sec. 4.2.1: identifiable and non-identifiable effects, confounding bias",
+   "evidence": "Sec. 4.2.1 Identifiable and non-identifiable effects. Confounding Bias."
+  },
+  {
+   "lesson": "L4-04",
+   "chapters": "Secs. 4.2.1 to 4.2.3: the back-door criterion and inverse probability weighting",
+   "evidence": "The Backdoor Criterion. Inverse probability Weighting/Propensity Score."
+  },
+  {
+   "lesson": "L4-05",
+   "chapters": "Secs. 4.2.5 to 4.3: the front-door case and the do-calculus",
+   "evidence": "The Front-door Case. The interventional calculus (do-calculus)."
+  },
+  {
+   "lesson": "L4-06",
+   "chapters": "Ch. 4, Secs. 4.1 and 4.2: what a causal effect is, and the identification problem",
+   "evidence": "Intuition and Definition of Causal Effects."
+  },
+  {
+   "lesson": "L4-07",
+   "chapters": "Ch. 4 (identification) and Ch. 20 (causal estimation)",
+   "evidence": "The Identification Problem"
+  },
+  {
+   "lesson": "L4-08",
+   "chapters": "Chs. 16 and 17: equivalence classes and multi-domain structure learning",
+   "evidence": "Observational Equivalence Class. Interventional Equivalence Class."
+  },
+  {
+   "lesson": "L4-09",
+   "chapters": "Ch. 5: counterfactual reasoning and the counterfactual calculus",
+   "evidence": "Ch. 5, Sec. 5.1, 5.2 Counterfactual's definition."
+  },
+  {
+   "lesson": "L4-10",
+   "chapters": "Ch. 6 (fairness), Chs. 10 to 12 (transportability), Ch. 18 (causal representation learning)",
+   "evidence": "Transportability Foundations"
+  },
+  {
+   "lesson": "L7-02",
+   "chapters": "Ch. 18: causal representation learning",
+   "evidence": "Ch. 18 Causal Representation Learning."
+  }
+ ]
+}

@@ -1,0 +1,158 @@
+{
+  "level": 3,
+  "title": "Mathematical tools for models",
+  "audience": "High school and college bridge",
+  "intro": "Build the mathematical tools that causal and quantum models use. Work with numbers, vectors, functions, and uncertainty. Each calculation has a stated meaning. A correct calculation does not by itself prove that a model describes a physical system.",
+  "lessons": [
+    {
+      "id": "L3-01", "title": "Complex numbers and phase", "objective": "Calculate a complex magnitude and explain the difference between magnitude and phase.",
+      "prerequisites": ["L2-01"],
+      "paragraphs": [
+        "A complex number has a real part and an imaginary part. Write it as z = a + ib. The numbers a and b are real. The symbol i satisfies i squared = -1. Plot a on the horizontal axis and b on the vertical axis.",
+        "The complex conjugate changes the sign of the imaginary part. For z = a + ib, its conjugate is a - ib. Multiply the two numbers. The imaginary terms cancel. The result is a squared plus b squared. Its square root is the magnitude.",
+        "Phase is the angle of the point from the positive real axis. Two numbers can have equal magnitude and different phases. Quantum amplitudes use both properties. Probability depends on squared magnitude, but a later operation can turn a phase difference into a probability difference."
+      ],
+      "equation": "z = a + ib; z* = a - ib; |z|² = z*z = a² + b². Here z* is the complex conjugate and |z| is the magnitude.",
+      "example": "Let z = 3 + 4i. Its conjugate is 3 - 4i. Their product is 9 + 16 = 25. Thus |z| = 5. The number -3 + 4i also has magnitude 5, but it points in a different direction.",
+      "exercise": "Find the squared magnitude of z = 1 - 2i. Does z have the same phase as 1 + 2i?",
+      "solution": "The squared magnitude is 1² + (-2)² = 5. The two points lie on opposite sides of the real axis, so their phases differ.",
+      "quiz": {"question": "Which operation produces the squared magnitude of z?", "options": ["Add z to its conjugate", "Multiply z by its conjugate", "Multiply z by i"], "answer": 1, "explanation": "The product with the conjugate is a² + b². It is real and cannot be negative."},
+      "sources": ["openstax", "watrous"], "lab": "interference", "caution": "A complex number is a mathematical object. It becomes a quantum amplitude only within a specified quantum model."
+    },
+    {
+      "id": "L3-02", "title": "Vectors and inner products", "objective": "Normalize a vector and calculate its overlap with a basis vector.",
+      "prerequisites": ["L3-01"],
+      "paragraphs": [
+        "A vector is an ordered list of numbers. In this lesson, its entries can be complex. The order matters because each position names a basis direction. A two-entry vector can describe an arrow in a plane, or the amplitudes of a two-outcome quantum system.",
+        "The inner product compares two vectors. Conjugate the entries of the first vector, multiply corresponding entries, then add. The inner product of a vector with itself is its squared norm. Divide a nonzero vector by its norm to obtain a normalized vector.",
+        "Orthogonal vectors have inner product zero. For a normalized quantum state, the squared magnitude of its inner product with a normalized measurement basis vector gives that outcome's probability. This statement requires an orthonormal measurement basis. An arbitrary coordinate entry is not automatically a physical probability."
+      ],
+      "equation": "⟨u,v⟩ = Σj u*j vj; ||v|| = √⟨v,v⟩. The index j names an entry, and * means complex conjugation.",
+      "example": "Take v = (3,4). Its norm is √(9 + 16) = 5. The normalized vector is (3/5,4/5). Its overlap with e0 = (1,0) is 3/5. If these are quantum amplitudes in the stated basis, outcome zero has probability 9/25.",
+      "exercise": "Normalize v = (1,1). Calculate the squared overlap with e1 = (0,1).",
+      "solution": "The norm is √2. The normalized vector is (1/√2,1/√2). Its overlap with e1 is 1/√2, and the squared overlap is 1/2.",
+      "quiz": {"question": "What does an inner product of zero mean?", "options": ["The vectors have equal length", "The vectors must both be zero", "The vectors are orthogonal"], "answer": 2, "explanation": "Orthogonality is defined by a zero inner product. Nonzero vectors can be orthogonal even when their lengths differ."},
+      "sources": ["watrous", "preskill"], "lab": "qubit", "caution": "An inner product is a mathematical overlap. Its physical interpretation depends on the model and measurement."
+    },
+    {
+      "id": "L3-03", "title": "Matrices as transformations", "objective": "Apply a matrix to a vector and test whether a simple transformation preserves norm.",
+      "prerequisites": ["L3-02"],
+      "paragraphs": [
+        "A matrix is a rectangular array of numbers. A matrix can transform a vector. For each output entry, multiply one matrix row by the input column, then add the products. The number of matrix columns must equal the number of input entries.",
+        "A square complex matrix U is unitary when its conjugate transpose times itself equals the identity matrix. The conjugate transpose changes rows into columns and conjugates every entry. A unitary matrix preserves inner products and norms. Its inverse is its conjugate transpose.",
+        "Closed quantum systems use unitary time evolution. Measurements and noise need more general descriptions. A matrix with real positive entries is not necessarily a quantum gate. Also, a stochastic transition matrix preserves total probability under its chosen convention, which differs from preserving an amplitude vector's norm."
+      ],
+      "equation": "w = Uv; U†U = I for a unitary U. Here † means conjugate transpose and I leaves every vector unchanged.",
+      "example": "Use the swap matrix X with rows (0,1) and (1,0). Apply it to v = (3/5,4/5). The result is (4/5,3/5). The squared norm remains 16/25 + 9/25 = 1. Applying X again returns the original vector.",
+      "exercise": "Apply H = (1/√2)[[1,1],[1,-1]] to v = (1,0). Then apply H once more.",
+      "solution": "The first result is (1/√2,1/√2). The second result is (1,0), because the second output entry cancels. Both output vectors have norm one.",
+      "quiz": {"question": "Which property must a unitary matrix preserve?", "options": ["Every individual vector entry", "The norm of every input vector", "The sign of every real entry"], "answer": 1, "explanation": "The identity U†U = I makes the squared output norm equal the squared input norm for every vector."},
+      "sources": ["watrous", "ibm"], "lab": "qubit", "caution": "Unitary evolution alone cannot describe every physical operation on a subsystem. Noise can reduce subsystem purity."
+    },
+    {
+      "id": "L3-04", "title": "Tensor products and joint systems", "objective": "Construct a joint vector and distinguish a product state from a correlated state.",
+      "prerequisites": ["L3-02", "L3-03"],
+      "paragraphs": [
+        "The tensor product builds a joint space from separate spaces. For two two-entry vectors, it produces four entries. Fix the order as 00, 01, 10, 11. Each entry is a product of one entry from the first vector and one from the second.",
+        "A product vector factors into one vector for each subsystem. A general joint quantum vector need not have this form. A pure state that cannot factor across a stated partition is entangled. This definition concerns joint amplitudes, rather than merely the presence of matching measurement results.",
+        "For classical independent variables, joint probabilities also form a product. Correlated classical variables do not. Thus a four-entry list alone does not tell you whether a model is classical or quantum. State what the entries mean and what operations the model permits before drawing a physical conclusion."
+      ],
+      "equation": "(a,b) ⊗ (c,d) = (ac,ad,bc,bd), in the basis order 00,01,10,11. The symbol ⊗ means tensor product.",
+      "example": "Take the first state as (1,0) and the second as (1/√2,1/√2). Their joint vector is (1/√2,1/√2,0,0). The first subsystem always gives zero in this basis. The second subsystem gives either outcome with probability one half. This state is a product state.",
+      "exercise": "Find (0,1) ⊗ (1,0). Which joint basis outcome has probability one?",
+      "solution": "The tensor product is (0,0,1,0). The nonzero entry is in position 10, so the first subsystem gives one and the second gives zero.",
+      "quiz": {"question": "How many amplitudes describe a general pure state of three qubits?", "options": ["Three", "Six", "Eight"], "answer": 2, "explanation": "Each added qubit doubles the joint basis size. Three qubits therefore use 2³ = 8 complex amplitudes before normalization constraints."},
+      "sources": ["watrous", "preskill"], "lab": "bell", "caution": "Exponential state-vector size does not prove an exponential advantage for every quantum computation."
+    },
+    {
+      "id": "L3-05", "title": "Eigenvectors and observables", "objective": "Find an eigenvalue and connect it to a possible measurement result.",
+      "prerequisites": ["L3-03"],
+      "paragraphs": [
+        "An eigenvector keeps its direction under a matrix transformation. The matrix can multiply the vector by a number called its eigenvalue. The vector must be nonzero. Solving an eigenvalue problem reveals directions that the transformation treats in a particularly simple way.",
+        "A Hermitian matrix equals its conjugate transpose. Its eigenvalues are real, and an orthonormal eigenbasis can be chosen in finite dimensions. Quantum observables use Hermitian operators. Their eigenvalues name possible outcomes in an ideal projective measurement, while the state determines the probabilities.",
+        "An expectation value is a weighted average of measurement outcomes. It need not be one of the possible outcomes. Measure many independently prepared copies to estimate it. A single measurement generally does not reveal the full state or its expectation value exactly."
+      ],
+      "equation": "Av = λv with v ≠ 0. For a normalized state ψ and Hermitian A, the expectation is ⟨A⟩ = ψ†Aψ. The number λ is an eigenvalue.",
+      "example": "The matrix Z has diagonal entries 1 and -1, with zero entries elsewhere. The vector (1,0) has eigenvalue 1. The vector (0,1) has eigenvalue -1. In the state (1/√2,1/√2), these outcomes have equal probabilities, so the expectation is zero.",
+      "exercise": "For the same Z measurement, outcome 1 has probability 0.8 and outcome -1 has probability 0.2. Calculate the expectation.",
+      "solution": "Multiply each outcome by its probability and add. The expectation is 1(0.8) + (-1)(0.2) = 0.6. A single ideal measurement still returns either 1 or -1.",
+      "quiz": {"question": "Can the expectation of a two-outcome Z measurement equal 0.6?", "options": ["Yes, as a weighted average", "No, because only eigenvalues can be averages", "Only if every result is 0.6"], "answer": 0, "explanation": "An average can lie between the possible outcomes. Individual ideal Z outcomes remain 1 and -1 in this convention."},
+      "sources": ["watrous", "preskill"], "lab": "qubit", "caution": "This lesson uses finite-dimensional ideal measurements. General measurements require the broader operator description taught later."
+    },
+    {
+      "id": "L3-06", "title": "Derivatives and gradients", "objective": "Calculate a derivative and interpret a gradient as local change.",
+      "prerequisites": ["L2-02"],
+      "paragraphs": [
+        "A derivative describes the local rate of change of a function. Approximate it by a difference quotient over a small interval. The derivative is the limit as that interval approaches zero, when the limit exists. It is not generally a constant over a large interval.",
+        "A gradient collects partial derivatives for a function with several inputs. Each partial derivative varies one input while holding the other coordinates fixed. Optimization algorithms use this local information to choose a direction. The units of a derivative depend on the units of its output and input.",
+        "A derivative inside a fitted prediction function is not automatically a causal effect. Holding model coordinates fixed is a mathematical operation. A physical intervention can change other variables through causal mechanisms. To interpret a derivative causally, specify the causal model and the intervention that the derivative represents."
+      ],
+      "equation": "f′(x) = lim[h→0](f(x+h)-f(x))/h. For f(x,y), ∇f = (∂f/∂x,∂f/∂y). The variable h is the input change.",
+      "example": "Let f(x) = x². The quotient is ((x+h)²-x²)/h = 2x+h. Its limit is 2x. At x = 3, the derivative is 6. A small positive step therefore increases the output by about six times the step size.",
+      "exercise": "For g(x,y) = x² + 3y², find the gradient at x = 2 and y = -1.",
+      "solution": "The partial derivatives are 2x and 6y. Substitute the point to obtain the gradient (4,-6). This vector gives local change in the two coordinate directions.",
+      "quiz": {"question": "Does a nonzero regression derivative by itself prove a causal effect?", "options": ["Yes, for every fitted function", "No, it needs causal assumptions", "Yes, if the derivative is large"], "answer": 1, "explanation": "A prediction function can reflect confounding or selection. A causal interpretation needs a justified model of interventions and mechanisms."},
+      "sources": ["openstax", "peters"], "lab": "gradient", "caution": "Differentiation describes mathematical change. Use separate assumptions to connect that change to a causal intervention."
+    },
+    {
+      "id": "L3-07", "title": "Expectation and variance", "objective": "Calculate a distribution's mean and variance without treating the mean as a certain outcome.",
+      "prerequisites": ["L2-04"],
+      "paragraphs": [
+        "A probability distribution assigns probabilities to possible outcomes. Its expectation is the probability-weighted average. For a finite set, multiply each outcome by its probability, then add. The probabilities must be nonnegative and sum to one. A mean can differ from every individual outcome.",
+        "Variance measures the average squared distance from the expectation. Squaring prevents positive and negative deviations from canceling. The standard deviation is its square root. Variance has squared outcome units. The standard deviation has the same units as the original measured outcome.",
+        "Repeated observations help estimate these quantities. Independent observations have a simpler error calculation than dependent observations. If measurements share drift or another cause, more samples do not necessarily reduce error as quickly as the independent formula predicts. Record the sampling assumptions before reporting uncertainty."
+      ],
+      "equation": "E[X] = Σx xP(X=x); Var(X) = E[(X-E[X])²] = E[X²]-E[X]². Here X is a random variable.",
+      "example": "Let X be one with probability 0.25 and zero with probability 0.75. The mean is 0.25. Since X² = X, its second moment is also 0.25. The variance is 0.25 - 0.25² = 0.1875. Most single trials still return zero.",
+      "exercise": "Let X take values -1 and 1 with equal probability. Find its expectation and variance.",
+      "solution": "The expectation is (-1)(1/2) + (1)(1/2) = 0. Both squared outcomes equal one. Thus E[X²] = 1 and the variance is 1 - 0² = 1.",
+      "quiz": {"question": "Which quantity always uses squared outcome units?", "options": ["The expectation", "The standard deviation", "The variance"], "answer": 2, "explanation": "Variance averages squared deviations. Taking its square root produces standard deviation, which returns to the original outcome units."},
+      "sources": ["openstax"], "lab": "chance", "caution": "The usual standard error of a sample mean assumes independent observations with a common finite variance."
+    },
+    {
+      "id": "L3-08", "title": "Entropy and uncertainty", "objective": "Calculate binary entropy and distinguish it from the value of one outcome.",
+      "prerequisites": ["L3-07"],
+      "paragraphs": [
+        "Entropy measures uncertainty in a probability distribution. It does not measure the size or importance of an outcome. A fair coin has more entropy than a coin that always gives heads. The logarithm base determines the information unit. Base two gives bits.",
+        "For a discrete distribution, multiply each probability by the negative logarithm of that probability, then add. A zero-probability term contributes zero by continuity. For two possible outcomes, entropy is largest when their probabilities are equal. It becomes zero when either outcome is certain.",
+        "Classical entropy applies to recorded outcomes. Quantum states use a related quantity called von Neumann entropy, which depends on the density matrix eigenvalues. A pure quantum state can have zero von Neumann entropy while a chosen measurement on that state still has uncertain outcomes."
+      ],
+      "equation": "H(X) = -Σx p(x)log₂p(x), with 0log₂0 defined as 0. Here p(x) is the probability of outcome x and H is measured in bits.",
+      "example": "A fair binary outcome has p(0) = p(1) = 1/2. Each logarithm is -1. Thus H = -(1/2)(-1) -(1/2)(-1) = 1 bit. A certain zero has entropy zero because the only nonzero probability is one, whose logarithm is zero.",
+      "exercise": "A device produces one of four equally likely symbols. Calculate its entropy in bits.",
+      "solution": "Each symbol has probability 1/4 and logarithm -2. Four equal contributions of -(1/4)(-2) give an entropy of 2 bits per symbol.",
+      "quiz": {"question": "Which binary distribution has the largest entropy?", "options": ["Probabilities 0.5 and 0.5", "Probabilities 0.9 and 0.1", "Probabilities 1 and 0"], "answer": 0, "explanation": "Equal binary probabilities give maximum uncertainty over two outcomes. Increasing certainty about either outcome reduces the binary entropy."},
+      "sources": ["watrous", "preskill"], "lab": "noise", "caution": "Entropy depends on the stated distribution or quantum state. Measurement entropy and state entropy need not be equal."
+    },
+    {
+      "id": "L3-09", "title": "Optimization and learning", "objective": "Perform a gradient descent step and explain why a lower training loss is an incomplete success test.",
+      "prerequisites": ["L3-06"],
+      "paragraphs": [
+        "Optimization chooses parameters to reduce a stated loss function. A loss measures error under a chosen rule. In gradient descent, subtract a learning rate times the gradient from the current parameters. A small step follows a local direction of decreasing loss when regularity conditions hold.",
+        "The learning rate controls the step size. A large value can overshoot a minimum or make the procedure diverge. A very small value can require many steps. Some loss functions contain several local minima or nearly flat regions, so a small gradient need not certify a useful solution.",
+        "Learning requires more than minimizing training loss. Evaluate predictions on data that the fitting procedure did not use. For causal learning, also test whether the target intervention is identifiable. For quantum learning, include data encoding, measurement, and classical computation costs when comparing methods."
+      ],
+      "equation": "θnew = θold - η∇L(θold). Here θ is a parameter vector, L is the loss, and η is a positive learning rate.",
+      "example": "Use L(θ) = (θ-2)². Its derivative is 2(θ-2). Start at θ = 0 with learning rate 0.25. The derivative is -4, so the new parameter is 1. The loss falls from 4 to 1 after this step.",
+      "exercise": "For L(θ) = (θ-3)², start at θ = 1 and use learning rate 0.1. Find the new parameter and loss.",
+      "solution": "The derivative at one is 2(1-3) = -4. The new parameter is 1.4. The new loss is (1.4-3)² = 2.56, below the initial loss of four.",
+      "quiz": {"question": "What does a smaller training loss establish by itself?", "options": ["A correct causal model", "Better fit under that training objective", "A quantum computational advantage"], "answer": 1, "explanation": "Training loss measures the chosen fit criterion. It does not establish causal validity, performance on new data, or computational advantage."},
+      "sources": ["openstax", "scholkopf"], "lab": "gradient", "caution": "A local decrease is not a certificate of a global optimum or a valid causal interpretation."
+    },
+    {
+      "id": "L3-10", "title": "Estimation, intervals, and repeated tests", "objective": "Estimate a probability and describe the sampling meaning of a confidence interval.",
+      "prerequisites": ["L3-07"],
+      "paragraphs": [
+        "An estimator is a rule that maps data to an estimate. A sample proportion estimates the probability of a binary outcome. It varies between repeated samples. This sampling variation differs from model bias, instrument error, and a change in the population over time.",
+        "A confidence interval is produced by a procedure with a stated long-run coverage under its assumptions. A 95 percent procedure covers the fixed parameter in about 95 percent of repeated samples. It does not assign a 95 percent frequentist probability to the parameter after observing one interval.",
+        "Testing many hypotheses increases opportunities for false findings. Plan the analysis before inspecting outcomes when possible. Report the number of tested claims and use an appropriate correction or independent confirmation. Statistical significance cannot repair confounding, a wrong measurement model, or an undefined causal target."
+      ],
+      "equation": "p̂ = k/n; SE(p̂) ≈ √[p̂(1-p̂)/n] for independent Bernoulli trials. Here k is the success count and n is the trial count.",
+      "example": "Observe 60 successes in 100 independent binary trials. The estimate is 0.60. The approximate standard error is √(0.6×0.4/100), about 0.049. This calculation describes sampling variation. It does not include systematic errors such as a detector that misses the same type of event.",
+      "exercise": "Observe 100 successes in 400 independent binary trials. Find the estimated probability and approximate standard error.",
+      "solution": "The estimate is 100/400 = 0.25. The approximate standard error is √(0.25×0.75/400), about 0.0217. Independence and a stable binary probability are required for this formula.",
+      "quiz": {"question": "What can a larger independent sample usually reduce?", "options": ["All systematic bias", "Every form of confounding", "Sampling variation of an estimate"], "answer": 2, "explanation": "More independent observations can reduce sampling variation. Systematic measurement errors and causal confounding need separate design or modeling solutions."},
+      "sources": ["openstax", "hernan"], "lab": "chance", "caution": "The simple normal approximation can fail near probability zero or one or with very small sample counts."
+    }
+  ]
+}

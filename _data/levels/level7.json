@@ -1,0 +1,357 @@
+{
+  "level": 7,
+  "title": "Quantum Causal AI research",
+  "audience": "Doctoral and postdoctoral study",
+  "intro": "Define research tasks, audit learning claims, count resources, and build reproducible causal experiments.",
+  "lessons": [
+    {
+      "id": "L7-01",
+      "title": "Define the learning task",
+      "objective": "Separate quantum machine learning from causal identification.",
+      "prerequisites": [
+        "L4-10",
+        "L6-10"
+      ],
+      "paragraphs": [
+        "Quantum machine learning uses quantum methods in a learning procedure or learns from quantum data. Causal AI asks questions about interventions and mechanisms. Quantum causal inference studies causal questions about quantum systems. Their intersection is a research area, not one established universal algorithm.",
+        "Specify the input as classical records, quantum states, or access to a physical process. Specify the requested output as a label, expectation, channel estimate, graph, or causal effect. These choices determine the loss and the access assumptions. A classification score is not automatically a causal result.",
+        "A useful project statement names the estimand, data-generation mechanism, available interventions, and resource budget. An estimand is the quantity the study seeks to determine. A learning method can estimate it only if the model and experiment make that quantity identifiable."
+      ],
+      "equation": "Prediction risk is R(f) = E[loss(f(X),Y)]. A causal target can instead be tau = E[Y|do(A=1)] - E[Y|do(A=0)]. X,Y,A are explicitly defined classical variables here.",
+      "example": "A circuit predicts a medical label from observational features. High test accuracy assesses prediction for that data distribution. It does not identify a treatment effect. A treatment-effect claim additionally needs a causal design, suitable assumptions, and a target such as the stated average intervention contrast.",
+      "exercise": "A quantum model predicts laboratory outcomes from instrument settings. State what extra information is needed before calling its learned graph a causal discovery result.",
+      "solution": "Specify the candidate process family, available interventions, hidden-system assumptions, and identifiability conditions. Check that distinct claimed graphs have distinct allowed predictions. Prediction accuracy alone cannot establish those requirements.",
+      "quiz": {
+        "question": "Which item defines a causal research target?",
+        "options": [
+          "A precise intervention quantity and its assumptions",
+          "The use of a quantum processor",
+          "A high classification score alone"
+        ],
+        "answer": 0,
+        "explanation": "The target and its identification assumptions determine the causal question. A processor choice or prediction score alone does not supply them."
+      },
+      "sources": [
+        "qml",
+        "costa",
+        "advantage"
+      ],
+      "lab": "causal",
+      "caution": "The phrase Quantum Causal AI covers several connected research directions. This course does not treat them as one settled technical definition."
+    },
+    {
+      "id": "L7-02",
+      "title": "Variational circuits and parameter-shift gradients",
+      "objective": "Derive an exact gradient for a single Pauli-generated rotation.",
+      "prerequisites": [
+        "L5-02",
+        "L3-06",
+        "L7-01"
+      ],
+      "paragraphs": [
+        "A variational circuit contains adjustable gate parameters. A classical optimizer updates them using an estimated loss or gradient. The circuit expectation is a smooth mathematical function in the ideal model. Hardware estimates add finite-sample uncertainty and possible device bias.",
+        "For one gate exp(-i theta P/2), with P squared equal to identity, an expectation has only the relevant sine and cosine dependence on that parameter. Two shifted circuit evaluations therefore give its exact derivative. This is an analytic identity, not a small-step finite difference.",
+        "The simple two-shift rule assumes one occurrence of the parameter in the stated gate form. A shared parameter at several gates requires summing gate contributions or a suitable generalized rule. A nonlinear loss needs the chain rule. Noisy estimates still carry measurement variance."
+      ],
+      "equation": "For f(theta)=<O> after one exp(-i theta P/2) gate with P²=I: f prime(theta) = [f(theta+pi/2)-f(theta-pi/2)]/2. Other circuit parameters are held fixed.",
+      "example": "Prepare |0>, apply Ry(theta), and measure Z. Then f(theta)=cos(theta). At theta=pi/6, the shifted values are -1/2 and 1/2. Half their difference is -1/2. This equals the analytic derivative -sin(pi/6). The agreement checks both sign and scale in the shift formula.",
+      "exercise": "For the same circuit at theta=pi/3, calculate the exact gradient. If loss is (f-y)², write its derivative using f prime.",
+      "solution": "The gradient is -sqrt(3)/2. The squared-loss derivative is 2(f-y) f prime. The parameter-shift rule supplies f prime; the loss itself also needs the classical chain rule.",
+      "quiz": {
+        "question": "What is the basic two-shift rule for the stated gate?",
+        "options": [
+          "A finite difference with an arbitrary tiny step",
+          "An exact expectation derivative under its generator assumptions",
+          "A zero-variance hardware estimator"
+        ],
+        "answer": 1,
+        "explanation": "The fixed shifts follow from the two-eigenvalue generator. The identity is exact for expectations, while finite-shot estimates still have uncertainty."
+      },
+      "sources": [
+        "mitarai",
+        "schuld"
+      ],
+      "lab": "gradient",
+      "caution": "Generators with other spectra or repeated parameter use need a different or expanded rule. Do not apply the basic formula without checking those conditions."
+    },
+    {
+      "id": "L7-03",
+      "title": "Quantum kernels and data access",
+      "objective": "Evaluate a kernel claim with its complete access cost.",
+      "prerequisites": [
+        "L7-01",
+        "L5-04"
+      ],
+      "paragraphs": [
+        "A feature map embeds an input x into a quantum state |phi(x)>. An overlap can define a positive semidefinite kernel. A classical learner can then use the kernel matrix. The quantum circuit supplies a similarity estimate rather than a causal interpretation of the data.",
+        "The total procedure includes data encoding, circuit execution, repeated measurements, kernel storage, optimization, and prediction. A short overlap circuit does not make arbitrary classical data loading free. The full cost depends on the input representation and the accuracy required for every estimated matrix entry.",
+        "A meaningful advantage claim compares strong classical methods with comparable data and resources. Hardness of a feature-map calculation alone does not establish learning advantage. Training examples can make prediction easier for classical methods. Report generalization and resource scaling separately."
+      ],
+      "equation": "k(x,z) = |<phi(x)|phi(z)>|². For |phi(x)> = Ry(x)|0>, k(x,z) = cos²((x-z)/2). x and z are real rotation angles.",
+      "example": "For x=0 and z=pi/2, the simple rotation kernel is one half. This kernel is easy to compute classically. Implementing it on a quantum device gives no computational advantage by itself. It remains a useful small example for testing the overlap-estimation workflow.",
+      "exercise": "Use x=pi/3 and z=pi. Compute the kernel. Name two costs that must accompany a claimed quantum speedup.",
+      "solution": "The angle difference is -2pi/3, so the half-angle cosine squared is 1/4. Include data encoding and measurement repetitions. Also report classical training and kernel storage costs when they contribute.",
+      "quiz": {
+        "question": "Does a hard feature calculation alone prove a learning advantage?",
+        "options": [
+          "Yes, for any data set",
+          "Only when a kernel is normalized",
+          "No, the learning task and classical data access also matter"
+        ],
+        "answer": 2,
+        "explanation": "The comparison concerns a complete learning task. Training data, approximation, and classical alternatives can change its difficulty relative to computing one feature exactly."
+      },
+      "sources": [
+        "kernels",
+        "advantage"
+      ],
+      "lab": "qubit",
+      "caution": "The rotation kernel here is deliberately classically tractable. It illustrates mechanics and cannot support a quantum advantage claim."
+    },
+    {
+      "id": "L7-04",
+      "title": "Barren plateaus and trainability",
+      "objective": "Distinguish tiny true gradients from noisy gradient estimates.",
+      "prerequisites": [
+        "L7-02",
+        "L3-07"
+      ],
+      "paragraphs": [
+        "A barren plateau is a regime where gradients concentrate near zero as problem size grows under stated circuit and cost assumptions. This is a property of a landscape distribution. One failed optimization run is not enough to establish that scaling behavior.",
+        "To test trainability, vary system size while controlling the circuit family, initialization, observable, and noise model. Estimate gradient variance across independent initializations. Compare that variance with shot noise. A flat-looking estimated landscape can result from limited measurement precision rather than a vanishing mathematical gradient.",
+        "Proposed remedies include structured circuits, local costs, informed initialization, and staged training. Their value depends on the task and assumptions. A remedy should preserve expressive power and generalization while improving measured scaling. Do not call one successful small circuit a general solution."
+      ],
+      "equation": "For N independent sign measurements, Var(mean) = (1-f²)/N <= 1/N. For two independent shifted means with N shots each, Var(gradient estimate) <= 1/(2N).",
+      "example": "A two-shift gradient estimate uses 500 shots at each shift. Its variance is at most 1/1000, so its standard deviation is at most about 0.0316. A true gradient near 0.001 can be hidden by this noise. More precise estimation can be costly.",
+      "exercise": "Use 2000 shots at each shift. Compute the worst-case gradient standard deviation and explain whether this calculation proves a barren plateau.",
+      "solution": "The variance bound is 1/4000. Its square root is about 0.0158. This bounds estimator noise only. A barren-plateau claim requires controlled gradient scaling across circuit sizes and initializations.",
+      "quiz": {
+        "question": "Which evidence supports a scaling claim about barren plateaus?",
+        "options": [
+          "Controlled gradient statistics across increasing sizes",
+          "One optimizer run with no improvement",
+          "One large error bar"
+        ],
+        "answer": 0,
+        "explanation": "A scaling claim needs repeated gradient statistics under controlled circuit assumptions at several sizes. A single optimization failure has many alternative explanations."
+      },
+      "sources": [
+        "plateaus",
+        "mitarai"
+      ],
+      "lab": "gradient",
+      "caution": "The original barren-plateau result applies to specified circuit ensembles. It does not state that every useful quantum model is untrainable."
+    },
+    {
+      "id": "L7-05",
+      "title": "Identifiability before quantum causal learning",
+      "objective": "Prove a target is identifiable before fitting a flexible model.",
+      "prerequisites": [
+        "L6-05",
+        "L7-01"
+      ],
+      "paragraphs": [
+        "A flexible learner can match observed probabilities while representing the wrong intervention behavior. This is a fundamental identification problem rather than an optimizer defect. Define the observational or operational equivalence class before choosing a model architecture. The target must be constant across that class to be identifiable.",
+        "For quantum processes, restricted instruments can make distinct channels or graphs indistinguishable. Hidden environments can enlarge the equivalence class. An expressive quantum or classical learner cannot create information absent from the data. A prior can choose an answer but must be disclosed as an additional assumption.",
+        "Use a constructive test. Find two allowed models with identical accessible predictions but different target values. Such a pair disproves identification for that design. To repair the study, add an informative intervention, narrow the justified model class, or report bounds instead of a point claim."
+      ],
+      "equation": "A target T is identifiable under data map D when D(M1)=D(M2) implies T(M1)=T(M2) for every allowed pair of models M1,M2.",
+      "example": "Observe only Z outcomes after a |0> input. Identity and complete Z dephasing both predict outcome 0. Their X-coherence transmission differs on |+> input. Thus coherence transmission is not identifiable from the original data. No training loss can resolve this exact equality.",
+      "exercise": "A learner chooses identity from those original records by imposing a minimum-noise prior. Is the coherence conclusion data-identified? Specify an experiment that could test it.",
+      "solution": "It is prior-selected rather than identified by those records. Prepare |+> and measure X after the device. Identity predicts + with probability one, while complete Z dephasing predicts one half.",
+      "quiz": {
+        "question": "What disproves target identification?",
+        "options": [
+          "A low training loss",
+          "Two data-equivalent models with different target values",
+          "A larger neural model"
+        ],
+        "answer": 1,
+        "explanation": "If two permitted models give identical available data but different targets, that data cannot select one target value without an additional assumption."
+      },
+      "sources": [
+        "costa",
+        "barrett",
+        "allen"
+      ],
+      "lab": "causal",
+      "caution": "The model class and operation set are part of every identification statement. Changing either can change the result."
+    },
+    {
+      "id": "L7-06",
+      "title": "Sample complexity and resource accounting",
+      "objective": "Separate copies, queries, gates, and total experimental cost.",
+      "prerequisites": [
+        "L7-04",
+        "L7-05"
+      ],
+      "paragraphs": [
+        "Sample complexity counts the observations needed for a stated accuracy and failure probability. Query complexity counts accesses to an oracle or process. Gate complexity counts circuit operations. Wall-clock cost also includes state preparation, reset, compilation, communication, and analysis. These quantities cannot be substituted without an access model.",
+        "For a bounded measurement mean, independent samples give a simple concentration bound. The bound can be conservative but it states a reproducible requirement. Correlated drift or adaptive stopping can invalidate an independence-based analysis. Declare those conditions before interpreting the calculated count.",
+        "A quantum advantage can concern one resource while increasing another. State whether the comparison counts classical samples, coherent queries, quantum memory, or compute time. A theoretical oracle model can be useful, but its assumptions must be visible beside any practical claim."
+      ],
+      "equation": "For independent outcomes in [-1,1], P(|mean-mu|>=epsilon) <= 2 exp(-N epsilon²/2). Thus N >= (2/epsilon²) ln(2/delta) suffices for failure probability at most delta.",
+      "example": "Choose epsilon=0.1 and delta=0.05. The bound gives N >= 200 ln(40), approximately 737.8. Round upward to 738 independent shots. This bound concerns one observable mean. Estimating many means or searching models needs additional error control.",
+      "exercise": "Use epsilon=0.2 and delta=0.1. Find the sufficient integer count. Explain what the count does not measure.",
+      "solution": "The bound gives N >= 50 ln(20), approximately 149.79. Use 150 independent shots. This does not count gate operations, state-preparation time, or the extra cost of estimating several observables.",
+      "quiz": {
+        "question": "Which statement is correct about resource counts?",
+        "options": [
+          "Queries, copies, and wall-clock time are interchangeable",
+          "A small shot count guarantees low total cost",
+          "Each count needs its own stated access and cost model"
+        ],
+        "answer": 2,
+        "explanation": "Different resource measures describe different operations. An algorithm can save queries while spending more preparation or computation time, so the comparison must state its model."
+      },
+      "sources": [
+        "hypothesis",
+        "watrous",
+        "advantage"
+      ],
+      "lab": "chance",
+      "caution": "The concentration bound assumes independent bounded outcomes and a fixed analysis. Time-correlated noise requires another justification."
+    },
+    {
+      "id": "L7-07",
+      "title": "Classical shadows and observable structure",
+      "objective": "Explain why shadow efficiency depends on the observables.",
+      "prerequisites": [
+        "L5-09",
+        "L7-06"
+      ],
+      "paragraphs": [
+        "A classical shadow stores randomized measurement data in a form that estimates many observables. Each measurement setting and outcome defines an inverted snapshot. Averaging snapshots gives an estimator for selected properties. The snapshot need not itself be a physical density operator.",
+        "Efficiency depends on the measurement ensemble and the target observables. For local random Pauli measurements, a high-weight observable can have a large shadow norm. A logarithmic dependence on the number of requested observables does not mean every observable can be estimated with a system-size-independent constant cost.",
+        "Use a measurement ensemble suited to the property family. State the error and confidence target and account for reconstruction time. Classical shadows do not provide a free complete state description at arbitrary accuracy. They also do not remove causal identification assumptions when the target is an intervention property."
+      ],
+      "equation": "For one qubit with a uniformly random X,Y,Z basis and observed eigenstate |b>, a snapshot is rho_hat = 3|b><b| - I. Its ensemble average equals rho under ideal calibrated measurements.",
+      "example": "For a Z-basis outcome 0, the snapshot is diag(2,-1). Its trace is one, but one eigenvalue is negative. This is valid as an estimator. Averaging over the randomized experiment, rather than interpreting each snapshot as a prepared state, recovers the density operator.",
+      "exercise": "Write the snapshot for a Z-basis outcome 1. Give its trace and explain why it need not be positive.",
+      "solution": "The snapshot is diag(-1,2), with trace one. It is an inverted statistical estimator, so positivity is not required for one snapshot. The ensemble mean reconstructs the physical state.",
+      "quiz": {
+        "question": "What controls the measurement cost beyond the observable count?",
+        "options": [
+          "The measurement ensemble and observable-dependent shadow norm",
+          "Only the number of stored files",
+          "Only the Hilbert-space label"
+        ],
+        "answer": 0,
+        "explanation": "Observable structure and measurement choice control estimator variance. The logarithmic observable-count factor does not remove these other potentially large factors."
+      },
+      "sources": [
+        "shadows",
+        "watrous"
+      ],
+      "lab": "qubit",
+      "caution": "The simple snapshot formula assumes ideal uniform local Pauli measurements. Noise and different ensembles require a calibrated inverse or another estimator."
+    },
+    {
+      "id": "L7-08",
+      "title": "Reproducible quantum causal benchmarks",
+      "objective": "Design a comparison that separates prediction from causal recovery.",
+      "prerequisites": [
+        "L7-03",
+        "L7-05",
+        "L7-06"
+      ],
+      "paragraphs": [
+        "A benchmark needs an explicit data generator or physical source, train and test splits, metrics, and resource limits. For causal tasks, reserve intervention tests that differ from training conditions. Predictive agreement on the original settings does not by itself measure intervention recovery.",
+        "Compare with strong classical models, simple physical baselines, and ablations. An ablation removes a selected feature to test its contribution. Match tuning budgets and prevent test-set feedback during model selection. Use several seeds or repeat experiments to quantify variation.",
+        "Record the exact circuit, device calibration, software version, shot allocation, and stopping rule. Save raw counts where permitted and enough metadata to reconstruct the analysis. Separate simulator results from hardware results. A simulation validates code and model calculations, not an advantage on a physical processor."
+      ],
+      "equation": "Report prediction error on held-out settings, target error |T_hat-T| where a reference is known, interval coverage across repeats, and total counted resources. Do not collapse these different quantities into one unexplained score.",
+      "example": "Train identity and dephasing candidates on Z-basis data only. Both fit equally well. Test with |+> preparation and X measurement. A benchmark that includes only the original Z settings would reward both and fail to test the claimed coherence mechanism.",
+      "exercise": "Propose one ablation and one held-out test for a learner that claims to use intervention information in quantum channel identification.",
+      "solution": "Remove intervention-setting labels or restrict the training operation set in the ablation. Test on a distinct informative preparation and measurement pair. Compare target error and uncertainty under equal resource budgets.",
+      "quiz": {
+        "question": "Which split tests intervention recovery more directly?",
+        "options": [
+          "Another copy of the same training records",
+          "Held-out informative intervention settings",
+          "A larger training score display"
+        ],
+        "answer": 1,
+        "explanation": "New informative interventions test the claimed mechanism beyond the original observations. Reusing the same setting distribution can leave causal ambiguity unchanged."
+      },
+      "sources": [
+        "advantage",
+        "costa",
+        "qml"
+      ],
+      "lab": "causal",
+      "caution": "Synthetic ground truth validates performance for that generator. It does not establish that the same causal assumptions hold in another physical system."
+    },
+    {
+      "id": "L7-09",
+      "title": "A research protocol from question to result",
+      "objective": "Prepare a falsifiable small research study with stopping rules.",
+      "prerequisites": [
+        "L6-10",
+        "L7-08"
+      ],
+      "paragraphs": [
+        "Choose one narrow question with an identifiable target. State the proposed contribution relative to a named baseline. A useful first project can compare experiment selection strategies for two or more channel families. Avoid claiming a universal quantum causal learner from one small example.",
+        "Write a protocol before tuning. Include hypotheses, process family, allowed instruments, parameter range, resource budget, metric, uncertainty method, and rejection criteria. Check the protocol with an analytic toy case. Then run a controlled pilot and preserve all attempts, including failures.",
+        "The final report should separate established results, numerical evidence, and interpretation. A negative result can reveal an identification failure or a cost omitted from earlier comparisons. Publish enough details for replication. Label any proposal beyond the measured regime as a future research question."
+      ],
+      "equation": "Example target: p in E_p(rho)=(1-p)rho+pI/2. With |0> input and Z measurement, P(1)=p/2, so p_hat=2 times the observed fraction of outcomes 1.",
+      "example": "For 1000 shots, suppose 120 outcomes are 1. The estimate is p_hat=0.24. Under the model, the variance of this unbiased estimator is 4q(1-q)/1000, where q=p/2. A confidence procedure and physical-range handling must be specified before reporting an interval.",
+      "exercise": "For 800 shots and 80 outcomes 1, estimate p. Name a residual pattern that would challenge the assumed depolarizing model.",
+      "solution": "The observed fraction is 0.1, so p_hat is 0.2. Different contraction factors across calibrated X, Y, and Z probes would challenge isotropic depolarization and suggest a broader noise model.",
+      "quiz": {
+        "question": "What makes the project falsifiable?",
+        "options": [
+          "A stated observation that would reject its model or claim",
+          "Only a positive expected outcome",
+          "An unspecified future experiment"
+        ],
+        "answer": 0,
+        "explanation": "A falsifiable protocol defines observations that count against the model or proposed improvement. It also preserves the analysis plan when the result is unfavorable."
+      },
+      "sources": [
+        "noise",
+        "costa",
+        "watrous"
+      ],
+      "lab": "noise",
+      "caution": "The estimator assumes the specific depolarizing convention and trusted preparation and readout. Bias in those operations can bias p_hat."
+    },
+    {
+      "id": "L7-10",
+      "title": "Open problems and critical synthesis",
+      "objective": "Form a research question without turning a proposal into a fact.",
+      "prerequisites": [
+        "L7-09",
+        "L6-09"
+      ],
+      "paragraphs": [
+        "Several themes connect quantum learning and causal inference. They include learning causal structure with restricted instruments, robust identification under unknown noise, adaptive experiment design, and efficient representations of large processes. Each theme contains distinct tasks and assumptions. Treat the list as directions rather than solved capabilities.",
+        "A research argument needs a clear gap, a formal task, a proposed method, and a comparison that can fail. Separate mathematical theorems from simulation evidence and hardware evidence. State which hidden-system, dimension, and access assumptions make the target meaningful and identifiable.",
+        "Read a paper by tracing its strongest claim back to definitions and evidence. Check the baseline, resource model, and limitation section. Then attempt a counterexample under relaxed assumptions. A useful postdoctoral contribution can sharpen a boundary or expose a failure, even without a new architecture."
+      ],
+      "equation": "A proposed claim has the form: for model class M, operation set O, accuracy epsilon, and failure rate delta, method A achieves a stated target with resource bound C. Every symbol needs an operational definition.",
+      "example": "Propose adaptive setting selection for channel discrimination. Compare it with a fixed informative design at equal total shots. Test both under calibration drift. If adaptation wins only with perfect calibration, report that boundary. Do not state a general causal advantage from this restricted result.",
+      "exercise": "Write a research question about restricted quantum causal discovery. Give one identifying assumption, one baseline, and one result that would count against the proposed method.",
+      "solution": "Ask whether adaptive allowed instruments reduce shots for a specified identifiable process family. Assume trusted instrument calibration. Compare with an optimized fixed design. Equal or worse target error at equal resources would count against the proposed improvement.",
+      "quiz": {
+        "question": "Which statement belongs in a research conclusion?",
+        "options": [
+          "A universal advantage from one toy simulation",
+          "A measured result with its model and access limits",
+          "An open question presented as an established theorem"
+        ],
+        "answer": 1,
+        "explanation": "A defensible conclusion matches the scope of the evidence. Model assumptions and access limits determine where the measured or proved result applies."
+      },
+      "sources": [
+        "qml",
+        "costa",
+        "advantage",
+        "plateaus"
+      ],
+      "lab": "gradient",
+      "caution": "This is a research-entry synthesis, not an exhaustive survey of every current paper. Verify new literature before claiming novelty or a current state-of-the-art result."
+    }
+  ]
+}

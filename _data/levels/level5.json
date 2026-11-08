@@ -1,0 +1,347 @@
+{
+  "level": 5,
+  "title": "Quantum information",
+  "audience": "University and graduate study",
+  "intro": "Build the state, channel, and measurement tools needed for quantum causal models.",
+  "lessons": [
+    {
+      "id": "L5-01",
+      "title": "States and the Born rule",
+      "objective": "Calculate measurement probabilities from normalized amplitudes.",
+      "prerequisites": [
+        "L3-01",
+        "L3-02"
+      ],
+      "paragraphs": [
+        "A qubit is a quantum system with two basis states. Write these states as |0> and |1>. A pure state is a normalized complex vector. Its amplitudes describe how the state relates to a selected measurement basis.",
+        "The Born rule converts amplitudes to probabilities. Square the magnitude of each amplitude. Add the probabilities to check normalization. A negative amplitude is permitted. A negative probability is not permitted. The measurement basis must always be stated.",
+        "A measurement gives one outcome per trial. It does not expose all amplitudes from one system. Estimate probabilities with many equally prepared systems. Use other measurement bases to learn relative phase. Measurement statistics alone do not establish a causal explanation."
+      ],
+      "equation": "|psi> = alpha|0> + beta|1>; |alpha|² + |beta|² = 1; P(1) = |beta|². Here alpha and beta are complex amplitudes.",
+      "example": "Prepare |psi> = sqrt(3)/2 |0> + 1/2 |1>. The squared magnitudes are 3/4 and 1/4. In 400 independent computational-basis trials, the expected number of outcomes 1 is 100. An observed count need not equal its expectation.",
+      "exercise": "A normalized state has amplitudes 1/sqrt(5) and 2i/sqrt(5). Find P(1) and the expected count in 250 trials.",
+      "solution": "The squared magnitude of 2i/sqrt(5) is 4/5. Thus P(1) is 0.8. The expected count is 250 times 0.8, or 200. The imaginary phase does not change this basis probability.",
+      "quiz": {
+        "question": "What must sum to one for a normalized pure state?",
+        "options": [
+          "The amplitudes",
+          "The squared amplitude magnitudes",
+          "The measurement counts"
+        ],
+        "answer": 1,
+        "explanation": "Probabilities are squared magnitudes. Their sum is one. Complex amplitudes themselves can cancel and need not sum to one."
+      },
+      "sources": [
+        "ibm",
+        "preskill"
+      ],
+      "lab": "qubit",
+      "caution": "The pure-state description assumes a specified preparation. General preparations require density operators."
+    },
+    {
+      "id": "L5-02",
+      "title": "Gates and circuit order",
+      "objective": "Apply unitary gates in the correct order.",
+      "prerequisites": [
+        "L5-01",
+        "L3-03"
+      ],
+      "paragraphs": [
+        "A closed quantum system evolves through a unitary matrix. A matrix U is unitary when its conjugate transpose times U is the identity. This property preserves vector length and total probability. A circuit records an ordered sequence of such operations.",
+        "The X gate exchanges |0> and |1>. The Hadamard gate H makes equal superpositions from these basis states. The Z gate changes the sign of the |1> amplitude. These changes affect later measurements even when current probabilities stay unchanged.",
+        "With column vectors, the rightmost matrix acts first. Circuit drawings usually show time from left to right. State this convention before multiplying gates. Measurement and noise are generally not unitary operations on the measured system alone."
+      ],
+      "equation": "H = (1/sqrt(2)) [[1,1],[1,-1]]; Z = diag(1,-1); HZH = X. Matrices act on column state vectors.",
+      "example": "Start in |0>. Apply H to get (|0> + |1>)/sqrt(2). Apply Z to get (|0> - |1>)/sqrt(2). Apply H again to get |1>. A final computational-basis measurement therefore gives 1 with probability one in the ideal circuit.",
+      "exercise": "Start in |1>. Apply H, then Z, then H. Calculate the final state and its computational-basis outcome.",
+      "solution": "The combined operation is HZH = X. The X gate maps |1> to |0>. The final state is |0>, so the outcome is 0 with probability one.",
+      "quiz": {
+        "question": "Which matrix acts first in U V |psi>?",
+        "options": [
+          "U",
+          "Both at once",
+          "V"
+        ],
+        "answer": 2,
+        "explanation": "For column vectors, evaluate the expression from the right. V first changes the state, and U acts on that result."
+      },
+      "sources": [
+        "ibm",
+        "watrous"
+      ],
+      "lab": "qubit",
+      "caution": "Ideal gates describe a noiseless model. Hardware operations can differ from their target matrices."
+    },
+    {
+      "id": "L5-03",
+      "title": "Phase and interference",
+      "objective": "Predict interference after a relative phase change.",
+      "prerequisites": [
+        "L5-02"
+      ],
+      "paragraphs": [
+        "Two paths can contribute amplitudes to the same outcome. Add those amplitudes before taking the squared magnitude. Their relative phase controls whether they reinforce or cancel. Adding the two path probabilities instead would remove the interference term.",
+        "A phase applied to the whole state has no effect on outcome probabilities. A phase applied to only one component can change a later measurement. This distinction separates global phase from relative phase. The measurement apparatus selects which distinction is observable.",
+        "Interference is not a claim that a detector reports every path. One trial still gives one registered outcome. The circuit combines amplitudes before detection. Compare several phase settings with repeated preparation to test the resulting probability curve."
+      ],
+      "equation": "|psi(phi)> = (|0> + exp(i phi)|1>)/sqrt(2); after H, P(0) = (1 + cos(phi))/2. Here phi is relative phase in radians.",
+      "example": "An equal path state receives relative phase pi/3. After a Hadamard gate, P(0) = (1 + 1/2)/2 = 3/4. The complementary probability is 1/4. Without the final combining gate, both path-basis probabilities would remain 1/2.",
+      "exercise": "Set the relative phase to 2pi/3. Find the two probabilities after the combining Hadamard gate.",
+      "solution": "The cosine of 2pi/3 is -1/2. Thus P(0) is 1/4 and P(1) is 3/4. Their sum remains one. Relative phase changes the interference result.",
+      "quiz": {
+        "question": "Which operation can reveal a relative phase?",
+        "options": [
+          "A measurement in a suitable changed basis",
+          "Reading a global phase directly",
+          "Adding path probabilities before combining"
+        ],
+        "answer": 0,
+        "explanation": "A changed basis can turn a relative phase into unequal outcome probabilities. Global phase remains absent from every measurement probability."
+      },
+      "sources": [
+        "ibm",
+        "preskill"
+      ],
+      "lab": "interference",
+      "caution": "This formula assumes equal path amplitudes, an ideal phase operation, and a coherent final combination."
+    },
+    {
+      "id": "L5-04",
+      "title": "Tensor products and entanglement",
+      "objective": "Distinguish entanglement from classical correlation.",
+      "prerequisites": [
+        "L5-01",
+        "L3-04"
+      ],
+      "paragraphs": [
+        "A joint system uses a tensor product of component spaces. Two qubits have four computational basis states. A product state separates into one state for each qubit. An entangled pure state cannot be written as such a product.",
+        "The Bell state (|00> + |11>)/sqrt(2) gives equal local outcomes in the computational basis. A classical mixture of |00> and |11> gives the same outcomes in that basis. A second measurement basis is needed to distinguish these preparations.",
+        "Entanglement concerns the joint state, rather than any single correlation table. Local outcomes can remain random while joint outcomes show strong structure. This structure does not permit a controllable message faster than light. Compare complete experimental assumptions before interpreting a Bell test."
+      ],
+      "equation": "|Phi+> = (|00> + |11>)/sqrt(2); rho_A = Tr_B(|Phi+><Phi+|) = I/2. Tr_B means partial trace over B.",
+      "example": "Measure both qubits of |Phi+> in the Z basis. Outcomes 00 and 11 each have probability 1/2. Measure in the X basis instead. The signs again agree. The classical equal mixture gives all four X-basis pairs with probability 1/4.",
+      "exercise": "For the equal classical mixture of |00> and |11>, calculate the probability that X-basis signs agree.",
+      "solution": "Each of the four X-basis pairs has probability 1/4. Two pairs have equal signs. Their combined probability is 1/2, unlike the Bell state value of one.",
+      "quiz": {
+        "question": "Does perfect correlation in one basis prove entanglement?",
+        "options": [
+          "Yes, in every case",
+          "No, a classical mixture can match it",
+          "Only with more repeated trials in that basis"
+        ],
+        "answer": 1,
+        "explanation": "A separable classical mixture can give the same single-basis correlation. Additional measurement settings are needed to exclude that explanation."
+      },
+      "sources": [
+        "watrous",
+        "preskill"
+      ],
+      "lab": "bell",
+      "caution": "Entanglement certification depends on the measurement model or on explicit device-independent test assumptions."
+    },
+    {
+      "id": "L5-05",
+      "title": "Density operators and reduced states",
+      "objective": "Calculate purity and explain a partial trace.",
+      "prerequisites": [
+        "L5-04",
+        "L3-05"
+      ],
+      "paragraphs": [
+        "A density operator describes both pure states and statistical mixtures. It is positive semidefinite and has trace one. For a pure state, form the outer product |psi><psi|. A mixture is a weighted sum of these outer products.",
+        "Purity is the trace of the squared density operator. A pure state has purity one. A mixed qubit can have purity as low as one half. Low local purity can arise from classical uncertainty or from entanglement with another system.",
+        "The partial trace gives local predictions from a joint state. It is an information reduction, not an assumption that the other system was physically destroyed. Two different joint states can have the same reduced state. Local data then cannot distinguish those joint preparations."
+      ],
+      "equation": "rho = sum_j p_j |psi_j><psi_j|; purity = Tr(rho²); rho_A = Tr_B(rho_AB). The weights p_j are nonnegative and sum to one.",
+      "example": "Take rho = diag(0.8,0.2). Its square has diagonal entries 0.64 and 0.04. The purity is 0.68. This is a valid mixed qubit state. Its Z-basis probabilities are 0.8 and 0.2, but this diagonal form contains no phase coherence.",
+      "exercise": "Find the purity of diag(0.6,0.4). Explain whether this operator describes a pure qubit state.",
+      "solution": "Square both diagonal entries and add them. The result is 0.36 + 0.16 = 0.52. Since this is below one, the state is mixed.",
+      "quiz": {
+        "question": "What does a reduced density operator determine?",
+        "options": [
+          "Every joint correlation",
+          "Only the global preparation label",
+          "All measurement probabilities on that subsystem"
+        ],
+        "answer": 2,
+        "explanation": "The reduced operator determines local probabilities. It does not retain the full joint correlation structure or uniquely identify the global preparation."
+      },
+      "sources": [
+        "watrous",
+        "preskill"
+      ],
+      "lab": "noise",
+      "caution": "A mixed-state decomposition is generally not unique. Do not interpret one decomposition as a uniquely observed hidden preparation."
+    },
+    {
+      "id": "L5-06",
+      "title": "Quantum channels and complete positivity",
+      "objective": "Check a channel with its Kraus operators.",
+      "prerequisites": [
+        "L5-05",
+        "L3-03"
+      ],
+      "paragraphs": [
+        "A quantum channel maps input density operators to output density operators. A deterministic physical channel is completely positive and trace preserving. Complete positivity means the map remains positive when an untouched reference system is included. Positivity on isolated inputs alone is insufficient.",
+        "Kraus operators provide one representation of a channel. Apply each operator on both sides of the input state, then add the results. The trace-preservation condition is a sum of conjugate products equal to the identity. Different Kraus lists can represent the same channel.",
+        "A channel can erase information even though total system and environment evolution is reversible. Tracing out the environment hides its record. A channel therefore differs from a unitary gate on the system alone. Preparation, damping, and measurement without a retained outcome are useful examples."
+      ],
+      "equation": "E(rho) = sum_k K_k rho K_k†; sum_k K_k† K_k = I. Dagger means conjugate transpose. This condition gives a trace-preserving Kraus map.",
+      "example": "A bit-flip channel uses K0 = sqrt(0.9) I and K1 = sqrt(0.1) X. The conjugate products sum to 0.9I + 0.1I = I. On |0><0|, the output has probabilities 0.9 for 0 and 0.1 for 1.",
+      "exercise": "A bit-flip channel has flip probability 0.25. Apply it to |1><1| and give its output diagonal.",
+      "solution": "The system stays in |1> with probability 0.75 and flips to |0> with probability 0.25. In basis order 0,1, the diagonal is (0.25,0.75).",
+      "quiz": {
+        "question": "Which condition guarantees trace preservation in a Kraus representation?",
+        "options": [
+          "The Kraus operators sum to I",
+          "The sum of K dagger K equals I",
+          "Every Kraus operator is unitary"
+        ],
+        "answer": 1,
+        "explanation": "The conjugate-product sum must equal the identity. Individual Kraus operators can be nonunitary, and their ordinary sum has no such requirement."
+      },
+      "sources": [
+        "watrous",
+        "preskill"
+      ],
+      "lab": "noise",
+      "caution": "The channel assumes no relevant initial correlation between the input system and an unmodelled environment for this fixed-map description."
+    },
+    {
+      "id": "L5-07",
+      "title": "Measurements and instruments",
+      "objective": "Separate an outcome probability from an outcome-conditioned state.",
+      "prerequisites": [
+        "L5-06"
+      ],
+      "paragraphs": [
+        "A positive operator valued measure, or POVM, specifies outcome probabilities. Each effect is positive and the effects sum to the identity. The probability is the trace of an effect times the state. Effects alone do not determine the state after measurement.",
+        "A quantum instrument adds the state change for each recorded outcome. Each outcome map is completely positive and trace nonincreasing. Their sum is a channel. Divide the outcome map result by its trace to obtain the normalized conditional state.",
+        "This distinction matters for causal experiments. Two apparatuses can have the same immediate outcome probabilities but prepare different states for the next laboratory. An experiment that records only outcomes can miss this difference. Include the operational intervention when specifying the model."
+      ],
+      "equation": "p(a) = Tr(E_a rho); rho_a = I_a(rho)/p(a). Here E_a is a POVM effect, I_a is its instrument map, and p(a)>0.",
+      "example": "A Z measurement of |+> gives outcome 0 with probability 1/2. A projective instrument then leaves |0>. Another instrument can record the same outcome and prepare |1>. The first probabilities match, but a later Z measurement distinguishes the two apparatuses.",
+      "exercise": "A device measures Z, records the outcome, then always prepares |+>. What is the probability of 1 in a later Z measurement?",
+      "solution": "The final preparation is |+>, independent of the first outcome. A later Z measurement therefore gives 1 with probability one half. The first measurement effect alone would not specify this result.",
+      "quiz": {
+        "question": "What extra information does an instrument supply beyond a POVM?",
+        "options": [
+          "The conditional state change",
+          "A different probability rule",
+          "A unique hidden variable"
+        ],
+        "answer": 0,
+        "explanation": "A POVM gives the probabilities of recorded outcomes. An instrument also specifies the physical transformation associated with each recorded outcome."
+      },
+      "sources": [
+        "watrous",
+        "costa"
+      ],
+      "lab": "qubit",
+      "caution": "Conditioning on an outcome with zero probability is undefined. State this limit when writing conditional-state formulas."
+    },
+    {
+      "id": "L5-08",
+      "title": "Bell correlations and the CHSH test",
+      "objective": "Calculate a CHSH value and state its assumptions.",
+      "prerequisites": [
+        "L5-04",
+        "L4-02"
+      ],
+      "paragraphs": [
+        "A Bell experiment compares correlations under several local measurement choices. In the CHSH test, each laboratory chooses between two settings and records a sign. A local hidden-variable model obeys an absolute CHSH bound of two under its measurement-independence and locality assumptions.",
+        "Quantum theory permits values up to two times the square root of two. This exceeds the local bound but still respects no signalling. Neither outcome lets one laboratory choose the other outcome. A violation excludes a stated class of models, rather than every possible causal explanation.",
+        "Real tests must address detection, setting selection, timing, and statistical uncertainty. Selecting only convenient detected events can invalidate the comparison. Finite samples require a defined test statistic and uncertainty method. A simulated expected value is not an experimental loophole-free Bell test."
+      ],
+      "equation": "S = E00 + E01 + E10 - E11; |S| <= 2 locally; |S| <= 2sqrt(2) quantum mechanically. Exy is the mean product of signs for settings x,y.",
+      "example": "Suppose the four correlations are 1/sqrt(2), 1/sqrt(2), 1/sqrt(2), and -1/sqrt(2). Their signed sum is 4/sqrt(2), or about 2.828. Uniform local marginals can accompany these correlations. Thus a Bell violation does not imply a signalling channel.",
+      "exercise": "For correlations 0.6,0.6,0.6,-0.6, calculate S. Compare it with the local bound without making a statistical significance claim.",
+      "solution": "The signed sum is 0.6 + 0.6 + 0.6 - (-0.6) = 2.4. This exceeds two as a point value. Sample counts and a statistical test are still needed.",
+      "quiz": {
+        "question": "Does a CHSH violation permit a controllable faster-than-light message?",
+        "options": [
+          "Yes, whenever S exceeds two",
+          "Only for pure states",
+          "No, quantum marginals can obey no signalling"
+        ],
+        "answer": 2,
+        "explanation": "The violation concerns local hidden-variable explanations. Quantum joint correlations can violate that bound while each local marginal stays independent of the remote setting."
+      },
+      "sources": [
+        "bell",
+        "chsh",
+        "preskill"
+      ],
+      "lab": "bell",
+      "caution": "The local bound assumes suitable locality and setting independence. Experimental confidence requires a valid finite-sample analysis."
+    },
+    {
+      "id": "L5-09",
+      "title": "Entropy and quantum tomography",
+      "objective": "Explain what can be reconstructed from repeated measurements.",
+      "prerequisites": [
+        "L5-05",
+        "L3-08"
+      ],
+      "paragraphs": [
+        "The von Neumann entropy measures mixedness through the eigenvalues of a density operator. Use logarithm base two to express entropy in bits. A pure state has zero entropy. A maximally mixed qubit has one bit of entropy.",
+        "Quantum tomography estimates a state from measurements of many equally prepared systems. For a qubit, measurements of X, Y, and Z determine a Bloch vector. A physical Bloch vector has length at most one. Statistical estimates can violate this condition before constrained fitting.",
+        "A full density matrix grows rapidly with system size. Tomography can therefore require many settings and samples. State assumptions can reduce this cost but also restrict the conclusion. A neural estimator does not remove the need for an identifiable measurement design."
+      ],
+      "equation": "S(rho) = -sum_j lambda_j log2(lambda_j); rho = (I + rx X + ry Y + rz Z)/2. The lambda_j are eigenvalues and r is the Bloch vector.",
+      "example": "A qubit has measured means rx = 0, ry = 0, rz = 0.6. Its eigenvalues are (1+0.6)/2 = 0.8 and 0.2. Its entropy is approximately 0.722 bits. These means identify a diagonal mixed state under the trusted measurement model.",
+      "exercise": "A fitted Bloch vector is (0,0,1). Give the eigenvalues and entropy. Explain whether additional samples can expose arbitrary global phase.",
+      "solution": "The eigenvalues are one and zero, so the entropy is zero. This is a pure state. No number of samples can reveal a physically irrelevant global phase.",
+      "quiz": {
+        "question": "Which three means specify a qubit density operator?",
+        "options": [
+          "X, Y, and Z expectation values",
+          "Only three repeated Z outcomes",
+          "Only its entropy"
+        ],
+        "answer": 0,
+        "explanation": "The three Pauli means specify the Bloch vector. Entropy or one measurement basis alone does not determine all state components."
+      },
+      "sources": [
+        "watrous",
+        "preskill"
+      ],
+      "lab": "qubit",
+      "caution": "Tomography assumes a stable preparation and a calibrated measurement model. These assumptions must be checked separately from the fit."
+    },
+    {
+      "id": "L5-10",
+      "title": "Noise, encoding, and error correction",
+      "objective": "Distinguish a noise channel from an error-correction procedure.",
+      "prerequisites": [
+        "L5-06",
+        "L5-09"
+      ],
+      "paragraphs": [
+        "Noise changes a quantum state through unwanted coupling or control error. Depolarization moves a state toward the maximally mixed state. Dephasing reduces coherence in a selected basis. These channels have different effects even when a single chosen measurement produces similar counts.",
+        "Quantum error correction stores logical information across several physical systems. Syndrome measurements reveal selected error properties without directly reading the logical state. A recovery operation then corrects an allowed error set. This procedure does not copy an unknown state into independent identical copies.",
+        "An encoding is useful only under its stated noise and control assumptions. A repetition code can correct certain bit flips but not arbitrary single-qubit errors. Fault tolerance also addresses faults during the correction process. Report logical error rates with the complete experimental procedure."
+      ],
+      "equation": "E_p(rho) = (1-p)rho + p I/2, 0<=p<=1. For rho=(I+r·sigma)/2, depolarization sends r to (1-p)r.",
+      "example": "Apply depolarization with p = 0.2 to |0><0|. The output is 0.8 diag(1,0) + 0.2 diag(1/2,1/2), or diag(0.9,0.1). Its purity is 0.82. This p convention differs from some Pauli-error parameterizations.",
+      "exercise": "Apply the same depolarization convention with p = 0.4 to |1><1|. Give the output probabilities and purity.",
+      "solution": "The output diagonal is (0.2,0.8). Its purity is 0.2 squared plus 0.8 squared, which is 0.68. Increasing depolarization reduces this initially pure state purity.",
+      "quiz": {
+        "question": "What does a syndrome measurement seek to reveal?",
+        "options": [
+          "The full unknown logical state",
+          "Information about an error without directly reading logical data",
+          "Independent copies of the logical state"
+        ],
+        "answer": 1,
+        "explanation": "A syndrome is designed to diagnose a correctable error class while preserving logical information. Reading the logical state itself would defeat that goal."
+      },
+      "sources": [
+        "noise",
+        "preskill"
+      ],
+      "lab": "noise",
+      "caution": "Noise parameters depend on convention. This lesson uses mixing with I/2, not the alternative total Pauli-error probability."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+# GitHub Actions workflow for the pozapas/quantum-causal-ai repository.
+# Builds the Jupyter Book (executing every notebook) and publishes it to
+# https://pozapas.github.io/quantum-causal-ai/
+name: deploy-book
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      BASE_URL: /quantum-causal-ai
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install
+        run: |
+          pip install -r requirements.txt "jupyter-book==2.1.7" nbclient jupyter-server pytest
+          python -m ipykernel install --user --name qcai --display-name "Python 3 (qcai)"
+      - name: Unit tests
+        run: python -m pytest -q tests
+      - name: Build book
+        run: jupyter-book build --html
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _build/html
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
