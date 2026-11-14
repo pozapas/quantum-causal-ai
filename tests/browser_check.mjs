@@ -130,6 +130,27 @@ try {
   await fresh.close(); await wp.close();
 } catch (e) { errors.push(`widget check: ${e.message.split('\n')[0]}`); }
 
+// Lesson animations: every video must play, have controls, and start paused for reduced motion
+try {
+  const vids = [];
+  for (const rm of ['no-preference', 'reduce']) {
+    const vctx = await browser.newContext({ reducedMotion: rm }); const vp = await vctx.newPage();
+    for (const url of list.filter(u => /levels\/level-[1-7]\//.test(u))) {
+      await vp.goto(origin + BASE + url, { waitUntil: 'networkidle' });
+      const n = await vp.locator('video').count();
+      if (!n) continue;
+      await vp.waitForTimeout(1500);
+      const st = await vp.evaluate(() => [...document.querySelectorAll('video')].map(v => ({ c: v.hasAttribute('controls'), p: v.paused, r: v.readyState })));
+      st.forEach(v => { vids.push(url);
+        if (!v.c) errors.push(`${url}: video without controls`);
+        if (v.r < 2) errors.push(`${url}: video did not load`);
+        if (rm === 'reduce' && !v.p) errors.push(`${url}: video plays despite reduced motion`); });
+    }
+    await vctx.close();
+  }
+  stats.videos = vids.length / 2;
+} catch (e) { errors.push(`video check: ${e.message.split('\n')[0]}`); }
+
 // Light mode is the default, even when the visitor's computer prefers dark
 try {
   const dctx = await browser.newContext({ colorScheme: 'dark' });
@@ -172,7 +193,7 @@ for (const [name, url, p] of [['home-desktop', '/', page], ['lesson-desktop', '/
 
 // axe-core on three pages
 const axeSrc = fs.readFileSync(require.resolve('axe-core/axe.min.js', { paths: [path.resolve(here, '..', '..')] }), 'utf8');
-for (const url of ['/', '/levels/level-5/l5-05/', '/labs/entanglement-bell/'].filter(u => list.includes(u))) {
+for (const url of ['/', '/levels/level-5/l5-05/', '/labs/entanglement-bell/', '/levels/level-1/l1-03/'].filter(u => list.includes(u))) {
   await visit(page, url);
   await page.addScriptTag({ content: axeSrc });
   const res = await page.evaluate(async () => (await window.axe.run(document, { resultTypes: ['violations'] })).violations

@@ -97,6 +97,21 @@
   ]
  },
  {
+  "id": "bickel1975",
+  "title": "Sex Bias in Graduate Admissions: Data from Berkeley",
+  "authors": "P. J. Bickel, E. A. Hammel, J. W. O'Connell",
+  "year": 1975,
+  "venue": "Science",
+  "doi": "10.1126/science.187.4175.398",
+  "url": "https://doi.org/10.1126/science.187.4175.398",
+  "kind": "paper",
+  "scope": "Berkeley graduate admissions: an aggregate gap that reverses or vanishes within departments",
+  "levels": [
+   2,
+   3
+  ]
+ },
+ {
   "id": "bradyneal",
   "title": "Introduction to Causal Inference",
   "authors": "Brady Neal",
@@ -138,10 +153,11 @@
   "venue": "Common Core State Standards Initiative",
   "url": "https://learning.ccsso.org/wp-content/uploads/2022/11/Math_Standards1.pdf",
   "kind": "web",
-  "scope": "K-2 counting, comparing, sorting, measuring, and picture graphs (K.CC.4, K.CC.5, K.CC.7, K.MD.3, 1.MD.4, 2.MD.1, 2.MD.10)",
+  "scope": "K-12 counting, comparing, sorting, measuring, graphs, fractions, expressions, functions, statistics, and probability (K.CC.4, K.CC.5, K.CC.6, K.CC.7, K.MD.3, 1.MD.4, 2.MD.1, 2.MD.10, 3.NF.1, 4.NF.1, 6.EE.6, 6.SP.1, 7.SP.5, 7.SP.6, 7.SP.7, 7.SP.8, 8.F.1, 8.SP.1, 8.SP.4, S-CP.3, S-ID.9)",
   "levels": [
    0,
-   1
+   1,
+   2
   ]
  },
  {
@@ -280,6 +296,8 @@
   "kind": "book",
   "scope": "Quantum amplitudes and interference",
   "levels": [
+   1,
+   2,
    3,
    4,
    5
@@ -332,6 +350,20 @@
   "levels": [
    6,
    7
+  ]
+ },
+ {
+  "id": "gigerenzer1995",
+  "title": "How to improve Bayesian reasoning without instruction: Frequency formats",
+  "authors": "Gerd Gigerenzer, Ulrich Hoffrage",
+  "year": 1995,
+  "venue": "Psychological Review",
+  "doi": "10.1037/0033-295X.102.4.684",
+  "url": "https://doi.org/10.1037/0033-295X.102.4.684",
+  "kind": "paper",
+  "scope": "Natural frequency formats improve Bayesian reasoning",
+  "levels": [
+   2
   ]
  },
  {
@@ -395,6 +427,7 @@
   "kind": "book",
   "scope": "Potential outcomes, exchangeability, consistency, positivity",
   "levels": [
+   2,
    4,
    5,
    6
@@ -445,6 +478,8 @@
   "scope": "States, gates, measurement, and entanglement",
   "levels": [
    0,
+   1,
+   2,
    3,
    4,
    5
@@ -532,6 +567,25 @@
   ]
  },
  {
+  "id": "manim_ce",
+  "title": "Manim Community",
+  "authors": "The Manim Community Developers",
+  "year": 2026,
+  "venue": "GitHub repository README",
+  "url": "https://raw.githubusercontent.com/ManimCommunity/manim/main/README.md",
+  "kind": "web",
+  "scope": "Open-source library for programmatic math animations, forked from 3b1b/manim by Grant Sanderson",
+  "levels": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ]
+ },
+ {
   "id": "merrill2002",
   "title": "First principles of instruction",
   "authors": "M. David Merrill",
@@ -588,6 +642,19 @@
   ]
  },
  {
+  "id": "ngss_4ps4_1",
+  "title": "4-PS4-1 Waves and Their Applications in Technologies for Information Transfer",
+  "authors": "NGSS Lead States",
+  "year": 2013,
+  "venue": "Next Generation Science Standards",
+  "url": "https://www.nextgenscience.org/pe/4-ps4-1-waves-and-their-applications-technologies-information-transfer",
+  "kind": "web",
+  "scope": "Grade 4 performance expectation: a model of waves in terms of amplitude and wavelength",
+  "levels": [
+   1
+  ]
+ },
+ {
   "id": "ngss_appf",
   "title": "Appendix F: Science and Engineering Practices in the NGSS",
   "authors": "NGSS Lead States",
@@ -595,10 +662,11 @@
   "venue": "Next Generation Science Standards",
   "url": "https://www.nextgenscience.org/sites/default/files/Appendix%20F%20%20Science%20and%20Engineering%20Practices%20in%20the%20NGSS%20-%20FINAL%20060513.pdf",
   "kind": "web",
-  "scope": "K-2 science practices, including simple investigations based on fair tests",
+  "scope": "K-12 science and engineering practices: fair tests and number of trials (K-5), analyzing data and constructing explanations from evidence (6-8)",
   "levels": [
    0,
-   1
+   1,
+   2
   ]
  },
  {
@@ -613,6 +681,7 @@
   "kind": "book",
   "scope": "Standard textbook on quantum computation and information",
   "levels": [
+   2,
    4,
    5,
    6
@@ -720,6 +789,86 @@
   ]
  },
  {
+  "id": "openstax_contingency",
+  "title": "3.4 Contingency Tables",
+  "authors": "Barbara Illowsky and Susan Dean",
+  "year": 2023,
+  "venue": "OpenStax, Introductory Statistics 2e",
+  "url": "https://openstax.org/books/introductory-statistics-2e/pages/3-4-contingency-tables",
+  "kind": "web",
+  "scope": "Two-way (contingency) tables and conditional probabilities read from them",
+  "levels": [
+   2
+  ]
+ },
+ {
+  "id": "openstax_design",
+  "title": "1.4 Experimental Design and Ethics",
+  "authors": "Barbara Illowsky and Susan Dean",
+  "year": 2023,
+  "venue": "OpenStax, Introductory Statistics 2e",
+  "url": "https://openstax.org/books/introductory-statistics-2e/pages/1-4-experimental-design-and-ethics",
+  "kind": "web",
+  "scope": "Experiments, random assignment, explanatory and response variables, and lurking variables",
+  "levels": [
+   1,
+   2
+  ]
+ },
+ {
+  "id": "openstax_functions",
+  "title": "3.1 Functions and Function Notation",
+  "authors": "Jay Abramson",
+  "year": 2021,
+  "venue": "OpenStax, College Algebra 2e",
+  "url": "https://openstax.org/books/college-algebra-2e/pages/3-1-functions-and-function-notation",
+  "kind": "web",
+  "scope": "A function assigns each input exactly one output; function notation",
+  "levels": [
+   2
+  ]
+ },
+ {
+  "id": "openstax_independent",
+  "title": "3.2 Independent and Mutually Exclusive Events",
+  "authors": "Barbara Illowsky and Susan Dean",
+  "year": 2023,
+  "venue": "OpenStax, Introductory Statistics 2e",
+  "url": "https://openstax.org/books/introductory-statistics-2e/pages/3-2-independent-and-mutually-exclusive-events",
+  "kind": "web",
+  "scope": "Independent events: P(A|B) = P(A); mutually exclusive events",
+  "levels": [
+   2
+  ]
+ },
+ {
+  "id": "openstax_interference",
+  "title": "16.5 Interference of Waves",
+  "authors": "William Moebs, Samuel J. Ling, and Jeff Sanny",
+  "year": 2016,
+  "venue": "OpenStax, University Physics Volume 1",
+  "url": "https://openstax.org/books/university-physics-volume-1/pages/16-5-interference-of-waves",
+  "kind": "web",
+  "scope": "Superposition: waves add; constructive and destructive interference",
+  "levels": [
+   1,
+   3
+  ]
+ },
+ {
+  "id": "openstax_linear",
+  "title": "12.1 Linear Equations",
+  "authors": "Barbara Illowsky and Susan Dean",
+  "year": 2023,
+  "venue": "OpenStax, Introductory Statistics 2e",
+  "url": "https://openstax.org/books/introductory-statistics-2e/pages/12-1-linear-equations",
+  "kind": "web",
+  "scope": "Linear equations y = a + bx, slope and y-intercept",
+  "levels": [
+   2
+  ]
+ },
+ {
   "id": "openstax_prob",
   "title": "3.1 Terminology",
   "authors": "Barbara Illowsky and Susan Dean",
@@ -730,6 +879,59 @@
   "scope": "Probability as long-run relative frequency; the law of large numbers with coin tosses",
   "levels": [
    0,
+   1,
+   2
+  ]
+ },
+ {
+  "id": "openstax_scatter",
+  "title": "12.2 Scatter Plots",
+  "authors": "Barbara Illowsky and Susan Dean",
+  "year": 2023,
+  "venue": "OpenStax, Introductory Statistics 2e",
+  "url": "https://openstax.org/books/introductory-statistics-2e/pages/12-2-scatter-plots",
+  "kind": "web",
+  "scope": "Scatter plots: direction, form, and strength of a relationship",
+  "levels": [
+   2
+  ]
+ },
+ {
+  "id": "openstax_trees",
+  "title": "3.5 Tree and Venn Diagrams",
+  "authors": "Barbara Illowsky and Susan Dean",
+  "year": 2023,
+  "venue": "OpenStax, Introductory Statistics 2e",
+  "url": "https://openstax.org/books/introductory-statistics-2e/pages/3-5-tree-and-venn-diagrams",
+  "kind": "web",
+  "scope": "Tree diagrams for multi-stage probability",
+  "levels": [
+   2
+  ]
+ },
+ {
+  "id": "openstax_vectors",
+  "title": "8.8 Vectors",
+  "authors": "Jay Abramson",
+  "year": 2021,
+  "venue": "OpenStax, Precalculus 2e",
+  "url": "https://openstax.org/books/precalculus-2e/pages/8-8-vectors",
+  "kind": "web",
+  "scope": "Vectors, components, magnitude, and unit vectors",
+  "levels": [
+   2
+  ]
+ },
+ {
+  "id": "openstax_waves",
+  "title": "13.2 Wave Properties: Speed, Amplitude, Frequency, and Period",
+  "authors": "Paul Peter Urone and Roger Hinrichs",
+  "year": 2020,
+  "venue": "OpenStax, Physics",
+  "url": "https://openstax.org/books/physics/pages/13-2-wave-properties-speed-amplitude-frequency-and-period",
+  "kind": "web",
+  "scope": "Amplitude, wavelength, frequency, and period of a wave",
+  "levels": [
    1
   ]
  },
@@ -746,6 +948,7 @@
   "scope": "SCMs, adjustment, identification, and counterfactuals",
   "levels": [
    0,
+   2,
    4,
    5,
    6
@@ -858,6 +1061,7 @@
   "kind": "notes",
   "scope": "Quantum information and quantum channels",
   "levels": [
+   1,
    5,
    6,
    7

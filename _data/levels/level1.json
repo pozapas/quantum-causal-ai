@@ -1,145 +1,1749 @@
 {
-  "level": 1, "title": "Chance, waves, and fair tests", "audience": "Upper primary school: grades 4 to 6", "intro": "Use fractions and repeated tests to describe uncertain results. Learn why observations, actions, and wave effects need different explanations.",
+  "level": 1,
+  "title": "Chance, waves, and fair tests",
+  "audience": "Ages 9 to 12 (grades 4 to 6), with a grown-up or teacher nearby",
+  "intro": "Use fractions and repeated tests to describe uncertain results. Learn why observations, actions, and wave effects need different explanations.",
   "lessons": [
     {
-      "id":"L1-01", "title":"Fractions describe part of a whole", "objective":"Compute a fraction from an explicit count and denominator.", "prerequisites":["L0-01","L0-05"],
-      "paragraphs":[
-        "A fraction describes a part relative to a whole. The numerator is the count of the selected part. The denominator is the total count in the whole. State what belongs to the whole before you calculate.",
-        "If three of twelve counters are blue, the blue fraction is three over twelve. This is the same number as one quarter. Dividing both counts by three changes the written form but keeps the same proportion.",
-        "A fraction without its group can mislead. Three blue counters among twelve differ from three blue counters among six. The selected count is the same, but the second group has a larger blue fraction because its total is smaller."
+      "id": "L1-01",
+      "schema": 2,
+      "title": "Fractions describe part of a whole",
+      "objective": "I can write a fraction from a count and use it to describe part of a group.",
+      "prerequisites": [
+        "L0-01",
+        "L0-05"
       ],
-      "equation":"fraction = selected count / total count. The total must be greater than zero.",
-      "example":"A tray has eight apples and two pears. There are ten fruits in all. The pear fraction is 2/10, which equals 1/5. The apple fraction is 8/10. The two fractions add to one because the groups cover the tray.",
-      "exercise":"A box has six red blocks and nine blue blocks. Find the red fraction and simplify it.",
-      "solution":"The total is fifteen blocks. The red fraction is 6/15. Divide numerator and denominator by three to get 2/5. The denominator counts all blocks, not only blue blocks.",
-      "quiz":{"question":"A class has five left-handed pupils among twenty pupils. What is the fraction?","options":["5/15","20/5","5/20"],"answer":2,"explanation":"The selected count is five and the whole class contains twenty. The fraction therefore uses five over twenty, or one quarter."},
-      "sources":["openstax"],"lab":"chance","caution":"A proportion describes a specified group. It does not automatically describe another population."
+      "time_minutes": 40,
+      "big_idea": "A fraction compares a part with the whole. The top number counts the part. The bottom number counts all the equal parts in the whole. Different fractions can name the same amount.",
+      "i_can": [
+        "I can write a fraction for part of a strip or part of a group.",
+        "I can show that one half, two fourths, and four eighths are the same amount.",
+        "I can say what the whole is before I write a fraction."
+      ],
+      "words": [
+        {
+          "word": "fraction",
+          "meaning": "A number that compares a part with a whole, like 3 out of 12, written 3/12."
+        },
+        {
+          "word": "numerator",
+          "meaning": "The top number of a fraction. It counts the part you are looking at."
+        },
+        {
+          "word": "denominator",
+          "meaning": "The bottom number of a fraction. It counts all the equal parts in the whole."
+        }
+      ],
+      "warmup": {
+        "recall_of": null,
+        "prompt": "Think of a pizza cut into 4 equal slices. You eat 1 slice. How many slices are left? How would you say how much of the pizza you ate?"
+      },
+      "story_title": "Sharing a strip and a bag of marbles",
+      "story": [
+        "Maya and Leo have one long strip of paper. They fold it in half and color one part. One part is colored, and there are 2 equal parts in all. That is 1 out of 2, or one half.",
+        "Leo folds the strip in half again. Now there are 4 equal parts, and 2 of them are colored. That is 2 out of 4. Maya folds it once more. Now there are 8 equal parts, and 4 are colored: 4 out of 8. \"The colored part never changed,\" says Leo. \"We only cut it into smaller pieces.\" So 1 out of 2, 2 out of 4, and 4 out of 8 are the same amount.",
+        "Next they open a bag of 12 marbles. 3 of the marbles are green. Leo writes 3 out of 12 as a fraction: 3/12. The numerator, 3, counts the green marbles. The denominator, 12, counts all the marbles.",
+        "Maya puts the marbles into 4 equal groups of 3. She puts the 3 green marbles together in one group. Now 1 out of 4 groups is green. So 3 out of 12 is the same as 1 out of 4.",
+        "\"What if the bag had only 6 marbles, with 3 green?\" asks Leo. Then 3 out of 6 would be green, which is one half. The part is the same, but the whole is smaller. That is why you always say what the whole is."
+      ],
+      "animation": {
+        "file": "l1-01-fractions.mp4",
+        "scene": "scripts/manim/l1_01.py:EqualFractions",
+        "params": {
+          "cuts": [
+            2,
+            4,
+            8
+          ],
+          "marbles": 12,
+          "green": 3,
+          "groups": 4
+        },
+        "caption": "The same shaded amount, cut into 2, 4, and 8 equal parts, and then 12 marbles sorted into 4 equal groups.",
+        "alt": "A bar is split into 2, then 4, then 8 equal parts with the same left half shaded, showing 1/2 = 2/4 = 4/8. Then 12 dots, 3 of them green, move into 4 groups of 3, showing 3/12 = 1/4.",
+        "describe": "A bar is cut into 2 equal parts, and 1 part is shaded: 1 out of 2. New cut lines make 4 parts, then 8, and the shaded amount stays 2 out of 4, then 4 out of 8. Next, 12 marbles appear, and 3 are green: 3 out of 12. They move into 4 groups of 3, and the green ones make 1 out of 4 groups."
+      },
+      "activity": {
+        "title": "Fold, shade, and group",
+        "minutes": 20,
+        "materials": [
+          "Three strips of paper, all the same length",
+          "Colored pencils or crayons",
+          "A ruler",
+          "12 counters, beans, or buttons, with 3 of one color"
+        ],
+        "steps": [
+          "Fold the first strip in half. Open it and shade one part, starting from the left end. Write 1/2 on it.",
+          "Fold the second strip in half, then in half again. Open it. Shade 2 parts next to each other from the left end. Write 2/4.",
+          "Fold the third strip in half three times. Open it. Shade 4 parts next to each other from the left end. Write 4/8.",
+          "Line up the three strips, one under the other. Use the ruler to check that the shaded parts are the same length.",
+          "Put out the 12 counters. Write a fraction for the 3 counters of the other color.",
+          "Sort the counters into 4 equal groups of 3. Put the 3 counters of the other color together in one group. Write the new fraction for the groups.",
+          "Write two fractions that name the same amount, like 3/12 and 1/4."
+        ],
+        "record": "Your three shaded strips with their fractions, a drawing of your 12 counters in 4 groups, and the two fractions that match.",
+        "safety": "Keep counters, beans, and buttons away from babies and toddlers. Never put beans in your mouth, nose, or ears."
+      },
+      "guided": {
+        "prompt": "A tray has 10 pieces of fruit. 2 are pears and the rest are apples. What fraction of the fruit is pears? What fraction is apples?",
+        "answer": "The whole is all 10 pieces of fruit. Pears are 2 out of 10, or 2/10. Apples are the other 8, so they are 8 out of 10, or 8/10. Together, the two parts make the whole tray."
+      },
+      "try_it": [
+        {
+          "prompt": "A box has 6 red blocks and 9 blue blocks. What fraction of the blocks are red?",
+          "answer": "There are 15 blocks in all. The red blocks are 6 out of 15, or 6/15. The bottom number counts all the blocks, not just the blue ones."
+        },
+        {
+          "prompt": "Leo shades 3 parts of a strip folded into 4 equal parts. Maya shades 6 parts of a strip folded into 8 equal parts. Did they shade the same amount?",
+          "answer": "Yes. Leo shaded 3/4 of his strip. Maya shaded 6/8. Each of Leo's parts is the same as two of Maya's parts, so 3/4 and 6/8 are the same amount."
+        }
+      ],
+      "talk": [
+        "Why must the parts be equal before you can name a fraction?",
+        "Is 3 green marbles a lot or a little? What do you need to know to decide?",
+        "Where do you see fractions at home or at school?"
+      ],
+      "check": [
+        {
+          "question": "A class has 20 students, and 5 of them are left-handed. What fraction of the class is left-handed?",
+          "options": [
+            "20/5",
+            "5/20",
+            "5/15"
+          ],
+          "answer": 1,
+          "explanation": "The whole class has 20 students, and the part is the 5 who are left-handed. So the fraction is 5 out of 20, or 5/20."
+        },
+        {
+          "question": "Which fraction is the same amount as one half?",
+          "options": [
+            "4/8",
+            "1/4",
+            "2/8"
+          ],
+          "answer": 0,
+          "explanation": "A strip folded into 8 equal parts with 4 shaded is half shaded. So 4/8 is the same amount as one half."
+        },
+        {
+          "question": "In a fraction, what does the denominator count?",
+          "options": [
+            "The part you are looking at",
+            "The parts that are left over",
+            "All the equal parts in the whole"
+          ],
+          "answer": 2,
+          "explanation": "The denominator is the bottom number. It counts all the equal parts in the whole. The numerator, on top, counts the part."
+        }
+      ],
+      "connect": "Fractions are everywhere: in recipes, on rulers, and in the minutes of an hour. In the next lesson, you will use fractions to say how likely something is, like drawing a green marble from a bag without looking.",
+      "grownups": {
+        "why": "The lesson builds the two fraction ideas of the Common Core that the rest of Level 1 needs: a fraction as a part of a whole cut into equal parts (3.NF.1), and equal fractions shown with a visual model, such as folded strips (4.NF.1) [@ccss_math]. Later lessons turn counts into probabilities and conditional fractions, which only make sense if the child first asks what the whole is.",
+        "misconceptions": [
+          "A bigger bottom number means a bigger fraction. (Eighths are smaller pieces than halves, so 1/8 is less than 1/2.)",
+          "Any split into 4 pieces makes fourths. (The pieces must be equal for each to be one fourth.)",
+          "3 green marbles is always the same fraction. (It depends on the whole: 3 out of 12 is not 3 out of 6.)",
+          "Equal fractions must use the same numbers. (2/4 and 4/8 use different numbers but name the same amount.)"
+        ],
+        "simplify": "Use only halves and fourths, and a group of 4 counters with 1 of a different color.",
+        "extend": "Fold a strip into thirds and then sixths, and find a fraction equal to 2/3. Or sort 12 counters with 4 of one color into equal groups, and show that 4/12 is the same as 1/3."
+      },
+      "caution": "Fractions of a group describe that group only. A bag with 3 green marbles out of 12 says nothing about another bag. The lesson uses small whole numbers and only equal parts; it does not yet cover comparing fractions by size.",
+      "sources": [
+        "ccss_math"
+      ],
+      "lab": "chance"
     },
     {
-      "id":"L1-02", "title":"Build a probability model", "objective":"Calculate probability for a draw when all individual counters are equally likely.", "prerequisites":["L1-01"],
-      "paragraphs":[
-        "Probability is a number that describes uncertainty in a model. Zero means impossible and one means certain. A value between them describes an uncertain event. The model must state the possible outcomes and how the trial works.",
-        "If each counter has an equal chance of selection, count the counters that satisfy the event. Divide by the total number of counters. Equal chance is an assumption about the draw method, not a result of using fractions.",
-        "The complement of an event means that the event does not occur. For a red draw, the complement is a non-red draw. Their probabilities add to one when every draw gives exactly one of these two results."
+      "id": "L1-02",
+      "schema": 2,
+      "title": "Build a probability model",
+      "objective": "I can build a probability model and find the probability of an event and of its opposite.",
+      "prerequisites": [
+        "L1-01"
       ],
-      "equation":"P(red) = number of red counters / total counters. P(not red) = 1 - P(red).",
-      "example":"A mixed bag contains three red counters and seven white counters of the same size. Under equal selection chances, P(red)=3/10=0.3. The non-red probability is 7/10=0.7. These values add to one, as required for the two exhaustive events.",
-      "exercise":"A bag contains four green counters and one orange counter. Find P(green) and P(not green) for an equal-chance draw.",
-      "solution":"There are five counters. P(green)=4/5=0.8 and P(not green)=1/5=0.2. The values add to one because green and not green cover every possible draw.",
-      "quiz":{"question":"When can favourable-count divided by total-count be used directly?","options":["When individual outcomes are equally likely","Whenever outcome names differ","Only when a result is certain"],"answer":0,"explanation":"The counting rule requires equal probabilities for the counted individual outcomes. Unequal chances require a model that assigns their different weights."},
-      "sources":["openstax"],"lab":"chance","caution":"Equal-sized counters still require a draw method that does not favour a colour."
+      "time_minutes": 40,
+      "big_idea": "A probability model lists everything that could happen and how likely each one is. When every outcome is equally likely, the probability of something happening is the number of outcomes that count, out of all the outcomes. A probability goes from 0, which means impossible, to 1, which means certain.",
+      "i_can": [
+        "I can list the outcomes for a bag of counters, a spinner, or a die.",
+        "I can find a probability as a fraction when the outcomes are equally likely.",
+        "I can find the probability that something does not happen by taking it away from 1."
+      ],
+      "words": [
+        {
+          "word": "probability",
+          "meaning": "A number from 0 to 1 that says how likely something is, according to a model."
+        },
+        {
+          "word": "outcome",
+          "meaning": "One thing that could happen, like drawing one counter or rolling a 4."
+        },
+        {
+          "word": "model",
+          "meaning": "A simple plan of how something works. A probability model lists the outcomes and how likely each one is."
+        }
+      ],
+      "warmup": {
+        "recall_of": "L1-01",
+        "prompt": "Last time you wrote fractions for parts of a group. A box holds 10 crayons, and 4 of them are red. What fraction of the crayons are red? What fraction are not red?"
+      },
+      "story_title": "What are the chances?",
+      "story": [
+        "Maya puts 8 counters in a paper bag. They are all the same size and feel the same. 3 are red and 5 are blue. \"If I reach in without looking, what will I get?\" she asks.",
+        "Leo makes a list of the outcomes. Each of the 8 counters is one outcome. Since they feel the same and Maya cannot see, each counter is equally likely to come out. 3 out of 8 outcomes are red. So their model says the probability of red is 3 out of 8. Leo writes it in short as P(red) = 3/8. The P stands for probability.",
+        "\"What about not red?\" asks Maya. Every counter that is not red is blue. That is 5 out of 8. Leo checks it a second way: 1 take away 3 eighths leaves 5 eighths. The two answers match, so P(not red) = 5/8.",
+        "Next they try a fair die. It has 6 faces, and each face is equally likely. The probability of rolling a 4 is 1 out of 6. The probability of not rolling a 4 is 5 out of 6.",
+        "\"Can we roll a 7?\" asks Leo. No face shows a 7, so the probability is 0. That is impossible. Rolling a number from 1 to 6 always happens, so its probability is 1. That is certain."
+      ],
+      "animation": {
+        "file": "l1-02-model.mp4",
+        "scene": "scripts/manim/l1_02.py:ProbabilityModel",
+        "params": {
+          "red": 3,
+          "blue": 5
+        },
+        "caption": "A bag of 8 counters becomes a probability model on a line from 0 to 1.",
+        "alt": "Eight counters, three red and five blue. The red ones light up, the fraction three eighths moves onto a number line from 0 to 1, and the blue ones fill the rest of the line as five eighths.",
+        "describe": "Eight counters sit in a row: 3 red and 5 blue, and the red ones light up as 3 out of 8. The fraction P(red) = 3/8 slides onto a line from 0, marked impossible, to 1, marked certain. Then the blue ones light up as 5 out of 8. They fill the rest of the line, since P(not red) = 1 - 3/8 = 5/8."
+      },
+      "activity": {
+        "title": "Three probability models",
+        "minutes": 20,
+        "materials": [
+          "Counters, beads, or bricks in two colors, all the same size",
+          "A paper bag",
+          "A die",
+          "Paper, a pencil, a ruler, and colored pencils",
+          "A paper clip"
+        ],
+        "steps": [
+          "Put 2 counters of one color and 4 of another color in the bag. Write a list of the outcomes.",
+          "Write the probability of each color as a fraction. Check that the two fractions add up to 1.",
+          "Draw a circle and split it into 4 equal parts. Color 1 part yellow and 3 parts green. This is your spinner.",
+          "Put the paper clip on the center and hold it with a pencil tip. Flick the clip to spin it.",
+          "Write the probability of yellow and of green for your spinner.",
+          "Write the probability of rolling a 6 on the die, and of not rolling a 6.",
+          "Draw a long line. Write 0 and impossible at the left end. Write 1 and certain at the right end. Mark one half in the middle.",
+          "Place every probability you found on the line. Add one event that is impossible and one that is certain."
+        ],
+        "record": "Your three models, each with a list of outcomes and their fractions, and your line from 0 to 1 with every event marked.",
+        "safety": "Keep counters, dice, and paper clips away from babies and toddlers. Spin the paper clip gently, away from faces."
+      },
+      "guided": {
+        "prompt": "A bag has 1 green counter and 3 yellow counters, all the same size. You draw one without looking. What is the probability of green? What is the probability of not green?",
+        "answer": "There are 4 counters, and each is equally likely. 1 out of 4 is green, so the probability of green is one fourth. Not green is 3 out of 4. Check: 1 take away one fourth is three fourths."
+      },
+      "try_it": [
+        {
+          "prompt": "A spinner has 5 equal parts. 2 parts are orange and 3 are purple. What is the probability of orange? Where would you mark it on a line from 0 to 1?",
+          "answer": "The probability of orange is 2 out of 5, which is 0.4. It goes a bit to the left of one half on the line."
+        },
+        {
+          "prompt": "Leo draws a spinner with one big red part and one small blue part. He says red and blue each have a probability of one half, because there are two colors. Is he right?",
+          "answer": "No. The two parts are not the same size, so red and blue are not equally likely. The arrow will land on the big red part more often. Counting colors only works when each outcome is equally likely."
+        }
+      ],
+      "talk": [
+        "Why does it matter that all the counters feel the same?",
+        "Can you think of something that is certain to happen tomorrow? Something impossible?",
+        "Why do the probability of red and the probability of not red always add up to 1?"
+      ],
+      "check": [
+        {
+          "question": "A bag has 3 red and 5 blue counters, all the same size. What is the probability of drawing blue?",
+          "options": [
+            "5 out of 3",
+            "3 out of 8",
+            "5 out of 8"
+          ],
+          "answer": 2,
+          "explanation": "There are 8 counters in all, and 5 of them are blue. So the probability of blue is 5 out of 8."
+        },
+        {
+          "question": "The probability of rain tomorrow is 0.3 in a weather model. What is the probability of no rain in that model?",
+          "options": [
+            "0.7",
+            "1.3",
+            "0.3"
+          ],
+          "answer": 0,
+          "explanation": "Rain and no rain together make 1. So no rain is 1 take away 0.3, which is 0.7."
+        },
+        {
+          "question": "Remember Lesson 1. A bag holds 12 marbles, and 3 of them are green. What fraction of the marbles are green?",
+          "options": [
+            "3 out of 9",
+            "1 out of 3",
+            "1 out of 4"
+          ],
+          "answer": 2,
+          "review_of": "L1-01",
+          "explanation": "3 out of 12 marbles are green. That is the same as 1 out of 4."
+        }
+      ],
+      "connect": "Probability models help people plan, from weather reports to board games. A model is only as good as its list of outcomes and its chances. In the next lesson, you will test a model by doing many trials and counting what really happens.",
+      "grownups": {
+        "why": "The lesson builds a probability model in the sense of the Common Core: probability as a number from 0 to 1 that expresses how likely an event is, with a probability near 0 indicating an unlikely event and one near 1 a likely event (7.SP.5), and a uniform model that gives equal probability to every outcome (7.SP.7) [@ccss_math]. OpenStax Introductory Statistics defines outcomes, the sample space, equally likely outcomes, and the complement rule P(not A) = 1 - P(A) [@openstax_prob]. Children see the complement two ways, by counting the other outcomes and by subtracting from 1, so the rule is checked rather than memorized.",
+        "misconceptions": [
+          "Two possible results always means a 50-50 chance. (Only if the two results are equally likely, as the unequal spinner shows.)",
+          "A probability of 3 out of 8 means exactly 3 reds in every 8 draws. (It is a prediction from a model; real counts vary, as Lesson 3 shows.)",
+          "Probabilities can be bigger than 1 or less than 0. (Every probability is from 0 to 1.)",
+          "A very unlikely event is impossible. (Impossible means probability 0. A small probability can still happen.)"
+        ],
+        "simplify": "Use a bag with 1 red and 1 blue counter first, then 1 red and 3 blue, and write only fractions with 2 or 4 on the bottom.",
+        "extend": "Add a third color to the bag and check that the three probabilities add up to 1. Or draw a spinner with parts of 1 half, 1 fourth, and 1 fourth, and ask why counting colors would give the wrong model."
+      },
+      "caution": "The model assumes each counter or face is equally likely. Real draws can be slightly biased, for example if one counter is bigger, stickier, or always on top. The lesson does not claim that real draws will match the model exactly.",
+      "sources": [
+        "ccss_math",
+        "openstax_prob"
+      ],
+      "lab": "chance"
     },
     {
-      "id":"L1-03", "title":"Repeat and record", "objective":"Separate a probability from a frequency measured in finitely many trials.", "prerequisites":["L1-02","L0-06"],
-      "paragraphs":[
-        "A relative frequency is the event count divided by the number of trials. It is a measured result. A probability belongs to a model. The measured frequency can differ from the model probability even when the model is suitable.",
-        "To keep bag trials comparable, replace the drawn counter after each trial and mix again. Without replacement, the bag changes. If you draw a red counter and keep it out, later red draws can become less likely.",
-        "Many independent trials can make large frequency errors less likely. They do not force an exact balance in every small block of trials. A fair coin does not need to produce a tail because several heads occurred before it."
+      "id": "L1-03",
+      "schema": 2,
+      "title": "Repeat and record",
+      "objective": "I can tell a probability apart from a frequency, and explain why more trials help.",
+      "prerequisites": [
+        "L1-02",
+        "L0-05"
       ],
-      "equation":"relative frequency = event count / trial count. A trial count must be positive.",
-      "example":"A fair-coin model gives P(heads)=0.5. In ten tosses you record seven heads, so the relative frequency is 7/10=0.7. This short record differs from the model value. It does not by itself prove that the coin model is wrong.",
-      "exercise":"A simulation records eighteen blue draws in sixty independent replacement trials. Compute the blue relative frequency. Does it determine the next draw?",
-      "solution":"The relative frequency is 18/60=0.3. It summarizes these sixty results. It does not determine the next draw, whose probability depends on the trial model and unchanged draw conditions.",
-      "quiz":{"question":"A fair coin gives four heads in a row. What is P(heads) on the next independent toss?","options":["Zero","One half","One"],"answer":1,"explanation":"Independence means the earlier tosses do not change the next toss probability. The fair-coin model still assigns one half to heads."},
-      "sources":["openstax"],"lab":"chance","caution":"Real trials can be dependent. Independence must be justified by the setup."
+      "time_minutes": 40,
+      "big_idea": "A probability is what a model predicts. A frequency is what you actually count. With more trials, the frequency usually gets closer to the probability, but it rarely lands on it exactly.",
+      "i_can": [
+        "I can find the relative frequency of an event from my own counts.",
+        "I can explain the difference between a probability and a frequency.",
+        "I can explain why a few trials are not enough to judge a coin or a die."
+      ],
+      "words": [
+        {
+          "word": "probability",
+          "meaning": "A number from 0 to 1 that says how likely something is, according to a model."
+        },
+        {
+          "word": "relative frequency",
+          "meaning": "How often something really happened, written as a fraction: times it happened divided by total tries."
+        },
+        {
+          "word": "trial",
+          "meaning": "One try of an experiment, like one coin flip."
+        }
+      ],
+      "warmup": {
+        "recall_of": "L1-02",
+        "prompt": "Last time you built a probability model for a bag of counters. A bag holds 3 red counters and 1 blue counter. What is the probability of drawing red? If you draw 4 times, putting the counter back each time, must you get exactly 3 reds?"
+      },
+      "story_title": "Does this coin like heads?",
+      "story": [
+        "Leo flips a coin 10 times and gets 7 heads. \"This coin likes heads!\" he says. Maya shakes her head. \"Our model says a fair coin lands heads with probability one half. Ten flips is not much. Let's keep going and write down every result.\"",
+        "After 20 flips, they have 11 heads. That is 11 out of 20, a little more than half. After 50 flips, they have 25 heads, which is 25 out of 50, exactly one half for a moment.",
+        "They keep flipping until they reach 200 flips. They count 101 heads. The relative frequency is 101 out of 200. That is just a tiny bit more than one half.",
+        "\"So it was not a heads-loving coin,\" says Leo. \"The 7 out of 10 was just a wobbly start.\" Maya nods. \"The probability stayed one half the whole time. Our counts got closer to it as we did more trials.\""
+      ],
+      "animation": {
+        "file": "l1-03-frequency.mp4",
+        "scene": "scripts/manim/l1_03.py:FrequencySettles",
+        "params": {
+          "seed": 13,
+          "flips": 200,
+          "checkpoints": [
+            10,
+            20,
+            50,
+            200
+          ]
+        },
+        "caption": "The fraction of flips that were heads, after each of 200 flips.",
+        "alt": "A line graph of the fraction of heads over 200 coin flips, wandering early and settling near a dashed line at one half.",
+        "describe": "A line shows the fraction of flips that were heads so far. It starts high, at 7 out of 10. It wobbles, then stays close to a dashed line at one half. Dots mark 11 out of 20, 25 out of 50, and, at the end, 101 out of 200."
+      },
+      "activity": {
+        "title": "Coin flip record",
+        "minutes": 20,
+        "materials": [
+          "A coin",
+          "A paper cup to shake it in (optional)",
+          "Graph paper or a printed grid",
+          "A pencil and a ruler",
+          "A calculator (optional)"
+        ],
+        "steps": [
+          "Make a table with three columns: flips so far, heads so far, and fraction of heads.",
+          "Flip the coin 10 times. Count the heads. Write the totals in the first row.",
+          "Work out the fraction of heads. For example, 6 heads in 10 flips is 6 out of 10, or 0.6.",
+          "Flip 10 more times. Add to your totals, so the second row shows 20 flips. Work out the new fraction.",
+          "Keep going until you reach 50 flips, one row for every 10.",
+          "On graph paper, draw a dashed line across at one half. Plot your five fractions and join the dots.",
+          "Look at your graph. Did the dots get closer to the dashed line as you flipped more?"
+        ],
+        "record": "Your table of flips, heads, and fractions, and your graph with the dashed line at one half.",
+        "safety": "Keep coins away from babies and toddlers. Flip over a table or a soft surface so the coin does not roll away."
+      },
+      "guided": {
+        "prompt": "After 20 flips you have 9 heads. What is the relative frequency of heads? Does that prove the coin is unfair?",
+        "answer": "It is 9 out of 20, which is 0.45. That is close to one half. Twenty flips are far too few to call a coin unfair."
+      },
+      "try_it": [
+        {
+          "prompt": "A spinner has 4 equal parts, and 1 part is blue. What is the probability of blue? You spin 40 times and get blue 13 times. What is the relative frequency of blue?",
+          "answer": "The probability of blue is one fourth, or 0.25. The relative frequency is 13 out of 40, which is 0.325. They are different, and that is normal for only 40 spins."
+        },
+        {
+          "prompt": "Sam rolls a fair die 6 times and never gets a 6. Sam says the die must be broken. What would you tell Sam?",
+          "answer": "Getting no 6 in 6 rolls happens about one time in three, so it is not a sign that the die is broken. The probability of a 6 is one sixth on every roll, but that does not promise one 6 in every 6 rolls. Sam should roll many more times before deciding."
+        }
+      ],
+      "talk": [
+        "Why were 10 flips not enough to judge Leo's coin?",
+        "Does a coin remember what it landed on before?",
+        "When would you trust counts more than a model? When would you trust the model more?"
+      ],
+      "check": [
+        {
+          "question": "A fair coin is flipped 200 times and lands heads 101 times. Which statement is true?",
+          "options": [
+            "The coin is unfair because 101 is not 100.",
+            "The relative frequency of heads is 101 out of 200.",
+            "The probability of heads is 101 out of 200."
+          ],
+          "answer": 1,
+          "explanation": "101 out of 200 is what was counted, so it is a frequency. The probability for a fair coin stays one half. A small gap, like 101 instead of 100, is normal."
+        },
+        {
+          "question": "Which fraction of heads is usually closer to one half?",
+          "options": [
+            "The fraction of heads in 10 flips",
+            "The fraction of heads in 1,000 flips",
+            "Both are always the same distance from one half"
+          ],
+          "answer": 1,
+          "explanation": "With more flips, the fraction of heads usually settles near the probability. With only a few flips, it can be far away."
+        },
+        {
+          "question": "Remember Lesson 2. A bag has 2 red counters and 6 blue counters. What is the probability of drawing red?",
+          "options": [
+            "6 out of 8, which is three fourths",
+            "2 out of 6, which is one third",
+            "2 out of 8, which is one fourth"
+          ],
+          "answer": 2,
+          "review_of": "L1-02",
+          "explanation": "There are 8 counters in all, and 2 of them are red. So the probability of red is 2 out of 8, which is one fourth."
+        }
+      ],
+      "connect": "This pattern has a name: the law of large numbers. It is why scientists repeat experiments many times. In later lessons, you will use many trials to compare two groups fairly and to test a model of two dice.",
+      "grownups": {
+        "why": "The lesson separates a model's probability from an observed relative frequency. That is the heart of the Common Core probability standards that come next, approximating a probability from data and comparing a model with observed frequencies (7.SP.6 and 7.SP.7) [@ccss_math]. OpenStax describes probability as long-run relative frequency and states the law of large numbers with coin tosses [@openstax_prob]. The animation uses the course's tested simulation with a fixed random seed, so the numbers in the story, the video, and this page all match.",
+        "misconceptions": [
+          "The fraction of heads must reach exactly one half in the end. (It gets close in the long run; it does not have to hit one half.)",
+          "After several heads, tails is due. (Each flip is separate; the coin has no memory.)",
+          "A small sample far from the model proves the model wrong. (Small samples vary a lot; judge with many trials.)",
+          "The gap between the heads count and the tails count always shrinks. (The share of heads gets closer to one half, but the count gap can grow.)"
+        ],
+        "simplify": "Do 30 flips in three rows of 10, and write fractions out of 10 only.",
+        "extend": "Pool the flips of the whole family or class (several hundred) and plot the running fraction. Then roll a die and track the fraction of 6s, which should settle near one sixth."
+      },
+      "caution": "The lesson treats the coin as fair. Real coins and flips can be very slightly biased, and no number of flips can prove that a coin is perfectly fair.",
+      "sources": [
+        "ccss_math",
+        "openstax_prob"
+      ],
+      "lab": "chance"
     },
     {
-      "id":"L1-04", "title":"Count within a condition", "objective":"Use the correct denominator when the question restricts a group.", "prerequisites":["L1-01","L1-02"],
-      "paragraphs":[
-        "A conditional question first selects a group and then asks about results within it. Suppose the question asks about red objects among squares. Only the squares belong in the denominator. Circles are outside the selected group for this question.",
-        "The phrase given that marks a condition. The chance of red given square can differ from the chance of square given red. They select different groups. Read the whole question before you choose a numerator or denominator.",
-        "Conditional frequencies are useful for prediction. They can also reveal that groups differ. A difference between selected groups does not by itself explain a cause. The way the groups were selected and other shared causes can matter."
+      "id": "L1-04",
+      "schema": 2,
+      "title": "Count within a condition",
+      "objective": "I can find a probability inside a group by using the right total.",
+      "prerequisites": [
+        "L1-01",
+        "L1-02"
       ],
-      "equation":"P(red given square) = red-square count / square count, when square count is positive.",
-      "example":"A tray has four red squares, two blue squares, and six red circles. Among squares, four of six are red, so the red fraction is 4/6. Among red objects, four of ten are squares, so that fraction is 4/10.",
-      "exercise":"A club has three girls with bikes, five girls without bikes, and two boys with bikes. What fraction of the girls have bikes?",
-      "solution":"There are eight girls, and three of them have bikes. The requested fraction is 3/8. The boys are outside the conditioning group, so they are not in this denominator.",
-      "quiz":{"question":"For the fraction of blue objects among circles, which total is the denominator?","options":["All blue objects","All objects in the room","All circles"],"answer":2,"explanation":"The word among restricts the group to circles. Count blue circles in the numerator and all circles in the denominator."},
-      "sources":["openstax"],"lab":"bayes","caution":"A conditional frequency is an association in the selected data, not automatically an intervention effect."
+      "time_minutes": 40,
+      "big_idea": "When a question says \"of the squares\" or \"among the kids with glasses\", it picks out a smaller group. That group becomes the whole. The bottom number of your fraction is the size of that group, not the size of everything.",
+      "i_can": [
+        "I can find the group a question is about before I count.",
+        "I can use a two-way table to answer \"of the ...\" questions.",
+        "I can explain why \"of the squares, how many are red?\" and \"of the red shapes, how many are squares?\" have different answers."
+      ],
+      "words": [
+        {
+          "word": "condition",
+          "meaning": "A rule that picks out a smaller group, like \"only the squares\"."
+        },
+        {
+          "word": "two-way table",
+          "meaning": "A table that sorts things two ways at once, like by color in the rows and by shape in the columns."
+        },
+        {
+          "word": "probability",
+          "meaning": "A number from 0 to 1 that says how likely something is, according to a model."
+        }
+      ],
+      "warmup": {
+        "recall_of": "L1-03",
+        "prompt": "Last time you flipped a coin many times and counted heads. If you got 9 heads in 20 flips, what fraction of the flips were heads? Is that a probability or a frequency?"
+      },
+      "story_title": "Which group are we counting?",
+      "story": [
+        "Maya and Leo cut out 24 paper shapes for an art project. Some are squares and some are circles. Some are red and some are blue. They spread them all out on the table.",
+        "Maya counts the red squares. There are 6. \"So 6 out of 24 shapes are red squares,\" she says.",
+        "Then Leo asks a new question: \"Of the squares, what fraction is red?\" Now only the squares matter. Maya pushes the circles to one side. There are 8 squares, and 6 of them are red. The answer is 6 out of 8. The top number stayed 6, but the bottom number changed from 24 to 8. So if Leo picks one square without looking, the probability that it is red is 6 out of 8.",
+        "\"Now try this,\" says Maya. \"Of the red shapes, what fraction are squares?\" This time they keep only the red shapes. There are 10 red shapes, and 6 of them are squares. That is 6 out of 10.",
+        "Leo is surprised. \"Both questions are about red squares, but the answers are different!\" Maya nods. \"The question tells you which group is the whole. Different group, different bottom number.\""
+      ],
+      "animation": {
+        "file": "l1-04-condition.mp4",
+        "scene": "scripts/manim/l1_04.py:CountWithinGroup",
+        "params": {
+          "red_square": 6,
+          "blue_square": 2,
+          "red_circle": 4,
+          "blue_circle": 12,
+          "seed": 7
+        },
+        "caption": "Keeping only one group changes the bottom number of the fraction.",
+        "alt": "A grid of 24 red and blue squares and circles. The circles fade, leaving 8 squares, 6 of them red. Then only the 10 red shapes stay, 6 of them squares. A two-way table sums it up.",
+        "describe": "A grid shows 24 shapes. The 6 red squares light up: 6 out of 24. Then every shape that is not a square fades away, and the fraction becomes 6 out of 8. Next, only the red shapes stay, and the fraction becomes 6 out of 10, before a two-way table shows all the counts."
+      },
+      "activity": {
+        "title": "Shape sort and two-way table",
+        "minutes": 20,
+        "materials": [
+          "20 small paper cards, or scraps of paper",
+          "Crayons or colored pencils in two colors",
+          "A pencil and a ruler",
+          "Plain paper for the table"
+        ],
+        "steps": [
+          "Make 20 small paper cards. On each card, draw a square or a circle in one of two colors. You choose how many of each.",
+          "Mix up the cards on the table. Count how many there are of each kind, like red squares and blue circles.",
+          "Draw a two-way table. Put the colors in the rows and the shapes in the columns. Add a total row and a total column.",
+          "Write your counts in the table. Check that the totals add up to 20.",
+          "Answer: of the squares, what fraction is red? Use the square total as the bottom number.",
+          "Answer: of the red shapes, what fraction are squares? Use the red total as the bottom number.",
+          "Compare your two answers. Circle the bottom number of each fraction in your table."
+        ],
+        "record": "Your two-way table with totals, and your two fractions with their bottom numbers circled.",
+        "safety": "If you cut the cards from a big sheet, use safe scissors and ask a grown-up for help. Pass scissors handle first."
+      },
+      "guided": {
+        "prompt": "In a class of 20 kids, 8 wear glasses. Of the kids with glasses, 3 have a pet dog. What fraction of the kids with glasses have a dog?",
+        "answer": "The question says \"of the kids with glasses\", so the whole is the 8 kids with glasses. 3 of them have a dog. The answer is 3 out of 8, not 3 out of 20."
+      },
+      "try_it": [
+        {
+          "prompt": "A box has 5 red squares, 5 blue squares, 2 red circles, and 8 blue circles. Of the circles, what fraction is red?",
+          "answer": "There are 2 + 8 = 10 circles, and 2 of them are red. So the answer is 2 out of 10, or one fifth."
+        },
+        {
+          "prompt": "Use the same box. Of the red shapes, what fraction are circles?",
+          "answer": "There are 5 + 2 = 7 red shapes, and 2 of them are circles. The answer is 2 out of 7. It is not the same as 2 out of 10, because the group is different."
+        }
+      ],
+      "talk": [
+        "What words in a question tell you that the group has changed?",
+        "Why did the top number stay 6 while the bottom number changed?",
+        "Make up an \"of the ...\" question about your family or your class."
+      ],
+      "check": [
+        {
+          "question": "A bag has 6 red squares, 2 blue squares, 4 red circles, and 12 blue circles. Of the squares, what fraction is red?",
+          "options": [
+            "6 out of 24",
+            "6 out of 10",
+            "6 out of 8"
+          ],
+          "answer": 2,
+          "explanation": "The question is about the squares only. There are 8 squares, and 6 of them are red, so the answer is 6 out of 8."
+        },
+        {
+          "question": "In a club, 12 kids play soccer. Of the soccer players, 4 also play piano. Which total goes on the bottom of the fraction?",
+          "options": [
+            "The number of kids who play piano",
+            "The 12 kids who play soccer",
+            "Every kid in the whole school"
+          ],
+          "answer": 1,
+          "explanation": "The words \"of the soccer players\" make the soccer players the whole. So the bottom number is 12, and the answer is 4 out of 12."
+        },
+        {
+          "question": "Remember Lesson 2. A fair spinner has 4 equal parts, and 1 part is yellow. What is the probability of not landing on yellow?",
+          "options": [
+            "4 out of 4",
+            "3 out of 4",
+            "1 out of 4"
+          ],
+          "answer": 1,
+          "review_of": "L1-02",
+          "explanation": "The probability of yellow is 1 out of 4. So not yellow is 1 take away one fourth, which is 3 out of 4."
+        }
+      ],
+      "connect": "Doctors, scientists, and sports coaches ask \"of the ...\" questions all the time. Mixing up the two groups is a very common mistake, even for grown-ups. Later in this course, you will use the same idea to update a guess when you learn something new.",
+      "grownups": {
+        "why": "This lesson is an informal start on conditional probability. OpenStax Introductory Statistics defines the probability of A given B as the probability of A and B divided by the probability of B, which with counts means using only the cases in B as the whole [@openstax_prob]. Children practice reading the condition from the question and choosing the matching total from a two-way table. Comparing \"red given square\" with \"square given red\" shows early that the two directions are not the same.",
+        "misconceptions": [
+          "The bottom number is always the total of everything. (When a question says \"of the ...\", the bottom number is the size of that group.)",
+          "\"Of the squares, how many are red?\" and \"of the red shapes, how many are squares?\" have the same answer. (They share a top number but use different groups as the whole.)",
+          "A difference between groups shows that one thing causes the other. (A two-way table shows a pattern in the counts, not a cause; Lesson 6 looks at common causes.)"
+        ],
+        "simplify": "Use 12 shapes and only one question at a time. Physically move the shapes that are not in the group off the table before counting.",
+        "extend": "Ask the child to make a set of shapes where \"of the squares, what fraction is red?\" equals \"of the red shapes, what fraction are squares?\". (This happens when there are as many squares as red shapes.)"
+      },
+      "caution": "The fractions here are counts within one set of shapes. They describe that set only. The lesson does not yet use the words \"given that\" or the formal notation for conditional probability.",
+      "sources": [
+        "openstax_prob"
+      ],
+      "lab": "bayes"
     },
     {
-      "id":"L1-05", "title":"Assign a fair comparison", "objective":"Explain how random assignment can reduce systematic group differences.", "prerequisites":["L0-04","L1-03"],
-      "paragraphs":[
-        "Random assignment uses a chance process to choose a treatment for each participant. For example, a fair coin can select between two study methods. The assignment must happen before the result is measured, using the planned rule.",
-        "Random assignment can prevent the experimenter from deliberately placing stronger learners in one group. It balances other causes on average across repeated assignments. One small experiment can still have groups that differ by chance, so record group sizes and uncertainty.",
-        "A fair experiment also needs a clear outcome and similar measurement. If one group receives extra practice and a different test, two changes occur together. Random assignment alone cannot repair a badly defined comparison or a missing result."
+      "id": "L1-05",
+      "schema": 2,
+      "title": "Assign a fair comparison",
+      "objective": "I can explain how random assignment makes a comparison fair.",
+      "prerequisites": [
+        "L0-04",
+        "L1-03"
       ],
-      "equation":"Planned comparison: average result under method A minus average result under method B.",
-      "example":"Twelve learners receive method A or B by a planned random rule. Both groups study for twenty minutes and take the same test. This setup is clearer than letting the teacher give A only to learners who already score well.",
-      "exercise":"Two garden plots receive different plant foods. Suggest a random assignment rule and one outcome measured in the same way for every plant.",
-      "solution":"Randomly assign similar plants to the two foods before growth is measured. Record height change over the same time interval with the same measuring method. Use enough plants to study variation.",
-      "quiz":{"question":"What does random assignment guarantee in one small experiment?","options":["Use of the stated chance rule, not identical groups","Exactly equal starting ability","A large treatment effect"],"answer":0,"explanation":"A correctly applied chance rule defines random assignment. It does not guarantee identical groups or any particular treatment effect in one small experiment."},
-      "sources":["hernan","seeing"],"lab":"causal","caution":"Experiments with people require suitable consent and oversight. Use the course simulation for this exercise."
+      "time_minutes": 40,
+      "big_idea": "To test two things fairly, let chance decide who gets which. A coin does not care who is strong or weak. So hidden differences between the groups balance out on average, but not perfectly every time.",
+      "i_can": [
+        "I can use coin flips to split people or things into two groups.",
+        "I can explain why picking the groups yourself can make a test unfair.",
+        "I can compare the averages of two groups and say if they are close."
+      ],
+      "words": [
+        {
+          "word": "random assignment",
+          "meaning": "Using chance, like a coin flip, to decide who goes in which group."
+        },
+        {
+          "word": "average",
+          "meaning": "Add up all the numbers, then divide by how many numbers there are."
+        },
+        {
+          "word": "fair test",
+          "meaning": "A comparison where only the thing you are testing is different between the groups."
+        }
+      ],
+      "warmup": {
+        "recall_of": "L1-04",
+        "prompt": "Last time you counted inside a group. A class has 20 kids, and 8 of them wear glasses. Of those 8, 2 wear red shirts. Of the kids with glasses, what fraction wear red shirts? What total do you use?"
+      },
+      "story_title": "Leo's favorite plane",
+      "story": [
+        "Leo has folded two paper planes. Plane A has long, thin wings. Plane B has short, wide wings. He wants to know which design flies farther. Sixteen friends will each throw one plane once.",
+        "\"I will choose who throws which,\" says Leo. Maya frowns. \"You like Plane A best. What if you give it to all the strong throwers? Then Plane A wins because of the throwers, not the wings.\"",
+        "To see the problem, a grown-up gives each friend a made-up throwing strength from 1 to 10. Leo sorts the 8 strongest friends to Plane A. Plane A's group: average 7.6. Plane B's group: average 3.1. That is not a fair test at all.",
+        "So they start over. For each friend, Maya flips a coin. Heads means Plane A, and tails means Plane B. This time the coin gives 8 friends to each plane, but that was luck. Plane A's group: average 5.5. Plane B's group: 42 divided by 8 is 5.25, which rounds to average 5.3.",
+        "\"The averages are close, but not the same,\" says Leo. Maya nods. \"A coin does not promise equal groups. But it does not take sides. If we did this again and again, neither plane would get the strong throwers more often.\""
+      ],
+      "animation": {
+        "file": "l1-05-assign.mp4",
+        "scene": "scripts/manim/l1_05.py:FairAssignment",
+        "params": {
+          "seed": 1,
+          "strengths": [
+            9,
+            3,
+            7,
+            5,
+            2,
+            8,
+            6,
+            4,
+            10,
+            1,
+            7,
+            3,
+            5,
+            8,
+            2,
+            6
+          ]
+        },
+        "caption": "Coin flips split 16 friends into two groups. Then Leo picks the groups himself. The strengths are made up.",
+        "alt": "Sixteen circles shaded by a made-up throwing strength are sorted into two groups, first by coin flips, giving close averages, then by picking, putting the strong throwers in one group.",
+        "describe": "Sixteen circles stand for friends. Darker circles are stronger throwers, and each shows a made-up strength from 1 to 10. First a coin flip for each friend sends them to Plane A or Plane B, and the labels read average 5.5 and average 5.3. Then Leo picks, and the strong throwers all go to Plane A: average 7.6 against average 3.1."
+      },
+      "activity": {
+        "title": "Coin groups or picked groups?",
+        "minutes": 20,
+        "materials": [
+          "20 index cards or scraps of paper",
+          "A pencil",
+          "A coin",
+          "Paper for your record",
+          "A calculator (optional)"
+        ],
+        "steps": [
+          "Ask a grown-up to write a made-up throwing strength from 1 to 10 on one side of each of 20 cards.",
+          "Turn the cards number side down so you cannot see the numbers. Write a name or letter on the blank side of each card.",
+          "Coin groups: flip the coin once for each card. Heads goes in pile A, and tails goes in pile B.",
+          "Turn the cards over. Add up the numbers in each pile, then divide by the number of cards in that pile. Write both averages.",
+          "Picked groups: now look at all the numbers. Put the 10 biggest numbers in pile A and the rest in pile B.",
+          "Find the two averages again and write them down.",
+          "Mix the cards and do the coin groups two more times. Write down the averages each time.",
+          "Compare. Were the coin groups close every time? How far apart were the picked groups?"
+        ],
+        "record": "A table with one row for each try: how you made the groups, the number of cards in each pile, and the two averages.",
+        "safety": "Keep coins away from babies and toddlers. If you fly paper planes afterward, never aim them at anyone's face."
+      },
+      "guided": {
+        "prompt": "A coin sends 4 cards to pile A, with strengths 2, 6, 7 and 5. What is the average strength of pile A?",
+        "answer": "Add them: 2 + 6 + 7 + 5 = 20. There are 4 cards, so divide by 4. The average is 20 divided by 4, which is 5."
+      },
+      "try_it": [
+        {
+          "prompt": "A teacher wants to test a new spelling game. She gives the game to the 10 kids who already spell best. They score higher than the others. Is that a fair test? How could she fix it?",
+          "answer": "No. The game group were already the best spellers, so they might score higher anyway. She could flip a coin for each kid to decide who plays the game. Then good spellers would most likely end up in both groups."
+        },
+        {
+          "prompt": "Sam flips a coin for 6 friends. Pile A gets strengths 9, 8 and 7. Pile B gets 2, 3 and 4. Did the coin do something wrong?",
+          "answer": "No. With only 6 friends, a coin can give lopsided groups by luck. Pile A has an average of 8 and pile B has an average of 3. That happens sometimes. With more friends, the averages are usually closer."
+        }
+      ],
+      "talk": [
+        "Why might Leo put the strong throwers on Plane A, even if he does not mean to?",
+        "The coin groups were close but not exactly equal. Is that a problem? Why or why not?",
+        "Why does using more friends usually make the coin groups more alike?"
+      ],
+      "check": [
+        {
+          "question": "Why do scientists use a coin or another chance tool to make groups?",
+          "options": [
+            "So the groups always have exactly the same average",
+            "So the experiment finishes faster",
+            "So nobody's choices can pile the strong ones into one group"
+          ],
+          "answer": 2,
+          "explanation": "A coin does not take sides. It balances hidden differences on average. It does not promise exactly equal groups every time."
+        },
+        {
+          "question": "Coin groups give averages of 5.5 and 5.3. Picked groups give 7.6 and 3.1. Which groups make a fairer test?",
+          "options": [
+            "Both are equally fair",
+            "The coin groups",
+            "The picked groups"
+          ],
+          "answer": 1,
+          "explanation": "The coin groups are close, so neither plane gets much stronger throwers. The picked groups are far apart, so the strong throwers would decide the winner."
+        },
+        {
+          "question": "Remember Lesson 3. You flip a fair coin 16 times and get 10 heads. What is the relative frequency of heads?",
+          "options": [
+            "6 out of 16",
+            "One half",
+            "10 out of 16"
+          ],
+          "answer": 2,
+          "review_of": "L1-03",
+          "explanation": "A relative frequency comes from your own count: 10 heads out of 16 flips. One half is what the fair-coin model predicts, not what you counted."
+        }
+      ],
+      "connect": "Doctors test new medicines this way. Chance decides who gets the new medicine and who does not. Later in this course, you will use random assignment in your own project. You will also see why a fair test needs enough people or tries.",
+      "grownups": {
+        "why": "OpenStax explains that random assignment places participants in treatment groups by chance, so that groups are similar in other ways and differences in results can be credited to the treatment; it also names lurking variables as the problem this guards against [@openstax_design]. The NGSS practices for grades 3 to 5 ask children to plan fair tests in which variables are controlled and the number of trials is considered [@ngss_appf]. The animation uses a fixed list of made-up strengths and the course's seeded random number generator, so the averages in the story, the video and this guide match.",
+        "misconceptions": [
+          "Random assignment makes the two groups exactly equal. (It balances them on average over many assignments; one small split can still be lopsided.)",
+          "Random means careless or messy. (Here random means a planned chance rule that nobody can steer.)",
+          "Picking groups carefully by hand is fairer than a coin. (A person can steer groups without meaning to; a coin cannot.)",
+          "A coin must give the same number in each group. (Group sizes can differ by luck; that is fine, and the averages still compare well.)"
+        ],
+        "simplify": "Use 10 cards with strengths written in plain view, and compare only one coin split with one picked split.",
+        "extend": "Pool the coin splits from the whole family or class. Plot the gap between the two averages for each split and see that the gaps center near zero. Try 40 cards and see the gaps shrink."
+      },
+      "caution": "The strengths are made up so that the hidden difference can be seen. Real experiments with people need consent, and random assignment does not fix other problems, such as measuring the two groups differently.",
+      "sources": [
+        "openstax_design",
+        "ngss_appf"
+      ],
+      "lab": "causal"
     },
     {
-      "id":"L1-06", "title":"Look for a common cause", "objective":"Draw a shared-cause explanation for an observed association.", "prerequisites":["L0-09","L1-04"],
-      "paragraphs":[
-        "A common cause is a factor that can affect two other factors. Hot weather can increase ice cream sales and swimming visits. The two activities can occur together because both respond to the weather, even without either causing the other.",
-        "A causal diagram uses arrows to state proposed direct influences. Draw weather pointing to sales and weather pointing to swimming. These arrows express a model. They need scientific support and are not created merely by drawing lines between recorded quantities.",
-        "A shared cause can make a prediction useful while making an action claim wrong. If sales predict swimming, increasing sales alone might still fail to increase swimming. The action removes the usual reason that high sales were observed."
+      "id": "L1-06",
+      "schema": 2,
+      "title": "Look for a common cause",
+      "objective": "I can draw a common-cause diagram for two things that go up and down together.",
+      "prerequisites": [
+        "L0-09",
+        "L1-04"
       ],
-      "equation":"Shared-cause diagram: sales <- weather -> swimming. An arrow points from proposed cause to effect.",
-      "example":"On ten warm days, a pool sells many tickets and a shop sells many cold drinks. On cool days both totals fall. Warm weather is a plausible shared cause. The record alone does not show that selling a drink sends someone to the pool.",
-      "exercise":"Roads are wet and umbrellas are common. Propose a common cause. What extra question would you ask before saying umbrellas make roads wet?",
-      "solution":"Rain is a plausible common cause of wet roads and umbrella use. Ask whether deliberately opening umbrellas without rain changes road wetness under a suitable controlled comparison.",
-      "quiz":{"question":"Which diagram represents Z as a common cause of X and Y?","options":["X -> Z <- Y","X <- Z -> Y","X -> Y -> Z"],"answer":1,"explanation":"Both arrows leave Z and enter the other variables. The diagram therefore states that Z directly influences X and Y in this model."},
-      "sources":["pearl","seeing"],"lab":"causal","caution":"A plausible common cause is a hypothesis. The diagram requires evidence and stated assumptions."
+      "time_minutes": 40,
+      "big_idea": "Two things can go up and down together even when neither one causes the other. Often a third thing causes both. Looking only at the pattern cannot tell you which way the causes run.",
+      "i_can": [
+        "I can spot two things that go up and down together in a table or a graph.",
+        "I can suggest a third thing that might cause both.",
+        "I can draw a common-cause diagram with arrows."
+      ],
+      "words": [
+        {
+          "word": "common cause",
+          "meaning": "One thing that causes two other things. It can make those two things go up and down together."
+        },
+        {
+          "word": "scatter plot",
+          "meaning": "A graph with one dot for each thing you measured, like one dot for each day."
+        },
+        {
+          "word": "diagram",
+          "meaning": "A simple drawing that shows how things are connected. Here, an arrow points from a cause to what it causes."
+        }
+      ],
+      "warmup": {
+        "recall_of": "L1-05",
+        "prompt": "Last time you used a coin to split friends into two groups for a fair test. Why is a coin fairer than letting Leo pick the groups himself?"
+      },
+      "story_title": "Does ice cream make people swim?",
+      "story": [
+        "Maya's cousin Sam runs an ice cream stand next to the town pool. Sam keeps a notebook. Each day, Sam writes how many ice creams were sold and how many people went swimming. The numbers in this story are made up, but they look like real ones.",
+        "Leo reads the notebook for 10 made-up days. On days with lots of ice cream sold, lots of people swam. On days with little ice cream sold, few people swam. \"Ice cream makes people want to swim!\" says Leo.",
+        "Maya points to another column in the notebook: hot or cool. There were 5 hot days and 5 cool days. On the hot days, Sam sold 40 to 56 ice creams, and 38 to 49 people swam. On the cool days, Sam sold 12 to 26 ice creams, and only 10 to 16 people swam.",
+        "\"Look only at the hot days,\" says Maya. \"Selling more ice cream does not go with more swimmers. The cool days are the same. The big pattern comes from the weather.\"",
+        "Leo draws arrows. Hot weather points to ice cream sold. Hot weather also points to people swimming. \"So hot weather is a common cause,\" he says. \"Giving out free ice cream on a cold day would not fill the pool.\""
+      ],
+      "animation": {
+        "file": "l1-06-common-cause.mp4",
+        "scene": "scripts/manim/l1_06.py:CommonCause",
+        "params": {
+          "days": [
+            {
+              "day": 1,
+              "hot": true,
+              "ice_cream": 44,
+              "swimmers": 38
+            },
+            {
+              "day": 2,
+              "hot": false,
+              "ice_cream": 16,
+              "swimmers": 10
+            },
+            {
+              "day": 3,
+              "hot": false,
+              "ice_cream": 22,
+              "swimmers": 10
+            },
+            {
+              "day": 4,
+              "hot": true,
+              "ice_cream": 52,
+              "swimmers": 40
+            },
+            {
+              "day": 5,
+              "hot": true,
+              "ice_cream": 40,
+              "swimmers": 46
+            },
+            {
+              "day": 6,
+              "hot": false,
+              "ice_cream": 12,
+              "swimmers": 13
+            },
+            {
+              "day": 7,
+              "hot": true,
+              "ice_cream": 56,
+              "swimmers": 45
+            },
+            {
+              "day": 8,
+              "hot": false,
+              "ice_cream": 26,
+              "swimmers": 13
+            },
+            {
+              "day": 9,
+              "hot": true,
+              "ice_cream": 48,
+              "swimmers": 49
+            },
+            {
+              "day": 10,
+              "hot": false,
+              "ice_cream": 19,
+              "swimmers": 16
+            }
+          ]
+        },
+        "caption": "Ice creams sold and people swimming on 10 made-up days. Coloring the hot and cool days shows where the pattern comes from.",
+        "alt": "A scatter plot of 10 made-up days rises from lower left to upper right. Colored by weather, the hot days and the cool days each form a flat cluster, and a diagram shows hot weather pointing to both ice cream and swimming.",
+        "describe": "Ten dots, one for each of 10 made-up days, show ice creams sold and people swimming. Together they rise from the lower left to the upper right. Then the dots turn orange for 5 hot days and blue for 5 cool days, and a flat line runs through each color. Last, a diagram appears: hot weather has one arrow to ice cream sold and one arrow to people swimming."
+      },
+      "activity": {
+        "title": "Find the hidden cause",
+        "minutes": 20,
+        "materials": [
+          "Graph paper or a printed grid",
+          "A pencil and a ruler",
+          "An orange crayon and a blue crayon",
+          "The made-up table in the steps"
+        ],
+        "steps": [
+          "These numbers are made up for practice. Each pair is ice creams sold, then people swimming.",
+          "Hot days: 40 and 46. 44 and 38. 48 and 49. 52 and 40. 56 and 45.",
+          "Cool days: 12 and 13. 16 and 10. 19 and 16. 22 and 10. 26 and 13.",
+          "Draw two lines for a graph. Label the bottom line ice creams sold, from 0 to 60. Label the side line people swimming, from 0 to 60.",
+          "Make a pencil dot for each of the 10 days. Do not color them yet. Do the dots go up from left to right?",
+          "Now color the dots for hot days orange and the dots for cool days blue.",
+          "Look at the orange dots alone. Do more ice creams go with more swimmers? Then look at the blue dots alone.",
+          "Draw a common-cause diagram. Write hot weather at the top. Draw one arrow to ice cream sold and one arrow to people swimming."
+        ],
+        "record": "Your scatter plot with orange and blue dots, one sentence about what you noticed, and your common-cause diagram.",
+        "safety": "No special safety needs. If you make your own real table at a pool, stay with a grown-up near the water."
+      },
+      "guided": {
+        "prompt": "On rainy days, more people carry umbrellas, and the roads are wet. Do umbrellas make roads wet? What is the common cause?",
+        "answer": "No. Rain is the common cause. Rain makes people carry umbrellas, and rain makes the roads wet. The diagram has rain at the top, with one arrow to umbrellas and one arrow to wet roads."
+      },
+      "try_it": [
+        {
+          "prompt": "In a made-up town, kids with bigger feet can read longer words. Does having big feet help you read? What third thing could cause both?",
+          "answer": "No. Age is a likely common cause. Older kids have bigger feet, and older kids have had more years to learn to read."
+        },
+        {
+          "prompt": "Leo notices that on days when many people wear shorts, many people buy cold drinks. Draw a common-cause diagram for this.",
+          "answer": "Hot weather goes at the top. One arrow goes from hot weather to wearing shorts. Another arrow goes from hot weather to buying cold drinks."
+        }
+      ],
+      "talk": [
+        "If Sam gave away free ice cream on a cold day, would more people swim? How could you find out?",
+        "Why was it helpful to color the hot days and the cool days differently?",
+        "Can you think of two things in your own life that go up and down together? Could a third thing cause both?"
+      ],
+      "check": [
+        {
+          "question": "On hot days, more ice cream is sold and more people swim. What is the best explanation?",
+          "options": [
+            "Swimming makes people buy ice cream.",
+            "Hot weather is a common cause of both.",
+            "Eating ice cream makes people swim."
+          ],
+          "answer": 1,
+          "explanation": "Hot weather makes people want ice cream, and it makes people want to swim. So the two go up together, even if neither causes the other."
+        },
+        {
+          "question": "Which diagram shows hot weather as a common cause?",
+          "options": [
+            "Ice cream points to hot weather, and swimming points to hot weather.",
+            "Hot weather points to ice cream, and hot weather points to swimming.",
+            "Ice cream points to swimming, and swimming points to hot weather."
+          ],
+          "answer": 1,
+          "explanation": "In a common-cause diagram, both arrows start at the cause. Here they start at hot weather and point to the two things it changes."
+        },
+        {
+          "question": "Remember Lesson 4. Of 10 made-up days, 5 were hot. The pool was full on 4 of the hot days. Of the hot days, what fraction had a full pool?",
+          "options": [
+            "5 out of 10",
+            "4 out of 5",
+            "4 out of 10"
+          ],
+          "answer": 1,
+          "review_of": "L1-04",
+          "explanation": "The question says of the hot days, so the total is the 5 hot days. The pool was full on 4 of them, so it is 4 out of 5."
+        }
+      ],
+      "connect": "Scientists who study health and nature often use diagrams like these. A pattern in data can hint at a cause, but it cannot prove one by itself. A fair test with random assignment, like in the last lesson, is one way to check.",
+      "grownups": {
+        "why": "Pearl's overview separates association from causation and uses causal diagrams in which a common cause, a confounder, opens a path that makes two variables associated even when neither affects the other [@pearl]. OpenStax calls such a hidden third variable a lurking variable and explains why random assignment in an experiment guards against it [@openstax_design]. Gopnik and colleagues give evidence that even young children learn causal structure from patterns in what they observe and do, which this lesson builds on with simple arrow diagrams [@gopnik2004]. The 10 days in the lesson are made up and were built so that, within hot days and within cool days, ice cream sold and swimmers are not related.",
+        "misconceptions": [
+          "If two things rise together, one must cause the other. (A third thing may cause both; the pattern alone cannot say.)",
+          "A common cause means the two things are not really related. (They really do go together; they are just not cause and effect.)",
+          "The arrow in a diagram is a proof. (An arrow is a guess about causes that still needs evidence, such as a fair test.)",
+          "Splitting the data into hot and cool days always removes a pattern. (It does here because the example was built that way; real data can keep part of the pattern.)"
+        ],
+        "simplify": "Plot only 6 days, 3 hot and 3 cool, and talk about the diagram before drawing it.",
+        "extend": "Ask the child to invent a made-up table where splitting by a third thing does not remove the pattern, and to explain what that might mean. Then look at a real weather record and a pool or park attendance record if one is available."
+      },
+      "caution": "The data are made up to make the idea clear. Real data are messier, and spotting a likely common cause is a guess that still needs testing.",
+      "sources": [
+        "pearl",
+        "openstax_design",
+        "gopnik2004"
+      ],
+      "lab": "causal"
     },
     {
-      "id":"L1-07", "title":"Track a wave", "objective":"Identify wave height, wavelength, and phase in a simple wave model.", "prerequisites":["L0-07","L1-01"],
-      "paragraphs":[
-        "A wave describes a change that extends across space or time. A water surface can have crests and troughs. A crest is a high point, and a trough is a low point relative to the resting surface.",
-        "Amplitude measures the size of the disturbance from its resting value. Wavelength is the distance between repeating points, such as adjacent crests. Phase describes where a wave is within its repeated cycle. Two equal waves can have different phases.",
-        "A drawing of a water wave is a useful first model of combination. It is not a drawing of a qubit. Quantum amplitudes have their own rules and need not describe a physical water height or a particle moving in a visible loop."
+      "id": "L1-07",
+      "schema": 2,
+      "title": "Track a wave",
+      "objective": "I can find the crests, troughs, amplitude, wavelength, and phase of a simple wave.",
+      "prerequisites": [
+        "L0-07",
+        "L1-01"
       ],
-      "equation":"One full cycle has phase 360 degrees. Half a cycle has phase 180 degrees.",
-      "example":"Two water-wave drawings have crests four centimetres apart. Each has wavelength four centimetres. One drawing is shifted by two centimetres, so its crest matches the other trough. The shift is half a wavelength, or half a cycle.",
-      "exercise":"A wave has crests at positions 1, 7, and 13 centimetres. Find the wavelength. What distance is half a wavelength?",
-      "solution":"The distance between adjacent crests is six centimetres, so the wavelength is six centimetres. Half a wavelength is three centimetres. Use adjacent matching points, not crest height, for this distance.",
-      "quiz":{"question":"What does a half-cycle phase shift align for equal sinusoidal waves?","options":["Every crest with another crest","No points at all","A crest with the other wave's trough"],"answer":2,"explanation":"A half cycle moves the wave from a crest to a trough. Equal wave heights then have opposite signs at corresponding positions."},
-      "sources":["feynman"],"lab":"interference","caution":"The wave picture is an analogy. Quantum state amplitudes are not water heights."
+      "time_minutes": 40,
+      "big_idea": "A wave is a pattern of ups and downs that travels. Its amplitude is how high a crest rises above the middle line. Its wavelength is the distance from one crest to the next. The rope itself only moves up and down.",
+      "i_can": [
+        "I can point to the crests and troughs of a wave and measure its amplitude and wavelength.",
+        "I can explain that the rope moves up and down while the wave pattern moves along.",
+        "I can tell when two waves are in step and when one is half a cycle behind."
+      ],
+      "words": [
+        {
+          "word": "amplitude",
+          "meaning": "How far a crest rises above the middle line. It is also how far a trough dips below it."
+        },
+        {
+          "word": "wavelength",
+          "meaning": "The distance from one crest to the next crest."
+        },
+        {
+          "word": "phase",
+          "meaning": "Where a point is in its up-and-down cycle: at the top, at the bottom, or somewhere between."
+        }
+      ],
+      "warmup": {
+        "recall_of": "L1-06",
+        "prompt": "Last time you saw that ice cream sales and swimming go up together on hot days. What third thing caused both? Today we leave chance for a while and look at waves. Have you ever watched a wave move along a rope or across a pond?"
+      },
+      "story_title": "The ribbon that stayed put",
+      "story": [
+        "Maya ties one end of a long jump rope to a fence post. Leo holds the other end and shakes it up and down. Bumps race along the rope toward the post. The high points are called crests, and the low points are called troughs.",
+        "Maya ties a red ribbon to the middle of the rope. \"Watch the ribbon,\" she says. The bumps travel all the way to the post, but the ribbon does not. It just bobs up and down in the same spot. The wave pattern moves along, while each bit of rope only moves up and down.",
+        "Maya takes a photo, and they copy the wave onto graph paper. First they draw a middle line where the rope rests. Each crest is 2 squares above the middle line, and each trough is 2 squares below it. So the amplitude is 2 squares, not 4. The crests are 8 squares apart, so the wavelength is 8 squares. In 24 squares of rope, they count 3 crests.",
+        "Next Leo shakes harder, but at the same speed. The crests now rise 3 squares above the middle line, so the amplitude is 3 squares. Then he shakes faster. The crests crowd closer together, only 4 squares apart. Faster shaking gives a shorter wavelength.",
+        "Maya's cousin Sam shakes a second rope beside Leo's, with the same size and speed of shakes. If both hands went up and down together, the two waves would be in step. But whenever Leo's hand is at the top, Sam's hand is at the bottom. Sam's wave is half a cycle behind Leo's. Each crest on Leo's rope lines up with a trough on Sam's rope."
+      ],
+      "animation": {
+        "file": "l1-07-wave.mp4",
+        "scene": "scripts/manim/l1_07.py:TrackAWave",
+        "params": {
+          "amplitude": 2,
+          "wavelength": 8,
+          "square": 0.4,
+          "dot_at": 6,
+          "speed": 4,
+          "travel_seconds": 6
+        },
+        "caption": "A wave on a grid: its amplitude, its wavelength, a dot that only bobs, and a second wave half a cycle behind.",
+        "alt": "A blue wave on a square grid with the amplitude marked as 2 squares and the wavelength as 8 squares; the wave slides right while a red dot on it moves only up and down; then a violet wave appears half a cycle behind.",
+        "describe": "A blue wave sits on a grid of squares with a dashed middle line. A marker from the middle line up to a crest says 2 squares, and an arrow from one crest to the next says 8 squares. Then the wave slides to the right while a red dot on the rope only moves up and down. Last, a violet wave appears half a cycle behind, and its crests line up with the blue troughs."
+      },
+      "activity": {
+        "title": "Rope waves",
+        "minutes": 20,
+        "materials": [
+          "A jump rope or a long toy spring",
+          "A partner",
+          "A ribbon, sticky note, or clothes peg",
+          "Graph paper and a pencil",
+          "A shallow tray of water and a pencil (optional)"
+        ],
+        "steps": [
+          "Lay the rope straight along the floor. You hold one end and your partner holds the other.",
+          "Clip the ribbon to the middle of the rope.",
+          "Shake your end slowly from side to side along the floor, the same amount each time. Watch the ribbon. Does it travel with the bumps, or only move side to side in its spot?",
+          "Count how many crests you see on the rope at one moment. Write the number down.",
+          "Make bigger shakes at the same speed. Do the bumps get bigger, or closer together? This is a bigger amplitude.",
+          "Now make faster shakes of the same size. Count the crests again. Are they closer together, so the wavelength is shorter?",
+          "On graph paper, draw a middle line and a wave with crests 2 squares high and 8 squares apart. Label one crest, one trough, the amplitude, and the wavelength.",
+          "Optional: tap the water in the tray with a pencil and watch the ripples spread out."
+        ],
+        "record": "Your crest counts for slow and fast shakes, and your labelled wave drawing on graph paper.",
+        "safety": "Keep the rope low and close to the floor, and never wrap it around a neck or a hand. Wipe up any spilled water right away so no one slips."
+      },
+      "guided": {
+        "prompt": "On graph paper, a wave's crests are 3 squares above the middle line and its troughs are 3 squares below. The crests are 10 squares apart. What are the amplitude and the wavelength?",
+        "answer": "The amplitude is 3 squares, measured from the middle line up to a crest, not from trough to crest. The wavelength is 10 squares, the distance from one crest to the next."
+      },
+      "try_it": [
+        {
+          "prompt": "A wave has crests at 2, 8, and 14 squares along the paper. What is its wavelength? How far apart are a crest and the next trough?",
+          "answer": "The crests are 6 squares apart, so the wavelength is 6 squares. A trough sits halfway between two crests, so a crest and the next trough are 3 squares apart."
+        },
+        {
+          "prompt": "Leo says, \"The water in a pond wave rushes all the way to the shore.\" Think about the ribbon. What would you tell Leo?",
+          "answer": "The wave pattern travels to the shore, but the water mostly bobs up and down near where it was, like the ribbon on the rope."
+        }
+      ],
+      "talk": [
+        "Why did the ribbon stay in its spot while the bumps raced to the post?",
+        "What did you change to make the amplitude bigger? What did you change to make the wavelength shorter?",
+        "Two people shake ropes half a cycle apart. Where are the crests of one rope compared with the other?"
+      ],
+      "check": [
+        {
+          "question": "A crest is 2 squares above the middle line. A trough is 2 squares below it. What is the amplitude?",
+          "options": [
+            "4 squares",
+            "2 squares",
+            "8 squares"
+          ],
+          "answer": 1,
+          "explanation": "Amplitude is measured from the middle line to a crest. That is 2 squares. The 4 squares from trough to crest is twice the amplitude."
+        },
+        {
+          "question": "Two waves are half a cycle apart. Where are the crests of one wave?",
+          "options": [
+            "Exactly on the middle line",
+            "Lined up with the troughs of the other wave",
+            "On top of the crests of the other wave"
+          ],
+          "answer": 1,
+          "explanation": "Half a cycle moves a point from the top of its cycle to the bottom. So each crest of one wave lines up with a trough of the other."
+        },
+        {
+          "question": "Remember Lesson 1. A wave's crests are 8 squares apart. A trough sits halfway between two crests. What fraction of the wavelength is that?",
+          "options": [
+            "One eighth, which is 1 square",
+            "One half, which is 4 squares",
+            "One fourth, which is 2 squares"
+          ],
+          "answer": 1,
+          "review_of": "L1-01",
+          "explanation": "Halfway means one half of the whole. One half of 8 squares is 4 squares, because 4 out of 8 is the same as 1 out of 2."
+        }
+      ],
+      "connect": "Waves are everywhere: on ropes, on water, in sound, and in light. Scientists describe all of them with the same words, amplitude and wavelength. In the next lesson, two waves will meet on the same rope. You will see that they can make a bigger wave, or even cancel out.",
+      "grownups": {
+        "why": "The Grade 4 science standard asks children to model waves in terms of amplitude and wavelength and to see that waves can make objects move [@ngss_4ps4_1]. OpenStax defines amplitude as the distance from the resting position to a crest and wavelength as the distance between adjacent identical parts of a wave, such as crests [@openstax_waves]. The ribbon shows a second key idea, which OpenStax illustrates with a seagull bobbing in place as waves pass: each bit of rope moves up and down near its own place while the pattern travels [@openstax_waves]. Phase is introduced only as \"where a point is in its cycle\", with in step and half a cycle behind as the two cases the next lesson needs. The animation draws the wave from a formula on a grid of true squares, so every length on screen can be counted.",
+        "misconceptions": [
+          "Amplitude is the height from trough to crest. (That is twice the amplitude; measure from the middle line to a crest.)",
+          "The rope or water travels along with the wave. (Each bit moves up and down near its own spot; the pattern travels.)",
+          "Shaking harder makes the wavelength longer. (Bigger shakes give a bigger amplitude; faster shakes on the same rope give a shorter wavelength.)",
+          "Half a cycle behind means the wave is half as big. (It has the same size; it is shifted so its crests line up with the other wave's troughs.)"
+        ],
+        "simplify": "Skip phase and the second rope. Focus on crests, troughs, and the ribbon that bobs in place.",
+        "extend": "Time 10 full up-and-down shakes with a stopwatch and work out how long one shake takes (the period). Then try to make a wave with half the wavelength and see how your shaking must change."
+      },
+      "caution": "A shaken rope makes a traveling wave that reflects from the post, so real rope waves soon get messy; the drawings show an ideal wave. Water waves are more complex than rope waves: water near the surface moves in small loops, not straight up and down, but the pattern still travels much farther than the water does.",
+      "sources": [
+        "ngss_4ps4_1",
+        "openstax_waves"
+      ],
+      "lab": "interference"
     },
     {
-      "id":"L1-08", "title":"Combine waves, then square", "objective":"Explain why interference cannot be modelled by adding only positive path probabilities.", "prerequisites":["L1-07","L1-02"],
-      "paragraphs":[
-        "When two simple wave disturbances meet, their signed heights can add. Two upward disturbances can make a larger upward disturbance. An upward and an equal downward disturbance can cancel at one point. The phase relation decides how they combine.",
-        "Quantum interference also depends on combining amplitudes before finding probabilities. An amplitude is a mathematical quantity used by the quantum rules. It can include a phase. The probability comes from the squared magnitude of the total amplitude for an outcome.",
-        "Adding ordinary positive path probabilities misses this cancellation. Interference does not mean that a probability is negative. A probability remains between zero and one. The quantities that combine first are amplitudes, which are different from the final probabilities."
+      "id": "L1-08",
+      "schema": 2,
+      "title": "Combine waves, then square",
+      "objective": "I can add two waves point by point, and explain why brightness comes from squaring the total amplitude.",
+      "prerequisites": [
+        "L1-07",
+        "L1-02"
       ],
-      "equation":"Equal opposite amplitudes: 1/2 + (-1/2) = 0; squared magnitude of the total is 0.",
-      "example":"At one output, two model path amplitudes are one half and minus one half. Their sum is zero, so that output probability is zero. Adding the separate squared values would give one half and would lose the cancellation.",
-      "exercise":"At an output, the model amplitudes are 1/2 and 1/2. Add them first, then square the result. Compare with squaring each first.",
-      "solution":"The amplitude sum is one, whose square is one. Squaring each one-half first gives one-quarter plus one-quarter, or one-half. The missing cross term explains the difference.",
-      "quiz":{"question":"Which order follows the quantum interference rule for indistinguishable alternatives?","options":["Add amplitudes, then take squared magnitude","Square probabilities, then subtract one","Add only the path probabilities"],"answer":0,"explanation":"Indistinguishable alternatives combine at the amplitude level. Taking the squared magnitude afterward includes the interference term that separate probability addition misses."},
-      "sources":["feynman","ibm"],"lab":"interference","caution":"These are contributions to one output. A complete physical experiment must give normalized probabilities across all outputs."
+      "time_minutes": 40,
+      "big_idea": "When two waves meet, their heights add at every point. In step, they make a bigger wave. Half a cycle apart and the same size, they cancel. For light, brightness goes with the amplitude times itself, so the order matters: add first, then square.",
+      "i_can": [
+        "I can add the heights of two waves at marked points, counting heights below the middle line as down.",
+        "I can predict whether two equal waves will make a bigger wave or cancel.",
+        "I can explain why two equal light waves in step are 4 times as bright as one, not 2 times."
+      ],
+      "words": [
+        {
+          "word": "amplitude",
+          "meaning": "How far a crest rises above the middle line."
+        },
+        {
+          "word": "cancel",
+          "meaning": "To add up to zero. An up of 2 and a down of 2 cancel."
+        },
+        {
+          "word": "square",
+          "meaning": "To square a number, multiply it by itself. The square of 3 is 3 times 3, which is 9."
+        }
+      ],
+      "warmup": {
+        "recall_of": "L1-07",
+        "prompt": "Last time you drew a wave with crests 2 squares above the middle line and 8 squares apart. What were its amplitude and its wavelength? What does it mean for a second wave to be half a cycle behind?"
+      },
+      "story_title": "When two bumps meet",
+      "story": [
+        "Maya and Leo stretch a long rope between them. Each one flicks a single bump up toward the other at the same moment. On their graph paper, each bump is 2 squares tall. In the middle, the bumps meet. For an instant, the rope jumps up 4 squares, because 2 plus 2 is 4. Then the bumps pass through each other and keep going.",
+        "Next, Maya flicks a bump up and Leo flicks a bump down, each 2 squares. When they meet, the rope looks flat for an instant. An up of 2 and a down of 2 cancel. The bumps did not break. A moment later, they come out the other side.",
+        "Back at the table, Leo draws a wave on tracing paper, with crests 2 squares high. Maya draws the same wave on another sheet. They lay one on top of the other, in step. At every point they add the heights: 2 up and 2 up make 4 up, and 2 down and 2 down make 4 down. The new wave has twice the amplitude.",
+        "Then Maya slides her sheet half a cycle, 4 squares along. Now each crest sits on a trough. At every point, the two heights are equal and opposite, like up 2 and down 2, so they add to 0. The two waves cancel completely.",
+        "Their teacher adds one more rule. For light, brightness goes with the amplitude times itself. Say one light wave has amplitude 1. Then amplitude 1 gives brightness 1, and amplitude 2 gives brightness 4. In step, the brightness is 4 times one wave, not 2 times. Half a cycle apart, amplitude 0 gives brightness 0. The extra light in bright places comes from dark places nearby, where waves cancel."
+      ],
+      "animation": {
+        "file": "l1-08-add-then-square.mp4",
+        "scene": "scripts/manim/l1_08.py:AddThenSquare",
+        "params": {
+          "amplitude": 1,
+          "wavelength": 8,
+          "square": 0.3,
+          "marker_at": 10,
+          "slide_seconds": 5
+        },
+        "caption": "Wave A, wave B, and their sum, point by point. The bar shows brightness, which is the total amplitude times itself.",
+        "alt": "Three rows of waves: wave A, wave B, and their sum A plus B. A bar on the right shows brightness. When B is in step, the sum is twice as tall and the bar reaches 4; when B slides half a cycle, the sum goes flat and the bar falls to 0.",
+        "describe": "Wave A appears with amplitude 1, and a brightness bar rises to 1. Wave B grows in step with A, and the bottom row, A plus B, becomes twice as tall. At a crest, 1 up plus 1 up is 2 up, and the screen says amplitude 2 gives brightness 4. Then wave B slides until it is half a cycle behind, the sum goes flat, and the screen says amplitude 0 gives brightness 0."
+      },
+      "activity": {
+        "title": "Add two waves on paper",
+        "minutes": 20,
+        "materials": [
+          "Graph paper",
+          "Two sheets of tracing paper or thin printer paper",
+          "A pencil and a colored pencil",
+          "A ruler",
+          "A rope and a partner (optional)"
+        ],
+        "steps": [
+          "On graph paper, draw a long middle line. Mark a dot on it every 2 squares.",
+          "Lay a sheet of tracing paper on top. Draw a wave with crests 2 squares high and 8 squares apart. Start at the middle line on the first dot.",
+          "On the second sheet, draw the same wave in a different color.",
+          "Lay both sheets on the graph paper, in step. At each dot, add the two heights. Count heights above the line as up and below it as down. Draw the sum on the graph paper.",
+          "Slide the top sheet 4 squares along, which is half a cycle. Add the heights at each dot again and draw this second sum.",
+          "Make a table with three rows: one wave, two waves in step, and two waves half a cycle apart. For each row, write the amplitude of the sum and that amplitude times itself.",
+          "Optional: hold a rope with a partner. Each flick one bump at the same moment, both up, then one up and one down. Watch what happens where they meet."
+        ],
+        "record": "Your two drawn sums and your table of amplitudes and squares.",
+        "safety": "Keep pencils pointed down when you lean over the paper. If you use a rope, keep it low and never wrap it around a neck or a hand."
+      },
+      "guided": {
+        "prompt": "At four dots, wave A has heights 0, 2 up, 0, 2 down. Wave B is in step and has the same heights. What are the heights of the sum? What if wave B is half a cycle behind instead?",
+        "answer": "In step, the sum is 0, 4 up, 0, 4 down, a wave with amplitude 4. Half a cycle behind, wave B has heights 0, 2 down, 0, 2 up, so the sum is 0 at every dot. The waves cancel."
+      },
+      "try_it": [
+        {
+          "prompt": "At one point, wave A is 3 squares up and wave B is 1 square down. What is the height of the sum there?",
+          "answer": "Up 3 plus down 1 is up 2. The sum is 2 squares up at that point."
+        },
+        {
+          "prompt": "A light wave has amplitude 3, so its brightness is 3 times 3, which is 9. Two of these waves meet in step. What is the new amplitude? What is the new brightness? How many times as bright as one wave is that?",
+          "answer": "The amplitudes add to 6. The brightness is 6 times 6, which is 36. That is 4 times as bright as one wave, because 36 is 4 times 9."
+        }
+      ],
+      "talk": [
+        "When the up bump and the down bump met, the rope looked flat. Where did the bumps go?",
+        "Why must you add the heights first and square after? What goes wrong if you square each wave first?",
+        "Two waves in step make a spot 4 times as bright. Why does that not mean light was made from nothing?"
+      ],
+      "check": [
+        {
+          "question": "Two equal light waves meet in step. How bright is the result, compared with one wave?",
+          "options": [
+            "The same brightness",
+            "2 times as bright",
+            "4 times as bright"
+          ],
+          "answer": 2,
+          "explanation": "The amplitudes add, so the total amplitude is 2 times as big. Brightness goes with amplitude times itself, and 2 times 2 is 4."
+        },
+        {
+          "question": "Two equal waves meet half a cycle apart. What happens?",
+          "options": [
+            "They make a wave twice as tall",
+            "They make a wave half as tall",
+            "They cancel, so the sum is flat"
+          ],
+          "answer": 2,
+          "explanation": "Half a cycle apart, each crest meets a trough of the same size. Up plus an equal down is 0 at every point, so the waves cancel."
+        },
+        {
+          "question": "Remember Lesson 2. A bag has 3 red counters and 5 blue counters. What is the chance of not drawing red?",
+          "options": [
+            "3 out of 5",
+            "5 out of 8",
+            "3 out of 8"
+          ],
+          "answer": 1,
+          "review_of": "L1-02",
+          "explanation": "There are 8 counters, and 5 of them are not red. That is 5 out of 8, which is 1 minus 3 out of 8."
+        }
+      ],
+      "connect": "The same order, add first and square after, comes back later in this course. In quantum physics, chances come from amplitudes. Amplitudes add first, then you square the total to get a chance. Ordinary chances can only add up, but amplitudes can cancel.",
+      "grownups": {
+        "why": "OpenStax describes superposition: where waves overlap, the resulting displacement is the sum of the individual displacements, giving constructive interference when they are in phase and destructive interference when they are half a cycle out of phase [@openstax_interference]. A standard result of wave physics is that for light and sound the intensity (energy carried per second per area) is proportional to the square of the amplitude, so two equal waves in phase give twice the amplitude and four times the intensity of one. The order matters: adding amplitudes first and then squaring is not the same as squaring each and adding. The quantum preview in the Where this leads paragraph follows Feynman's account of the two-slit experiment, where the chance of arrival is found by adding the amplitudes for the two paths first and then taking the absolute square [@feynman]. The animation computes each wave with numpy and draws the sum as exactly the pointwise sum of the two drawn waves.",
+        "misconceptions": [
+          "Two waves in step give twice the brightness. (They give twice the amplitude and four times the brightness.)",
+          "When waves cancel, they are destroyed. (They pass through each other and continue; the flat moment is the sum at that time and place.)",
+          "Interference makes extra energy at bright spots. (Light is moved, not made: bright places are balanced by dark places nearby.)",
+          "You can square each wave first and then add. (That gives 1 + 1 = 2 for two equal waves in step and can never give 0; add the amplitudes first.)"
+        ],
+        "simplify": "Do only the in-step and half-cycle overlays at four dots. Use whole numbers and skip the brightness table, or do just one row of it.",
+        "extend": "Slide the top sheet a quarter cycle (2 squares) and add again. The sum is a wave in between in size. Measure its amplitude and square it to compare with the other cases."
+      },
+      "caution": "\"Brightness goes with amplitude squared\" is about intensity, the energy carried by the wave. How bright or loud something seems to a person grows more slowly than that. Two ordinary flashlights do not show light and dark stripes, because their waves do not keep a steady step with each other. Seeing interference with light usually uses a single source split into two paths, such as two narrow slits.",
+      "sources": [
+        "openstax_interference",
+        "feynman"
+      ],
+      "lab": "interference"
     },
     {
-      "id":"L1-09", "title":"Unknown is not the same as quantum", "objective":"Distinguish classical hidden information from a quantum state with observable phase effects.", "prerequisites":["L0-08","L1-08"],
-      "paragraphs":[
-        "A coin under a cup can have a fixed face that you do not know. Your uncertainty is about missing information. A probability model can describe that uncertainty without saying that the coin follows quantum information rules in this task.",
-        "A qubit state can give the same measurement probabilities as a classical random bit for one chosen measurement. That agreement does not make the models identical. Other measurement choices or controlled operations can expose different predictions, including effects of relative phase.",
-        "Do not picture a qubit as merely a secret ordinary bit. Also do not claim that one measurement reveals its whole state. State learning requires suitable preparations and many measurement results. A model is tested through its predictions across allowed experiments."
+      "id": "L1-09",
+      "schema": 2,
+      "title": "Unknown is not the same as quantum",
+      "objective": "I can tell not knowing something apart from amplitudes that cancel, using a hidden coin and the two-path experiment with light.",
+      "prerequisites": [
+        "L0-08",
+        "L1-08"
       ],
-      "equation":"Same test probabilities can hide different states. Different tests can distinguish their predictions.",
-      "example":"The quantum states called plus and minus both give zero or one with equal probabilities in the usual computational-basis measurement. A different basis can distinguish them perfectly in the ideal model. Their relative phases differ even though the first probabilities match.",
-      "exercise":"Two devices each give half zeros in one test. Can that result alone prove that they prepare the same quantum state? Explain what is missing.",
-      "solution":"No. One test supplies only limited probabilities. Different quantum states can share those probabilities. Additional suitable measurement settings and repeated preparations are necessary to compare their other predictions.",
-      "quiz":{"question":"Why is an unknown classical bit not a full model of a qubit?","options":["Classical bits cannot be recorded","Qubit predictions also depend on phase and measurement basis","Every qubit gives a certain answer"],"answer":1,"explanation":"Quantum states include phase relations that affect results after suitable operations or measurements. An unknown fixed bit does not supply those quantum prediction rules."},
-      "sources":["ibm","preskill"],"lab":"qubit","caution":"This distinction is operational. It does not settle philosophical interpretations of quantum theory."
+      "time_minutes": 40,
+      "big_idea": "In the two-path experiment with light, some spots stay dark because the amplitudes from the two paths cancel. Ordinary chances can only add up, but amplitudes can cancel. When a coin is hidden under a cup, you do not know how it landed. Not knowing which way a coin landed is different: the coin already landed one way.",
+      "i_can": [
+        "I can explain why my chance of guessing a hidden coin is one half, even though the coin already landed one way.",
+        "I can show with strips of paper that two chances can never add to zero, but two amplitudes can.",
+        "I can work out a dark spot with numbers: 1/2 up and 1/2 down add to 0, and 0 × 0 = 0."
+      ],
+      "words": [
+        {
+          "word": "amplitude",
+          "meaning": "A number with a size and a direction, up or down, like the height of a wave. Two amplitudes can cancel."
+        },
+        {
+          "word": "cancel",
+          "meaning": "To add up to zero, like 1/2 up and 1/2 down."
+        },
+        {
+          "word": "two-path experiment",
+          "meaning": "Light from one lamp reaches a wall through two narrow slits, making stripes of light and dark."
+        }
+      ],
+      "warmup": {
+        "recall_of": "L1-08",
+        "prompt": "Last time you added two waves. Two equal waves meet half a cycle apart. What is the height of the sum at every point? Then square that height. What do you get?"
+      },
+      "story_title": "The coin under the cup",
+      "story": [
+        "Maya flips a coin and slaps a cup over it before anyone can see. \"Heads or tails?\" she asks. Leo shrugs. \"I don't know. My chance of guessing right is one half.\" Maya lifts the cup. Tails. \"It was tails the whole time,\" she says. \"I did not know either, but the coin already landed one way.\"",
+        "They play 20 rounds. Leo guesses right 9 times, which is 9 out of 20, close to one half. His chance was one half because he did not know. Every time, the coin under the cup was already heads or already tails.",
+        "The next day, their teacher shows a picture of the two-path experiment. Light from one lamp shines through two narrow slits onto a wall. The wall shows stripes of light and dark. \"In the two-path experiment with light, some spots stay dark because the amplitudes from the two paths cancel,\" she says.",
+        "She gives them simple numbers for one dark spot. With only path 1 open, the chance of light landing there is 1/4. With only path 2 open, it is also 1/4. If chances just added, we would get 1/4 + 1/4 = 1/2. Chances are never below zero, so adding two chances that are above zero can never make zero. But the spot is dark.",
+        "In quantum physics, chances come from amplitudes. Amplitudes add first, then you square the total to get a chance. The amplitude from path 1 is 1/2 up, and the one from path 2 is 1/2 down. Then 1/2 up and 1/2 down add to 0, and 0 × 0 = 0. That is a dark spot. \"Ordinary chances can only add up, but amplitudes can cancel,\" says Maya. \"The coin under the cup was just unknown. Not knowing which way a coin landed is different: the coin already landed one way.\""
+      ],
+      "animation": {
+        "file": "l1-09-chances-and-amplitudes.mp4",
+        "scene": "scripts/manim/l1_09.py:ChancesAndAmplitudes",
+        "params": {
+          "amplitude": [
+            1,
+            2
+          ]
+        },
+        "caption": "Left: two chances stack and can never make zero. Right: two amplitudes, one up and one down, add to zero, and zero squared is zero.",
+        "alt": "Two panels. On the left, two bars of 1/4 stack into 1/2. On the right, an arrow 1/2 up and an arrow 1/2 down add to 0, then 0 times 0 is 0. Text at the bottom reads: chances add; amplitudes can cancel.",
+        "describe": "On the left, two chance bars of 1/4 stack on top of each other, and the screen shows 1/4 + 1/4 = 1/2, never 0. On the right, one amplitude arrow points 1/2 up and the next points 1/2 down, so 1/2 up and 1/2 down add to 0. Then the screen shows 0 × 0 = 0. At the end, the words \"chances add; amplitudes can cancel\" appear."
+      },
+      "activity": {
+        "title": "Hidden coins and paper arrows",
+        "minutes": 20,
+        "materials": [
+          "A coin and a paper cup",
+          "Graph paper, scissors, and a ruler",
+          "Two colored pencils",
+          "Tape (optional)"
+        ],
+        "steps": [
+          "Play the hidden-coin game with a partner. One person flips the coin and covers it with the cup. The other guesses, then lifts the cup.",
+          "Play 20 rounds and keep a tally of right and wrong guesses. Write your count as a fraction, like 9 out of 20.",
+          "Cut two paper strips, each 4 squares long. These are chance bars. A chance bar always stands up from the line, never down.",
+          "Draw a line across a sheet of paper. Stand both chance bars on it, one on top of the other. How tall is the stack? Can you make it reach zero?",
+          "Cut two more strips, each 4 squares long, and draw an arrowhead at one end of each. These are amplitude arrows. An arrow can point up or down.",
+          "Put the first arrow pointing up from the line. Put the tail of the second arrow at the tip of the first, pointing down. Where does the second arrow end?",
+          "Write one sentence: which pair could add to zero, the chance bars or the amplitude arrows?"
+        ],
+        "record": "Your tally of 20 guesses written as a fraction, and your sentence about which pair could add to zero.",
+        "safety": "Use scissors carefully and pass them handle first. Keep coins away from babies and toddlers."
+      },
+      "guided": {
+        "prompt": "At one spot, path 1 gives an amplitude of 1/2 up and path 2 gives 1/2 down. Add the amplitudes, then square the total. Is the spot bright or dark?",
+        "answer": "1/2 up and 1/2 down add to 0. Then 0 × 0 = 0. The spot is dark."
+      },
+      "try_it": [
+        {
+          "prompt": "At another spot, both paths give an amplitude of 1/2 up. Add the amplitudes, then square. Compare your answer with 1/4 + 1/4.",
+          "answer": "1/2 up and 1/2 up add to 1 up, and 1 × 1 = 1. That is twice as much as 1/4 + 1/4 = 1/2. Where amplitudes add in step, the spot is extra bright."
+        },
+        {
+          "prompt": "Sam says, \"Until we lift the cup, the coin is half heads and half tails.\" What would you tell Sam?",
+          "answer": "The coin already landed one way, heads or tails. The one half is our chance of guessing right, because we do not know which. Lifting the cup just shows us the side that was already up."
+        }
+      ],
+      "talk": [
+        "How is not knowing about the coin different from the dark stripes on the wall?",
+        "Can two chances ever add up to less than either one? Why or why not?",
+        "Where do you think the light goes, if it does not land on the dark stripes?"
+      ],
+      "check": [
+        {
+          "question": "Maya hides a coin under a cup. Which sentence is true?",
+          "options": [
+            "The coin has not picked a side yet.",
+            "The coin is heads, because heads comes first.",
+            "The coin already landed one way, and we just do not know which."
+          ],
+          "answer": 2,
+          "explanation": "Not knowing which way a coin landed is different: the coin already landed one way. The one half is about what we know, not about the coin."
+        },
+        {
+          "question": "Which pair can add to zero?",
+          "options": [
+            "Two chances of 1/4",
+            "Two chances of 1/2",
+            "Amplitudes of 1/2 up and 1/2 down"
+          ],
+          "answer": 2,
+          "explanation": "Chances are never below zero, so adding two chances that are above zero can never make zero. An amplitude up and an equal amplitude down cancel."
+        },
+        {
+          "question": "Remember Lesson 3. Leo guesses the hidden coin right 9 times in 20 rounds. What is 9 out of 20?",
+          "options": [
+            "The chance a model predicts for each guess",
+            "A frequency: what really happened in the rounds",
+            "An amplitude that can point up or down"
+          ],
+          "answer": 1,
+          "review_of": "L1-03",
+          "explanation": "9 out of 20 is what Leo really counted, so it is a relative frequency. The model's chance of guessing right is one half."
+        }
+      ],
+      "connect": "Later levels of this course come back to amplitudes. You will learn the rules for adding them and check those rules against real experiments.",
+      "grownups": {
+        "why": "The lesson separates two kinds of uncertainty. A hidden coin is ordinary missing information: a probability describes what we know, and the coin already has a definite face. In the two-path (two-slit) experiment, the chance of arrival is found by adding the amplitudes for the two paths first and then taking the absolute square, so the pattern with both paths open is not the sum of the two one-path patterns [@feynman]. Quantum states are described by amplitudes, and measurement probabilities are the squared magnitudes of amplitudes, unlike a classical probabilistic state, whose entries are themselves probabilities [@ibm]. Preskill's lecture notes develop the same rules for quantum information at an advanced level [@preskill]. The full contrast, too long for the children's reading limit, is: \"If each bit of light had simply taken one path, and we just did not know which, adding the two chances could never give zero there.\" The children's text makes the same point with numbers: chances of 1/4 and 1/4 add to 1/2 and can never give 0, while amplitudes of 1/2 up and 1/2 down add to 0. The numbers 1/2 and 1/4 are idealized, as in a balanced two-path setup. Real amplitudes are complex numbers with a size and a phase; the up and down arrows are the simplest case, two amplitudes with opposite signs. In this lesson, chance means the same as probability in Lessons 2 and 3.",
+        "misconceptions": [
+          "A coin under a cup is half heads and half tails until someone lifts the cup. (It already landed one way; the one half describes our missing information.)",
+          "Amplitudes are just chances with a new name. (Chances are never below zero; amplitudes can point opposite ways and cancel, and you square the total to get a chance.)",
+          "Dark stripes mean light was destroyed. (The light that is missing from the dark stripes shows up in the bright stripes.)",
+          "Any uncertainty is quantum. (Most everyday uncertainty, like a hidden coin, is ordinary missing information.)"
+        ],
+        "simplify": "Do the hidden-coin game and the paper strips only. Use strips 2 squares long: two chance bars that stack to 4 squares, and two arrows, 2 squares up and 2 squares down, that end back at the line.",
+        "extend": "Try the in-step case: two amplitude arrows of 1/2 up add to 1, and 1 × 1 = 1, which is twice 1/4 + 1/4. Talk about how a bright stripe can get more light than the two chances would give, while a dark stripe gets less."
+      },
+      "caution": "Bright light also makes stripes in ordinary wave optics, so a single picture of stripes is not by itself the quantum point. The quantum point is that the same striped pattern still builds up when the light is so dim that it arrives one small bit at a time. Feynman describes this build-up for electrons that arrive one at a time, each landing in one place, with the stripes appearing in the pattern of many arrivals, and he says that what we learn about electrons applies also to photons of light [@feynman]. That is why the guide's sentence about each bit of light taking one path matters: if that were the whole story, adding the two chances could never give a dark spot. The lesson does not say what light does between the lamp and the wall; questions about interpretation are beyond this level.",
+      "sources": [
+        "feynman",
+        "ibm",
+        "preskill"
+      ],
+      "lab": "qubit"
     },
     {
-      "id":"L1-10", "title":"Keep a model testable", "objective":"State a model, its assumptions, a prediction, and a possible failure observation.", "prerequisites":["L1-03","L1-05","L1-09"],
-      "paragraphs":[
-        "A model is a limited description used to answer a question. A fair-coin model assigns equal probabilities to two outcomes. It leaves out many physical details. Those omissions can be useful if the model still predicts the results needed for the task.",
-        "Write the assumptions before you use the model. For repeated coin trials, you might assume unchanged conditions and independent tosses. A useful test compares predictions with new results. It also states how much random variation is compatible with the planned check.",
-        "A failed check is information. It can reveal a recording error, a broken assumption, or an unsuitable model. Do not change the rule only to hide a failure. Record the original prediction, inspect the setup, and explain any revised model."
+      "id": "L1-10",
+      "schema": 2,
+      "title": "Keep a model testable",
+      "objective": "I can write a model that a test could prove wrong, and compare real counts with its prediction.",
+      "prerequisites": [
+        "L1-03",
+        "L1-05",
+        "L1-09"
       ],
-      "equation":"Model record: question + assumptions + prediction + check + limits.",
-      "example":"A learner models a spinner as four equally likely colours and predicts roughly one quarter red over many trials. The spinner repeatedly sticks near red. This suggests that equal chances may be a poor assumption. The learner records the issue instead of discarding red results.",
-      "exercise":"Write a model record for drawing a blue counter from a bag with two blue and six white counters, with replacement and mixing.",
-      "solution":"The model assumes equal selection chances, replacement, mixing, and unchanged contents. It predicts P(blue)=2/8=1/4. Record repeated outcomes and use a planned variation-aware check rather than demanding exactly one quarter every time.",
-      "quiz":{"question":"What should happen when a planned check fails?","options":["Delete results that disagree","Claim success without a record","Record the failure and examine assumptions"],"answer":2,"explanation":"A recorded failure supports diagnosis and honest revision. Deleting inconvenient results changes the evidence and prevents a valid assessment of the original prediction."},
-      "sources":["openstax","hernan"],"lab":"chance","caution":"A model can pass a limited test and still fail outside the tested conditions."
+      "time_minutes": 40,
+      "big_idea": "A good model makes a prediction that a test could prove wrong. Before you test, write down what result would make you doubt the model. Then test it and write down what really happened.",
+      "i_can": [
+        "I can find the chance that two dice add to 7 by listing all 36 pairs.",
+        "I can write a model card with a prediction and a result that would make me doubt the model.",
+        "I can compare my real counts with my prediction without changing the rule afterward."
+      ],
+      "words": [
+        {
+          "word": "model card",
+          "meaning": "A short record of a model: the question, what you assume, what you predict, what would make you doubt it, and what happened."
+        },
+        {
+          "word": "prediction",
+          "meaning": "What you expect to happen before you test, based on your model."
+        },
+        {
+          "word": "assumption",
+          "meaning": "Something you take to be true so your model can work, like the dice being fair."
+        }
+      ],
+      "warmup": {
+        "recall_of": "L1-09",
+        "prompt": "Last time, Maya hid a coin under a cup. Leo's chance of guessing right was one half. Was the coin already heads or tails before Leo looked? Why was his chance still one half?"
+      },
+      "story_title": "Testing the dice",
+      "story": [
+        "Maya and Leo want to know how often two dice add up to 7. They list every way the dice can land. The first die can show 1 to 6, and so can the second. That makes 36 pairs, and with fair dice each pair is equally likely.",
+        "Six of the pairs add to 7. They are 1 and 6, 2 and 5, 3 and 4, 4 and 3, 5 and 2, and 6 and 1. So their model says the chance of a 7 is 6 out of 36, which is one sixth. In 36 rolls, they predict about 6 sevens.",
+        "Before rolling, they write a model card. \"What would make us doubt the dice?\" asks Leo. They agree on a rule: 0 or 1 sevens, or 12 or more. With fair dice, a result that far off happens only about 2 times in 100.",
+        "Then they roll 36 times and tally every sum. They get 3 sevens in 36 rolls. That is 3 out of 36, fewer than 6. Leo groans. \"Is the model wrong?\"",
+        "Maya points to the card. \"We said we would doubt it at 1 or fewer. Three is lower than we guessed, but it is not past our line. We have no reason to doubt the dice yet.\" They write what happened on the card, without changing the rule."
+      ],
+      "animation": {
+        "file": "l1-10-model-card.mp4",
+        "scene": "scripts/manim/l1_10.py:TestableModel",
+        "params": {
+          "seed": 1,
+          "rolls": 36,
+          "doubt_low": 1,
+          "doubt_high": 12
+        },
+        "caption": "All 36 ways two dice can land, a run of 36 rolls, and the model card.",
+        "alt": "A 6 by 6 grid of dice pairs with the six pairs that add to 7 highlighted, then a bar chart of sums filling up over 36 rolls, then a model card.",
+        "describe": "A 6 by 6 grid shows every way two dice can land, and the six squares that add to 7 light up. The screen shows 6 out of 36, which equals one sixth, and a prediction of about 6 sevens. A bar chart then fills up during 36 rolls and ends at 3 sevens in 36 rolls. Last, a model card lists the question, assumption, prediction, doubt rule of 0 or 1 sevens, or 12 or more, and what happened."
+      },
+      "activity": {
+        "title": "My model card for two dice",
+        "minutes": 20,
+        "materials": [
+          "Two dice",
+          "A cup to shake them in (optional)",
+          "Paper and a pencil",
+          "A ruler for drawing a table"
+        ],
+        "steps": [
+          "Draw a 6 by 6 grid. Write 1 to 6 across the top for the first die and down the side for the second die.",
+          "Fill each square with the sum of its two numbers. Circle every square that shows 7. How many did you circle?",
+          "Write your model card. Question: how often do two dice add to 7? Assumption: the dice are fair.",
+          "Add your prediction to the card: about 6 sevens in 36 rolls.",
+          "Add your doubt rule before you roll: 0 or 1 sevens, or 12 or more.",
+          "Write the sums 2 to 12 down the side of a new page. Roll both dice 36 times and make a tally mark next to each sum.",
+          "Count your 7s. Write the result on the card under what happened.",
+          "Compare with your doubt rule. Do you have a reason to doubt the dice? Do not change the rule now."
+        ],
+        "record": "Your 6 by 6 grid, your tally of 36 rolls, and your finished model card.",
+        "safety": "Keep dice away from babies and toddlers. Roll on a table or a tray so the dice do not get lost."
+      },
+      "guided": {
+        "prompt": "Using the 6 by 6 grid, how many pairs add up to 2? What is the chance of rolling a sum of 2?",
+        "answer": "Only one pair adds to 2: a 1 and a 1. So the chance is 1 out of 36. A sum of 7 is six times as likely."
+      },
+      "try_it": [
+        {
+          "prompt": "Sam says, \"My lucky model says something will happen.\" Sam will not say what or when. Is this a good model? Why or why not?",
+          "answer": "No. No test could ever prove it wrong, because almost anything counts as something happening. A good model makes a clear prediction that could turn out false."
+        },
+        {
+          "prompt": "Leo rolls two dice 36 times and gets 0 sevens. Using the rule on the card, what should he write under what happened?",
+          "answer": "Zero is inside the doubt rule of 0 or 1 sevens. He should write that he got 0 sevens and that he now doubts the model. Next he could check the dice and roll again."
+        }
+      ],
+      "talk": [
+        "Why should you write your doubt rule before you roll, not after?",
+        "Maya and Leo got 3 sevens, not 6. Why is that not enough to call the dice unfair?",
+        "If four friends each roll two dice 36 times, will they all get the same number of sevens? Why not?"
+      ],
+      "check": [
+        {
+          "question": "Which of these is a testable prediction?",
+          "options": [
+            "Dice are fun to roll.",
+            "In 36 rolls of two fair dice, we will get about 6 sevens.",
+            "Something interesting might happen someday."
+          ],
+          "answer": 1,
+          "explanation": "This prediction gives a number that a test can check. If the count were very far from 6, the test would make us doubt the model."
+        },
+        {
+          "question": "Your doubt rule is 0 or 1 sevens, or 12 or more. You roll 36 times and get 9 sevens. What should you do?",
+          "options": [
+            "Change the rule so 9 counts as too many",
+            "Throw out the rolls and start over",
+            "Write down 9 sevens and say there is no reason to doubt the dice yet"
+          ],
+          "answer": 2,
+          "explanation": "Nine is not past either line of your rule, so you keep the model for now. Changing the rule after you see the result would not be a fair test."
+        },
+        {
+          "question": "Remember Lesson 5. Why do scientists flip a coin to choose who goes in which group?",
+          "options": [
+            "So the groups always have exactly equal averages",
+            "So no person can steer the strong ones into one group",
+            "So fewer people are needed"
+          ],
+          "answer": 1,
+          "review_of": "L1-05",
+          "explanation": "A coin does not take sides, so hidden differences balance out on average. It does not promise exactly equal groups every time."
+        }
+      ],
+      "connect": "Careful scientists often write down their predictions and doubt rules before they collect data. Then nobody can move the line after seeing the results. You can write a model card for any test, from dice to paper planes.",
+      "grownups": {
+        "why": "The Common Core asks students to build a probability model, here 36 equally likely ordered pairs, and to compare its predictions with observed frequencies, explaining possible reasons for a mismatch (7.SP.7) [@ccss_math]. OpenStax defines equally likely outcomes and relative frequency, and states the law of large numbers: the relative frequency tends toward the theoretical probability as the number of trials grows, so a short run of 36 rolls can still land some way off [@openstax_prob]. The NGSS practices ask children to make predictions, plan investigations, and use evidence to judge an explanation [@ngss_appf]. The doubt rule of 0 or 1 sevens, or 12 or more, is a two-sided cutoff: with fair dice, the binomial chance of a count that far off in 36 rolls is about 0.023. The roll sequence comes from the course's seeded random number generator (seed 1), so the 3 sevens in the story, the video and this guide match.",
+        "misconceptions": [
+          "If the count is not exactly 6, the model is wrong. (Counts vary; 3 sevens in 36 rolls is not unusual for fair dice.)",
+          "A test that agrees with the model proves it is true. (It only means the test gave no reason to doubt it; a later test still could.)",
+          "It is fine to choose the doubt rule after seeing the results. (Choosing it afterward lets you excuse any result; set it in advance.)",
+          "A sum of 7 has one way to happen, 3 and 4. (Order matters on two dice: 3 then 4 and 4 then 3 are different pairs, so there are 6 ways.)"
+        ],
+        "simplify": "Use 18 rolls and predict about 3 sevens. Skip the doubt rule numbers and simply ask: would 0 sevens surprise you?",
+        "extend": "Pool the 36-roll tallies from several people. Plot how many sevens each person got, and see that most counts land between 3 and 9. Then write a model card for the sum of 2, which has a chance of 1 out of 36."
+      },
+      "caution": "Passing a test does not prove a model is true, and one unusual result does not prove it false. About 2 times in 100, fair dice will break this doubt rule by chance alone.",
+      "sources": [
+        "ccss_math",
+        "openstax_prob",
+        "ngss_appf"
+      ],
+      "lab": "chance"
     }
-  ]
+  ],
+  "unit": {
+    "reading": {
+      "max_fk": 5.5,
+      "max_sentence": 25,
+      "long_word_syllables": 5
+    },
+    "big_question": "How do we describe chance, test fairly, and tell what waves can do that coins cannot?",
+    "summary": "Learners turn counts into fractions and probabilities, compare what a model predicts with what really happens, and use random assignment to make a fair comparison. Then they meet waves, which can add up or cancel. That idea, adding first and then squaring, is the first step toward quantum physics.",
+    "for_whom": "Learners aged about 9 to 12 who have finished Level 0 or can count, compare, and read simple tables. They can work through most of a lesson alone. A grown-up or teacher checks the record sheet and joins the talk questions.",
+    "time": {
+      "lessons": 10,
+      "minutes_per_lesson": 40,
+      "project_sessions": 3,
+      "pace": "Two lessons a week takes about six weeks, including the final project. Any lesson can be split into two sittings: story, animation and activity one day, practice and checks the next."
+    },
+    "session_flow": [
+      "Warm up: answer the look-back question from memory.",
+      "Read the story and watch the animation.",
+      "Do the hands-on activity and keep a record.",
+      "Practice together, then try two on your own.",
+      "Talk about it, then answer the three check questions. Say or write your answer before you open it.",
+      "Grown-ups: read the short guide at the end of the page."
+    ],
+    "outcomes": [
+      {
+        "id": "O1",
+        "text": "I can write a fraction from a count and use it to describe part of a group.",
+        "lessons": [
+          "L1-01"
+        ]
+      },
+      {
+        "id": "O2",
+        "text": "I can build a probability model and find the probability of an event and of its opposite.",
+        "lessons": [
+          "L1-02"
+        ]
+      },
+      {
+        "id": "O3",
+        "text": "I can tell a probability apart from a frequency, and explain why more trials help.",
+        "lessons": [
+          "L1-03"
+        ]
+      },
+      {
+        "id": "O4",
+        "text": "I can find a probability inside a group by using the right total.",
+        "lessons": [
+          "L1-04"
+        ]
+      },
+      {
+        "id": "O5",
+        "text": "I can explain how random assignment makes a comparison fair.",
+        "lessons": [
+          "L1-05",
+          "PROJECT"
+        ]
+      },
+      {
+        "id": "O6",
+        "text": "I can draw a common-cause diagram for two things that go up and down together.",
+        "lessons": [
+          "L1-06"
+        ]
+      },
+      {
+        "id": "O7",
+        "text": "I can describe a wave and explain how two waves can add up or cancel.",
+        "lessons": [
+          "L1-07",
+          "L1-08"
+        ]
+      },
+      {
+        "id": "O8",
+        "text": "I can explain why not knowing a hidden result is different from the two-path experiment with light, and write a model that a test could prove wrong.",
+        "lessons": [
+          "L1-09",
+          "L1-10",
+          "PROJECT"
+        ]
+      }
+    ],
+    "evidence": "Progress shows up three ways. Each lesson ends with three check questions. From Lesson 2 on, one of them looks back at an earlier lesson. Each activity produces a record (a table, a graph, or a diagram) that a grown-up can look at. The final project uses a four-part checklist.",
+    "materials": [
+      "Two coins, two dice, and a paper cup",
+      "Counters, beads, or building bricks in two or three colors, and a paper bag",
+      "Graph paper or a printed grid, a ruler, pencils, and colored pencils",
+      "A calculator (optional)",
+      "A jump rope or a long, soft rope, or a toy spring coil",
+      "A shallow tray or baking dish of water and a small cup",
+      "Paper for paper airplanes or a paper cup tower, and masking tape"
+    ],
+    "safety": "Keep coins, dice, and small counters away from babies and toddlers. Use water trays on a towel, away from screens and plugs, and wipe up spills right away. Swing ropes slowly, with space around you.",
+    "project": {
+      "title": "My chance and cause investigation",
+      "summary": "Over three sittings, the learner runs a small experiment with random assignment, compares a model with real counts, and writes a model card.",
+      "questions": [
+        "Does a paper airplane with folded wing tips fly farther than one without? Flip a coin to decide which plane each throw uses.",
+        "Do two dice add to 7 as often as a model predicts?",
+        "Does a ball roll farther on carpet or on a hard floor? Use a coin to decide the order of the trials."
+      ],
+      "steps": [
+        "Pick a question. Write a prediction and the model behind it.",
+        "Plan a fair test. Use a coin or a die to assign which choice each trial gets.",
+        "Run at least 20 trials. Record every result in a table.",
+        "Turn your counts into fractions, and compare them with your model.",
+        "Make a graph of your results.",
+        "Write a model card: question, assumptions, prediction, what would prove it wrong, and what happened."
+      ],
+      "rubric": [
+        {
+          "part": "My question and model",
+          "start": "I wrote a question.",
+          "got": "I wrote a question and a prediction from a model.",
+          "explain": "I can say what my model assumes."
+        },
+        {
+          "part": "My fair test",
+          "start": "I compared two choices.",
+          "got": "I used a coin or die to assign the choices.",
+          "explain": "I can say why random assignment makes it fair."
+        },
+        {
+          "part": "My record",
+          "start": "I wrote some results.",
+          "got": "I recorded at least 20 trials and turned them into fractions.",
+          "explain": "I can say why my fractions are not exactly what the model predicted."
+        },
+        {
+          "part": "My model card",
+          "start": "I said what happened.",
+          "got": "I compared my results with my prediction.",
+          "explain": "I named a result that would have proved my model wrong."
+        }
+      ],
+      "safety": "Throw paper airplanes away from faces. Roll balls away from stairs. Keep dice away from babies and toddlers."
+    },
+    "udl": [
+      "Each story comes with an animation and a written description of what it shows.",
+      "Learners can show what they know in a table, a graph, a drawing, or by explaining aloud.",
+      "Each lesson has a way to make it easier and a way to make it harder.",
+      "Activities use cheap household things, and the animations play without sound."
+    ],
+    "standards": [
+      {
+        "code": "NGSS 3-5 practices",
+        "text": "Plan and conduct fair tests in which variables are controlled and the number of trials considered.",
+        "key": "ngss_appf"
+      },
+      {
+        "code": "NGSS 4-PS4-1",
+        "text": "Develop a model of waves to describe patterns in terms of amplitude and wavelength.",
+        "key": "ngss_4ps4_1"
+      },
+      {
+        "code": "CCSS 3.NF.1",
+        "text": "Understand a fraction 1/b as one part of a whole cut into b equal parts.",
+        "key": "ccss_math"
+      },
+      {
+        "code": "CCSS 4.NF.1",
+        "text": "Explain why two fractions are equivalent, using visual fraction models.",
+        "key": "ccss_math"
+      },
+      {
+        "code": "CCSS 6.SP.1",
+        "text": "Recognize a statistical question as one that expects variability in the data.",
+        "key": "ccss_math"
+      },
+      {
+        "code": "CCSS 7.SP.5 to 7.SP.7",
+        "text": "Probability as a number from 0 to 1; approximate it from data; build and compare probability models.",
+        "key": "ccss_math"
+      }
+    ],
+    "approach": "Like Level 0, this unit was planned backward from its outcomes [@ubd_whitepaper], and each lesson moves from recall, to an example, to doing, to talking it through [@merrill2002], with built-in retrieval and spaced review [@dunlosky2013]. New in Level 1, each lesson has a short animation made with Manim Community Edition, an open-source animation library forked from the tool Grant Sanderson created for his 3Blue1Brown videos [@manim_ce]. The animations use the course's own tested simulation code, so the numbers on screen match the text. The probability ideas follow OpenStax Introductory Statistics [@openstax_prob; @openstax_design]; the wave ideas follow OpenStax Physics [@openstax_waves; @openstax_interference]."
+  }
 }

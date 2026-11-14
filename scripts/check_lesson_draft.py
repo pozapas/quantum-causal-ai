@@ -16,13 +16,12 @@ import sys
 BOOK = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(BOOK / "scripts"))
 import textstat  # noqa: E402
-from check import (CHILD_MAX_FK, CHILD_MAX_SENTENCE, EASY_LONG_WORDS, EMOJI_RE,  # noqa: E402
-                   child_fields)
+from check import (EMOJI_RE, animation_errors, child_fields, reading_errors, reading_limits)  # noqa: E402
 
-ORDER = [f"L0-{i:02d}" for i in range(1, 11)]
+ORDER = [f"L0-{i:02d}" for i in range(1, 11)]  # Level 0 order (kept for merge_level0.py)
 KEYS = {s["id"] for s in json.loads((BOOK / "_data/sources.json").read_text(encoding="utf-8"))}
 REQUIRED = ["id", "schema", "title", "objective", "prerequisites", "time_minutes", "big_idea", "i_can", "words", "warmup",
-            "story_title", "story", "picture", "activity", "guided", "try_it", "talk", "check", "connect", "grownups",
+            "story_title", "story", "activity", "guided", "try_it", "talk", "check", "connect", "grownups",
             "caution", "sources", "lab"]
 
 
@@ -32,46 +31,38 @@ def check(path):
     missing = [k for k in REQUIRED if k not in L]
     if missing:
         return [f"missing keys: {missing}"]
+    if not (L.get("picture") or L.get("animation")):
+        return ["needs a picture or an animation"]
     lid = L["id"]
-    i = ORDER.index(lid)
+    n = int(lid[1])
+    level_json = json.loads((BOOK.parent / "src" / "data" / f"level{n}.json").read_text(encoding="utf-8"))
+    order = [f"L{n}-{k:02d}" for k in range(1, 11)]
+    i = order.index(lid)
     a, gr = L["activity"], L["grownups"]
     rules = [
         (L["schema"] == 2, "schema must be 2"),
         (2 <= len(L["i_can"]) <= 3, "2-3 I-can statements"), (1 <= len(L["words"]) <= 3, "1-3 words"),
-        ((i == 0 and not L["warmup"].get("recall_of")) or (L["warmup"].get("recall_of") in ORDER[:i]),
+        ((i == 0 and not L["warmup"].get("recall_of")) or (L["warmup"].get("recall_of") in order[:i]),
          "warm-up recall_of must be an earlier lesson (null for L0-01)"),
         (len(L["story"]) >= 3, "story of 3+ paragraphs"), (len(a["steps"]) >= 4, "4+ activity steps"),
         (0 < a["minutes"] <= 20, "activity minutes 1-20"), (bool(a["record"]) and bool(a["safety"]), "record and safety line"),
         (bool(a["materials"]), "materials list"), (len(L["try_it"]) >= 2, "2+ tries"), (len(L["talk"]) >= 2, "2+ talk prompts"),
         (len(L["check"]) == 3, "exactly 3 checks"),
         (sum(1 for q in L["check"] if q.get("review_of")) == (0 if i == 0 else 1), "exactly one review check (none for L0-01)"),
-        (all(q.get("review_of") in ORDER[:i] for q in L["check"] if q.get("review_of")), "review_of must be an earlier lesson"),
+        (all(q.get("review_of") in order[:i] for q in L["check"] if q.get("review_of")), "review_of must be an earlier lesson"),
         (all(0 <= q["answer"] < len(q["options"]) and len(set(q["options"])) == len(q["options"]) and 3 <= len(q["options"]) <= 4
              for q in L["check"]), "each check: 3-4 distinct options and a valid answer index"),
         (bool(L["connect"]), "where-this-leads text"),
         (bool(gr["why"]) and len(gr["misconceptions"]) >= 2 and bool(gr["simplify"]) and bool(gr["extend"]) and bool(L["caution"]),
          "full grown-up guide"),
-        (all(p in ORDER[:i] for p in L["prerequisites"]), "prerequisites must be earlier Level 0 lessons"),
+        (all(p in order[:i] or int(p[1]) < n for p in L["prerequisites"]), "prerequisites must be earlier lessons"),
         (L["lab"] in {"chance", "bayes", "causal", "interference", "qubit", "bell", "noise", "gradient"}, "lab key"),
-        (20 <= L["time_minutes"] <= 35, "time_minutes 20-35"),
+        (20 <= L["time_minutes"] <= (35 if n == 0 else 45), "time_minutes 20-35 (Level 0) or 20-45"),
     ]
     errs += [f"needs: {why}" for ok, why in rules if not ok]
 
-    kid = child_fields(L)
-    if any("[@" in x for x in kid):
-        errs.append("child-facing text contains a citation")
-    fk = textstat.flesch_kincaid_grade(" ".join(kid))
-    if fk > CHILD_MAX_FK:
-        errs.append(f"reading level {fk:.2f} > {CHILD_MAX_FK}")
-    for x in kid:
-        for sent in re.split(r"(?<=[.!?])\s+|(?<=[.!?][\"”])\s+", x):
-            if len(sent.split()) > CHILD_MAX_SENTENCE:
-                errs.append(f"sentence of {len(sent.split())} words: {sent[:70]}")
-    defined = {w for item in L["words"] for w in re.findall(r"[a-z]+", item["word"].lower())}
-    hard = sorted({w for w in re.findall(r"[A-Za-z]+", " ".join(kid))
-                   if textstat.syllable_count(w) >= 4 and w.lower() not in defined and w.lower() not in EASY_LONG_WORDS})
-    if hard:
-        errs.append(f"undefined long words: {', '.join(hard)}")
+    rerrs, fk = reading_errors(L, reading_limits(level_json))
+    errs += rerrs + animation_errors(L)
 
     grown = " ".join([gr["why"], *gr["misconceptions"], gr["simplify"], gr["extend"], L["caution"]])
     cited = set(re.findall(r"@([A-Za-z][\w-]*)", grown)) | set(L["sources"])
@@ -87,8 +78,10 @@ def check(path):
     if EMOJI_RE.search(blob):
         errs.append("emoji found")
 
-    svg = BOOK / "_static" / "lessons" / L["picture"]["file"]
-    if not svg.exists():
+    svg = BOOK / "_static" / "lessons" / (L["picture"]["file"] if L.get("picture") else "__none__")
+    if not L.get("picture"):
+        pass
+    elif not svg.exists():
         errs.append(f"picture missing: {svg.name}")
     else:
         t = svg.read_text(encoding="utf-8")

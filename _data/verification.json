@@ -1031,5 +1031,143 @@
   "jaccard": 1.0,
   "checked_at": "2026-11-14T18:11:53+00:00",
   "note": "key passage found: 'law of large numbers'"
+ },
+ "openstax_design": {
+  "status": "PASS",
+  "method": "HTTP GET; title and key passage found in the fetched page",
+  "url_checked": "https://openstax.org/books/introductory-statistics-2e/pages/1-4-experimental-design-and-ethics",
+  "http": 200,
+  "fetched_title": "1.4 Experimental Design and Ethics",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-14T19:16:04+00:00",
+  "note": "key passage found: 'random assignment'"
+ },
+ "openstax_waves": {
+  "status": "PASS",
+  "method": "HTTP GET; title and key passage found in the fetched page",
+  "url_checked": "https://openstax.org/books/physics/pages/13-2-wave-properties-speed-amplitude-frequency-and-period",
+  "http": 200,
+  "fetched_title": "13.2 Wave Properties: Speed, Amplitude, Frequency, and Period",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-14T19:16:04+00:00",
+  "note": "key passage found: 'wavelength'"
+ },
+ "openstax_interference": {
+  "status": "PASS",
+  "method": "HTTP GET; title and key passage found in the fetched page",
+  "url_checked": "https://openstax.org/books/university-physics-volume-1/pages/16-5-interference-of-waves",
+  "http": 200,
+  "fetched_title": "16.5 Interference of Waves",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-14T19:16:04+00:00",
+  "note": "key passage found: 'destructive interference'"
+ },
+ "ngss_4ps4_1": {
+  "status": "PASS",
+  "method": "HTTP GET; title and key passage found in the fetched page",
+  "url_checked": "https://www.nextgenscience.org/pe/4-ps4-1-waves-and-their-applications-technologies-information-transfer",
+  "http": 200,
+  "fetched_title": "4-PS4-1 Waves and Their Applications in Technologies for Information Transfer",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-14T19:16:04+00:00",
+  "note": "key passage found: 'amplitude and wavelength'"
+ },
+ "manim_ce": {
+  "status": "PASS",
+  "method": "HTTP GET; title and key passage found in the fetched page",
+  "url_checked": "https://raw.githubusercontent.com/ManimCommunity/manim/main/README.md",
+  "http": 200,
+  "fetched_title": "Manim Community",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-14T19:16:04+00:00",
+  "note": "key passage found: 'originally created and open-sourced by Grant Sanderson'"
+ },
+ "openstax_independent": {
+  "status": "PASS",
+  "method": "HTTP GET; title and key passage found in the fetched page",
+  "url_checked": "https://openstax.org/books/introductory-statistics-2e/pages/3-2-independent-and-mutually-exclusive-events",
+  "http": 200,
+  "fetched_title": "3.2 Independent and Mutually Exclusive Events",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-14T19:38:10+00:00",
+  "note": "key passage found: 'independent'"
+ },
+ "openstax_contingency": {
+  "status": "PASS",
+  "method": "HTTP GET; title and key passage found in the fetched page",
+  "url_checked": "https://openstax.org/books/introductory-statistics-2e/pages/3-4-contingency-tables",
+  "http": 200,
+  "fetched_title": "3.4 Contingency Tables",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-14T19:38:10+00:00",
+  "note": "key passage found: 'contingency table'"
+ },
+ "openstax_trees": {
+  "status": "PASS",
+  "method": "HTTP GET; title and key passage found in the fetched page",
+  "url_checked": "https://openstax.org/books/introductory-statistics-2e/pages/3-5-tree-and-venn-diagrams",
+  "http": 200,
+  "fetched_title": "3.5 Tree and Venn Diagrams",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-14T19:38:10+00:00",
+  "note": "key passage found: 'tree diagram'"
+ },
+ "openstax_linear": {
+  "status": "PASS",
+  "method": "HTTP GET; title and key passage found in the fetched page",
+  "url_checked": "https://openstax.org/books/introductory-statistics-2e/pages/12-1-linear-equations",
+  "http": 200,
+  "fetched_title": "12.1 Linear Equations",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-14T19:38:10+00:00",
+  "note": "key passage found: 'slope'"
+ },
+ "openstax_scatter": {
+  "status": "PASS",
+  "method": "HTTP GET; title and key passage found in the fetched page",
+  "url_checked": "https://openstax.org/books/introductory-statistics-2e/pages/12-2-scatter-plots",
+  "http": 200,
+  "fetched_title": "12.2 Scatter Plots",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-14T19:38:10+00:00",
+  "note": "key passage found: 'scatter plot'"
+ },
+ "openstax_functions": {
+  "status": "PASS",
+  "method": "HTTP GET; title and key passage found in the fetched page",
+  "url_checked": "https://openstax.org/books/college-algebra-2e/pages/3-1-functions-and-function-notation",
+  "http": 200,
+  "fetched_title": "3.1 Functions and Function Notation",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-14T19:38:10+00:00",
+  "note": "key passage found: 'function'"
+ },
+ "openstax_vectors": {
+  "status": "PASS",
+  "method": "HTTP GET; title and key passage found in the fetched page",
+  "url_checked": "https://openstax.org/books/precalculus-2e/pages/8-8-vectors",
+  "http": 200,
+  "fetched_title": "8.8 Vectors",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-14T19:38:10+00:00",
+  "note": "key passage found: 'unit vector'"
+ },
+ "bickel1975": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1126/science.187.4175.398",
+  "http": 200,
+  "fetched_title": "Sex Bias in Graduate Admissions: Data from Berkeley",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-14T19:38:10+00:00"
+ },
+ "gigerenzer1995": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1037/0033-295X.102.4.684",
+  "http": 200,
+  "fetched_title": "How to improve Bayesian reasoning without instruction: Frequency formats",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-14T19:38:10+00:00"
  }
 }

@@ -61,6 +61,11 @@ def lesson_v2(level: dict, L: dict, nxt: dict, *, esc, icon_md: str, stage: str,
     ]
     for p in L["story"]:
         out += [esc(p), ""]
+    if L.get("animation"):
+        an = L["animation"]
+        out += [f":::{{figure}} ../../_static/animations/{an['file']}", f":alt: {an['alt']}", ":width: 100%", "",
+                esc(an["caption"]), ":::", "",
+                f"**What the animation shows.** {esc(an['describe'])}", ""]
     if L.get("picture"):
         pic = L["picture"]
         out += [f":::{{figure}} ../../_static/lessons/{pic['file']}", f":alt: {pic['alt']}", ":width: 100%", "",
@@ -96,10 +101,10 @@ def lesson_v2(level: dict, L: dict, nxt: dict, *, esc, icon_md: str, stage: str,
     out += [":::{dropdown} For grown-ups: about this lesson", ":open:", "",
             "**Why it matters.** " + esc_cite(gr["why"], esc), "",
             "**Watch for these mix-ups.**", ""]
-    out += [f"- {esc(m)}" for m in gr["misconceptions"]]
+    out += [f"- {esc_cite(m, esc)}" for m in gr["misconceptions"]]
     out += ["", "**To make it easier.** " + esc_cite(gr["simplify"], esc), "",
             "**To make it harder.** " + esc_cite(gr["extend"], esc), "",
-            "**Limits.** " + esc(L["caution"]), "",
+            "**Limits.** " + esc_cite(L["caution"], esc), "",
             f"**On the computer.** Grown-ups can see where this idea leads later in [Lab: {lab_title}](../../labs/{lab_file}.ipynb), "
             "written for older learners.", ""]
     if L.get("sources"):

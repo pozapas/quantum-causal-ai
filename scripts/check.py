@@ -287,8 +287,7 @@ def c6_build():
                        capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=3600)
     log = r.stdout + r.stderr
     lp = subprocess.run([PY, str(BOOK / "scripts" / "postbuild_light.py")], capture_output=True, text=True)
-    log += "
-" + lp.stdout + lp.stderr
+    log += "\n" + lp.stdout + lp.stderr
     if lp.returncode != 0:
         errs.append("postbuild_light failed: " + (lp.stderr or lp.stdout).strip()[:200])
     (BOOK / "evidence" / "build.log").write_text(log, encoding="utf-8")
@@ -343,7 +342,7 @@ def c8_hygiene():
     plan = json.loads((BOOK / "PLAN.json").read_text(encoding="utf-8"))
     for u in plan["units"]:
         recs = attempts.get(u["id"], [])
-        if u["id"] in ("integrate", "release-check", "style-ui", "round3-ui", "map-viewer", "level0-release"):
+        if u["id"] in ("integrate", "release-check", "style-ui", "round3-ui", "map-viewer", "level0-release", "levels12-release"):
             continue  # judged by this check itself / gated
         if not recs:
             errs.append(f"unit {u['id']}: no attempts logged")
@@ -403,10 +402,95 @@ def child_fields(L):
     out = [L["big_idea"], *L["i_can"], L["warmup"]["prompt"], L["story_title"], *L["story"], L["activity"]["title"],
            *L["activity"]["materials"], *L["activity"]["steps"], L["activity"]["record"], L["guided"]["prompt"],
            L["guided"]["answer"], *[t[k] for t in L["try_it"] for k in ("prompt", "answer")], *L["talk"], L["connect"],
-           *[w["meaning"] for w in L["words"]], *([L["picture"]["caption"]] if L.get("picture") else [])]
+           *[w["meaning"] for w in L["words"]], *([L["picture"]["caption"]] if L.get("picture") else []),
+           *([L["animation"]["caption"], L["animation"]["describe"]] if L.get("animation") else [])]
     for q in L["check"]:
         out += [q["question"], *q["options"], q["explanation"]]
     return [x for x in out if x]
+
+
+def reading_limits(level_json):
+    """Reading limits for child-facing text; Level 0 values are the defaults."""
+    r = (level_json.get("unit") or {}).get("reading", {})
+    return r.get("max_fk", CHILD_MAX_FK), r.get("max_sentence", CHILD_MAX_SENTENCE), r.get("long_word_syllables", 4)
+
+
+def reading_errors(L, limits):
+    """Reading-level, sentence-length and long-word errors for one lesson's child text."""
+    import textstat
+    max_fk, max_sent, long_syl = limits
+    kid = child_fields(L)
+    errs = []
+    if any("[@" in x for x in kid):
+        errs.append("child-facing text contains a citation")
+    fk = textstat.flesch_kincaid_grade(" ".join(kid))
+    if fk > max_fk:
+        errs.append(f"reading level {fk:.2f} > {max_fk}")
+    for x in kid:
+        for sent in re.split(r"(?<=[.!?])\s+|(?<=[.!?][\"\u201d])\s+", x):
+            if len(sent.split()) > max_sent:
+                errs.append(f"sentence of {len(sent.split())} words: {sent[:60]}")
+    defined = {w for item in L["words"] for w in re.findall(r"[a-z]+", item["word"].lower())}
+    def base(w):  # accept simple plurals of defined words: probabilities -> probability, trials -> trial
+        w = w.lower()
+        return {w, w[:-3] + "y" if w.endswith("ies") else w, w[:-2] if w.endswith("es") else w, w[:-1] if w.endswith("s") else w}
+    hard = sorted({w for w in re.findall(r"[A-Za-z]+", " ".join(kid)) if textstat.syllable_count(w) >= long_syl
+                   and not (base(w) & defined) and not (base(w) & EASY_LONG_WORDS)})
+    if hard:
+        errs.append(f"undefined long words for this age: {', '.join(hard[:8])}")
+    return errs, round(fk, 2)
+
+
+ANIM_MAX_BYTES = 2_500_000
+
+
+def animation_errors(L):
+    """Checks for a lesson animation: scene source, rendered file, codec, length, size, and facts."""
+    a = L.get("animation")
+    if not a:
+        return []
+    errs = []
+    for k in ("file", "scene", "alt", "describe", "caption"):
+        if not a.get(k):
+            errs.append(f"animation needs '{k}'")
+    if errs:
+        return errs
+    scene_file, _, cls = a["scene"].partition(":")
+    sp = BOOK / scene_file
+    if not sp.exists() or f"class {cls}(" not in sp.read_text(encoding="utf-8"):
+        errs.append(f"animation scene {a['scene']} not found")
+    mp4 = BOOK / "_static" / "animations" / a["file"]
+    if not mp4.exists():
+        errs.append(f"animation file missing: {a['file']}")
+    else:
+        if mp4.stat().st_size > ANIM_MAX_BYTES:
+            errs.append(f"animation too large: {mp4.stat().st_size // 1000} KB")
+        try:
+            import av
+            c = av.open(str(mp4))
+            v = c.streams.video[0]
+            dur = float(c.duration / 1e6)
+            if v.codec_context.name != "h264" or v.codec_context.pix_fmt != "yuv420p":
+                errs.append(f"animation codec {v.codec_context.name}/{v.codec_context.pix_fmt} (need h264/yuv420p)")
+            if not 10 <= dur <= 45:
+                errs.append(f"animation length {dur:.1f} s (need 10 to 45)")
+            c.close()
+        except Exception as e:  # noqa: BLE001
+            errs.append(f"animation unreadable: {e}")
+    # facts the animation shows must also be in the lesson text
+    if sp.exists():
+        import importlib.util
+        spec = importlib.util.spec_from_file_location(f"scene_{L['id'].replace('-', '_')}", sp)
+        mod = importlib.util.module_from_spec(spec)
+        try:
+            spec.loader.exec_module(mod)
+            text = " ".join(child_fields(L))
+            for fact in getattr(mod, "facts", lambda _L: [])(L):
+                if fact not in text:
+                    errs.append(f"animation shows '{fact}' but the lesson text does not")
+        except Exception as e:  # noqa: BLE001
+            errs.append(f"animation scene failed to load: {type(e).__name__}: {e}")
+    return errs
 
 
 def c10_coursebook():
@@ -459,22 +543,10 @@ def c10_coursebook():
             for f in fields:
                 if coursebook.esc_cite(f, convert.esc) not in page:
                     errs.append(f"{lid}: field missing from page: {f[:50]}")
-            kid = child_fields(L)
-            if any("[@" in x for x in kid):
-                errs.append(f"{lid}: child-facing text contains a citation")
-            fk = textstat.flesch_kincaid_grade(" ".join(kid))
-            info["fk"][lid] = round(fk, 2)
-            if fk > CHILD_MAX_FK:
-                errs.append(f"{lid}: reading level {fk:.1f} > {CHILD_MAX_FK}")
-            for x in kid:
-                for sent in re.split(r"(?<=[.!?])\s+|(?<=[.!?][\"”])\s+", x):
-                    if len(sent.split()) > CHILD_MAX_SENTENCE:
-                        errs.append(f"{lid}: sentence of {len(sent.split())} words: {sent[:60]}")
-            defined = {w for item in L["words"] for w in re.findall(r"[a-z]+", item["word"].lower())}
-            hard = sorted({w for w in re.findall(r"[A-Za-z]+", " ".join(kid)) if textstat.syllable_count(w) >= 4
-                           and w.lower() not in defined and w.lower() not in EASY_LONG_WORDS})
-            if hard:
-                errs.append(f"{lid}: undefined long words for this age: {', '.join(hard[:8])}")
+            rerrs, fk = reading_errors(L, reading_limits(lv))
+            info["fk"][lid] = fk
+            errs += [f"{lid}: {e}" for e in rerrs]
+            errs += [f"{lid}: {e}" for e in animation_errors(L)]
     return errs, info
 
 

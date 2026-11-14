@@ -1,145 +1,1772 @@
 {
-  "level":2,"title":"Algebra, evidence, and causal maps","audience":"Lower secondary school: grades 7 to 9","intro":"Turn verbal questions into variables and models. Calculate conditional probabilities, examine misleading comparisons, and prepare for formal causal and quantum mathematics.",
-  "lessons":[
+  "level": 2,
+  "title": "Algebra, evidence, and causal maps",
+  "audience": "Ages 12 to 15 (grades 7 to 9), working mostly on their own",
+  "intro": "Turn questions into variables, functions, and tables. Calculate conditional probabilities, see how a comparison can flip, draw causal maps, and meet the vectors that quantum physics is written in.",
+  "lessons": [
     {
-      "id":"L2-01","title":"Name quantities with variables","objective":"Translate a simple relationship into an equation and evaluate it.","prerequisites":["L1-01","L0-06"],
-      "paragraphs":[
-        "A variable is a named quantity whose value can change. Let x be the number of tickets purchased. Let y be the total price in dollars. Naming the quantities and their units prevents confusion when an equation is used.",
-        "An equation states equality between two expressions. If each ticket costs three dollars and there is a two-dollar fee, write y=3x+2. The coefficient three gives the price per ticket, and the constant two gives the fixed fee.",
-        "An equation can describe an observed pattern without being a causal law. A fitted line connecting two measurements does not prove that changing the first will change the second. Its interpretation depends on the mechanism and assumptions behind the model."
+      "id": "L2-01",
+      "schema": 2,
+      "title": "Name quantities with variables",
+      "objective": "I can name quantities with variables and units and write a rule as an equation.",
+      "prerequisites": [
+        "L1-01",
+        "L0-06"
       ],
-      "equation":"y = 3x + 2, where x is ticket count and y is total price in dollars.",
-      "example":"For four tickets, substitute x=4 into y=3x+2. First multiply three by four to get twelve. Then add the fixed fee of two. The total is fourteen dollars under this stated pricing rule.",
-      "exercise":"A service costs five dollars per item plus a fixed fee of four dollars. Write the rule and find the price for three items.",
-      "solution":"Let x be item count and y be price in dollars. The rule is y=5x+4. For three items, y=15+4=19 dollars. The fixed fee is added once.",
-      "quiz":{"question":"In y=5x+4, what does the four represent in the stated price model?","options":["The item count","The fixed fee","The cost of every item"],"answer":1,"explanation":"The constant is added once regardless of item count. The coefficient five multiplies the count and represents the per-item cost."},
-      "sources":["openstax"],"lab":"causal","caution":"A numerical relationship needs an explicit interpretation before it can support a causal claim."
+      "time_minutes": 45,
+      "big_idea": "A variable is a letter that stands for a quantity that can change, like a number of tickets or a cost in dollars. An equation states a rule that links variables. Some rules are set by people, like a price list. Others only describe a pattern in data, and a pattern is not the same as a law of cause.",
+      "i_can": [
+        "I can name a quantity with a variable and give its unit.",
+        "I can write a rule like y = 3x + 2 and use it to fill in a table and draw a graph.",
+        "I can explain what the coefficient and the constant mean in a real situation."
+      ],
+      "words": [
+        {
+          "word": "variable",
+          "meaning": "A letter, like x or y, that stands for a quantity that can change. Always say what it counts and in what unit."
+        },
+        {
+          "word": "coefficient",
+          "meaning": "The number that multiplies a variable. In y = 3x + 2, the coefficient is 3."
+        },
+        {
+          "word": "constant",
+          "meaning": "A number in a rule that stays the same, like the 2 in y = 3x + 2."
+        }
+      ],
+      "warmup": {
+        "recall_of": null,
+        "prompt": "In a made-up shop, a pack of pens costs 4 dollars. How much do 5 packs cost? How much do 10 packs cost? Write one sentence that tells someone how to find the cost of any number of packs."
+      },
+      "story_title": "The ticket rule",
+      "story": [
+        "Maya is selling tickets for her school's science night. The made-up prices are 3 dollars per ticket plus a 2 dollar booking fee for each order. The fee is the same whether you buy 1 ticket or 10. Leo asks, \"So how much do 4 tickets cost?\" Maya works it out: 3 times 4 is 12, plus 2 is 14 dollars.",
+        "Maya does not want to do this sum for every customer. She names the quantities. Let x be the number of tickets in an order. Let y be the total cost in dollars. Now the rule fits on one line: y = 3x + 2. The 3 is the coefficient, the price of each ticket. The 2 is the constant, the fee you pay once.",
+        "She fills in a table for 0 to 4 tickets. Each row becomes a point (x, y): (0, 2), (1, 5), (2, 8), (3, 11), (4, 14). On a graph the points sit on a straight line. Each step of +1 across goes +3 up, because each extra ticket adds 3 dollars. The line meets the y axis at 2, the fee. You can check any point: for x = 3, the rule gives 3 times 3 plus 2, which is 11.",
+        "Leo has a rule of his own. He wrote down made-up numbers from his basketball team: hours of practice per week and points per game. A line through the dots is close to points = 2 times hours + 4. \"So if I practice 30 hours a week, I will score 64 points?\" he jokes.",
+        "Maya laughs. \"The ticket rule is true because we set the prices. Your rule only describes the players you wrote down.\" Maybe players who already score well enjoy practice more. Maybe taller players do both. And nobody on the team practiced anywhere near 30 hours, so the rule says nothing about that. An equation can describe a pattern without being a law of cause."
+      ],
+      "animation": {
+        "file": "l2-01-ticket-line.mp4",
+        "scene": "scripts/manim/l2_01.py:TicketLine",
+        "params": {
+          "price": 3,
+          "fee": 2,
+          "tickets": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "caption": "A table for Maya's made-up ticket prices turns into points, and the points line up on y = 3x + 2.",
+        "alt": "A table of tickets and dollars fills in row by row while matching points appear on a graph; a straight line through them is labeled y = 3x + 2, with a step of 1 across and 3 up and the starting value 2 highlighted.",
+        "describe": "Using Maya's made-up ticket prices, a table fills in one row at a time: x is tickets and y is dollars. Each row becomes a point on the graph: (0, 2), (1, 5), (2, 8), (3, 11), (4, 14). A straight line is drawn through all five points and labeled y = 3x + 2. A small step marked +1 across, +3 up shows that each extra ticket adds 3 dollars, the coefficient. Then the point where the line starts, at 2 dollars for 0 tickets, is circled. That is the booking fee, the constant."
+      },
+      "activity": {
+        "title": "Three price plans on one grid",
+        "minutes": 20,
+        "materials": [
+          "Graph paper",
+          "A ruler",
+          "Pencils in three colors",
+          "A calculator (optional)"
+        ],
+        "steps": [
+          "Here are three made-up monthly plans, close to real ones. Phone data: 15 dollars a month plus a 10 dollar start fee. Bike share: 10 dollars a month plus a 25 dollar sign-up fee. Streaming: 8 dollars a month, no fee.",
+          "Let x be the number of months and y be the total cost in dollars. Write a rule for each plan, like y = 15x + 10.",
+          "Make a table for each plan for 0 to 6 months.",
+          "Draw axes on graph paper. Put months on the across axis (0 to 6) and dollars on the up axis (0 to 100).",
+          "Plot each plan's points in its own color and join them with a ruler.",
+          "For each line, mark where it meets the y axis. Check that it matches the fee in the rule.",
+          "Find the month where the phone line and the bike line cross. Check it by putting that x into both rules.",
+          "Write one sentence: for a short time, which plan of those two is cheaper, and which is cheaper for a long time?"
+        ],
+        "record": "Your three rules, your three tables, the graph with three colored lines, and the crossing point with your check.",
+        "safety": "No special hazards. Keep the ruler and pencils on the table."
+      },
+      "guided": {
+        "prompt": "An imagined bowling alley charges 5 dollars per game plus 4 dollars for shoes. Name the variables with units, write the rule, and find the cost of 3 games.",
+        "answer": "Let x be the number of games and y be the total cost in dollars. The rule is y = 5x + 4. For 3 games, y = 5 times 3 plus 4, which is 19 dollars. The coefficient 5 is the price per game. The constant 4 is the shoe fee, paid once."
+      },
+      "try_it": [
+        {
+          "prompt": "A taxi in an imagined city charges 2 dollars per kilometer plus 3 dollars to start. Write the rule. What does a 6 kilometer ride cost? Where does the line meet the y axis?",
+          "answer": "Let x be kilometers and y be dollars. Then y = 2x + 3. A 6 kilometer ride costs 2 times 6 plus 3, which is 15 dollars. The line meets the y axis at 3, the starting charge."
+        },
+        {
+          "prompt": "Kai's made-up data show that on hot days his family's fan runs longer. A line through the dots is roughly hours = 0.5 times temperature minus 8, with temperature in degrees Celsius. Is this rule a price list, like Maya's, or a pattern? What else should you ask?",
+          "answer": "It is a pattern found in data, not a rule someone set. It may hold only for the temperatures Kai saw. You should ask what else changes on hot days, and whether the rule still works far outside the data."
+        }
+      ],
+      "talk": [
+        "Why does Maya's rule work for any number of tickets, while Leo's rule may not work for 30 hours of practice?",
+        "Why is it important to say the unit of a variable? What could go wrong if one person counts in dollars and another in cents?",
+        "Can you think of a rule in your life that is set by people, and a pattern that only shows up in data?"
+      ],
+      "check": [
+        {
+          "question": "In y = 3x + 2 for Maya's tickets, what does the 2 stand for?",
+          "options": [
+            "The price of each ticket",
+            "The number of tickets",
+            "The booking fee, paid once"
+          ],
+          "answer": 2,
+          "explanation": "The constant 2 is added once, whatever x is. It is the fee. The coefficient 3 is the price of each ticket, and x is the number of tickets."
+        },
+        {
+          "question": "On the graph of y = 3x + 2, what happens to y each time x goes up by 1?",
+          "options": [
+            "y goes up by 3",
+            "y goes up by 2",
+            "y doubles"
+          ],
+          "answer": 0,
+          "explanation": "Each step of +1 across goes +3 up. One more ticket adds 3 dollars. The 2 only sets where the line starts."
+        },
+        {
+          "question": "Leo's made-up team data fit points = 2 times hours + 4. Which statement is fair?",
+          "options": [
+            "The rule must be wrong because it is not about prices.",
+            "The rule describes a pattern in his data, not a proven cause.",
+            "Practicing 30 hours a week will give 64 points."
+          ],
+          "answer": 1,
+          "explanation": "A rule fitted to data describes the players he recorded. Other things could explain the pattern, and 30 hours is far outside the data."
+        }
+      ],
+      "connect": "Every model in this course starts by naming its variables and their units. Later lessons use rules like these to make predictions and check them against measurements. In causal AI, the question \"is this a rule we set, or a pattern we saw?\" comes up again and again.",
+      "grownups": {
+        "why": "Writing an expression with a variable that stands for a quantity in a real situation is the Common Core expectation in 6.EE.6, and this lesson extends it to two-variable linear rules [@ccss_math]. OpenStax treats y = a + bx with a as the y-intercept and b as the slope, which here are the fee and the price per ticket [@openstax_linear]. The second half of the story separates a rule fixed by definition (a price list) from a line fitted to observations, which describes a pattern and supports no causal claim by itself.",
+        "misconceptions": [
+          "The fee is part of every ticket. (The constant is added once per order; only the coefficient multiplies x.)",
+          "A variable is just an unknown number to solve for. (Here it names a quantity that changes, with a unit.)",
+          "Any equation that fits data is a law. (A fitted line describes the recorded data; a cause needs more evidence, and the line may fail outside the data range.)",
+          "The line starts at the origin. (It starts at the constant: 2 dollars for 0 tickets.)"
+        ],
+        "simplify": "Use only the ticket rule. Fill in the table for 0 to 4 tickets and plot the five points before drawing the line.",
+        "extend": "Find the exact crossing of the phone and bike plans by solving 15x + 10 = 10x + 25. Then ask whether the streaming line ever crosses the phone line for positive x, and explain why from the rules."
+      },
+      "caution": "All prices and the basketball data are made up. Real price plans often have extra conditions, such as limits or discounts, that a single straight-line rule leaves out.",
+      "sources": [
+        "ccss_math",
+        "openstax_linear"
+      ],
+      "lab": "causal"
     },
     {
-      "id":"L2-02","title":"Functions map inputs to outputs","objective":"Read a function rule and distinguish a model output from an observed outcome.","prerequisites":["L2-01"],
-      "paragraphs":[
-        "A function assigns one output to each allowed input. We write f(x) for the output associated with input x. The domain is the set of allowed inputs. The domain can be restricted by mathematics or by the intended application.",
-        "A prediction function takes recorded features and produces an estimate. Its output can differ from the measured result. Write the prediction and observation separately so that you can calculate an error instead of silently treating the model as the real system.",
-        "Some outcomes vary even when the recorded input is unchanged. A deterministic prediction can summarize a typical value while missing that variation. A probability model can represent multiple possible results. Later lessons combine functions with unobserved inputs to model such variation."
+      "id": "L2-02",
+      "schema": 2,
+      "title": "Functions map inputs to outputs",
+      "objective": "I can use a function rule and tell a model's output apart from a measured value.",
+      "prerequisites": [
+        "L2-01"
       ],
-      "equation":"f(x)=2x+1. Prediction error here means observed value minus predicted value.",
-      "example":"A model predicts f(3)=2 times 3 plus 1, which is 7. The observed result is 9, so the signed error is 9-7=2. The calculation checks this prediction only; it does not prove that the whole function is suitable.",
-      "exercise":"Let g(x)=4x-2. Find g(5). If the observed result is 16, compute observed minus predicted.",
-      "solution":"The predicted value is g(5)=20-2=18. The signed error is 16-18=-2. A negative error means the prediction is larger than the observation under this error convention.",
-      "quiz":{"question":"What must a function assign to each input in its domain?","options":["Every possible output at once","No defined output","Exactly one output"],"answer":2,"explanation":"A function has one output for each allowed input. A stochastic model can instead describe a distribution, or include additional random inputs."},
-      "sources":["openstax"],"lab":"gradient","caution":"One small prediction error does not establish generalization or a causal mechanism."
+      "time_minutes": 45,
+      "big_idea": "A function is a rule that gives exactly one output for each input. When we use a function as a model of the real world, its output is a prediction, not a measurement. The gap between them is called the residual: observed minus predicted.",
+      "i_can": [
+        "I can decide whether a table or a mapping diagram shows a function.",
+        "I can use function notation, like h(3), to find a predicted value.",
+        "I can find a residual as observed minus predicted, with its sign and unit."
+      ],
+      "words": [
+        {
+          "word": "function",
+          "meaning": "A rule that gives exactly one output for each input. Two inputs may share an output, but one input may not have two outputs."
+        },
+        {
+          "word": "residual",
+          "meaning": "Observed value minus predicted value. A positive residual means the real value was above the prediction."
+        }
+      ],
+      "warmup": {
+        "recall_of": "L2-01",
+        "prompt": "Last lesson, Maya's ticket rule was y = 3x + 2, with x tickets and y dollars. What do 5 tickets cost? Can 5 tickets ever have two different costs under this rule?"
+      },
+      "story_title": "Leo's bean plant",
+      "story": [
+        "Leo plants a bean seedling for a science project. These are made-up numbers, but they are like real ones. At the start it is 5 cm tall, and it seems to grow about 2 cm a week. Leo writes a rule: h(t) = 2t + 5. Here t is the time in weeks and h is the height in cm. You read h(t) as \"h of t\", the height at time t.",
+        "Maya tests the rule like a machine. Put in t = 3, and out comes 2 times 3 plus 5, which is 11. So h(3) = 11: the model says the plant should be 11 cm tall after 3 weeks. Each input gives exactly one output. That is what makes the rule a function.",
+        "Not every rule is a function. Maya makes a made-up list of birth months for three friends: Maya and Kai were born in March, and Leo in July. Person to birth month is a function, because each person has one birth month. Two people sharing March is fine. But birth month to person is not a function, since March points to two people.",
+        "Every Sunday Leo measures the real plant with a ruler. After 3 weeks it is 11.5 cm, not 11. After 4 weeks it is 12 cm, while the model said 13. The model's output is a prediction. The ruler gives a measurement. They are not the same thing.",
+        "To compare them, Leo uses residual = observed - predicted. At week 3, 11.5 - 11 = 0.5 cm, so the plant was a bit above the line. At week 4, 12 - 13 = -1 cm, so it was below. Small residuals that go both ways mean the line is a fair summary for these weeks. They do not mean the plant follows the rule exactly."
+      ],
+      "animation": {
+        "file": "l2-02-function-residuals.mp4",
+        "scene": "scripts/manim/l2_02.py:FunctionResiduals",
+        "params": {
+          "rate": 2,
+          "start": 5,
+          "machine_input": 3,
+          "people": {
+            "Maya": "March",
+            "Kai": "March",
+            "Leo": "July"
+          },
+          "weeks": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "measured": [
+            5,
+            7.5,
+            8.5,
+            11.5,
+            12,
+            15.5
+          ],
+          "show_residuals": [
+            3,
+            4
+          ]
+        },
+        "caption": "A function machine, a function and a non-function, then a model line with measured heights and their residuals.",
+        "alt": "A box labeled h(t) = 2t + 5 turns the input 3 weeks into 11 cm. Two mapping diagrams follow: person to birth month is a function, birth month to person is not. Finally a predicted line and six measured dots appear, joined by short residual segments, with week 3 at plus 0.5 and week 4 at minus 1.",
+        "describe": "First, the input t = 3 weeks goes into a machine with the rule h(t) = 2t + 5. Out comes 11 cm, written h(3) = 11. Next, arrows go from Maya, Kai and Leo to their made-up birth months. Each person has one arrow, so it is a function, even though Maya and Kai share March. When the arrows are turned around, March has two arrows, so it is not a function. Last, the rule is drawn as a line, and Leo's six made-up measured heights appear as dots. The height axis starts at 4 cm, not 0, so the gaps are easier to see. Short segments show each gap, using residual = observed - predicted. Week 3 shows 11.5 - 11 = 0.5 and week 4 shows 12 - 13 = -1."
+      },
+      "activity": {
+        "title": "Function machines and a coin tower",
+        "minutes": 20,
+        "materials": [
+          "10 index cards",
+          "20 coins of the same kind",
+          "A ruler with millimeters",
+          "Graph paper",
+          "A pencil and a calculator"
+        ],
+        "steps": [
+          "On 5 cards, write a rule, such as \"double it, then add 1\". On the back, write three inputs and their outputs. If you have a partner, swap cards and guess each other's rules from the outputs.",
+          "On the other 5 cards, draw small mapping diagrams. Make some that are functions and at least one where an input has two arrows. Sort them into two piles.",
+          "Now the coins. Stack 10 coins and measure the height in millimeters. Divide by 10 to get the thickness of one coin.",
+          "Write a model: h(n) = thickness times n, where n is the number of coins and h is the height in millimeters.",
+          "Use your model to predict the height of 5, 15 and 20 coins. Write the predictions in a table before you measure.",
+          "Build each stack and measure it. Add a column for the measured height.",
+          "Work out each residual as observed minus predicted, with its sign and unit.",
+          "Plot the model as a line and the measurements as dots. Look at whether the residuals are mostly small and go both ways."
+        ],
+        "record": "Your sorted mapping cards, your coin table with predicted heights, measured heights and residuals, and your graph.",
+        "safety": "Keep coins away from small children, who might swallow them. Wash your hands after handling coins."
+      },
+      "guided": {
+        "prompt": "Leo's model for his plant (made-up numbers) is h(t) = 2t + 5. Predict the height at week 6. If he measures 16.5 cm, what is the residual?",
+        "answer": "The prediction is h(6) = 2 times 6 plus 5, which is 17 cm. The residual is observed minus predicted: 16.5 - 17 = -0.5 cm. It is negative, so the real plant was a little shorter than the model said."
+      },
+      "try_it": [
+        {
+          "prompt": "A made-up candle model says L(t) = 20 - 3t, where t is hours of burning and L is length in cm. Predict the length after 4 hours. The real candle is 9 cm long then. Find the residual.",
+          "answer": "The prediction is L(4) = 20 - 12, which is 8 cm. The residual is 9 - 8 = 1 cm. It is positive, so the candle burned a bit more slowly than the model said."
+        },
+        {
+          "prompt": "A table lists inputs and outputs: 1 gives 4, 2 gives 4, 3 gives 6, and 1 gives 5. Is this a function? What if the last pair were removed?",
+          "answer": "It is not a function, because the input 1 has two outputs, 4 and 5. Without the last pair it is a function. Inputs 1 and 2 sharing the output 4 is allowed."
+        }
+      ],
+      "talk": [
+        "Why should Leo keep his predictions and his measurements in separate columns?",
+        "If every residual were positive, what would that tell you about the model?",
+        "Can a model be useful even if it is never exactly right? Give an example from your life."
+      ],
+      "check": [
+        {
+          "question": "A model predicts 13 cm and the ruler shows 12 cm. What is the residual?",
+          "options": [
+            "1 cm",
+            "25 cm",
+            "-1 cm"
+          ],
+          "answer": 2,
+          "explanation": "Residual = observed - predicted, so 12 - 13 = -1 cm. The minus sign says the real value was below the prediction."
+        },
+        {
+          "question": "Two students in a class were both born in May. Which of these is NOT a function?",
+          "options": [
+            "Each student maps to their birth month.",
+            "May maps to the first student, and May also maps to the second.",
+            "Each number x maps to 2x + 5."
+          ],
+          "answer": 1,
+          "explanation": "In the last rule, the input May has two outputs, the two students, so it is not a function. Two students sharing May is fine in the first rule."
+        },
+        {
+          "question": "Remember Lesson 1. In the rule y = 5x + 4 for a price in dollars, what does the 4 stand for?",
+          "options": [
+            "The cost of each item",
+            "The number of items",
+            "A fixed fee, paid once"
+          ],
+          "answer": 2,
+          "review_of": "L2-01",
+          "explanation": "The constant 4 is added once, whatever x is, so it is a fixed fee. The coefficient 5 is the cost of each item."
+        }
+      ],
+      "connect": "Machine learning models are functions too: they take inputs and return predictions. People who build them check residuals to see where a model does well and where it fails. Later in this course you will meet models whose outputs are probabilities instead of single numbers.",
+      "grownups": {
+        "why": "Common Core 8.F.1 asks learners to understand that a function assigns to each input exactly one output [@ccss_math]. OpenStax defines a function the same way and introduces function notation f(x) [@openstax_functions]. The mapping diagrams make the definition concrete: two inputs may share an output, but one input may not have two. The lesson then treats the function as a model: its output is a prediction, and the residual (observed minus predicted) measures how far a measurement falls from it. This sign convention, observed minus predicted, is the one OpenStax uses for regression residuals [@openstax], and it prepares the scatter-plot and line-fitting work in the next lesson.",
+        "misconceptions": [
+          "A function must be one-to-one. (Two inputs may share an output; only one input with two outputs breaks the rule.)",
+          "The model's output is what really happened. (It is a prediction; the measurement is what was observed.)",
+          "Residual is predicted minus observed. (In this course, as in the OpenStax statistics text [@openstax], it is observed minus predicted, so a positive residual means the real value was higher.)",
+          "Small residuals prove the rule is the true cause of growth. (They show the line summarizes these weeks well; they say nothing about other weeks or about why the plant grows.)"
+        ],
+        "simplify": "Skip the mapping cards. Use only the coin tower: find the thickness from 10 coins, then predict and measure 5 and 15 coins, and compute two residuals.",
+        "extend": "Measure the coin tower for 1 to 20 coins and fit your own line. Compare the slope with your single-stack estimate of the thickness, and explain why measuring 10 coins and dividing gives a better thickness estimate than measuring 1."
+      },
+      "caution": "The plant heights and birth months are made up. Real plants do not grow in a straight line for long, so a linear rule is only a short-term summary.",
+      "sources": [
+        "ccss_math",
+        "openstax_functions",
+        "openstax"
+      ],
+      "lab": "gradient"
     },
     {
-      "id":"L2-03","title":"Read plots without inventing causes","objective":"Interpret axes, trends, and extrapolation limits in a plotted relationship.","prerequisites":["L2-01","L2-02"],
-      "paragraphs":[
-        "A coordinate plot places one quantity on each axis. Each point represents a recorded pair. Read the axis labels, units, and scale before describing a trend. A steep-looking line can result from an axis range rather than a large effect.",
-        "A positive association means that larger values of one quantity tend to occur with larger values of the other in the records. It does not establish an arrow of causation. Shared causes, reverse influence, or selection can produce an association.",
-        "Interpolation estimates within the observed range. Extrapolation estimates beyond that range. A straight line can be useful locally but fail far away. Keep the data range visible and state where a prediction depends on an untested extension of the model."
+      "id": "L2-03",
+      "schema": 2,
+      "title": "Read plots without inventing causes",
+      "objective": "I can read a scatter plot, describe its trend, and say what it cannot show.",
+      "prerequisites": [
+        "L2-01",
+        "L2-02"
       ],
-      "equation":"Slope = change in vertical quantity / change in horizontal quantity, with both units stated.",
-      "example":"A line passes through two recorded points: one hour and four tasks, then three hours and ten tasks. Its slope is (10-4)/(3-1)=3 tasks per hour. This summary does not show that adding any hour always causes three completed tasks.",
-      "exercise":"A line passes through (2,5) and (6,13). Find its slope. If all data lie between x=2 and x=6, classify a prediction at x=20.",
-      "solution":"The slope is (13-5)/(6-2)=8/4=2 vertical units per horizontal unit. A prediction at x=20 is extrapolation because twenty is outside the observed input range.",
-      "quiz":{"question":"What does a positive trend in an observational scatter plot establish by itself?","options":["An association in the recorded data","A guaranteed intervention effect","The absence of hidden causes"],"answer":0,"explanation":"The plot describes how recorded values vary together. Causal effects require further assumptions or suitable experimental evidence beyond the visual trend."},
-      "sources":["openstax","seeing"],"lab":"causal","caution":"Axis choices and restricted samples can change the apparent pattern. Always inspect the data definition."
+      "time_minutes": 45,
+      "big_idea": "A scatter plot shows how two quantities vary together. You can describe its direction, form and strength, and spot points that do not fit. The plot alone cannot tell you what causes what, which way a cause runs, or what happens outside the range of the data.",
+      "i_can": [
+        "I can describe a scatter plot by its direction, form, strength and any outliers.",
+        "I can list at least three explanations for a pattern, including a common cause.",
+        "I can explain why a trend line is risky to use far outside the data."
+      ],
+      "words": [
+        {
+          "word": "scatter plot",
+          "meaning": "A graph with one dot for each record, placed by two measured quantities, one on each axis."
+        },
+        {
+          "word": "common cause",
+          "meaning": "A third thing that pushes two other quantities up or down together, so they move together even if neither affects the other."
+        },
+        {
+          "word": "extrapolation",
+          "meaning": "Using a trend to predict far outside the range of the data you have. It is risky, because the pattern may change."
+        }
+      ],
+      "warmup": {
+        "recall_of": "L2-02",
+        "prompt": "Last lesson, Leo's model h(t) = 2t + 5 predicted 13 cm at week 4, and he measured 12 cm. What was the residual? Does a small residual prove that time makes the plant grow 2 cm a week?"
+      },
+      "story_title": "Does sunscreen cause sunburn?",
+      "story": [
+        "Maya finds a table of data for an imagined town, with 12 made-up months. For each month it lists the number of sunscreen bottles sold and the number of sunburn cases at the town clinic. In January the town sold 20 bottles and saw 3 cases. In July it sold 160 bottles and saw 26 cases.",
+        "She makes a scatter plot with one dot per month. Then she describes it the way a statistician would. The direction: positive, because more bottles go with more cases. The form: linear, because the dots lie close to a straight line. The strength: strong, because they hug the line tightly. No point sits far from the rest, so there is no outlier.",
+        "Leo grins. \"So sunscreen causes sunburn!\" Maya draws a question mark between the two quantities. There are at least three stories. Maybe people with sunscreen stay out longer. Maybe people buy sunscreen after they get burned. Or maybe a common cause drives both: more sunshine means more sunscreen sold and more sunburns. The plot could look the same in all three stories.",
+        "To decide between stories you need more data, such as hours of sunshine each month. In this made-up town, sunshine is high in exactly the months when both numbers are high. That fits the common cause story. It still does not prove it, but it shows why the plot alone cannot settle the question.",
+        "Then Kai brings his own trap. His made-up growth record says he was 50 cm long at birth and 86 cm at age 2. That is 18 cm per year. A straight line says height = 50 + 18 times age. At age 14 the line gives 50 + 252 = 302 cm, a teenager over 3 meters tall! The line fits the first two years, but using it outside the data is extrapolation, and here it fails badly."
+      ],
+      "animation": {
+        "file": "l2-03-plot-no-cause.mp4",
+        "scene": "scripts/manim/l2_03.py:PlotNoCause",
+        "params": {
+          "sunscreen": [
+            20,
+            30,
+            50,
+            80,
+            110,
+            140,
+            160,
+            150,
+            100,
+            60,
+            30,
+            20
+          ],
+          "sunburn": [
+            3,
+            5,
+            7,
+            13,
+            16,
+            25,
+            26,
+            24,
+            13,
+            10,
+            4,
+            2
+          ],
+          "direction": "positive",
+          "form": "linear",
+          "strength": "strong",
+          "x_max": 300,
+          "y_max": 50
+        },
+        "caption": "A scatter plot of sunscreen sold and sunburn cases in an imagined town, a hidden common cause, and a trend line pushed past the data.",
+        "alt": "Twelve blue dots rise from lower left to upper right with a straight trend line through them. A question mark appears between boxes for sunscreen and sunburn, then a sunshine box with arrows to both. Finally the line is extended past the last data point in red, labeled outside the data.",
+        "describe": "Twelve dots appear, one for each of 12 made-up months in an imagined town. Bottles of sunscreen sold go across and sunburn cases go up. A straight trend line is drawn through them. Three labels appear: direction: positive, form: linear, strength: strong. Then two boxes, sunscreen sold and sunburn cases, appear with a question mark between them: which causes which? A third box, sunshine, appears above with arrows to both. One cause can drive both. Last, the trend line is pushed far to the right, past the biggest month. That part turns red with the words outside the data: no evidence here."
+      },
+      "activity": {
+        "title": "Plot it, then doubt it",
+        "minutes": 20,
+        "materials": [
+          "Graph paper",
+          "A ruler",
+          "Pencils in two colors"
+        ],
+        "steps": [
+          "Draw axes. Put sunscreen bottles sold across, from 0 to 200, and sunburn cases up, from 0 to 40. Label both axes.",
+          "Plot the made-up months January to June as (bottles, cases): (20, 3), (30, 5), (50, 7), (80, 13), (110, 16), (140, 25).",
+          "Plot July to December: (160, 26), (150, 24), (100, 13), (60, 10), (30, 4), (20, 2).",
+          "Describe the plot in one sentence each for direction, form and strength. Is any dot far from the others?",
+          "Sketch a straight line with your ruler that follows the dots, with about as many dots above it as below.",
+          "Write three possible explanations: sunscreen leads to sunburn, sunburn leads to buying sunscreen, and a common cause. Draw each as boxes and arrows.",
+          "For each explanation, write one piece of extra data that could help check it.",
+          "Shade the range of bottles your data covers (20 to 160). Use your line to predict cases for 120 bottles. Then extend the line with your ruler to 200 bottles, the edge of your grid, and read off a prediction there.",
+          "Say which of your two predictions you trust less, and why. What might change in a month with far more sun than any month in the data?"
+        ],
+        "record": "Your scatter plot with its line, your three-part description, your three arrow diagrams with the extra data for each, and your two predictions.",
+        "safety": "No special hazards. If you collect real data from people instead, ask permission and leave names off."
+      },
+      "guided": {
+        "prompt": "A made-up plot shows 20 students. Across is hours of screen time in the evening, and up is hours of sleep. The dots fall from upper left to lower right, close to a line. Describe the plot, and give one reason it might not show that screens cut sleep.",
+        "answer": "Direction: negative, since more screen time goes with less sleep. Form: roughly linear. Strength: fairly strong, since the dots stay near the line. It might not be cause, because a common cause such as homework or stress could keep students up and on screens. The cause could also run the other way: students who cannot sleep may pick up a screen."
+      },
+      "try_it": [
+        {
+          "prompt": "In a made-up survey of students aged 6 to 14, bigger shoe sizes go with higher reading scores. Name a common cause.",
+          "answer": "Age. Older students tend to have bigger feet and also read better. Shoe size does not cause reading skill, and reading does not grow feet."
+        },
+        {
+          "prompt": "A made-up record shows an ice cube's mass dropping by about 2 grams a minute over its first 5 minutes in a warm room. It started at 30 grams. What does the line predict at 20 minutes? Why should you doubt it?",
+          "answer": "The line gives 30 - 2 times 20, which is -10 grams. A mass cannot be negative. The trend only covered 5 minutes, so using it at 20 minutes is extrapolation, and the cube will simply melt away."
+        }
+      ],
+      "talk": [
+        "Why does a strong pattern still not tell you which way a cause runs?",
+        "Which of the three sunscreen stories do you find most likely, and what data would change your mind?",
+        "Can you think of a headline that claims a cause from a pattern? What common cause might it be missing?"
+      ],
+      "check": [
+        {
+          "question": "In the imagined town, a strong positive scatter plot of sunscreen sold and sunburn cases, by itself, shows that:",
+          "options": [
+            "Sunshine causes both.",
+            "The two numbers tend to rise and fall together.",
+            "Sunscreen causes sunburn."
+          ],
+          "answer": 1,
+          "explanation": "A scatter plot shows how two quantities vary together. It cannot tell you which story about causes is true. Sunshine is a good guess, but checking it needs more data."
+        },
+        {
+          "question": "Kai's made-up growth line fits ages 0 to 2. Using it to predict his height at age 14 is:",
+          "options": [
+            "A residual",
+            "Extrapolation, which is risky",
+            "Safe, because the line fit the data well"
+          ],
+          "answer": 1,
+          "explanation": "Age 14 is far outside the data, so it is extrapolation. Growth slows down, and the line gives a silly 302 cm."
+        },
+        {
+          "question": "Remember Lesson 1. Where does the line y = 2x + 3 meet the y axis?",
+          "options": [
+            "At y = 2",
+            "At y = 5",
+            "At y = 3"
+          ],
+          "answer": 2,
+          "review_of": "L2-01",
+          "explanation": "When x = 0, y = 2 times 0 plus 3, which is 3. The constant tells you where the line starts. The 2 is how much y goes up for each step of 1 across."
+        }
+      ],
+      "connect": "A pattern in data is where causal questions begin, not where they end. In the coming lessons you will learn tools for those questions: tables, causal maps, and the difference between watching and stepping in. Causal AI uses the same tools to ask what would change if we acted.",
+      "grownups": {
+        "why": "OpenStax describes the relationship in a scatter plot by its direction (positive or negative), form (linear or not) and strength [@openstax_scatter]. Common Core asks learners to construct and interpret scatter plots and describe patterns, including outliers, in 8.SP.1, and to distinguish correlation from causation in S-ID.9 [@ccss_math]. In Pearl's framework, a shared cause (a confounder) can produce an association between two variables even when neither affects the other, and the data alone cannot choose among the causal stories [@pearl]. The extrapolation example (a growth line giving a 302 cm teenager) shows that a fitted line is supported only inside the range of the data.",
+        "misconceptions": [
+          "A strong correlation shows cause. (Strength says how tightly dots follow a line; it says nothing about why.)",
+          "If A and B rise together, A must cause B. (B could cause A, or a common cause could drive both.)",
+          "A line that fits well works everywhere. (It is supported only inside the range of the data; outside it, the pattern may change.)",
+          "Positive means good. (Positive only means both quantities tend to increase together.)"
+        ],
+        "simplify": "Plot only 6 of the 12 months, describe the direction, and draw just the common cause diagram.",
+        "extend": "Make up monthly sunshine hours for the imagined town and plot sunscreen against sunshine and sunburn against sunshine. Then look up a real pair of quantities in a public data table and write three possible explanations for any pattern you see."
+      },
+      "caution": "The town, its sales, its clinic cases and Kai's growth record are all made up. Nothing here is health advice, and the lesson does not suggest that sunscreen causes sunburn; the point is that a plot alone cannot tell.",
+      "sources": [
+        "openstax_scatter",
+        "ccss_math",
+        "pearl"
+      ],
+      "lab": "causal"
     },
     {
-      "id":"L2-04","title":"Calculate conditional probability","objective":"Compute conditional probabilities and test a simple independence claim.","prerequisites":["L1-04","L1-02"],
-      "paragraphs":[
-        "For events A and B, conditional probability P(A given B) restricts attention to cases where B occurs. Divide the probability of both events by the probability of B. This formula requires P(B) to be greater than zero.",
-        "Events are independent when learning that one occurred does not change the probability of the other. For a positive-probability B, this gives P(A given B)=P(A). Independence is a property of the specified probability distribution and is not the same as no causal relation.",
-        "A two-way table helps keep the counts visible. Label rows and columns, include their totals, and check that every case appears once. Reversing the condition changes the denominator, which can change the answer even when the intersection count stays the same."
+      "id": "L2-04",
+      "schema": 2,
+      "title": "Calculate conditional probability",
+      "objective": "I can calculate a conditional probability from a two-way table and test whether two events are independent.",
+      "prerequisites": [
+        "L1-04",
+        "L1-02"
       ],
-      "equation":"P(A | B)=P(A and B)/P(B), for P(B)>0. The vertical bar means given.",
-      "example":"In forty records, twelve have both A and B, twenty have B, and twenty-four have A. Thus P(A given B)=12/20=0.6 and P(A)=24/40=0.6. For these binary events in this table, the equality is consistent with independence.",
-      "exercise":"In fifty records, fifteen have both A and B, twenty-five have B, and twenty have A. Find P(A given B) and P(A). Are the events independent in this table?",
-      "solution":"P(A given B)=15/25=0.6, while P(A)=20/50=0.4. They differ, so A and B are not independent in this empirical table. This conclusion does not itself identify a cause.",
-      "quiz":{"question":"When is P(A given B) undefined by the elementary ratio formula?","options":["When A is possible","When P(B)=0","When the events are independent"],"answer":1,"explanation":"The elementary formula divides by P(B). A zero denominator is undefined, so the positive-probability condition is necessary for this formula."},
-      "sources":["openstax"],"lab":"bayes","caution":"An empirical table estimates a population relationship. Sampling uncertainty remains outside this exact table calculation."
+      "time_minutes": 45,
+      "big_idea": "A conditional probability counts inside one group. The group you condition on becomes the whole, so its total goes on the bottom of the fraction. If knowing one thing does not change the chance of the other, the two events are independent.",
+      "i_can": [
+        "I can find a conditional probability from a two-way table by dividing by the right total.",
+        "I can test whether two events are independent by comparing P(A | B) with P(A).",
+        "I can explain why independent and mutually exclusive are different ideas."
+      ],
+      "words": [
+        {
+          "word": "conditional probability",
+          "meaning": "The chance of one event when we already know a second event happened. We write P(A | B) and say \"the probability of A given B\"."
+        },
+        {
+          "word": "independent",
+          "meaning": "Two events are independent when knowing that one happened does not change the chance of the other. In symbols, P(A | B) = P(A)."
+        },
+        {
+          "word": "mutually exclusive",
+          "meaning": "Two events are mutually exclusive when they can never happen together, like rolling a 2 and rolling a 5 on one roll of a die."
+        }
+      ],
+      "warmup": {
+        "recall_of": "L2-03",
+        "prompt": "Last lesson, an imagined town sold more sunscreen in the same months that it had more sunburns. Does the sunscreen cause the sunburns? Name one thing a scatter plot cannot tell you."
+      },
+      "story_title": "Do musicians like math more?",
+      "story": [
+        "Maya's school club ran an imagined survey of 200 students. These are made-up numbers, not a real school. Each student answered two questions. Do you play an instrument? Do you like math? Leo put the answers into a two-way table with a total for every row and column.",
+        "Of the 200 students, 60 play an instrument. Of those 60, 36 like math and 24 do not. Of the 140 who play no instrument, 64 like math and 76 do not. Leo checks the table: 60 + 140 = 200, and 100 students like math in all.",
+        "Maya asks a sharper question. \"If I only look at the students who play an instrument, what fraction like math?\" Now the 60 players are the whole group. So the answer is 36 out of 60, which is 0.6. In symbols, P(math | instrument) = 36 / 60 = 0.6. The bar means \"given\".",
+        "Leo compares this with the whole survey. There, 100 out of 200 is 0.5, so P(math) = 0.5. Knowing that a student plays an instrument changes the chance from 0.5 to 0.6. So in this survey, liking math and playing an instrument are not independent.",
+        "\"So playing music makes you like math?\" Leo asks. Maya shakes her head. \"The table only shows that the two go together here. It does not say which one causes the other, or whether something else causes both.\" The rule they used is P(A | B) = P(A and B) / P(B), as long as P(B) is more than 0."
+      ],
+      "animation": {
+        "file": "l2-04-row-becomes-whole.mp4",
+        "scene": "scripts/manim/l2_04.py:RowBecomesWhole",
+        "params": {
+          "instrument_math": 36,
+          "instrument_not": 24,
+          "none_math": 64,
+          "none_not": 76
+        },
+        "caption": "Conditioning on one row makes that row's total the bottom of the fraction.",
+        "alt": "A two-way table of 200 imagined students. The instrument row is boxed and the fraction 36 over 60 forms. Then the whole-survey fraction 100 over 200 appears beside it, and the two are compared.",
+        "describe": "A two-way table shows an imagined survey of 200 students with made-up numbers. The row for students who play an instrument lights up and the other rows fade. The 36 in that row moves up to the top of a fraction, and the row total 60 moves to the bottom. The screen reads 36 out of 60 is 0.6. Next, the whole survey counts again. The total of students who like math gives 100 out of 200 is 0.5. The two answers are different, so the events are not independent in this survey."
+      },
+      "activity": {
+        "title": "Doubles and big sums",
+        "minutes": 20,
+        "materials": [
+          "Two dice.",
+          "A paper cup to shake them in (optional).",
+          "Paper and a pencil.",
+          "A calculator (optional)."
+        ],
+        "steps": [
+          "Draw a two-way table. The rows are \"double\" and \"not a double\". The columns are \"sum above 7\" and \"sum 7 or less\". Add a total row and a total column.",
+          "Roll both dice. A double means both dice show the same number. Make a tally mark in the right cell.",
+          "Roll at least 36 times. Then fill in all the totals and check that they add up to your number of rolls.",
+          "Find P(double) from your counts: all doubles divided by all rolls.",
+          "Find P(double | sum above 7): doubles with a sum above 7, divided by the total of the \"sum above 7\" column.",
+          "Now find the exact answers. List all 36 equally likely pairs, from (1,1) to (6,6). Count the doubles and the pairs with a sum above 7.",
+          "Compare the exact P(double) with the exact P(double | sum above 7). Are the two events independent? Then compare your counts with the exact answers."
+        ],
+        "record": "Your tally table with totals, your two fractions from rolling, the two exact fractions, and one sentence on whether the events are independent.",
+        "safety": "Keep small dice away from young children who might put them in their mouths. Roll on a table or a tray so the dice do not fall."
+      },
+      "guided": {
+        "prompt": "Use the 36 equally likely pairs from two dice. What is P(double)? What is P(double | sum above 7)? Are the two events independent?",
+        "answer": "There are 6 doubles, so P(double) = 6/36 = 1/6. There are 15 pairs with a sum above 7. Only 3 of them are doubles: (4,4), (5,5) and (6,6). So P(double | sum above 7) = 3/15 = 1/5. Since 1/5 is not 1/6, the events are not independent."
+      },
+      "try_it": [
+        {
+          "prompt": "In another imagined class of 40 students (made-up numbers), 20 have a pet. Of the 16 who walk to school, 8 have a pet. Find P(pet) and P(pet | walks). Are the two events independent in this class?",
+          "answer": "P(pet) = 20/40 = 0.5. P(pet | walks) = 8/16 = 0.5. They are equal, so in this class having a pet and walking to school are independent."
+        },
+        {
+          "prompt": "Roll two dice. Event A is \"a double\". Event B is \"an odd sum\". Can A and B happen together? Are they independent?",
+          "answer": "A double always has an even sum, so A and B can never happen together. They are mutually exclusive. They are not independent: P(A) = 1/6, but P(A | B) = 0. Knowing B happened tells you A did not."
+        }
+      ],
+      "talk": [
+        "Why does the bottom number change when you add the word \"given\"?",
+        "Leo's table shows musicians like math a bit more in the made-up survey. What else could explain that?",
+        "Mutually exclusive events can never happen together. Why does that make them depend on each other?"
+      ],
+      "check": [
+        {
+          "question": "In the imagined survey, what is P(math | instrument)?",
+          "options": [
+            "36 out of 200",
+            "36 out of 100",
+            "36 out of 60"
+          ],
+          "answer": 2,
+          "explanation": "The condition is \"plays an instrument\", so only the 60 players count. Of them, 36 like math, which is 36 out of 60."
+        },
+        {
+          "question": "For two events with P(B) more than 0, which statement shows they are independent?",
+          "options": [
+            "A and B can never happen together.",
+            "P(A | B) = P(A)",
+            "P(A and B) = P(B)"
+          ],
+          "answer": 1,
+          "explanation": "Independent means knowing B does not change the chance of A, so P(A | B) = P(A). Events that never happen together are mutually exclusive, which is different."
+        },
+        {
+          "question": "Remember Lesson 2. A rule predicts a height of 11 cm, and the measured height is 12 cm. What is the residual?",
+          "options": [
+            "23 cm",
+            "11 cm",
+            "1 cm"
+          ],
+          "answer": 2,
+          "review_of": "L2-02",
+          "explanation": "A residual is observed minus predicted. That is 12 cm minus 11 cm, which is 1 cm."
+        }
+      ],
+      "connect": "Conditional probability is the main tool for the next lesson, where you will turn a condition around. Causal AI systems also start from tables like this one. They then ask a harder question: does changing one thing change the other?",
+      "grownups": {
+        "why": "The lesson builds conditional probability from a two-way table, where the row or column total is visibly the denominator. Two-way tables and conditional probability are presented this way in OpenStax [@openstax_contingency], and independence is defined there as P(A | B) = P(A), separate from mutual exclusivity [@openstax_independent]. The standards ask students to read two-way tables (8.SP.4) and to understand conditional probability as P(A and B) / P(B) and independence as P(A | B) = P(A) (S-CP.3) [@ccss_math]. The survey is made up and is labeled so on every surface. The dice task gives an exact check: 3 of the 15 pairs with a sum above 7 are doubles, so 1/5, not 1/6.",
+        "misconceptions": [
+          "P(A | B) and P(B | A) are the same. (They have different denominators; in the survey, 36 of 60 players like math, but 36 of 100 math-likers play.)",
+          "Mutually exclusive means independent. (If two possible events cannot happen together, knowing one rules out the other, so they are dependent.)",
+          "A difference in a table shows a cause. (It shows an association in this group only; a common cause or chance could explain it.)",
+          "Rolled counts that give slightly different fractions disprove the exact answer. (Thirty-six rolls vary a lot; pooled rolls get closer to 1/6 and 1/5.)"
+        ],
+        "simplify": "Give the completed survey table and ask only for P(math) and P(math | instrument). Skip the dice table and use the list of 36 pairs.",
+        "extend": "Find P(instrument | math) from the same table and explain why it differs from P(math | instrument). Then change one cell so the events become independent while all totals still add up."
+      },
+      "caution": "The survey numbers are invented for teaching. A real survey of 200 students estimates a pattern with sampling error, so two fractions that differ a little could still come from independent events in the wider population.",
+      "sources": [
+        "openstax_contingency",
+        "openstax_independent",
+        "ccss_math"
+      ],
+      "lab": "bayes"
     },
     {
-      "id":"L2-05","title":"Reverse a condition with Bayes' rule","objective":"Use base rates and error rates to calculate a reversed conditional probability.","prerequisites":["L2-04","L1-01"],
-      "paragraphs":[
-        "Bayes' rule connects a conditional probability to its reversed condition. P(flag given defect) is not P(defect given flag). The first describes detector behaviour among defective items. The second asks how many flagged items are actually defective and depends on how common defects are.",
-        "Use a large imaginary batch to make the denominators clear. Split the batch into defective and non-defective items first. Then apply the flag rate within each group. Combine both kinds of flags before calculating the fraction that came from defective items.",
-        "A low base rate can make false flags numerous even when the false-flag rate is modest. This is arithmetic, not a paradox. A flag is evidence that updates a probability under the model; it is not automatically a certain conclusion about the item."
+      "id": "L2-05",
+      "schema": 2,
+      "title": "Reverse a condition with Bayes' rule",
+      "objective": "I can reverse a condition with natural frequencies, taking the base rate into account.",
+      "prerequisites": [
+        "L2-04",
+        "L1-01"
       ],
-      "equation":"P(D | F)=P(F | D)P(D)/[P(F | D)P(D)+P(F | not D)P(not D)], for a positive denominator.",
-      "example":"In a model batch of 1000 items, ten are defective. A detector flags 80 percent of defects, giving eight true flags. It also flags ten percent of 990 sound items, giving 99 false flags. Only 8/107, about 7.48 percent, of flags indicate defects.",
-      "exercise":"A model batch has 1000 items, including 100 defects. A detector flags 90 percent of defects and 20 percent of sound items. What fraction of flags are true defects?",
-      "solution":"There are ninety true flags and 180 false flags because 20 percent of 900 is 180. The desired fraction is 90/270=1/3. The detector sensitivity alone is not the answer.",
-      "quiz":{"question":"What additional quantity is necessary to reverse a detector's conditional probability?","options":["Only the detector name","The colour of the display","The base rate of defects"],"answer":2,"explanation":"The base rate sets the relative sizes of the defective and sound groups. Both groups contribute flags and determine the reversed conditional probability."},
-      "sources":["openstax"],"lab":"bayes","caution":"These are fictional manufacturing counts. The model assumes the stated rates apply to this batch."
+      "time_minutes": 45,
+      "big_idea": "P(positive | condition) and P(condition | positive) are different numbers. To turn one into the other, count the people in an imagined group. When a condition is rare, most positive tests can be false alarms, even from a fairly good test.",
+      "i_can": [
+        "I can build a frequency tree for 1,000 people from a base rate and two test rates.",
+        "I can find P(condition | positive) by dividing true positives by all positives.",
+        "I can explain why a rare condition gives many false positives."
+      ],
+      "words": [
+        {
+          "word": "base rate",
+          "meaning": "How common something is in the whole group before any test. For example, 1 percent of students."
+        },
+        {
+          "word": "false positive",
+          "meaning": "A test result that says \"yes\" for someone who does not have the condition."
+        },
+        {
+          "word": "natural frequencies",
+          "meaning": "Counts of people, like \"9 out of 98\", used in place of percentages so the groups stay easy to see."
+        }
+      ],
+      "warmup": {
+        "recall_of": "L2-04",
+        "prompt": "Last lesson you rolled two dice. Of the 15 pairs with a sum above 7, three are doubles. What is P(double | sum above 7)? Is that the same as P(sum above 7 | double)? Count to check."
+      },
+      "story_title": "A positive test at Maya's school",
+      "story": [
+        "Maya's imagined school has 1,000 students. It runs an imagined screening test for a rare, made-up allergy. All the numbers in this story are made up. The base rate is 1 percent, so 10 have the allergy and 990 do not.",
+        "The test catches 90 percent of people who have the allergy. So 9 of the 10 test positive, and 1 is missed. The test also has a false positive rate of 9 percent. That sounds small, but 9 percent of 990 is 89.1. So about 89 without the allergy also test positive.",
+        "Leo's friend Priya gets a positive result and panics. \"The test is 90 percent right, so I almost surely have it!\" Maya draws the counts. About 98 students test positive in all: the 9 true positives plus about 89 false ones. Only 9 of them have the allergy.",
+        "So P(allergy | positive) is 9 out of 98, about 9 percent. The 90 percent was a different number, P(positive | allergy). It answers the question \"of the students with the allergy, how many test positive?\" Priya's question was the reverse: \"of the students who test positive, how many have the allergy?\"",
+        "The reason is the base rate. The 990 students without the allergy are a huge group, so even a small error rate makes many false alarms. Counting this way is Bayes' rule in disguise. The short version is P(allergy | positive) = true positives / all positives."
+      ],
+      "animation": {
+        "file": "l2-05-false-alarms.mp4",
+        "scene": "scripts/manim/l2_05.py:FalseAlarms",
+        "params": {
+          "people": 1000,
+          "columns": 40,
+          "prior": 0.01,
+          "sensitivity": 0.9,
+          "false_positive": 0.09,
+          "seed": 7
+        },
+        "caption": "Of 1,000 imagined students, the few true positives are outnumbered by false positives.",
+        "alt": "A grid of 1,000 grey dots. Ten turn red, nine of those turn violet, then 89 scattered dots turn amber. The rest fade, leaving 98 positive dots, and the fraction 9 over 98 appears.",
+        "describe": "A grid of 1,000 grey dots stands for the students of an imagined school, with made-up numbers. First, 10 have the allergy and turn red. Next, 9 of the 10 test positive and turn violet. Then, about 89 without the allergy also test positive, shown as amber dots scattered across the grid. Everyone with a negative test fades away. The 98 positive dots gather into one block. Only 9 out of 98 are violet, about 9 percent."
+      },
+      "activity": {
+        "title": "Grow a frequency tree",
+        "minutes": 20,
+        "materials": [
+          "Paper and a pencil.",
+          "A ruler.",
+          "A calculator (optional).",
+          "Two colored pens (optional)."
+        ],
+        "steps": [
+          "At the top of the page, write 1,000 students. This is an imagined school with made-up numbers.",
+          "Draw two branches down. Label one \"has the allergy\" and the other \"does not\". Use the base rate of 1 percent to write 10 and 990.",
+          "Under \"has the allergy\", draw two branches: \"positive\" and \"negative\". The test catches 90 percent, so write 9 and 1.",
+          "Under \"does not\", draw the same two branches. The false positive rate is 9 percent. Work out 9 percent of 990 and round to a whole person.",
+          "Circle every positive count. Add them to find all the positives.",
+          "Write P(allergy | positive) as true positives out of all positives. Change it to a percentage.",
+          "Now draw a new tree with a base rate of 10 percent. Keep the same test rates. Compare the two answers."
+        ],
+        "record": "Your two frequency trees, the fraction P(allergy | positive) for each one as a fraction and a percentage, and one sentence on what changed.",
+        "safety": "This is a made-up test for a made-up allergy. It is not medical advice, and real test results should be explained by a doctor."
+      },
+      "guided": {
+        "prompt": "Redo the tree with a base rate of 10 percent. The test still catches 90 percent and has a false positive rate of 9 percent. What is P(allergy | positive)?",
+        "answer": "Of 1,000 students, 100 have the allergy and 900 do not. The test catches 90 of the 100. It also flags 9 percent of 900, which is 81. That makes 90 + 81 = 171 positives. So P(allergy | positive) = 90/171, about 53 percent. The test did not change. Only the base rate did."
+      },
+      "try_it": [
+        {
+          "prompt": "An imagined test (made-up numbers) is used on 1,000 people. The base rate is 2 percent. The test catches 90 percent of cases and has a false positive rate of 5 percent. Find P(condition | positive).",
+          "answer": "20 people have the condition and 980 do not. The test catches 18 of the 20. It also flags 5 percent of 980, which is 49. There are 18 + 49 = 67 positives, so the answer is 18/67, about 27 percent."
+        },
+        {
+          "prompt": "A friend says, \"The test catches 90 percent of cases, so a positive means a 90 percent chance.\" Which conditional probability is your friend mixing up?",
+          "answer": "The 90 percent is P(positive | condition). The friend wants P(condition | positive). These have different groups on the bottom, so they can be far apart. You need the base rate to get from one to the other."
+        }
+      ],
+      "talk": [
+        "Why does a smaller base rate make a positive test less convincing?",
+        "Priya felt sure after one positive test. What would a second, separate test add?",
+        "Why might counts of people be easier to think with than percentages?"
+      ],
+      "check": [
+        {
+          "question": "In Maya's imagined school, what is P(allergy | positive)?",
+          "options": [
+            "9 out of 10",
+            "10 out of 1,000",
+            "9 out of 98"
+          ],
+          "answer": 2,
+          "explanation": "The condition is \"tested positive\", so the whole is all 98 positives. Only 9 of them have the allergy, which is 9 out of 98."
+        },
+        {
+          "question": "The base rate rises from 1 percent to 10 percent, with the same test. What happens to P(allergy | positive)?",
+          "options": [
+            "It goes up.",
+            "It goes down.",
+            "It stays the same."
+          ],
+          "answer": 0,
+          "explanation": "With more students who have the allergy, true positives grow and false positives shrink. The answer rises from about 9 percent to about 53 percent."
+        },
+        {
+          "question": "Remember Lesson 4. In the imagined survey, 36 of the 60 instrument players like math, and 100 students like math in all. What is P(instrument | math)?",
+          "options": [
+            "36 out of 60",
+            "36 out of 100",
+            "60 out of 100"
+          ],
+          "answer": 1,
+          "review_of": "L2-04",
+          "explanation": "The condition is \"likes math\", so the 100 math fans are the whole. Of them, 36 play an instrument, which is 36 out of 100."
+        }
+      ],
+      "connect": "Doctors, spam filters and fraud checkers all face this same base rate problem. Many AI systems use Bayes' rule to update a chance when new evidence arrives. Later lessons use the same habit: always ask which group is on the bottom of the fraction.",
+      "grownups": {
+        "why": "The lesson teaches Bayes' rule through natural frequencies: a frequency tree of 1,000 people in place of the formula. Gigerenzer and Hoffrage found that natural frequency formats make this kind of reasoning much more accurate than single-event probabilities [@gigerenzer1995]. Tree diagrams for conditional events follow OpenStax [@openstax_trees], and finding probabilities of compound events with trees and tables matches 7.SP.8 [@ccss_math]. The numbers come from the course function bayes(0.01, 0.9, 0.09): positives are 0.0981 of the group (98.1 per 1,000), and the posterior is about 0.092. The lesson rounds 89.1 false positives to about 89, so it says 9 out of 98.",
+        "misconceptions": [
+          "A test that catches 90 percent of cases gives a 90 percent chance after a positive. (That confuses P(positive | condition) with P(condition | positive); the base rate matters.)",
+          "A small false positive rate means few false positives. (A small rate times a huge group of people without the condition can still be many people.)",
+          "A positive test with a low posterior means the test is useless. (The chance rose from 1 percent to about 9 percent; a second, separate test could raise it further.)"
+        ],
+        "simplify": "Do only the 1 percent tree with the counts already filled in at the first level, and ask for the final fraction 9 out of 98.",
+        "extend": "Write the general formula P(A | B) = P(B | A) P(A) / P(B) and check it against the tree. Then find the base rate at which half of all positives are true, using the same test rates."
+      },
+      "caution": "The test, the allergy and every rate here are invented. Real screening tests have rates that vary by group and setting, and real results need a doctor to interpret them. Rounding to whole people changes the answer by about 0.0001 (9/98 is 0.0918; the exact value is 0.0917).",
+      "sources": [
+        "gigerenzer1995",
+        "openstax_trees",
+        "ccss_math"
+      ],
+      "lab": "bayes"
     },
     {
-      "id":"L2-06","title":"See a reversed comparison","objective":"Calculate a Simpson reversal and explain why group composition matters.","prerequisites":["L2-04","L1-06"],
-      "paragraphs":[
-        "A combined comparison can point in the opposite direction from comparisons within groups. This is called a Simpson reversal. Different mixtures of easier and harder cases can change the combined rates even when each within-group comparison has the same direction.",
-        "Consider an observational study of training success. If one method is used mostly for harder tasks, its combined success rate can look worse. Compare the counts within task difficulty as well as the totals. Never average group percentages without their correct weights.",
-        "The reversal does not tell you automatically which comparison is causal. The answer depends on the question and the causal role of the grouping variable. A cause measured before treatment can require different handling from a variable caused by the treatment."
+      "id": "L2-06",
+      "schema": 2,
+      "title": "See a reversed comparison",
+      "objective": "I can show how a comparison can flip when groups of different sizes are combined.",
+      "prerequisites": [
+        "L2-04",
+        "L1-06"
       ],
-      "equation":"Combined success rate = total successes across groups / total cases across groups.",
-      "example":"For easy tasks, method A succeeds in 90/100 cases and B in 80/100. For hard tasks, A succeeds in 10/100 and B in 1/20. A has the higher rate in each group. Combined, A gives 100/200=0.5 and B gives 81/120=0.675.",
-      "exercise":"For mild cases, A succeeds in 8/10 and B in 35/50. For severe cases, A succeeds in 20/50 and B in 3/10. Compare each group and the combined totals.",
-      "solution":"A exceeds B within mild cases, 0.8 versus 0.7, and severe cases, 0.4 versus 0.3. Combined A is 28/60, while B is 38/60. Unequal case mixtures reverse the comparison.",
-      "quiz":{"question":"What does a Simpson reversal require you to inspect?","options":["Group counts, weights, and causal roles","Only the largest percentage","Only the method names"],"answer":0,"explanation":"The group counts explain the weighting. A causal interpretation also needs the role of the grouping variable, not merely a preferred numerical comparison."},
-      "sources":["pearl","seeing"],"lab":"causal","caution":"Stratification is not always valid adjustment. The causal graph must support the chosen comparison."
+      "time_minutes": 45,
+      "big_idea": "One option can win inside every group and still lose when the groups are added together. This happens when the options get very different mixes of easy and hard cases. Which comparison to trust depends on the causal story behind the numbers.",
+      "i_can": [
+        "I can find pass rates inside each group and for the groups combined.",
+        "I can explain how different group sizes make a comparison flip.",
+        "I can use a causal map to decide which comparison answers my question."
+      ],
+      "words": [
+        {
+          "word": "Simpson's reversal",
+          "meaning": "When a comparison points one way inside every group but the other way once the groups are combined."
+        },
+        {
+          "word": "combined rate",
+          "meaning": "All the successes from every group divided by all the cases from every group."
+        },
+        {
+          "word": "causal map",
+          "meaning": "A drawing with arrows from causes to the things they affect. It shows what we assume, not a proven fact."
+        }
+      ],
+      "warmup": {
+        "recall_of": "L2-05",
+        "prompt": "Last lesson, an imagined test gave 98 positives, and only 9 of them had the allergy. Why did the base rate matter so much? Explain in one or two sentences."
+      },
+      "story_title": "Which tutoring program works better?",
+      "story": [
+        "Leo's imagined school tries two tutoring programs, A and B. Each program helps 100 students. All the numbers here are made up. Some students take easy courses and some take hard courses. Leo counts who passed.",
+        "In easy courses, program A passed 18 of 20 students, which is 90 percent. Program B passed 64 of 80, which is 80 percent. In hard courses, A passed 32 of 80, which is 40 percent. B passed 6 of 20, which is 30 percent. So A is ahead in easy courses and in hard courses.",
+        "Then Maya adds the groups together. Program A passed 18 + 32 = 50 of 100, which is 50 percent. Program B passed 64 + 6 = 70 of 100, which is 70 percent. Now B looks much better! The comparison flipped. This is called a Simpson's reversal.",
+        "The reason is the mix of students. Most of A's students, 80 of 100, were in hard courses, where everyone passes less often. Most of B's students were in easy courses. So the combined rate mostly measures which courses the students took. Leo draws a causal map. Course difficulty points to the program and to passing. Difficulty came first and affects both, so if this map is right, the fair test compares A and B within each group. Then A wins. With a different causal story, the combined numbers could be the right ones.",
+        "A real case like this was published in 1975 about graduate school admissions at the University of California, Berkeley. Across the whole university, men were admitted at a higher rate than women. Inside most departments, the gap vanished or slightly favored women. Women had applied more often to the departments that admitted a small share of everyone who applied."
+      ],
+      "animation": {
+        "file": "l2-06-reversed-comparison.mp4",
+        "scene": "scripts/manim/l2_06.py:ReversedComparison",
+        "params": {
+          "easy": {
+            "A": [
+              18,
+              20
+            ],
+            "B": [
+              64,
+              80
+            ]
+          },
+          "hard": {
+            "A": [
+              32,
+              80
+            ],
+            "B": [
+              6,
+              20
+            ]
+          }
+        },
+        "caption": "Program A wins in each group but loses when the groups are combined.",
+        "alt": "Bar charts of made-up pass rates. A beats B in easy and hard courses. Bars widen to show group sizes, then merge, and B ends ahead. A causal map follows with course difficulty pointing to program and to pass, and a question mark on the arrow from program to pass.",
+        "describe": "Bars show made-up pass rates for two tutoring programs. In easy courses, A passed 18 of 20, or 90 percent, and B passed 64 of 80, or 80 percent. In hard courses, A passed 32 of 80, or 40 percent, and B passed 6 of 20, or 30 percent. A is ahead in both. Next, each bar becomes as wide as its number of students. Each program's two bars slide together and merge into one bar with the same area. Combined, A passed 50 of 100, or 50 percent, and B passed 70 of 100, or 70 percent. Last, a causal map shows course difficulty with arrows to the program and to passing. A third arrow, from the program to passing, has a question mark. The closing lines say that difficulty affects both, so here we compare A and B within each group."
+      },
+      "activity": {
+        "title": "Find the flip, then build your own",
+        "minutes": 20,
+        "materials": [
+          "Paper and a pencil.",
+          "A calculator (optional).",
+          "About 40 counters, coins or beans in two colors.",
+          "Two cups or bowls."
+        ],
+        "steps": [
+          "Here is a made-up table about two imagined pizza shops, P and Q. On sunny days, P is on time for 45 of 50 orders and Q for 136 of 160. On rainy days, P is on time for 75 of 150 orders and Q for 16 of 40.",
+          "Find each shop's on-time rate on sunny days and on rainy days. Which shop is ahead in each kind of weather?",
+          "Find each shop's combined rate. Add its on-time orders and divide by all its orders. Which shop is ahead now?",
+          "Explain the flip in one sentence. Look at how many rainy-day orders each shop had.",
+          "Now build your own reversal with counters. One color means success, the other means failure. Make two groups, easy and hard, for two options, X and Y.",
+          "Arrange the counters so X beats Y in both groups. Then give X mostly hard cases and Y mostly easy cases.",
+          "Count the combined rates. If X is not behind yet, move more of X's cases into the hard group and try again.",
+          "Draw a causal map for your story. Which comparison would you trust, and why?"
+        ],
+        "record": "Your rates for both shops, your own counter table with group and combined rates, and your causal map with one sentence of reasoning.",
+        "safety": "Keep small counters, coins and beans away from young children who might swallow them."
+      },
+      "guided": {
+        "prompt": "Use Leo's made-up numbers. Why can you not just average A's two rates, 90 percent and 40 percent, to get A's combined rate?",
+        "answer": "The average of 90 and 40 is 65, but that treats both groups as the same size. A had only 20 students in easy courses and 80 in hard courses. Counting students gives 50 of 100, which is 50 percent. The big hard group pulls A's combined rate down."
+      },
+      "try_it": [
+        {
+          "prompt": "Two imagined players take shots (made-up numbers). On close shots, A scores 8 of 10 and B scores 35 of 50. On far shots, A scores 20 of 50 and B scores 3 of 10. Who is better at each kind of shot? Who is better combined?",
+          "answer": "Close: A has 80 percent and B has 70 percent. Far: A has 40 percent and B has 30 percent. So A is better at both. Combined, A scores 28 of 60, about 47 percent, and B scores 38 of 60, about 63 percent. A took far more of the hard, far shots."
+        },
+        {
+          "prompt": "In the pizza table, would you choose a shop by the combined rate or by the weather rates? Use a causal map to explain.",
+          "answer": "Rain makes every shop late more often, and P got far more of its orders on rainy days. So weather sits behind both the mix of orders and being on time. On any given kind of day, the weather rates are the fair comparison, and P wins both."
+        }
+      ],
+      "talk": [
+        "In Leo's story, difficulty came before the program. Suppose instead the program itself pushed students into harder courses. Would splitting by difficulty still be fair?",
+        "The Berkeley numbers looked unfair to women overall. What extra question would you need to ask before deciding what caused the gap?",
+        "Can you think of another place where a total might hide what happens inside groups?"
+      ],
+      "check": [
+        {
+          "question": "In Leo's made-up data, what is program B's combined pass rate?",
+          "options": [
+            "64 of 80",
+            "6 of 20",
+            "70 of 100"
+          ],
+          "answer": 2,
+          "explanation": "B passed 64 students in easy courses and 6 in hard courses. That is 70 of 100 students in all."
+        },
+        {
+          "question": "Why did program A look worse when the groups were combined?",
+          "options": [
+            "The combined numbers were added wrong.",
+            "Most of A's students took hard courses.",
+            "A was worse in hard courses."
+          ],
+          "answer": 1,
+          "explanation": "A was ahead in both groups. But 80 of its 100 students were in hard courses, where pass rates are lower for everyone."
+        },
+        {
+          "question": "Remember Lesson 4. In a made-up table, 12 of 30 students in a club also play chess. What is P(chess | club)?",
+          "options": [
+            "12 out of 100",
+            "12 out of 30",
+            "30 out of 12"
+          ],
+          "answer": 1,
+          "review_of": "L2-04",
+          "explanation": "The condition is \"in the club\", so the 30 club members are the whole. Of them, 12 play chess."
+        }
+      ],
+      "connect": "Simpson's reversal is one reason causal AI needs a causal map, not just data. The same numbers can support opposite answers, and the map tells you which comparison fits your question. Next, you will learn three basic shapes of causal maps.",
+      "grownups": {
+        "why": "The lesson shows Simpson's reversal with made-up numbers chosen so that every rate is a whole percent and both programs have 100 students: easy 18/20 vs 64/80, hard 32/80 vs 6/20, combined 50/100 vs 70/100. Bickel, Hammel and O'Connell analyzed Berkeley graduate admissions and found that the aggregate gap favoring men mostly disappeared within departments, because women applied more to departments with low admission rates [@bickel1975]; the lesson describes this in words only. Pearl's overview explains that whether to adjust for a variable depends on the assumed causal model, which is why the choice between split and combined data cannot be made from the numbers alone [@pearl]. Cunningham's text covers causal comparisons, confounders and research design at a level suitable for further reading by teachers [@seeing]. Here difficulty is a common cause measured before the program, so the split comparison is the fair one under that assumed map.",
+        "misconceptions": [
+          "The combined numbers are always the true answer. (They mix in differences in who got which option; with a common cause, compare within groups.)",
+          "The split numbers are always the true answer. (If the program itself changes the grouping variable, splitting can hide part of its effect; the causal map decides.)",
+          "A reversal means someone made an arithmetic mistake. (The arithmetic is right; unequal group sizes produce the flip.)",
+          "The Berkeley data proved there was no bias anywhere. (It showed the overall gap was mostly explained by where people applied; it did not settle why women applied where they did.)"
+        ],
+        "simplify": "Work only with Leo's table. Give the four group rates and ask learners to add the counts for the two combined rates, then say which program looks better each way.",
+        "extend": "Find the smallest change to Leo's table that stops the reversal. Then read about the 1975 Berkeley study and explain, without numbers, why department choice acts like course difficulty."
+      },
+      "caution": "All tutoring, pizza and shooting numbers are invented. The causal map is an assumption; if other causes of passing differ between programs, even the split comparison may not show the program's effect.",
+      "sources": [
+        "bickel1975",
+        "pearl",
+        "seeing"
+      ],
+      "lab": "causal"
     },
     {
-      "id":"L2-07","title":"Read a causal graph","objective":"Distinguish a chain, a common cause, and a collider in a proposed directed graph.","prerequisites":["L1-06","L2-04"],
-      "paragraphs":[
-        "A directed graph contains nodes and arrows. A node represents a variable. An arrow X to Y proposes a direct causal influence relative to the variables included in the model. A directed acyclic graph has no path of arrows that returns to its starting node.",
-        "Three small patterns matter. In a chain X to M to Y, influence can pass through M. In a common-cause pattern X from Z to Y, Z affects both endpoints. In a collider X to C from Y, both endpoints affect C.",
-        "Conditioning has different effects on these patterns. In suitable simple models, conditioning on a common cause can remove an association. Conditioning on a collider can create one. Graphs make these distinctions explicit, but their arrows and missing arrows require substantive assumptions."
+      "id": "L2-07",
+      "schema": 2,
+      "title": "Read a causal graph",
+      "objective": "I can tell a chain, a fork, and a collider apart, and say what happens when I look only inside one group.",
+      "prerequisites": [
+        "L1-06",
+        "L2-04"
       ],
-      "equation":"Chain: X -> M -> Y. Common cause: X <- Z -> Y. Collider: X -> C <- Y.",
-      "example":"Suppose battery failure and bulb failure can each make a lamp stay dark. The model has battery failure pointing to darkness and bulb failure pointing to darkness. Darkness is a collider. Studying only dark lamps can associate two otherwise independent failure causes.",
-      "exercise":"Classify these proposed patterns: rain -> wet road -> slipping; age -> shoe size and age -> reading skill; skill -> selection <- luck.",
-      "solution":"The first is a chain through wet road. The second is a common-cause pattern through age. The third is a collider at selection. Classification describes the proposed arrows, not proof that they are correct.",
-      "quiz":{"question":"Which node is the collider in X -> C <- Y?","options":["X","C","Y"],"answer":1,"explanation":"Both arrows enter C, so C is the collider on this path. Conditioning on it can create association under suitable model assumptions."},
-      "sources":["pearl","seeing"],"lab":"causal","caution":"A graph is a causal assumption, not a decoration inferred from correlation alone."
+      "time_minutes": 45,
+      "big_idea": "A causal graph is a map of what we think causes what. Three small shapes appear again and again: a chain, a fork, and a collider. Looking only inside one group can hide a link in a chain or a fork, but it can create a fake link at a collider.",
+      "i_can": [
+        "I can draw a chain, a fork, and a collider, and name each one.",
+        "I can explain why picking a group by a collider can make two unrelated causes look linked.",
+        "I can say why a causal graph is a guess to be tested, not a fact read from data."
+      ],
+      "words": [
+        {
+          "word": "causal graph",
+          "meaning": "A drawing of boxes and arrows. Each arrow says we think one thing directly affects another."
+        },
+        {
+          "word": "collider",
+          "meaning": "A box that two arrows point into, as in talent -> admitted <- hard work."
+        },
+        {
+          "word": "condition on",
+          "meaning": "To look only at the records in one group, such as only admitted students or only July days."
+        }
+      ],
+      "warmup": {
+        "recall_of": "L2-06",
+        "prompt": "In Lesson 6, made-up tutoring program A did better than B in easy courses and in hard courses, but worse overall. What third thing explains the flip? Sketch it with arrows between course difficulty, program, and passing."
+      },
+      "story_title": "Three shapes, one surprise",
+      "story": [
+        "Leo is late for school on a rainy morning. Rain makes the road wet, and a wet road slows the traffic. \"That is a chain,\" says Maya: rain -> wet road -> slow traffic. In this simple map, if you already know the road is wet, hearing that it rained tells you nothing new about the traffic.",
+        "Next, Maya points at a news chart. In summer, ice cream sales rise, and so do sunburns. Neither one causes the other. Summer is a common cause, so the map is a fork: ice cream <- summer -> sunburn. If you compare only July days, most of the link between ice cream and sunburn fades away.",
+        "Then their friend Priya talks about an imagined arts school that is hard to get into. Maya invents a test with made-up numbers. There are 150 made-up applicants, each with a talent score and a hard work score from 1 to 10. The two scores are random and unrelated. The school admits a student only if talent plus hard work is above 13. That rule lets in 46 admitted students.",
+        "Among those 46 admitted students, a pattern appears. The ones with less talent tend to have more hard work. Why? A student with low talent only gets in by working very hard. A very talented student can get in with less work. The rule picks students by a collider: talent -> admitted <- hard work.",
+        "\"So the pattern comes from the choosing, not from the students,\" says Leo. Maya nods. \"And every map we drew today is a guess. Data can support a map or argue against it. The arrows never appear on their own.\""
+      ],
+      "animation": {
+        "file": "l2-07-causal-graphs.mp4",
+        "scene": "scripts/manim/l2_07.py:CausalGraphShapes",
+        "params": {
+          "seed": 11,
+          "n": 150,
+          "low": 1,
+          "high": 10,
+          "threshold": 13
+        },
+        "caption": "A chain, a fork, and a collider, then 150 made-up applicants chosen by a collider.",
+        "alt": "Three small arrow diagrams appear: a chain, a fork and a collider, with dots moving along the arrows. Then a scatter plot of 150 made-up applicants shows no trend until only the points above a dashed admission line are kept, and those show a downward trend.",
+        "describe": "First, three maps appear with dots moving along the arrows. The chain runs rain -> wet road -> slow traffic. The fork has summer pointing to ice cream and to sunburn. The collider has talent and hard work both pointing into admitted. Next comes a scatter plot of 150 made-up applicants. Talent is across and hard work is up, and the dots show no trend. A dashed line marks where talent plus hard work is above 13. The 46 admitted students stay bright and the rest fade. A line through the admitted students slopes down: among them, less talent goes with more hard work."
+      },
+      "activity": {
+        "title": "Sort the stories, then play the admissions game",
+        "minutes": 20,
+        "materials": [
+          "9 index cards or slips of paper",
+          "A coin",
+          "A six-sided die",
+          "A pencil and paper for a table",
+          "A calculator (optional)"
+        ],
+        "steps": [
+          "Copy one story onto each card. (a) A storm cuts the power, the fridge warms up, and the milk spoils. (b) Good grades or a sports award can each win a prize.",
+          "(c) Hot weather raises fan sales and also raises pool visits. (d) In children, age affects both shoe size and reading level. (e) Missing the bus makes you late, and being late means missing the warm-up.",
+          "(f) A dead battery or a broken bulb can each make a flashlight stay dark. (g) Great food or a great view can each make a cafe busy. (h) Practice builds skill, and skill wins games. (i) A festival fills the hotels and jams the roads.",
+          "Sort the cards into three piles: chain, fork, and collider. Draw each story as boxes and arrows.",
+          "Now the admissions game. Flip the coin for talent: heads scores 3 and tails scores 0. Roll the die for hard work, from 1 to 6.",
+          "Add the two scores. A total of 6 or more means the student is admitted. Play 30 students and record talent, hard work, and admitted or not.",
+          "For all 30 students, find the average die roll for heads and for tails. Then do the same using only the admitted students.",
+          "Compare the two pairs of averages. Among the admitted, which talent group needed more hard work?"
+        ],
+        "record": "Your three drawn graphs, your 30-row table, and your four averages. Card key: chains a, e, h; forks c, d, i; colliders b, f, g.",
+        "safety": "Roll the die and flip the coin on a table so nothing rolls onto the floor."
+      },
+      "guided": {
+        "prompt": "In the admissions game, work out exactly which rolls get a student admitted. What is the average hard work score of admitted students for tails and for heads?",
+        "answer": "Tails gives 0, so the student needs a 6 on the die. Heads gives 3, so the student needs 3, 4, 5, or 6. Among admitted students, tails students average 6 and heads students average 4.5. Among everyone, both groups average 3.5, because the coin and die are unrelated. The admission rule made the link."
+      },
+      "try_it": [
+        {
+          "prompt": "Exercise improves fitness, and fitness lowers resting heart rate. Which shape is this? In this map, if you compare only people with the same fitness, does exercise tell you more about heart rate?",
+          "answer": "It is a chain: exercise -> fitness -> heart rate. In this simple map, once you know fitness, exercise adds no new information about heart rate. Real bodies may have other paths, so the map is a guess to test."
+        },
+        {
+          "prompt": "A website lists only cafes with at least 4 stars. Stars go up with tasty food and with low prices. Among the listed cafes, cheap ones seem to have worse food. What could explain this?",
+          "answer": "Stars are a collider: tasty food -> stars <- low prices. A cheap cafe can reach 4 stars with ordinary food, but an expensive one needs great food. Listing only 4-star cafes can create the pattern even if price and taste are unrelated."
+        }
+      ],
+      "talk": [
+        "Why does looking only at admitted students change what you see, even though no student changed?",
+        "Think of a team, a club, or a contest that picks people by two different strengths. What fake pattern might appear among the people picked?",
+        "If two people draw different graphs for the same story, how could data help you decide between them?"
+      ],
+      "check": [
+        {
+          "question": "Which map is a fork?",
+          "options": [
+            "talent -> admitted <- hard work",
+            "rain -> wet road -> slow traffic",
+            "ice cream <- summer -> sunburn"
+          ],
+          "answer": 2,
+          "explanation": "In a fork, one cause points to two effects. Summer affects both ice cream sales and sunburns."
+        },
+        {
+          "question": "In the made-up admissions data, among the 46 admitted students, less talent went with more hard work. In all 150 applicants, the two were unrelated. What is the best explanation?",
+          "options": [
+            "Choosing students by talent plus hard work created the pattern.",
+            "Working hard lowers talent.",
+            "Talent makes students lazy."
+          ],
+          "answer": 0,
+          "explanation": "Admission is a collider. Picking only students above the cutoff means low talent must be balanced by high hard work, so a downward pattern appears."
+        },
+        {
+          "question": "Remember Lesson 3. In an imagined town, months with more sunscreen sold also have more sunburns. What does the scatter plot alone show?",
+          "options": [
+            "Sunburns cause people to buy sunscreen.",
+            "Sunscreen sales and sunburns rise together in this data.",
+            "Sunscreen causes sunburn."
+          ],
+          "answer": 1,
+          "review_of": "L2-03",
+          "explanation": "A scatter plot shows an association. Here sunny weather is a likely common cause of both, and the plot cannot tell which way causes run."
+        }
+      ],
+      "connect": "Causal graphs like these are a main tool of causal AI. A computer can use a graph to decide which groups to compare and which to leave alone. Next lesson, you will use a graph to see why choosing an action is different from watching who already took it.",
+      "grownups": {
+        "why": "The lesson introduces the three building blocks of causal diagrams: chains, forks (common causes) and colliders. Pearl's overview explains how conditioning on the middle of a chain or fork blocks an association, while conditioning on a collider can open one [@pearl]. Bareinboim's causal AI textbook builds on the same graphs [@bareinboim]. Gopnik and colleagues argue that young children learn causal maps of this kind from patterns in data and from their own interventions [@gopnik2004]. The lesson presents graphs as working guesses because data can support or challenge a graph but cannot draw it alone. The collider scatter uses the course's seeded generator, so the 150 applicants and the 46 admitted match the text.",
+        "misconceptions": [
+          "Looking inside a group always makes the picture clearer. (Conditioning on a collider can create a link that is not there in the whole population.)",
+          "If two things are linked among admitted students, one must cause the other. (The selection rule itself can produce the link.)",
+          "A causal graph is read straight off the data. (Arrows are assumptions; data can support or challenge a graph, but cannot draw it alone.)",
+          "In a fork, the two effects cause each other. (They share a cause; neither needs to affect the other.)"
+        ],
+        "simplify": "Skip the card sort and draw only the three story graphs. Play the admissions game with 12 students and compare only the admitted ones.",
+        "extend": "Pool the class's admissions games, or list all 12 coin and die outcomes and work out the exact averages. Then change the cutoff to 4 or 5 and predict how the pattern changes before checking."
+      },
+      "caution": "The chain, fork and collider stories are simplified maps. Real situations usually have more causes and more arrows, and the collider data are made up.",
+      "sources": [
+        "pearl",
+        "bareinboim",
+        "gopnik2004"
+      ],
+      "lab": "causal"
     },
     {
-      "id":"L2-08","title":"Observe or intervene","objective":"Explain how setting a variable differs from selecting records where it has a value.","prerequisites":["L2-07","L2-04","L1-05"],
-      "paragraphs":[
-        "Observation asks about records in which a variable takes a value through its ordinary causes. An intervention sets a variable according to a specified action. These can produce different populations because the usual reasons for that variable's value no longer apply in the same way.",
-        "The notation do(X=x) describes an ideal intervention that replaces the mechanism generating X with a fixed value x. In the graph, remove arrows entering X. Keep the other mechanisms unchanged. This is a precise model operation, not a guarantee about every practical action.",
-        "If a shared cause affects X and Y, observing X can give information about that cause. Setting X need not give the same information. This difference explains why an observational conditional probability is not generally the probability of Y after an intervention."
+      "id": "L2-08",
+      "schema": 2,
+      "title": "Observe or intervene",
+      "objective": "I can explain why seeing X = 1 in records is not the same as setting X = 1, and why a fair coin helps.",
+      "prerequisites": [
+        "L2-07",
+        "L2-04",
+        "L1-05"
       ],
-      "equation":"P(Y | X=x) is observational. P(Y | do(X=x)) is interventional. They need not be equal.",
-      "example":"Let a hidden binary Z be equally likely zero or one. Set X=Z and Y=Z in the observational model. Observing X=1 implies Y=1. Under do(X=1), the rule for X is replaced but Z remains balanced, so P(Y=1)=1/2.",
-      "exercise":"In the same model, compare P(Y=1 given X=0) with P(Y=1 given do(X=0)). Explain the difference.",
-      "solution":"Observing X=0 implies Z=0, so Y=1 has probability zero. Setting X=0 leaves Z unchanged, so Y=1 has probability one half. The intervention breaks the Z-to-X mechanism only.",
-      "quiz":{"question":"Which arrows are removed by the ideal operation do(X=x)?","options":["All arrows leaving Y","Every arrow in the graph","Arrows entering X"],"answer":2,"explanation":"The intervention replaces X's ordinary generating mechanism. Its incoming arrows are removed while other mechanisms and outgoing causal influences remain as specified."},
-      "sources":["pearl","hernan"],"lab":"causal","caution":"Real actions can have side effects. The ideal intervention model must be matched to the actual action."
+      "time_minutes": 45,
+      "big_idea": "Watching who chose something and assigning it to people answer different questions. When a common cause pushes both the choice and the result, the watched gap can be much bigger than the real effect. A coin that decides who gets what removes that push.",
+      "i_can": [
+        "I can find a watched gap and an assigned gap from a table of made-up numbers.",
+        "I can explain why the two gaps differ when a common cause affects both the choice and the result.",
+        "I can explain why letting a coin decide gives a fair estimate of an effect."
+      ],
+      "words": [
+        {
+          "word": "intervene",
+          "meaning": "To set something on purpose for people, instead of letting them choose it."
+        },
+        {
+          "word": "randomized trial",
+          "meaning": "A study where chance, like a coin flip, decides who gets each treatment."
+        },
+        {
+          "word": "percentage points",
+          "meaning": "The gap between two percents. From 38 percent to 72 percent is a gap of 34 points."
+        }
+      ],
+      "warmup": {
+        "recall_of": "L2-07",
+        "prompt": "Last lesson you drew the fork ice cream <- summer -> sunburn. If a shop sells lots of ice cream today, why might you expect more sunburns, even though ice cream causes none?"
+      },
+      "story_title": "Does the study app work?",
+      "story": [
+        "An imagined school, with made-up numbers, has 200 made-up students. Half of them, 100, are very motivated. A new study app is free to use. Of the 100 motivated students, 80 choose to use it. Of the other 100, only 20 do.",
+        "Leo looks at the test results. Among the 100 app users, 72 out of 100 pass. Among the 100 non-users, only 38 out of 100 pass. \"That's a gap of 34 points,\" he says. \"The app is amazing.\"",
+        "Maya draws a causal graph: motivated -> uses app -> passes, and motivated -> passes. \"Motivated students pass more anyway, and they also chose the app more. So the app users had a head start.\" In this made-up model, the app adds just 10 points to anyone's chance of passing. Motivation adds 40.",
+        "To test the app fairly, the school would let a coin decide who gets it. Then motivated and other students land in both groups, about half each. In the model, students given the app pass at about 60 out of 100. Students without it pass at about 50 out of 100. The gap is 10 points.",
+        "\"Watching gave 34 points. Assigning gave 10 points,\" says Leo. \"Same students, same app.\" Maya adds, \"Watching asks who passes among people who chose the app. Assigning asks what happens if we give the app to people.\" In symbols, P(pass | app) is 0.72, but P(pass | do(app)) is 0.60."
+      ],
+      "animation": {
+        "file": "l2-08-observe-or-intervene.mp4",
+        "scene": "scripts/manim/l2_08.py:ObserveOrIntervene",
+        "params": {
+          "model": {
+            "prevalence": 0.5,
+            "low": 0.2,
+            "high": 0.8,
+            "base": 0.3,
+            "effect": 0.1,
+            "confound": 0.4
+          },
+          "students": 200,
+          "seed": 8
+        },
+        "caption": "200 made-up students: first they choose the app, then a coin decides.",
+        "alt": "A causal graph with motivated pointing to uses app and to passes, and uses app pointing to passes, beside a grid of 200 dots colored by motivation. Rings mark app users. The watched gap of 34 points appears. Scissors cut the arrow from motivated to uses app, a coin takes its place, rings are reassigned, and a gap of 10 points appears.",
+        "describe": "A graph shows motivated -> uses app -> passes, plus motivated -> passes. Beside it, 200 made-up students appear as dots, violet if motivated and gray if not. First the students choose: rings appear around app users, mostly violet ones. App users pass at 72 out of 100, non-users at 38 out of 100, a gap of 34 points. Then scissors cut the arrow from motivated to uses app, and a coin points to uses app instead. The rings move so that exactly half of each color gets the app, the even split a fair coin gives on average. Now the app group passes at 60 out of 100 and the others at 50 out of 100, a gap of 10 points."
+      },
+      "activity": {
+        "title": "Watch, then assign",
+        "minutes": 20,
+        "materials": [
+          "10 cards numbered 0 to 9",
+          "Two coins",
+          "A pencil and paper for two tables",
+          "A calculator (optional)",
+          "The optional causal notebook, if you have a computer"
+        ],
+        "steps": [
+          "Shuffle the 10 cards. Each student you simulate needs a coin flip for motivation: heads means motivated, tails means not.",
+          "Watch round. Draw a card for app use. A motivated student uses the app on cards 0 to 7. Another student uses it only on cards 0 or 1.",
+          "Put the card back and shuffle. Draw again for passing. The student passes if the card is below their number: 8 for motivated with app, 7 for motivated without app.",
+          "For a student who is not motivated, the numbers are 4 with the app and 3 without. Simulate 20 students and record motivated, app, and pass.",
+          "Assign round. Flip the motivation coin as before. Then flip the second coin: heads gets the app, tails does not. Motivation plays no part.",
+          "Draw a card for passing with the same numbers. Simulate 20 more students and record them in a second table.",
+          "In each table, find the fraction who passed with the app and without it. Subtract to find each gap.",
+          "Compare your gaps with the model: 34 points for watching and 10 points for assigning. With only 20 students, expect a lot of wobble, so pool your results with a partner."
+        ],
+        "record": "Two tables of 20 students, the pass fraction with and without the app in each, and your two gaps.",
+        "safety": "Flip coins over a table so they do not roll away."
+      },
+      "guided": {
+        "prompt": "Check the watched numbers in the made-up study. Of the 80 motivated app users, 80 percent pass. Of the 20 other app users, 40 percent pass. How many of the 100 app users pass?",
+        "answer": "80 percent of 80 is 64, and 40 percent of 20 is 8. So 64 + 8 = 72 of the 100 app users pass. That is 72 out of 100. Most app users were motivated, which pushed the number up."
+      },
+      "try_it": [
+        {
+          "prompt": "Now check the coin in the made-up study. It gives the app to 50 motivated students and 50 others. Motivated students with the app pass 80 percent of the time, others 40 percent. How many of the 100 pass?",
+          "answer": "80 percent of 50 is 40, and 40 percent of 50 is 20. So 40 + 20 = 60 of 100 pass, which is 60 out of 100. Compare 72 out of 100 when students chose."
+        },
+        {
+          "prompt": "An imagined news story says people who take vitamins are healthier, so vitamins work. Draw a graph with one possible common cause. What study would test the claim?",
+          "answer": "One common cause could be caring about health, which leads to taking vitamins and also to exercise and good food. A randomized trial, where chance decides who gets vitamins or a dummy pill, would estimate the effect."
+        }
+      ],
+      "talk": [
+        "Why does a coin flip make the two groups alike in motivation, at least on average?",
+        "Name a question where a randomized trial would be unfair or impossible. What could you do instead?",
+        "The watched gap was 34 points and the real effect in the model was 10 points. Could a watched gap ever be smaller than the real effect?"
+      ],
+      "check": [
+        {
+          "question": "In the made-up app study, which gap estimates the effect of giving students the app?",
+          "options": [
+            "The watched gap of 34 points",
+            "Neither, because only grades matter",
+            "The assigned gap of 10 points"
+          ],
+          "answer": 2,
+          "explanation": "When a coin decides, motivated students land about evenly in both groups. The remaining gap of about 10 points comes from the app."
+        },
+        {
+          "question": "Why was the watched gap so much bigger?",
+          "options": [
+            "The coin flips were unlucky.",
+            "The app works better when you choose it.",
+            "Motivated students chose the app more and also passed more anyway."
+          ],
+          "answer": 2,
+          "explanation": "Motivation is a common cause of using the app and of passing. Watching mixes its effect into the app's gap."
+        },
+        {
+          "question": "Remember Lesson 5. In an imagined screening of 1,000 people, 1 percent have a condition. The test catches 90 percent of them, and 9 percent of the rest test positive. About how many positives have the condition?",
+          "options": [
+            "About 9 out of 10",
+            "About 9 out of 98",
+            "About 90 out of 100"
+          ],
+          "answer": 1,
+          "review_of": "L2-05",
+          "explanation": "10 people have the condition and about 9 test positive. Of the other 990, about 89 test positive. So about 9 of the 98 positives have it."
+        }
+      ],
+      "connect": "Causal AI is built to answer questions like \"what happens if we do this?\" and not only \"what goes with what?\" When a trial is not possible, it uses a causal graph and stated assumptions to estimate an effect from watched data. Those assumptions can be wrong, so they are written down and checked.",
+      "grownups": {
+        "why": "This lesson contrasts the observational quantity P(Y | X = 1) with the interventional quantity P(Y | do(X = 1)). Pearl's overview defines the do-operator as replacing the mechanism that sets X, which in the graph removes the arrows into X [@pearl]. Hernan and Robins explain why randomization makes the treated and untreated groups exchangeable, so a randomized trial estimates the causal effect [@hernan]. OpenStax describes randomized experiments and the role of chance assignment [@openstax_design]. All rates come from the course's tested model with motivation 50 percent, app use 80 or 20 percent, and pass chance 0.3 + 0.1 (app) + 0.4 (motivated). The watched gap is 34 points and the true effect is 10 points.",
+        "misconceptions": [
+          "A big gap between people who chose a treatment and those who did not shows the treatment works. (A common cause can make the gap far bigger or smaller than the effect.)",
+          "Intervening means watching more carefully. (It means setting the value, which cuts the usual causes of the choice.)",
+          "A randomized trial gives the exact effect. (It estimates the effect; small trials wobble, which is why the activity results vary.)"
+        ],
+        "simplify": "Skip the card simulation. Work through the guided example and the first try-it with the 200 made-up students only.",
+        "extend": "Change the model so motivated students pick the app 95 percent of the time, and recompute the watched gap by hand. Or use the optional causal notebook to vary each setting and watch the two gaps."
+      },
+      "caution": "All numbers are made up and come from a simple model in which the app adds the same 10 points for everyone. Real studies have dropouts, side effects and mixed-up groups, and real actions are not always as clean as the do-operator.",
+      "sources": [
+        "pearl",
+        "hernan",
+        "openstax_design"
+      ],
+      "lab": "causal"
     },
     {
-      "id":"L2-09","title":"Use vectors for two outcomes","objective":"Represent a two-outcome probability distribution as a normalized vector and distinguish it from a state-amplitude vector.","prerequisites":["L1-01","L1-09","L2-01"],
-      "paragraphs":[
-        "A vector is an ordered list of numbers. The order matters because each entry has a stated meaning. For two recorded outcomes zero and one, the vector (0.3,0.7) can list their probabilities in that order.",
-        "A classical probability vector has nonnegative entries that add to one. This is normalization. A quantum state vector instead lists amplitudes in a chosen basis. Its squared amplitude magnitudes add to one, and relative phase can affect predictions in other measurements.",
-        "Do not switch these normalization rules. The amplitude vector (1 divided by square root of two, 1 divided by square root of two) gives equal measurement probabilities after squaring magnitudes. The amplitude sum itself is not required to equal one."
+      "id": "L2-09",
+      "schema": 2,
+      "title": "Use vectors for two outcomes",
+      "objective": "I can write a two-outcome chance as a probability vector, and find the chances from a qubit state vector by squaring its amplitudes.",
+      "prerequisites": [
+        "L1-01",
+        "L1-09",
+        "L2-01"
       ],
-      "equation":"Classical: p0+p1=1. Pure qubit: |a0|^2+|a1|^2=1. Here p are probabilities and a are amplitudes.",
-      "example":"The probability vector (0.2,0.8) is normalized because both entries are nonnegative and their sum is one. The real amplitude vector (0.6,0.8) is normalized under the quantum rule because 0.6 squared plus 0.8 squared equals 0.36+0.64=1.",
-      "exercise":"Check whether (0.4,0.6) is a probability vector. Then use the normalized real amplitude vector (0,1) to find computational-basis outcome probabilities.",
-      "solution":"The first vector is a probability vector because its nonnegative entries sum to one. For amplitudes (0,1), squared magnitudes give probabilities (0,1), so outcome one is certain in that basis.",
-      "quiz":{"question":"Which rule normalizes a pure quantum state vector?","options":["Squared magnitudes of amplitudes sum to one","Amplitudes must be positive integers","The raw amplitude sum is always one"],"answer":0,"explanation":"Quantum measurement probabilities are squared magnitudes. Their total must be one, while amplitudes themselves can be negative or complex and need not sum to one."},
-      "sources":["ibm","preskill"],"lab":"qubit","caution":"This lesson uses pure states in a stated basis. Mixed states require density matrices in later lessons."
+      "time_minutes": 45,
+      "big_idea": "A probability vector (p0, p1) lists two chances that add to 1, so it sits on a line segment. A qubit state vector (a0, a1) lists two amplitudes whose squares add to 1, so it sits on a circle. Two different state vectors can give the same chances in one measurement and still be different states.",
+      "i_can": [
+        "I can check whether a pair of numbers is a probability vector.",
+        "I can find the chances from a state vector with real amplitudes by squaring each amplitude.",
+        "I can find two different state vectors that give the same chances in the standard measurement."
+      ],
+      "words": [
+        {
+          "word": "vector",
+          "meaning": "An ordered list of numbers, like (0.3, 0.7). The order matters: the first number is about outcome 0, the second about outcome 1."
+        },
+        {
+          "word": "amplitude",
+          "meaning": "A number in a qubit state vector. It can be negative. Its square gives a chance."
+        },
+        {
+          "word": "qubit",
+          "meaning": "A quantum object whose state is written as a state vector (a0, a1). Measuring it in the standard way gives 0 or 1."
+        }
+      ],
+      "warmup": {
+        "recall_of": "L2-08",
+        "prompt": "Last lesson, watching gave a gap of 34 points and assigning with a coin gave a gap of 10 points. Which gap estimates the effect of the app? Explain in one sentence why the other one was bigger."
+      },
+      "story_title": "A line and a circle",
+      "story": [
+        "Maya writes a fair coin as a vector: (0.5, 0.5). The first number is the chance of heads, outcome 0. The second is the chance of tails, outcome 1. A bent coin might be (0.3, 0.7). In a probability vector, both numbers are from 0 to 1 and they add to 1.",
+        "She draws p0 across and p1 up. Every probability vector lands on the same line segment, from (1, 0) to (0, 1). That segment is the line p0 + p1 = 1. The pair (0.6, 0.6) is not on it, because 0.6 + 0.6 = 1.2.",
+        "In science class, Leo's teacher describes a qubit. Its state is written as a state vector (a0, a1) of amplitudes. The rule is different: a0^2 + a1^2 = 1. For example, (0.6, 0.8) works, because 0.36 + 0.64 = 1. So every state vector lands on a circle of radius 1.",
+        "When the qubit is measured in the standard way, the chance of 0 is a0^2 and the chance of 1 is a1^2. For (0.6, 0.8), that is 0.36 and 0.64. Amplitudes can be negative, and (0.6, -0.8) gives the same chances. In this lesson amplitudes are real numbers. In general they can be complex numbers, which you will meet later.",
+        "Then the teacher shows (1/√2, 1/√2) and (1/√2, -1/√2). Each amplitude is about 0.71 or about -0.71, and each square is exactly 1/2. So both states give 50/50 chances, the same chances in the standard measurement. Yet they are different states. A different measurement, made after a step called a Hadamard gate, gives 0 every time for the first and 1 every time for the second."
+      ],
+      "animation": {
+        "file": "l2-09-two-outcome-vectors.mp4",
+        "scene": "scripts/manim/l2_09.py:TwoOutcomeVectors",
+        "params": {
+          "prob_points": [
+            0.5,
+            0.3
+          ],
+          "amp": [
+            0.6,
+            0.8
+          ],
+          "sweep_deg": 135,
+          "pair_deg": [
+            45,
+            -45
+          ]
+        },
+        "caption": "Probability vectors sit on a line segment; qubit state vectors sit on a circle, and their squares give the chances.",
+        "alt": "A point slides along the segment p0 + p1 = 1 from (0.5, 0.5) to (0.3, 0.7). Then an arrow turns inside a unit circle while a stacked bar shows the squares of its two amplitudes, always reaching a total of 1. Finally arrows at 45 and minus 45 degrees show identical half-and-half bars.",
+        "describe": "First, a point on the line segment p0 + p1 = 1 starts at (0.5, 0.5), a fair coin, and slides to (0.3, 0.7). Next comes a circle of radius 1. An arrow from the center shows a state vector, starting at (0.6, 0.8). A stacked bar shows the chance of 0 and the chance of 1, the squares of the amplitudes. As the arrow turns, the two parts change but the bar always reaches 1, even when a0 is negative. Back at (0.6, 0.8), the screen shows 0.36 + 0.64 = 1. Last, two arrows point to (1/√2, 1/√2) and (1/√2, -1/√2). Their bars are the same, 1/2 and 1/2: same chances, different states."
+      },
+      "activity": {
+        "title": "Points on a line, arrows on a circle",
+        "minutes": 20,
+        "materials": [
+          "Graph paper",
+          "A ruler",
+          "A protractor",
+          "A compass, or a round lid about 20 cm across",
+          "A calculator"
+        ],
+        "steps": [
+          "Draw axes for p0 across and p1 up, with 10 cm standing for 1. Draw the segment from (1, 0) to (0, 1).",
+          "Plot (0.5, 0.5), (0.3, 0.7), and (0.9, 0.1). Check that each pair adds to 1. Is (0.6, 0.6) on your segment?",
+          "On a new page, draw axes a0 and a1 and a circle of radius 10 cm around where they cross. Here 10 cm stands for 1.",
+          "With a protractor, measure angles from the right half of the a0 axis. Mark points on the circle at 0, 30, 45, 60, and 90 degrees, and at -45 degrees.",
+          "For each point, measure a0 across and a1 up in cm and divide by 10. Below the axis, a1 is negative.",
+          "Square each amplitude to get the chances. Add the two chances. Your totals should be close to 1.",
+          "From the points you marked, find two different points with the same chances. Then mark one new point on the right half of the circle that matches another point's chances."
+        ],
+        "record": "Your segment with three plotted points, your circle with six marked points and your new point, and a table of a0, a1, their squares, and each total.",
+        "safety": "Take care with the sharp point of the compass."
+      },
+      "guided": {
+        "prompt": "Is (0.8, -0.6) a qubit state vector? If it is, what is the chance of measuring 0 in the standard way?",
+        "answer": "Square each amplitude: 0.8^2 = 0.64 and (-0.6)^2 = 0.36. They add to 1, so it is a state vector. The chance of 0 is 0.64 and the chance of 1 is 0.36. The minus sign does not change the chances here."
+      },
+      "try_it": [
+        {
+          "prompt": "Is (0.5, 0.5) a probability vector? Is it a qubit state vector?",
+          "answer": "It is a probability vector, because 0.5 + 0.5 = 1. It is not a qubit state vector, because 0.25 + 0.25 = 0.5, not 1."
+        },
+        {
+          "prompt": "A qubit state vector with real amplitudes gives a chance of 0 equal to 0.25. Find two different state vectors that do this.",
+          "answer": "a0^2 = 0.25, so a0 is 0.5 or -0.5. Then a1^2 = 0.75, so a1 is about 0.87 or about -0.87. Two examples are (0.5, 0.87) and (0.5, -0.87). Both are rounded."
+        }
+      ],
+      "talk": [
+        "A chance can never be negative, but an amplitude can. Why does squaring make that safe?",
+        "If you only know the chances 1/2 and 1/2, do you know the state vector? What else would you need?",
+        "Where else have you seen ordered pairs where the order matters?"
+      ],
+      "check": [
+        {
+          "question": "Which of these is a probability vector?",
+          "options": [
+            "(-0.2, 1.2)",
+            "(0.4, 0.6)",
+            "(0.6, 0.6)"
+          ],
+          "answer": 1,
+          "explanation": "Both entries of (0.4, 0.6) are from 0 to 1 and they add to 1. The others add to 1.2 or have a negative entry."
+        },
+        {
+          "question": "A qubit has state vector (0.6, 0.8). What is the chance of measuring 0 in the standard way?",
+          "options": [
+            "0.6",
+            "0.36",
+            "0.8"
+          ],
+          "answer": 1,
+          "explanation": "The chance of 0 is the square of the first amplitude: 0.6^2 = 0.36. The chance of 1 is 0.64, and 0.36 + 0.64 = 1."
+        },
+        {
+          "question": "Remember Lesson 1. Tickets cost 3 dollars each plus a 2 dollar booking fee, so y = 3x + 2. What do 4 tickets cost?",
+          "options": [
+            "20 dollars",
+            "14 dollars",
+            "12 dollars"
+          ],
+          "answer": 1,
+          "review_of": "L2-01",
+          "explanation": "Put x = 4 into the rule: 3 times 4 is 12, plus the 2 dollar fee makes 14 dollars."
+        }
+      ],
+      "connect": "Later quantum lessons use state vectors like these to work out the chances of measurement results. Squaring the amplitudes, as you did today, is the first step. Those lessons also allow complex amplitudes.",
+      "grownups": {
+        "why": "The lesson sets classical probability vectors beside quantum state vectors, the same comparison IBM's Basics of quantum information course uses to introduce qubits [@ibm]. A probability vector has nonnegative entries that sum to 1; a state vector has entries whose squared magnitudes sum to 1, and a standard-basis measurement gives outcome 0 with probability |a0|^2 [@ibm; @nielsenchuang]. OpenStax covers vectors, components and unit vectors, which supports the circle picture [@openstax_vectors]. We keep amplitudes real so learners can use a protractor; the states (1/√2, 1/√2) and (1/√2, -1/√2) give identical standard-basis probabilities, and a Hadamard gate followed by a standard measurement distinguishes them with certainty [@nielsenchuang].",
+        "misconceptions": [
+          "The amplitudes are the chances. (The chances in the standard measurement are the squares of the amplitudes.)",
+          "The amplitudes must add to 1. (Their squares add to 1; for example 0.6 + 0.8 = 1.4.)",
+          "Two states with the same 50/50 chances must be the same state. (A different measurement, such as one after a Hadamard gate, tells (1/√2, 1/√2) and (1/√2, -1/√2) apart with certainty.)",
+          "A negative amplitude means a negative chance. (Squaring makes every chance zero or positive.)"
+        ],
+        "simplify": "Skip the circle drawing. Check the squares for (0.6, 0.8), (0.8, 0.6) and (1/√2, 1/√2) with a calculator, and plot the probability vectors only.",
+        "extend": "Show that the arrow at angle t has amplitudes (cos t, sin t), so the chances are cos^2 t and sin^2 t, which add to 1. Then multiply (1/√2, 1/√2) and (1/√2, -1/√2) by the Hadamard matrix and check the results are (1, 0) and (0, 1)."
+      },
+      "caution": "This lesson uses only real amplitudes and single-qubit state vectors. In general amplitudes are complex numbers, and the chances are the squared magnitudes. Two vectors that differ only by an overall sign, such as (0.6, 0.8) and (-0.6, -0.8), describe the same physical state, which is why the activity asks for the new point on the right half of the circle.",
+      "sources": [
+        "ibm",
+        "openstax_vectors",
+        "nielsenchuang"
+      ],
+      "lab": "qubit"
     },
     {
-      "id":"L2-10","title":"Build an evidence record","objective":"State a claim with its source, assumptions, test, uncertainty, and scope.","prerequisites":["L2-03","L2-05","L2-06","L2-08","L2-09"],
-      "paragraphs":[
-        "A scientific claim needs a clear meaning and supporting evidence. Record the question, the model, and the data or derivation used to answer it. A title or an impressive diagram is not enough to establish that the claim follows.",
-        "Separate a mathematical result from an empirical result. A theorem follows from stated assumptions. An experiment measures a real setup with uncertainty and possible systematic errors. A simulation checks a programmed model and can be wrong because of either model assumptions or implementation errors.",
-        "For Quantum Causal AI, ask three separate questions. Is the causal effect identified under the assumptions? Does the quantum model represent the system and data access? Does the learning method improve a specified outcome against suitable alternatives? Evidence for one answer does not establish the others."
+      "id": "L2-10",
+      "schema": 2,
+      "title": "Build an evidence record",
+      "objective": "I can state a claim with its source, calculation, assumptions, uncertainty, and scope, and keep what was tested apart from what was assumed.",
+      "prerequisites": [
+        "L2-03",
+        "L2-05",
+        "L2-06",
+        "L2-08",
+        "L2-09"
       ],
-      "equation":"Evidence record: claim; assumptions; source; method; result; uncertainty; tested scope.",
-      "example":"A simulation shows that a chosen qubit rotation produces a predicted probability curve. This supports agreement between the code and that model over tested inputs. It does not prove that real hardware is noiseless, that a causal effect is identified, or that training is faster.",
-      "exercise":"A report says a quantum predictor has 90 percent accuracy. Name three missing details before judging a claim that it makes better causal decisions.",
-      "solution":"Ask how new test data were separated from training, which classical baselines were compared, and what evidence identifies the action effect. Also ask about uncertainty, data access, hardware costs, and the exact decision objective.",
-      "quiz":{"question":"What does a successful numerical simulation establish most directly?","options":["Universal real-world advantage","Agreement with a specified implemented model on tested cases","Every causal assumption is true"],"answer":1,"explanation":"A simulation tests computations within an implemented model. Claims about real systems, causal identification, or advantage require further evidence beyond numerical agreement."},
-      "sources":["pearl","hernan","preskill"],"lab":"gradient","caution":"No finite test establishes every future use. Keep claims inside the scope of the evidence."
+      "time_minutes": 45,
+      "big_idea": "A claim is only as strong as the evidence behind it. An evidence record writes down the claim, where it came from, the calculation, what was assumed, how uncertain it is, and who the data covered. It keeps what was tested apart from what was only assumed.",
+      "i_can": [
+        "I can fill in an evidence record with a claim, source, calculation, assumptions, uncertainty, and scope.",
+        "I can point to the part of a claim that was assumed rather than tested.",
+        "I can rewrite a claim so it fits the data it came from."
+      ],
+      "words": [
+        {
+          "word": "evidence record",
+          "meaning": "A short write-up of a claim with its source, calculation, assumptions, uncertainty, and scope."
+        },
+        {
+          "word": "assumption",
+          "meaning": "Something a claim needs to be true but that the data did not test."
+        },
+        {
+          "word": "scope",
+          "meaning": "Who, where, and when the data covered. A claim should not reach past its scope."
+        }
+      ],
+      "warmup": {
+        "recall_of": "L2-09",
+        "prompt": "Last lesson you met two kinds of vectors. Is (0.6, 0.8) a probability vector, a qubit state vector, both, or neither? Show the check for each."
+      },
+      "story_title": "The juice poster",
+      "story": [
+        "Leo spots a poster for Brand X juice. It is made up for this lesson, but it looks like a real advert: \"Students who drink Brand X get better grades!\" Maya grins. \"Let's build an evidence record and see what holds up.\"",
+        "They imagine a survey with made-up numbers: 80 students at one imagined school, over one term. Of 30 juice drinkers, 18 out of 30 had mostly A and B grades. That is 60 percent. Of the 50 other students, 20 out of 50 did. That is 40 percent. The gap is 20 points.",
+        "Next, Maya draws a causal map. \"What if students who sleep well and eat breakfast also drink more juice? Sleep could raise grades on its own.\" The survey cannot rule that out. So \"no common cause\" is an assumption, not something the data tested.",
+        "Leo adds two more worries. \"Only 80 students is a small sample. Another school could show a smaller gap, or none.\" And the scope is narrow: one imagined school, one term. The poster talks about all students everywhere.",
+        "They finish the record. Tested: a gap of 20 points in made-up data. Assumed: no common cause. Not tested: whether juice causes better grades. \"To test that,\" says Maya, \"a coin would decide who gets the juice, like the app study in Lesson 8.\""
+      ],
+      "animation": {
+        "file": "l2-10-evidence-record.mp4",
+        "scene": "scripts/manim/l2_10.py:EvidenceRecord",
+        "params": {
+          "drinkers": 30,
+          "drinkers_good": 18,
+          "others": 50,
+          "others_good": 20
+        },
+        "caption": "Scattered facts about a made-up juice claim become an evidence record; weak links glow and the scope shrinks.",
+        "alt": "Tilted text chips about a made-up juice survey float around the screen, then fly into the rows of a card labeled claim, source, calculation, assumption, uncertainty and scope. The assumption and uncertainty rows glow amber. The scope changes from all students everywhere to 80 students, one imagined school, one term.",
+        "describe": "Facts about the made-up juice claim float around the screen. Then a card appears with rows for claim, source, calculation, assumption, uncertainty, and scope, and each fact flies into its row. The calculation reads 18 out of 30 vs 20 out of 50, then 60 percent vs 40 percent: 20 points. The assumption row, no common cause, glows amber with the note assumed, not tested. The uncertainty row, only 80 students, glows amber with the note small sample. The scope shrinks from all students everywhere to 80 students, one imagined school, one term."
+      },
+      "activity": {
+        "title": "Write your own evidence record",
+        "minutes": 20,
+        "materials": [
+          "A printed or hand-drawn template with six rows: claim, source, calculation, assumptions, uncertainty, scope",
+          "A pencil",
+          "Your notes from Lessons 3, 5, 6, and 8",
+          "A calculator (optional)"
+        ],
+        "steps": [
+          "Choose a claim. Use one from Lessons 3, 5, 6, or 8, or a headline from a news site or an advert. Copy it word for word.",
+          "Source: write where the claim came from and who collected the data. Say whether the numbers are real or made up.",
+          "Calculation: copy or redo the key number, such as a rate, a conditional probability, or a gap. Write each denominator.",
+          "Draw a causal map for the claim. Include at least one possible common cause.",
+          "Assumptions: list what the claim needs to be true that the data did not test.",
+          "Uncertainty: write how many records there were. Could chance or a small sample explain the result?",
+          "Scope: write who, where, and when the data covered. Then rewrite the claim so it stays inside that scope.",
+          "Finish with one line: what experiment would test the claim, or why one is not possible."
+        ],
+        "record": "Your completed evidence record with all six rows, your causal map, and your rewritten claim.",
+        "safety": "Do not collect or write down personal information about anyone. Ask an adult before searching online for a headline."
+      },
+      "guided": {
+        "prompt": "Rewrite the Brand X poster claim so it fits the made-up data and its scope.",
+        "answer": "This made-up survey covered 80 students at one imagined school over one term. In it, 60 percent of Brand X drinkers had mostly A and B grades, compared with 40 percent of other students. The survey does not show that the juice caused the difference."
+      },
+      "try_it": [
+        {
+          "prompt": "In Lesson 8, a coin decided who got the study app. Which assumption from the juice record does a coin make much safer? What still limits the scope?",
+          "answer": "The coin makes \"no common cause\" much safer, because motivation cannot decide who gets the app. The scope is still limited: the numbers were made up and came from one imagined school and one simple model."
+        },
+        {
+          "prompt": "An imagined headline says \"Dog owners live longer.\" Write one assumption, one uncertainty question, and one scope question for it.",
+          "answer": "Assumption: nothing like fitness or income affects both owning a dog and health. Uncertainty: how many people were studied, and could chance explain the gap? Scope: which country, which ages, and which years did the data cover?"
+        }
+      ],
+      "talk": [
+        "Why do adverts often skip the scope and the assumptions?",
+        "Which row of the evidence record is hardest to fill in, and why?",
+        "Can a claim be useful even when it is not tested by an experiment? Give an example."
+      ],
+      "check": [
+        {
+          "question": "In the juice record, which item was assumed rather than tested?",
+          "options": [
+            "That 18 out of 30 drinkers had mostly A and B grades",
+            "That no common cause, such as sleep, affects both juice and grades",
+            "That 80 students took part"
+          ],
+          "answer": 1,
+          "explanation": "The counts came from the made-up survey. Whether a common cause is at work was never checked, so it is an assumption."
+        },
+        {
+          "question": "Which scope statement fits the made-up juice data best?",
+          "options": [
+            "All students everywhere",
+            "Every student who has ever tried Brand X",
+            "80 students, one imagined school, one term"
+          ],
+          "answer": 2,
+          "explanation": "A scope should name exactly who, where, and when the data covered, and no more."
+        },
+        {
+          "question": "Remember Lesson 6. In made-up data, program A did better than B in easy courses and in hard courses, but worse overall. What usually causes a flip like this?",
+          "options": [
+            "Someone made an adding mistake.",
+            "The groups had different sizes, because A took mostly hard courses.",
+            "A is really worse in every course."
+          ],
+          "answer": 1,
+          "review_of": "L2-06",
+          "explanation": "When most of A's students took hard courses, A's combined rate is pulled down. The split shows A did better in each group."
+        }
+      ],
+      "connect": "Careful scientists check the same things before they trust a claim: where it came from, what was assumed, and who the data covered. Later in this course you will meet claims about quantum devices and AI systems. The same six rows will help you sort what was tested from what was assumed.",
+      "grownups": {
+        "why": "This capstone lesson practices two NGSS science and engineering practices: constructing explanations and engaging in argument from evidence [@ngss_appf]. The assumptions row draws on causal inference: an association in observational data has a causal reading only under assumptions such as no unmeasured common cause, which a randomized experiment makes far more plausible [@hernan]. Pearl stresses writing causal assumptions down explicitly, for example as a graph, so others can examine them [@pearl]. The juice survey is entirely made up, and its numbers (18 of 30 against 20 of 50) are stored with the animation so the text and video match.",
+        "misconceptions": [
+          "A big gap in a table proves the claim. (A gap shows an association in that data; a cause needs more, such as a randomized trial or a well-argued causal map.)",
+          "Assumptions are weaknesses to hide. (Every claim rests on some; writing them down lets others check them.)",
+          "A result from one school applies everywhere. (Keep the claim inside the scope the data covered.)",
+          "Uncertainty means the result is useless. (It says how far to trust the result and what extra data would help.)"
+        ],
+        "simplify": "Fill in only four rows: claim, source, calculation, and scope. Use the juice example and change only the numbers.",
+        "extend": "Write evidence records for two claims, one from an experiment and one from watched data, and compare their assumptions rows. Then swap with a partner and challenge one assumption each."
+      },
+      "caution": "The juice poster and survey are invented. Real headlines can come from strong or weak studies, and a short record cannot replace reading the original study.",
+      "sources": [
+        "ngss_appf",
+        "hernan",
+        "pearl"
+      ],
+      "lab": "gradient"
     }
-  ]
+  ],
+  "unit": {
+    "reading": {
+      "max_fk": 8.0,
+      "max_sentence": 28,
+      "long_word_syllables": 6
+    },
+    "big_question": "When does a pattern in data tell us what causes what, and how would we check?",
+    "summary": "Learners write rules with variables and functions, read graphs with care, and calculate probabilities inside a group. They use natural frequencies to reverse a condition, see a comparison flip when groups are combined, and draw causal maps with chains, common causes, and colliders. They learn why setting a value is different from selecting records with that value. Finally they write a two-outcome chance as a vector and compare it with the state vectors used in quantum physics.",
+    "for_whom": "Learners aged about 12 to 15 who have finished Level 1 or are comfortable with fractions, simple probability, and reading tables. They can work through a lesson alone. A teacher, parent, or study partner can join the discussion questions and look over the project.",
+    "time": {
+      "lessons": 10,
+      "minutes_per_lesson": 45,
+      "project_sessions": 3,
+      "pace": "Two lessons a week takes about six weeks, including the final project. Each lesson splits well into two sittings: story, animation and activity first, practice and checks second."
+    },
+    "session_flow": [
+      "Warm up: answer the look-back question from memory.",
+      "Read the story and watch the animation.",
+      "Do the activity and keep a record.",
+      "Work through the guided example, then try two on your own.",
+      "Discuss, then answer the three check questions. Commit to an answer before you open it.",
+      "Teachers and parents: read the short guide at the end of the page."
+    ],
+    "outcomes": [
+      {
+        "id": "O1",
+        "text": "I can name quantities with variables and units and write a rule as an equation.",
+        "lessons": [
+          "L2-01"
+        ]
+      },
+      {
+        "id": "O2",
+        "text": "I can use a function rule and tell a model's output apart from a measured value.",
+        "lessons": [
+          "L2-02"
+        ]
+      },
+      {
+        "id": "O3",
+        "text": "I can read a scatter plot, describe its trend, and say what it cannot show.",
+        "lessons": [
+          "L2-03",
+          "PROJECT"
+        ]
+      },
+      {
+        "id": "O4",
+        "text": "I can calculate a conditional probability from a two-way table and test whether two events are independent.",
+        "lessons": [
+          "L2-04",
+          "PROJECT"
+        ]
+      },
+      {
+        "id": "O5",
+        "text": "I can reverse a condition with natural frequencies, taking the base rate into account.",
+        "lessons": [
+          "L2-05"
+        ]
+      },
+      {
+        "id": "O6",
+        "text": "I can show how a comparison can flip when groups of different sizes are combined.",
+        "lessons": [
+          "L2-06"
+        ]
+      },
+      {
+        "id": "O7",
+        "text": "I can read a causal map and tell observing apart from intervening.",
+        "lessons": [
+          "L2-07",
+          "L2-08",
+          "PROJECT"
+        ]
+      },
+      {
+        "id": "O8",
+        "text": "I can write a two-outcome chance as a vector, and state a claim with its evidence and limits.",
+        "lessons": [
+          "L2-09",
+          "L2-10",
+          "PROJECT"
+        ]
+      }
+    ],
+    "evidence": "Each lesson ends with three check questions, one of which looks back at an earlier lesson. Each activity produces a record (a table, a graph, a calculation, or a causal map). The final project is an evidence record judged with a four-part rubric.",
+    "materials": [
+      "Graph paper, a ruler, pencils in three colors",
+      "A calculator or a spreadsheet",
+      "Two coins and two dice",
+      "Index cards or sticky notes",
+      "A computer with a web browser for the optional notebooks (Colab or Binder)"
+    ],
+    "safety": "No special hazards. When collecting data from other people, ask permission, keep names off your records, and never collect private or medical information.",
+    "project": {
+      "title": "My evidence record",
+      "summary": "Over three sittings, the learner investigates a question with a two-way table, draws a causal map, and writes an evidence record that states what the data can and cannot show.",
+      "questions": [
+        "Among classmates or family members who agree to answer, is having a pet linked to time spent outdoors? (Use first names only, or none.)",
+        "In 100 rolls of two dice, is getting a double independent of getting a sum above 7?",
+        "Use a public table from a textbook or a government statistics site and ask whether a comparison changes when you split it into groups."
+      ],
+      "steps": [
+        "Write the question, the variables, and their possible values.",
+        "Collect or copy the data into a two-way table (at least 40 records).",
+        "Calculate at least two conditional probabilities and say whether the events look independent.",
+        "Draw a causal map with at least one other variable that could explain the pattern.",
+        "Say what experiment, if any, would test the causal claim, and why it might not be possible.",
+        "Write the evidence record: claim, source, assumptions, calculation, uncertainty, and scope."
+      ],
+      "rubric": [
+        {
+          "part": "Question and variables",
+          "start": "I wrote a question.",
+          "got": "I named my variables and their values.",
+          "explain": "I can say why my question is a statistical question."
+        },
+        {
+          "part": "Calculations",
+          "start": "I made a table.",
+          "got": "I calculated conditional probabilities correctly.",
+          "explain": "I can explain what each denominator is."
+        },
+        {
+          "part": "Causal map",
+          "start": "I drew arrows.",
+          "got": "I drew a map with a possible common cause.",
+          "explain": "I can say how the map changes what my numbers mean."
+        },
+        {
+          "part": "Evidence record",
+          "start": "I stated a conclusion.",
+          "got": "I listed my assumptions and uncertainty.",
+          "explain": "I can say what new data would change my mind."
+        }
+      ],
+      "safety": "Survey only people who agree. Record no names or private details."
+    },
+    "udl": [
+      "Each story comes with an animation and a written description of what it shows.",
+      "Learners can show what they know with a table, a graph, a diagram, a calculation, or a spoken explanation.",
+      "Each lesson has a way to make it easier and a way to go further.",
+      "Optional notebooks let learners run the same calculations in Python."
+    ],
+    "standards": [
+      {
+        "code": "CCSS 6.EE.6",
+        "text": "Use variables to represent numbers and write expressions for real-world problems.",
+        "key": "ccss_math"
+      },
+      {
+        "code": "CCSS 8.F.1",
+        "text": "A function is a rule that assigns to each input exactly one output.",
+        "key": "ccss_math"
+      },
+      {
+        "code": "CCSS 8.SP.1, 8.SP.4",
+        "text": "Construct and interpret scatter plots and two-way tables.",
+        "key": "ccss_math"
+      },
+      {
+        "code": "CCSS 7.SP.8",
+        "text": "Find probabilities of compound events with tables, tree diagrams, and simulation.",
+        "key": "ccss_math"
+      },
+      {
+        "code": "CCSS S-CP.3",
+        "text": "Conditional probability of A given B as P(A and B)/P(B), and independence.",
+        "key": "ccss_math"
+      },
+      {
+        "code": "CCSS S-ID.9",
+        "text": "Distinguish between correlation and causation.",
+        "key": "ccss_math"
+      },
+      {
+        "code": "NGSS 6-8 practices",
+        "text": "Analyze and interpret data; construct explanations supported by evidence.",
+        "key": "ngss_appf"
+      }
+    ],
+    "approach": "Like the earlier levels, this unit was planned backward from its outcomes [@ubd_whitepaper], and each lesson moves from recall, to a worked example, to practice, to discussion [@merrill2002], with retrieval and spaced review built in [@dunlosky2013]. Each lesson has a short animation made with Manim Community Edition [@manim_ce], driven by the same numbers as the text. The probability ideas follow OpenStax Introductory Statistics [@openstax_contingency; @openstax_independent; @openstax_trees], Bayes' rule is taught with natural frequencies, which research shows people reason with more accurately [@gigerenzer1995], the reversal lesson draws on a classic admissions study [@bickel1975], and the causal maps follow Pearl's framework [@pearl; @bareinboim]."
+  }
 }
