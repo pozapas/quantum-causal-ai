@@ -79,6 +79,8 @@ def c1_content():
             n_lessons += 1
             ids.add(L["id"])
             prereq[L["id"]] = L["prerequisites"]
+            if L.get("schema") == 2:
+                continue  # coursebook lessons are checked by C10
             page = BOOK / "levels" / f"level-{n}" / f"{L['id']}.md"
             if not page.exists():
                 errs.append(f"missing page {page.name}")
@@ -271,7 +273,8 @@ def c5_notebooks():
 
 
 WARN_RE = re.compile(r"⚠️|⛔|\berror\b|Error:", re.I)
-IGNORE_RE = re.compile(r"DeprecationWarning|ExperimentalWarning|trace-warnings|url\.parse|GET /|errors?=0")
+# the last pattern is a warning inside the downloaded MyST theme's own template.yml, not in book content
+IGNORE_RE = re.compile(r"DeprecationWarning|ExperimentalWarning|trace-warnings|url\.parse|GET /|errors?=0|template\.yml#template")
 
 
 def c6_build():
@@ -283,6 +286,11 @@ def c6_build():
     r = subprocess.run([jb, "build", "--html"], cwd=BOOK, env=env,
                        capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=3600)
     log = r.stdout + r.stderr
+    lp = subprocess.run([PY, str(BOOK / "scripts" / "postbuild_light.py")], capture_output=True, text=True)
+    log += "
+" + lp.stdout + lp.stderr
+    if lp.returncode != 0:
+        errs.append("postbuild_light failed: " + (lp.stderr or lp.stdout).strip()[:200])
     (BOOK / "evidence" / "build.log").write_text(log, encoding="utf-8")
     if r.returncode != 0:
         errs.append(f"build exit {r.returncode}")
@@ -335,7 +343,7 @@ def c8_hygiene():
     plan = json.loads((BOOK / "PLAN.json").read_text(encoding="utf-8"))
     for u in plan["units"]:
         recs = attempts.get(u["id"], [])
-        if u["id"] in ("integrate", "release-check", "style-ui", "round3-ui", "map-viewer"):
+        if u["id"] in ("integrate", "release-check", "style-ui", "round3-ui", "map-viewer", "level0-release"):
             continue  # judged by this check itself / gated
         if not recs:
             errs.append(f"unit {u['id']}: no attempts logged")
@@ -383,8 +391,95 @@ def c9_style():
     return errs, {"files": len(files), "em_dashes": em, "emoji": emo, "icons": len(icons)}
 
 
+CHILD_MAX_FK = 3.0
+CHILD_MAX_SENTENCE = 22
+# common words of 4+ syllables that young readers meet early; anything else must be in the lesson's word box
+EASY_LONG_WORDS = {"experiment", "experiments", "everything", "everyone", "anybody", "anything", "usually",
+                   "information", "interesting", "television", "watermelon", "caterpillar", "helicopter", "calculator"}
+
+
+def child_fields(L):
+    """Child-facing text of a schema-2 lesson, one string per field."""
+    out = [L["big_idea"], *L["i_can"], L["warmup"]["prompt"], L["story_title"], *L["story"], L["activity"]["title"],
+           *L["activity"]["materials"], *L["activity"]["steps"], L["activity"]["record"], L["guided"]["prompt"],
+           L["guided"]["answer"], *[t[k] for t in L["try_it"] for k in ("prompt", "answer")], *L["talk"], L["connect"],
+           *[w["meaning"] for w in L["words"]], *([L["picture"]["caption"]] if L.get("picture") else [])]
+    for q in L["check"]:
+        out += [q["question"], *q["options"], q["explanation"]]
+    return [x for x in out if x]
+
+
+def c10_coursebook():
+    import textstat
+    import coursebook
+    import convert
+    errs, info = [], {"lessons": 0, "fk": {}}
+    for n in range(8):
+        lv = json.loads((SRC / f"level{n}.json").read_text(encoding="utf-8"))
+        if not lv.get("unit"):
+            continue
+        u = lv["unit"]
+        ids = [L["id"] for L in lv["lessons"]]
+        order = {lid: i for i, lid in enumerate(ids)}
+        if not 6 <= len(u["outcomes"]) <= 8:
+            errs.append(f"level {n}: {len(u['outcomes'])} outcomes (need 6-8)")
+        for o in u["outcomes"]:
+            if not any(x in ids or x == "PROJECT" for x in o["lessons"]):
+                errs.append(f"level {n}: outcome {o['id']} is practised nowhere")
+        if len(u["project"]["rubric"]) != 4 or not u["materials"] or not u["safety"]:
+            errs.append(f"level {n}: project rubric, materials or safety missing")
+        unit_md = (BOOK / "levels" / f"level-{n}" / "index.md").read_text(encoding="utf-8")
+        for o in u["outcomes"]:
+            if convert.esc(o["text"]) not in unit_md:
+                errs.append(f"level {n}: outcome {o['id']} not on the unit page")
+        for L in lv["lessons"]:
+            lid = L["id"]
+            if L.get("schema") != 2:
+                errs.append(f"{lid}: not yet in coursebook format")
+                continue
+            info["lessons"] += 1
+            a, gr = L["activity"], L["grownups"]
+            need = [
+                (2 <= len(L["i_can"]) <= 3, "2-3 I-can statements"), (1 <= len(L["words"]) <= 3, "1-3 words"),
+                ((order[lid] == 0 and not L["warmup"].get("recall_of")) or (L["warmup"].get("recall_of") in order and order[L["warmup"]["recall_of"]] < order[lid]), "warm-up recalls an earlier lesson (none for the first lesson)"),
+                (len(L["story"]) >= 3, "story of 3+ paragraphs"), (len(a["steps"]) >= 4, "4+ activity steps"),
+                (0 < a["minutes"] <= 20, "activity <= 20 minutes"), (bool(a["record"]) and bool(a["safety"]), "record and safety line"),
+                (len(L["try_it"]) >= 2, "2+ tries"), (len(L["talk"]) >= 2, "2+ talk prompts"), (len(L["check"]) == 3, "exactly 3 checks"),
+                (sum(1 for q in L["check"] if q.get("review_of")) == (0 if order[lid] == 0 else 1), "exactly one review check (none for the first lesson)"),
+                (all(order.get(q["review_of"], 99) < order[lid] for q in L["check"] if q.get("review_of")), "review points to an earlier lesson"),
+                (all(0 <= q["answer"] < len(q["options"]) and len(set(q["options"])) == len(q["options"]) for q in L["check"]), "valid check answers"),
+                (bool(L["connect"]), "where-this-leads box"),
+                (bool(gr["why"]) and len(gr["misconceptions"]) >= 2 and bool(gr["simplify"]) and bool(gr["extend"]) and bool(L["caution"]), "full grown-up guide"),
+            ]
+            errs += [f"{lid}: needs {why}" for ok, why in need if not ok]
+            if L.get("picture") and not (BOOK / "_static" / "lessons" / L["picture"]["file"]).exists():
+                errs.append(f"{lid}: picture file missing")
+            page = (BOOK / "levels" / f"level-{n}" / f"{lid}.md").read_text(encoding="utf-8")
+            fields = child_fields(L) + [gr["why"], *gr["misconceptions"], gr["simplify"], gr["extend"], L["caution"]]
+            for f in fields:
+                if coursebook.esc_cite(f, convert.esc) not in page:
+                    errs.append(f"{lid}: field missing from page: {f[:50]}")
+            kid = child_fields(L)
+            if any("[@" in x for x in kid):
+                errs.append(f"{lid}: child-facing text contains a citation")
+            fk = textstat.flesch_kincaid_grade(" ".join(kid))
+            info["fk"][lid] = round(fk, 2)
+            if fk > CHILD_MAX_FK:
+                errs.append(f"{lid}: reading level {fk:.1f} > {CHILD_MAX_FK}")
+            for x in kid:
+                for sent in re.split(r"(?<=[.!?])\s+|(?<=[.!?][\"”])\s+", x):
+                    if len(sent.split()) > CHILD_MAX_SENTENCE:
+                        errs.append(f"{lid}: sentence of {len(sent.split())} words: {sent[:60]}")
+            defined = {w for item in L["words"] for w in re.findall(r"[a-z]+", item["word"].lower())}
+            hard = sorted({w for w in re.findall(r"[A-Za-z]+", " ".join(kid)) if textstat.syllable_count(w) >= 4
+                           and w.lower() not in defined and w.lower() not in EASY_LONG_WORDS})
+            if hard:
+                errs.append(f"{lid}: undefined long words for this age: {', '.join(hard[:8])}")
+    return errs, info
+
+
 CHECKS = {"C1": c1_content, "C2": c2_references, "C3": c3_media, "C4": c4_science,
-          "C5": c5_notebooks, "C6": c6_build, "C7": c7_browser, "C8": c8_hygiene, "C9": c9_style}
+          "C5": c5_notebooks, "C6": c6_build, "C7": c7_browser, "C8": c8_hygiene, "C9": c9_style, "C10": c10_coursebook}
 
 
 def main() -> int:

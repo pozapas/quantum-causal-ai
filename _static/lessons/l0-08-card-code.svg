@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-labelledby="t d">
+<title id="t">A card code with four bits</title>
+<desc id="d">Four yes or no questions sit in a row: Like rain? Have a pet? Blue is best? Can you skip? Under each question is one card. The first, third and fourth cards are face up, showing a star and the word yes, with the number 1 below. The second card is face down, with a striped back and the word no, with the number 0 below. The row reads 1 0 1 1. A key at the bottom says face up means yes, which is 1, and face down means no, which is 0.</desc>
+<defs>
+  <pattern id="stripes" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <rect width="12" height="12" fill="#a78bfa"/><rect width="6" height="12" fill="#7c3aed"/>
+  </pattern>
+  <style>
+    .lbl{font:700 18px Inter,"Segoe UI",Arial,sans-serif;fill:#1e1b4b}
+    .sub{font:500 16px Inter,"Segoe UI",Arial,sans-serif;fill:#475569}
+    .q{font:600 16px Inter,"Segoe UI",Arial,sans-serif;fill:#1e1b4b}
+    .big{font:800 34px Inter,"Segoe UI",Arial,sans-serif;fill:#1e1b4b}
+    .up{fill:#ffffff;stroke:#7c3aed;stroke-width:2.5}
+    .down{fill:url(#stripes);stroke:#4c1d95;stroke-width:2.5}
+    .star{fill:#fcd34d;stroke:#92400e;stroke-width:1.5}
+    .tag{font:700 16px Inter,"Segoe UI",Arial,sans-serif}
+  </style>
+  <g id="cardup">
+    <rect class="up" x="-42" y="0" width="84" height="110" rx="10"/>
+    <polygon class="star" points="0,22 7,40 26,40 11,51 17,70 0,59 -17,70 -11,51 -26,40 -7,40"/>
+    <text class="tag" x="0" y="95" text-anchor="middle" fill="#6d28d9">yes</text>
+  </g>
+  <g id="carddown">
+    <rect class="down" x="-42" y="0" width="84" height="110" rx="10"/>
+    <rect x="-22" y="78" width="44" height="24" rx="6" fill="#ffffff"/>
+    <text class="tag" x="0" y="95" text-anchor="middle" fill="#1e1b4b">no</text>
+  </g>
+</defs>
+<rect width="720" height="360" rx="18" fill="#ffffff"/>
+
+<text class="lbl" x="24" y="34">Maya asks. Leo answers with cards.</text>
+
+<!-- questions -->
+<text class="q" x="120" y="74" text-anchor="middle">Like rain?</text>
+<text class="q" x="280" y="74" text-anchor="middle">Have a pet?</text>
+<text class="q" x="440" y="74" text-anchor="middle">Blue is best?</text>
+<text class="q" x="600" y="74" text-anchor="middle">Can you skip?</text>
+
+<!-- cards -->
+<use href="#cardup" x="120" y="88"/>
+<use href="#carddown" x="280" y="88"/>
+<use href="#cardup" x="440" y="88"/>
+<use href="#cardup" x="600" y="88"/>
+
+<!-- bits -->
+<g>
+  <circle cx="120" cy="236" r="22" fill="#cffafe" stroke="#06b6d4" stroke-width="2"/>
+  <text class="big" x="120" y="248" text-anchor="middle">1</text>
+  <circle cx="280" cy="236" r="22" fill="#cffafe" stroke="#06b6d4" stroke-width="2"/>
+  <text class="big" x="280" y="248" text-anchor="middle">0</text>
+  <circle cx="440" cy="236" r="22" fill="#cffafe" stroke="#06b6d4" stroke-width="2"/>
+  <text class="big" x="440" y="248" text-anchor="middle">1</text>
+  <circle cx="600" cy="236" r="22" fill="#cffafe" stroke="#06b6d4" stroke-width="2"/>
+  <text class="big" x="600" y="248" text-anchor="middle">1</text>
+</g>
+
+<!-- key -->
+<rect x="24" y="280" width="672" height="60" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+<rect x="44" y="294" width="24" height="32" rx="4" class="up"/>
+<text class="sub" x="80" y="316">face up = yes = 1</text>
+<rect x="260" y="294" width="24" height="32" rx="4" class="down"/>
+<text class="sub" x="296" y="316">face down = no = 0</text>
+<text class="lbl" x="676" y="317" text-anchor="end">Read left to right</text>
+</svg>

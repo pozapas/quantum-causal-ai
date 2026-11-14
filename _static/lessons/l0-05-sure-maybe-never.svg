@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-labelledby="t d">
+<title id="t">Sure, maybe, or never, and a tally of 20 coin flips</title>
+<desc id="d">Top: a line that goes from Never on the left, through Maybe in the middle, to Sure on the right. Under Never: a dog grows wings. Under Maybe: rain this week, and the next coin flip. Under Sure: a dropped spoon falls down. Bottom: a tally of 20 coin flips. Heads has 11 tally marks and Tails has 9 tally marks. A note says one flip is a maybe, but many flips come out close to half and half.</desc>
+<defs>
+  <style>
+    .lbl{font:700 18px Inter,"Segoe UI",Arial,sans-serif;fill:#1e1b4b}
+    .sub{font:500 16px Inter,"Segoe UI",Arial,sans-serif;fill:#475569}
+    .big{font:700 18px Inter,"Segoe UI",Arial,sans-serif;fill:#1e1b4b}
+    .tm{stroke:#1e1b4b;stroke-width:3;stroke-linecap:round}
+  </style>
+</defs>
+<rect width="720" height="360" rx="18" fill="#ffffff"/>
+
+<!-- chance line -->
+<line x1="80" y1="70" x2="640" y2="70" stroke="#a78bfa" stroke-width="6" stroke-linecap="round"/>
+<circle cx="120" cy="70" r="14" fill="#ef4444"/>
+<circle cx="360" cy="70" r="14" fill="#fcd34d" stroke="#92400e" stroke-width="1.5"/>
+<circle cx="600" cy="70" r="14" fill="#06b6d4"/>
+<text class="lbl" x="120" y="36" text-anchor="middle">Never</text>
+<text class="lbl" x="360" y="36" text-anchor="middle">Maybe</text>
+<text class="lbl" x="600" y="36" text-anchor="middle">Sure</text>
+<text class="sub" x="120" y="112" text-anchor="middle">A dog grows wings</text>
+<text class="sub" x="360" y="112" text-anchor="middle">Rain this week</text>
+<text class="sub" x="360" y="136" text-anchor="middle">The next coin flip</text>
+<text class="sub" x="600" y="112" text-anchor="middle">A dropped spoon</text>
+<text class="sub" x="600" y="136" text-anchor="middle">falls down</text>
+
+<line x1="24" y1="164" x2="696" y2="164" stroke="#e2e8f0" stroke-width="2"/>
+
+<!-- tally -->
+<text class="lbl" x="24" y="196">We flipped a coin 20 times</text>
+<g transform="translate(24 212)">
+  <rect x="0" y="0" width="220" height="124" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text class="lbl" x="16" y="30">Heads</text>
+  <line class="tm" x1="22" y1="52" x2="22" y2="92"/>
+  <line class="tm" x1="32" y1="52" x2="32" y2="92"/>
+  <line class="tm" x1="42" y1="52" x2="42" y2="92"/>
+  <line class="tm" x1="52" y1="52" x2="52" y2="92"/>
+  <line class="tm" x1="16" y1="86" x2="58" y2="58"/>
+  <line class="tm" x1="78" y1="52" x2="78" y2="92"/>
+  <line class="tm" x1="88" y1="52" x2="88" y2="92"/>
+  <line class="tm" x1="98" y1="52" x2="98" y2="92"/>
+  <line class="tm" x1="108" y1="52" x2="108" y2="92"/>
+  <line class="tm" x1="72" y1="86" x2="114" y2="58"/>
+  <line class="tm" x1="134" y1="52" x2="134" y2="92"/>
+  <text class="big" x="204" y="110" text-anchor="end">11</text>
+</g>
+<g transform="translate(260 212)">
+  <rect x="0" y="0" width="220" height="124" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text class="lbl" x="16" y="30">Tails</text>
+  <line class="tm" x1="22" y1="52" x2="22" y2="92"/>
+  <line class="tm" x1="32" y1="52" x2="32" y2="92"/>
+  <line class="tm" x1="42" y1="52" x2="42" y2="92"/>
+  <line class="tm" x1="52" y1="52" x2="52" y2="92"/>
+  <line class="tm" x1="16" y1="86" x2="58" y2="58"/>
+  <line class="tm" x1="78" y1="52" x2="78" y2="92"/>
+  <line class="tm" x1="88" y1="52" x2="88" y2="92"/>
+  <line class="tm" x1="98" y1="52" x2="98" y2="92"/>
+  <line class="tm" x1="108" y1="52" x2="108" y2="92"/>
+  <text class="big" x="204" y="110" text-anchor="end">9</text>
+</g>
+<g transform="translate(496 212)">
+  <rect x="0" y="0" width="200" height="124" rx="14" fill="#cffafe" stroke="#06b6d4"/>
+  <text class="lbl" x="16" y="32">One flip:</text>
+  <text class="sub" x="16" y="54">a maybe</text>
+  <text class="lbl" x="16" y="86">Many flips:</text>
+  <text class="sub" x="16" y="108">close to half and half</text>
+</g>
+</svg>

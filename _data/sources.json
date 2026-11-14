@@ -131,6 +131,20 @@
   ]
  },
  {
+  "id": "ccss_math",
+  "title": "Common Core State Standards for Mathematics",
+  "authors": "NGA Center and CCSSO",
+  "year": 2010,
+  "venue": "Common Core State Standards Initiative",
+  "url": "https://learning.ccsso.org/wp-content/uploads/2022/11/Math_Standards1.pdf",
+  "kind": "web",
+  "scope": "K-2 counting, comparing, sorting, measuring, and picture graphs (K.CC.4, K.CC.5, K.CC.7, K.MD.3, 1.MD.4, 2.MD.1, 2.MD.10)",
+  "levels": [
+   0,
+   1
+  ]
+ },
+ {
   "id": "chaves",
   "title": "Information-Theoretic Implications of Quantum Causal Structures",
   "authors": "Rafael Chaves, Christian Majenz, David Gross",
@@ -196,6 +210,19 @@
   ]
  },
  {
+  "id": "csunplugged_binary",
+  "title": "Binary numbers",
+  "authors": "CS Unplugged",
+  "year": null,
+  "venue": "CS Unplugged",
+  "url": "https://www.csunplugged.org/en/topics/binary-numbers/",
+  "kind": "web",
+  "scope": "Unplugged activities that show how two-state symbols store information",
+  "levels": [
+   0
+  ]
+ },
+ {
   "id": "dowhy",
   "title": "DoWhy: An End-to-End Library for Causal Inference",
   "authors": "Amit Sharma, Emre Kiciman",
@@ -209,6 +236,20 @@
   "levels": [
    4,
    5
+  ]
+ },
+ {
+  "id": "dunlosky2013",
+  "title": "Improving Students’ Learning With Effective Learning Techniques",
+  "authors": "John Dunlosky, Katherine A. Rawson, Elizabeth J. Marsh, Mitchell J. Nathan, Daniel T. Willingham",
+  "year": 2013,
+  "venue": "Psychological Science in the Public Interest",
+  "doi": "10.1177/1529100612453266",
+  "url": "https://doi.org/10.1177/1529100612453266",
+  "kind": "paper",
+  "scope": "Which study techniques work: practice testing and spaced practice rated highest",
+  "levels": [
+   0
   ]
  },
  {
@@ -294,6 +335,37 @@
   ]
  },
  {
+  "id": "gopnik2000",
+  "title": "Detecting Blickets: How Young Children Use Information about Novel Causal Powers in Categorization and Induction",
+  "authors": "Alison Gopnik, David M Sobel",
+  "year": 2000,
+  "venue": "Child Development",
+  "doi": "10.1111/1467-8624.00224",
+  "url": "https://doi.org/10.1111/1467-8624.00224",
+  "kind": "paper",
+  "scope": "Young children infer hidden causal powers from evidence (the blicket detector)",
+  "levels": [
+   0,
+   2
+  ]
+ },
+ {
+  "id": "gopnik2004",
+  "title": "A Theory of Causal Learning in Children: Causal Maps and Bayes Nets",
+  "authors": "Alison Gopnik, Clark Glymour, David M. Sobel, Laura E. Schulz, Tamar Kushnir, David Danks",
+  "year": 2004,
+  "venue": "Psychological Review",
+  "doi": "10.1037/0033-295X.111.1.3",
+  "url": "https://doi.org/10.1037/0033-295X.111.1.3",
+  "kind": "paper",
+  "scope": "Children's causal learning described with causal maps and Bayes nets",
+  "levels": [
+   0,
+   2,
+   4
+  ]
+ },
+ {
   "id": "hensen",
   "title": "Loophole-free Bell inequality violation using electron spins separated by 1.3 kilometres",
   "authors": "B. Hensen, H. Bernien, A. E. Dréau, A. Reiserer, N. Kalb, M. S. Blok, J. Ruitenberg, R. F. L. Vermeulen, R. N. Schouten, C. Abellán, W. Amaya, V. Pruneri, M. W. Mitchell, M. Markham, D. J. Twitchen, D. Elkouss, S. Wehner, T. H. Taminiau, R. Hanson",
@@ -372,6 +444,7 @@
   "kind": "notes",
   "scope": "States, gates, measurement, and entanglement",
   "levels": [
+   0,
    3,
    4,
    5
@@ -459,6 +532,20 @@
   ]
  },
  {
+  "id": "merrill2002",
+  "title": "First principles of instruction",
+  "authors": "M. David Merrill",
+  "year": 2002,
+  "venue": "Educational Technology Research and Development",
+  "doi": "10.1007/BF02505024",
+  "url": "https://doi.org/10.1007/BF02505024",
+  "kind": "paper",
+  "scope": "First principles of instruction: activation, demonstration, application, integration",
+  "levels": [
+   0
+  ]
+ },
+ {
   "id": "mitarai",
   "title": "Quantum Circuit Learning",
   "authors": "Kosuke Mitarai, Makoto Negoro, Masahiro Kitagawa, Keisuke Fujii",
@@ -472,6 +559,46 @@
   "levels": [
    5,
    6
+  ]
+ },
+ {
+  "id": "ngss_1ps4_2",
+  "title": "1-PS4-2 Waves and Their Applications in Technologies for Information Transfer",
+  "authors": "NGSS Lead States",
+  "year": 2013,
+  "venue": "Next Generation Science Standards",
+  "url": "https://www.nextgenscience.org/pe/1-ps4-2-waves-and-their-applications-technologies-information-transfer",
+  "kind": "web",
+  "scope": "Grade 1 performance expectation: objects can be seen only when illuminated",
+  "levels": [
+   0
+  ]
+ },
+ {
+  "id": "ngss_1ps4_3",
+  "title": "1-PS4-3 Waves and Their Applications in Technologies for Information Transfer",
+  "authors": "NGSS Lead States",
+  "year": 2013,
+  "venue": "Next Generation Science Standards",
+  "url": "https://www.nextgenscience.org/pe/1-ps4-3-waves-and-their-applications-technologies-information-transfer",
+  "kind": "web",
+  "scope": "Grade 1 performance expectation: materials placed in the path of a beam of light",
+  "levels": [
+   0
+  ]
+ },
+ {
+  "id": "ngss_appf",
+  "title": "Appendix F: Science and Engineering Practices in the NGSS",
+  "authors": "NGSS Lead States",
+  "year": 2013,
+  "venue": "Next Generation Science Standards",
+  "url": "https://www.nextgenscience.org/sites/default/files/Appendix%20F%20%20Science%20and%20Engineering%20Practices%20in%20the%20NGSS%20-%20FINAL%20060513.pdf",
+  "kind": "web",
+  "scope": "K-2 science practices, including simple investigations based on fair tests",
+  "levels": [
+   0,
+   1
   ]
  },
  {
@@ -593,6 +720,20 @@
   ]
  },
  {
+  "id": "openstax_prob",
+  "title": "3.1 Terminology",
+  "authors": "Barbara Illowsky and Susan Dean",
+  "year": 2023,
+  "venue": "OpenStax, Introductory Statistics 2e",
+  "url": "https://openstax.org/books/introductory-statistics-2e/pages/3-1-terminology",
+  "kind": "web",
+  "scope": "Probability as long-run relative frequency; the law of large numbers with coin tosses",
+  "levels": [
+   0,
+   1
+  ]
+ },
+ {
   "id": "pearl",
   "title": "Causal inference in statistics: An overview",
   "authors": "Judea Pearl",
@@ -604,6 +745,7 @@
   "kind": "paper",
   "scope": "SCMs, adjustment, identification, and counterfactuals",
   "levels": [
+   0,
    4,
    5,
    6
@@ -899,6 +1041,32 @@
   "levels": [
    6,
    7
+  ]
+ },
+ {
+  "id": "ubd_whitepaper",
+  "title": "Improve Curriculum, Assessment, and Instruction Using the Understanding by Design Framework",
+  "authors": "Jay McTighe and Grant Wiggins",
+  "year": null,
+  "venue": "ASCD white paper",
+  "url": "https://jaymctighe.com/wp-content/uploads/2024/10/UbD-White-Paper.pdf",
+  "kind": "web",
+  "scope": "Backward design: desired results, evidence, then the learning plan",
+  "levels": [
+   0
+  ]
+ },
+ {
+  "id": "udl",
+  "title": "Universal Design for Learning Guidelines",
+  "authors": "CAST",
+  "year": 2024,
+  "venue": "CAST",
+  "url": "https://udlguidelines.cast.org/",
+  "kind": "web",
+  "scope": "Engagement, representation, and action and expression: options that remove barriers to learning",
+  "levels": [
+   0
   ]
  },
  {

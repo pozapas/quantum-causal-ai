@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-labelledby="t d">
+<title id="t">What a flashlight beam does</title>
+<desc id="d">Four rows. In each row a flashlight shines a yellow beam at one thing, with a wall on the right. Clear plastic: the beam passes through and makes a bright spot on the wall, so it lets light through. Wax paper: a faint beam passes and makes a dim spot, so it lets some light through. Cardboard: no beam reaches the wall, so it blocks light. Mirror: the beam bounces back up toward the flashlight side, so it bounces light back.</desc>
+<defs>
+  <style>
+    .lbl{font:700 18px Inter,"Segoe UI",Arial,sans-serif;fill:#1e1b4b}
+    .sub{font:500 16px Inter,"Segoe UI",Arial,sans-serif;fill:#475569}
+  </style>
+</defs>
+<rect width="720" height="360" rx="18" fill="#ffffff"/>
+<text class="lbl" x="24" y="32">Shine the beam at each one. What reaches the wall?</text>
+<rect x="24" y="73" width="50" height="18" rx="4" fill="#475569"/>
+<polygon points="74,73 92,68 92,96 74,91" fill="#334155"/>
+<polygon points="92,72 250,66 250,98 92,92" fill="#fcd34d" opacity="0.85"/>
+<rect x="420" y="54" width="10" height="56" rx="2" fill="#e2e8f0" stroke="#94a3b8"/>
+<rect x="250" y="56" width="10" height="52" rx="2" fill="#cffafe" fill-opacity="0.6" stroke="#06b6d4" stroke-width="2"/>
+<polygon points="260,66 420,62 420,102 260,98" fill="#fcd34d" opacity="0.8"/>
+<ellipse cx="425" cy="82" rx="7" ry="20" fill="#fcd34d" stroke="#d97706" stroke-width="1.5"/>
+<text class="lbl" x="456" y="78">Lets light through</text>
+<text class="sub" x="456" y="100">clear plastic</text>
+<rect x="24" y="151" width="50" height="18" rx="4" fill="#475569"/>
+<polygon points="74,151 92,146 92,174 74,169" fill="#334155"/>
+<polygon points="92,150 250,144 250,176 92,170" fill="#fcd34d" opacity="0.85"/>
+<rect x="420" y="132" width="10" height="56" rx="2" fill="#e2e8f0" stroke="#94a3b8"/>
+<polygon points="260,144 420,136 420,184 260,176" fill="#fcd34d" opacity="0.3"/>
+<rect x="250" y="134" width="10" height="52" rx="2" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+<ellipse cx="425" cy="160" rx="7" ry="24" fill="#fcd34d" opacity="0.45"/>
+<text class="lbl" x="456" y="156">Lets some light through</text>
+<text class="sub" x="456" y="178">wax paper</text>
+<rect x="24" y="229" width="50" height="18" rx="4" fill="#475569"/>
+<polygon points="74,229 92,224 92,252 74,247" fill="#334155"/>
+<polygon points="92,228 250,222 250,254 92,248" fill="#fcd34d" opacity="0.85"/>
+<rect x="420" y="210" width="10" height="56" rx="2" fill="#e2e8f0" stroke="#94a3b8"/>
+<rect x="250" y="212" width="12" height="52" rx="2" fill="#b45309" stroke="#78350f" stroke-width="2"/>
+<text class="lbl" x="456" y="234">Blocks light</text>
+<text class="sub" x="456" y="256">cardboard</text>
+<rect x="24" y="307" width="50" height="18" rx="4" fill="#475569"/>
+<polygon points="74,307 92,302 92,330 74,325" fill="#334155"/>
+<polygon points="92,306 252,300 254,332 92,326" fill="#fcd34d" opacity="0.85"/>
+<rect x="420" y="288" width="10" height="56" rx="2" fill="#e2e8f0" stroke="#94a3b8"/>
+<line x1="250" y1="342" x2="259" y2="290" stroke="#93c5fd" stroke-width="5" stroke-linecap="round"/>
+<line x1="256" y1="342" x2="265" y2="290" stroke="#1e40af" stroke-width="4" stroke-linecap="round"/>
+<polygon points="252,304 254,326 136,286 148,264" fill="#fcd34d" opacity="0.85"/>
+<text class="lbl" x="456" y="312">Bounces light back</text>
+<text class="sub" x="456" y="334">mirror</text>
+</svg>

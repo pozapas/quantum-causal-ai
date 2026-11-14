@@ -130,6 +130,17 @@ try {
   await fresh.close(); await wp.close();
 } catch (e) { errors.push(`widget check: ${e.message.split('\n')[0]}`); }
 
+// Light mode is the default, even when the visitor's computer prefers dark
+try {
+  const dctx = await browser.newContext({ colorScheme: 'dark' });
+  const dp = await dctx.newPage();
+  await dp.goto(origin + BASE + '/levels/level-0/', { waitUntil: 'networkidle' }); await dp.waitForTimeout(800);
+  const cls = await dp.evaluate(() => document.documentElement.className);
+  stats.defaultTheme = cls.includes('dark') ? 'dark' : (cls.includes('light') ? 'light' : cls);
+  if (!cls.includes('light') || cls.includes('dark')) errors.push(`default theme is not light for a dark-preferring visitor: '${cls}'`);
+  await dctx.close();
+} catch (e) { errors.push(`theme check: ${e.message.split('\n')[0]}`); }
+
 // Every internal link must stay under the base path and resolve
 stats.internalLinks = links.size;
 for (const h of links) {

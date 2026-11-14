@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-labelledby="t d">
+<title id="t">Sort by color, then graph</title>
+<desc id="d">Rule: sort by color. Tricky buttons with two colors get their own group. Buttons are sorted into three groups on mats. The red group has 5 buttons. The blue group has 4 buttons. The two colors group has 2 buttons that are half red and half blue. On the right is a picture graph with one row for each group and one square for each button: red has 5 squares, blue has 4, and two colors has 2. One square stands for one button. The red row is the longest, so red has the most.</desc>
+<defs>
+  <style>
+    .lbl{font:700 18px Inter,"Segoe UI",Arial,sans-serif;fill:#1e1b4b}
+    .sub{font:500 16px Inter,"Segoe UI",Arial,sans-serif;fill:#475569}
+    .big{font:700 28px Inter,"Segoe UI",Arial,sans-serif;fill:#1e1b4b}
+    .tally{stroke:#1e1b4b;stroke-width:4;stroke-linecap:round}
+    .slash{stroke:#7c3aed;stroke-width:4;stroke-linecap:round}
+  </style>
+<clipPath id="lh"><rect x="-15" y="-15" width="15" height="30"/></clipPath>
+</defs>
+<rect width="720" height="360" rx="18" fill="#ffffff"/>
+<text class="lbl" x="24" y="40">Rule: sort by color</text>
+<text class="sub" x="24" y="64">Tricky buttons with two colors get their own group.</text>
+<rect x="24" y="84" width="106" height="216" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+<g transform="translate(60 118)"><circle r="14" fill="#ef4444" stroke="#7f1d1d" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#7f1d1d"/><circle cx="4" cy="-4" r="2" fill="#7f1d1d"/><circle cx="-4" cy="4" r="2" fill="#7f1d1d"/><circle cx="4" cy="4" r="2" fill="#7f1d1d"/></g>
+<g transform="translate(94 118)"><circle r="14" fill="#ef4444" stroke="#7f1d1d" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#7f1d1d"/><circle cx="4" cy="-4" r="2" fill="#7f1d1d"/><circle cx="-4" cy="4" r="2" fill="#7f1d1d"/><circle cx="4" cy="4" r="2" fill="#7f1d1d"/></g>
+<g transform="translate(60 152)"><circle r="14" fill="#ef4444" stroke="#7f1d1d" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#7f1d1d"/><circle cx="4" cy="-4" r="2" fill="#7f1d1d"/><circle cx="-4" cy="4" r="2" fill="#7f1d1d"/><circle cx="4" cy="4" r="2" fill="#7f1d1d"/></g>
+<g transform="translate(94 152)"><circle r="14" fill="#ef4444" stroke="#7f1d1d" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#7f1d1d"/><circle cx="4" cy="-4" r="2" fill="#7f1d1d"/><circle cx="-4" cy="4" r="2" fill="#7f1d1d"/><circle cx="4" cy="4" r="2" fill="#7f1d1d"/></g>
+<g transform="translate(77 186)"><circle r="14" fill="#ef4444" stroke="#7f1d1d" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#7f1d1d"/><circle cx="4" cy="-4" r="2" fill="#7f1d1d"/><circle cx="-4" cy="4" r="2" fill="#7f1d1d"/><circle cx="4" cy="4" r="2" fill="#7f1d1d"/></g>
+<text class="sub" x="77" y="254" text-anchor="middle">Red</text>
+<text class="lbl" x="77" y="284" text-anchor="middle">5</text>
+<rect x="142" y="84" width="106" height="216" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+<g transform="translate(178 118)"><circle r="14" fill="#93c5fd" stroke="#1e40af" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#1e40af"/><circle cx="4" cy="-4" r="2" fill="#1e40af"/><circle cx="-4" cy="4" r="2" fill="#1e40af"/><circle cx="4" cy="4" r="2" fill="#1e40af"/></g>
+<g transform="translate(212 118)"><circle r="14" fill="#93c5fd" stroke="#1e40af" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#1e40af"/><circle cx="4" cy="-4" r="2" fill="#1e40af"/><circle cx="-4" cy="4" r="2" fill="#1e40af"/><circle cx="4" cy="4" r="2" fill="#1e40af"/></g>
+<g transform="translate(178 152)"><circle r="14" fill="#93c5fd" stroke="#1e40af" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#1e40af"/><circle cx="4" cy="-4" r="2" fill="#1e40af"/><circle cx="-4" cy="4" r="2" fill="#1e40af"/><circle cx="4" cy="4" r="2" fill="#1e40af"/></g>
+<g transform="translate(212 152)"><circle r="14" fill="#93c5fd" stroke="#1e40af" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#1e40af"/><circle cx="4" cy="-4" r="2" fill="#1e40af"/><circle cx="-4" cy="4" r="2" fill="#1e40af"/><circle cx="4" cy="4" r="2" fill="#1e40af"/></g>
+<text class="sub" x="195" y="254" text-anchor="middle">Blue</text>
+<text class="lbl" x="195" y="284" text-anchor="middle">4</text>
+<rect x="260" y="84" width="106" height="216" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+<g transform="translate(296 118)"><circle r="14" fill="#93c5fd"/><circle r="14" fill="#ef4444" clip-path="url(#lh)"/><circle r="14" fill="none" stroke="#1e1b4b" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#1e1b4b"/><circle cx="4" cy="-4" r="2" fill="#1e1b4b"/><circle cx="-4" cy="4" r="2" fill="#1e1b4b"/><circle cx="4" cy="4" r="2" fill="#1e1b4b"/></g>
+<g transform="translate(330 118)"><circle r="14" fill="#93c5fd"/><circle r="14" fill="#ef4444" clip-path="url(#lh)"/><circle r="14" fill="none" stroke="#1e1b4b" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#1e1b4b"/><circle cx="4" cy="-4" r="2" fill="#1e1b4b"/><circle cx="-4" cy="4" r="2" fill="#1e1b4b"/><circle cx="4" cy="4" r="2" fill="#1e1b4b"/></g>
+<text class="sub" x="313" y="254" text-anchor="middle">Two colors</text>
+<text class="lbl" x="313" y="284" text-anchor="middle">2</text>
+<rect x="410" y="84" width="286" height="216" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+<text class="lbl" x="426" y="112">Picture graph</text>
+<text class="sub" x="426" y="148">Red</text>
+<rect x="530" y="128" width="28" height="28" rx="4" fill="#ef4444" stroke="#7f1d1d" stroke-width="1.5"/>
+<rect x="562" y="128" width="28" height="28" rx="4" fill="#ef4444" stroke="#7f1d1d" stroke-width="1.5"/>
+<rect x="594" y="128" width="28" height="28" rx="4" fill="#ef4444" stroke="#7f1d1d" stroke-width="1.5"/>
+<rect x="626" y="128" width="28" height="28" rx="4" fill="#ef4444" stroke="#7f1d1d" stroke-width="1.5"/>
+<rect x="658" y="128" width="28" height="28" rx="4" fill="#ef4444" stroke="#7f1d1d" stroke-width="1.5"/>
+<text class="sub" x="426" y="192">Blue</text>
+<rect x="530" y="172" width="28" height="28" rx="4" fill="#93c5fd" stroke="#1e40af" stroke-width="1.5"/>
+<rect x="562" y="172" width="28" height="28" rx="4" fill="#93c5fd" stroke="#1e40af" stroke-width="1.5"/>
+<rect x="594" y="172" width="28" height="28" rx="4" fill="#93c5fd" stroke="#1e40af" stroke-width="1.5"/>
+<rect x="626" y="172" width="28" height="28" rx="4" fill="#93c5fd" stroke="#1e40af" stroke-width="1.5"/>
+<text class="sub" x="426" y="236">Two colors</text>
+<path d="M544 216 H534 a4 4 0 0 0 -4 4 V240 a4 4 0 0 0 4 4 H544 Z" fill="#ef4444"/><path d="M544 216 H554 a4 4 0 0 1 4 4 V240 a4 4 0 0 1 -4 4 H544 Z" fill="#93c5fd"/><rect x="530" y="216" width="28" height="28" rx="4" fill="none" stroke="#1e1b4b" stroke-width="1.5"/>
+<path d="M576 216 H566 a4 4 0 0 0 -4 4 V240 a4 4 0 0 0 4 4 H576 Z" fill="#ef4444"/><path d="M576 216 H586 a4 4 0 0 1 4 4 V240 a4 4 0 0 1 -4 4 H576 Z" fill="#93c5fd"/><rect x="562" y="216" width="28" height="28" rx="4" fill="none" stroke="#1e1b4b" stroke-width="1.5"/>
+<line x1="522" y1="122" x2="522" y2="250" stroke="#94a3b8" stroke-width="2"/>
+<text class="sub" x="426" y="284">1 square = 1 button</text>
+<text class="lbl" x="696" y="336" text-anchor="end" style="fill:#6d28d9">Red has the most.</text>
+</svg>

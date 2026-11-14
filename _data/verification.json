@@ -915,5 +915,121 @@
   "jaccard": 1.0,
   "checked_at": "2026-11-08T17:51:22+00:00",
   "note": "Draft version (Oct/11/25); PDF https://causalai.net/r102.pdf HTTP 200, 11204607 bytes"
+ },
+ "gopnik2000": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1111/1467-8624.00224",
+  "http": 200,
+  "fetched_title": "Detecting Blickets: How Young Children Use Information about Novel Causal Powers in Categorization and Induction",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-14T18:11:53+00:00"
+ },
+ "gopnik2004": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1037/0033-295X.111.1.3",
+  "http": 200,
+  "fetched_title": "A Theory of Causal Learning in Children: Causal Maps and Bayes Nets",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-14T18:11:53+00:00"
+ },
+ "dunlosky2013": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1177/1529100612453266",
+  "http": 200,
+  "fetched_title": "Improving Students’ Learning With Effective Learning Techniques",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-14T18:11:53+00:00"
+ },
+ "merrill2002": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1007/BF02505024",
+  "http": 200,
+  "fetched_title": "First principles of instruction",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-14T18:11:53+00:00"
+ },
+ "ngss_appf": {
+  "status": "PASS",
+  "method": "HTTP GET; title and key passage found in the fetched page",
+  "url_checked": "https://www.nextgenscience.org/sites/default/files/Appendix%20F%20%20Science%20and%20Engineering%20Practices%20in%20the%20NGSS%20-%20FINAL%20060513.pdf",
+  "http": 200,
+  "fetched_title": "Appendix F: Science and Engineering Practices in the NGSS",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-14T18:11:53+00:00",
+  "note": "key passage found: 'simple investigations, based on fair tests'"
+ },
+ "ngss_1ps4_2": {
+  "status": "PASS",
+  "method": "HTTP GET; title and key passage found in the fetched page",
+  "url_checked": "https://www.nextgenscience.org/pe/1-ps4-2-waves-and-their-applications-technologies-information-transfer",
+  "http": 200,
+  "fetched_title": "1-PS4-2 Waves and Their Applications in Technologies for Information Transfer",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-14T18:11:53+00:00",
+  "note": "key passage found: 'only when illuminated'"
+ },
+ "ngss_1ps4_3": {
+  "status": "PASS",
+  "method": "HTTP GET; title and key passage found in the fetched page",
+  "url_checked": "https://www.nextgenscience.org/pe/1-ps4-3-waves-and-their-applications-technologies-information-transfer",
+  "http": 200,
+  "fetched_title": "1-PS4-3 Waves and Their Applications in Technologies for Information Transfer",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-14T18:11:53+00:00",
+  "note": "key passage found: 'path of a beam of light'"
+ },
+ "ccss_math": {
+  "status": "PASS",
+  "method": "HTTP GET; title and key passage found in the fetched page",
+  "url_checked": "https://learning.ccsso.org/wp-content/uploads/2022/11/Math_Standards1.pdf",
+  "http": 200,
+  "fetched_title": "Common Core State Standards for Mathematics",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-14T18:11:53+00:00",
+  "note": "key passage found: 'Draw a picture graph and a bar graph'"
+ },
+ "ubd_whitepaper": {
+  "status": "PASS",
+  "method": "HTTP GET; title and key passage found in the fetched page",
+  "url_checked": "https://jaymctighe.com/wp-content/uploads/2024/10/UbD-White-Paper.pdf",
+  "http": 200,
+  "fetched_title": "Improve Curriculum, Assessment, and Instruction Using the Understanding by Design Framework",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-14T18:11:53+00:00",
+  "note": "key passage found: 'UNDERSTANDING BY DESIGN'"
+ },
+ "udl": {
+  "status": "PASS",
+  "method": "HTTP GET; title and key passage found in the fetched page",
+  "url_checked": "https://udlguidelines.cast.org/",
+  "http": 200,
+  "fetched_title": "Universal Design for Learning Guidelines",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-14T18:11:53+00:00",
+  "note": "key passage found: 'Universal Design for Learning'"
+ },
+ "csunplugged_binary": {
+  "status": "PASS",
+  "method": "HTTP GET; title and key passage found in the fetched page",
+  "url_checked": "https://www.csunplugged.org/en/topics/binary-numbers/",
+  "http": 200,
+  "fetched_title": "Binary numbers",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-14T18:11:53+00:00",
+  "note": "key passage found: 'Binary numbers'"
+ },
+ "openstax_prob": {
+  "status": "PASS",
+  "method": "HTTP GET; title and key passage found in the fetched page",
+  "url_checked": "https://openstax.org/books/introductory-statistics-2e/pages/3-1-terminology",
+  "http": 200,
+  "fetched_title": "3.1 Terminology",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-14T18:11:53+00:00",
+  "note": "key passage found: 'law of large numbers'"
  }
 }

@@ -11,6 +11,8 @@ import pathlib
 import re
 import sys
 
+import coursebook  # schema-2 lessons and unit syllabus pages
+
 BOOK = pathlib.Path(__file__).resolve().parents[1]
 SRC = BOOK.parent / "src" / "data"
 if not SRC.exists():  # standalone repository: the vendored copy is the source
@@ -54,6 +56,9 @@ def esc(text: str) -> str:
 
 def lesson_page(level: dict, L: dict, index: dict) -> str:
     lab_file, lab_title = LAB[L["lab"]]
+    if L.get("schema") == 2:
+        return coursebook.lesson_v2(level, L, index, esc=esc, icon_md=ICON[level['level']],
+                                    stage=STAGE[level['level']], lab=LAB[L['lab']])
     lines = [
         "---",
         f"title: {json.dumps(L['id'] + ' · ' + L['title'], ensure_ascii=False)}",
@@ -118,6 +123,9 @@ def lesson_page(level: dict, L: dict, index: dict) -> str:
 
 def level_page(level: dict) -> str:
     n = level["level"]
+    if level.get("unit"):
+        return coursebook.unit_page(level, esc=esc, icon_md=ICON[n], stage=STAGE[n],
+                                    media_include=f"../../media/_level-{n}.md")
     rows = ["| Lesson | Objective | Lab |", "|---|---|---|"]
     for L in level["lessons"]:
         lab_file, lab_title = LAB[L["lab"]]

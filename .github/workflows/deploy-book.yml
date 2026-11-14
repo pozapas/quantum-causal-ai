@@ -34,6 +34,8 @@ jobs:
         run: python -m pytest -q tests
       - name: Build book
         run: jupyter-book build --html
+      - name: Default to light mode
+        run: python scripts/postbuild_light.py
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _build/html

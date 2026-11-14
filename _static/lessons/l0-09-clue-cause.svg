@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-labelledby="t d">
+<title id="t">The sun causes both</title>
+<desc id="d">A sun sits at the top. One arrow labeled causes goes from the sun down to an ice cream cone. Another arrow labeled causes goes from the sun down to a sunburned arm. Between the ice cream and the sunburn is a dashed arrow with a red X on it, labeled not a cause. A box on the right asks: If we stop eating ice cream, will sunburns stop? The answer is no. The sun causes both, so ice cream is just a clue.</desc>
+<defs>
+  <style>
+    .lbl{font:700 18px Inter,"Segoe UI",Arial,sans-serif;fill:#1e1b4b}
+    .sub{font:500 16px Inter,"Segoe UI",Arial,sans-serif;fill:#475569}
+    .cause{stroke:#0891b2;stroke-width:4;fill:none}
+    .not{stroke:#94a3b8;stroke-width:3;stroke-dasharray:8 6;fill:none}
+  </style>
+  <marker id="ac" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 10 5 0 10z" fill="#0891b2"/></marker>
+  <marker id="an" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10z" fill="#94a3b8"/></marker>
+</defs>
+<rect width="720" height="360" rx="18" fill="#ffffff"/>
+
+<!-- sun -->
+<g transform="translate(240 70)" stroke="#d97706" stroke-width="4" stroke-linecap="round">
+  <line x1="0" y1="-50" x2="0" y2="-40"/><line x1="0" y1="40" x2="0" y2="50"/>
+  <line x1="-50" y1="0" x2="-40" y2="0"/><line x1="40" y1="0" x2="50" y2="0"/>
+  <line x1="-35" y1="-35" x2="-28" y2="-28"/><line x1="28" y1="28" x2="35" y2="35"/>
+  <line x1="35" y1="-35" x2="28" y2="-28"/><line x1="-28" y1="28" x2="-35" y2="35"/>
+  <circle r="32" fill="#fcd34d" stroke="#d97706" stroke-width="3"/>
+</g>
+<text class="lbl" x="300" y="44">Sunny day</text>
+
+<!-- cause arrows -->
+<path class="cause" d="M210 112 L120 196" marker-end="url(#ac)"/>
+<path class="cause" d="M270 112 L360 196" marker-end="url(#ac)"/>
+<text class="lbl" x="110" y="150" style="fill:#0e7490" text-anchor="end">causes</text>
+<text class="lbl" x="370" y="150" style="fill:#0e7490">causes</text>
+
+<!-- ice cream -->
+<g transform="translate(100 210)">
+  <polygon points="-20,36 20,36 0,96" fill="#fcd34d" stroke="#92400e" stroke-width="2"/>
+  <circle cx="-10" cy="30" r="16" fill="#f9a8d4" stroke="#be185d" stroke-width="2"/>
+  <circle cx="10" cy="30" r="16" fill="#cffafe" stroke="#0891b2" stroke-width="2"/>
+  <circle cx="0" cy="14" r="16" fill="#f9a8d4" stroke="#be185d" stroke-width="2"/>
+</g>
+<text class="lbl" x="100" y="336" text-anchor="middle">ice cream</text>
+
+<!-- sunburned arm -->
+<g transform="translate(380 250)">
+  <rect x="-56" y="-16" width="96" height="32" rx="16" fill="#fecaca" stroke="#b91c1c" stroke-width="2"/>
+  <rect x="56" y="-13" width="22" height="7" rx="3.5" fill="#fecaca" stroke="#b91c1c" stroke-width="1.5"/>
+  <rect x="58" y="-4" width="24" height="7" rx="3.5" fill="#fecaca" stroke="#b91c1c" stroke-width="1.5"/>
+  <rect x="56" y="5" width="22" height="7" rx="3.5" fill="#fecaca" stroke="#b91c1c" stroke-width="1.5"/>
+  <rect x="36" y="-26" width="8" height="18" rx="4" transform="rotate(-30 40 -10)" fill="#fecaca" stroke="#b91c1c" stroke-width="1.5"/>
+  <circle cx="46" cy="0" r="18" fill="#fecaca" stroke="#b91c1c" stroke-width="2"/>
+  <circle cx="-30" cy="-2" r="6" fill="#ef4444"/>
+  <circle cx="-8" cy="4" r="7" fill="#ef4444"/>
+  <circle cx="16" cy="-4" r="6" fill="#ef4444"/>
+</g>
+<text class="lbl" x="372" y="336" text-anchor="middle">sunburn</text>
+
+<!-- not a cause -->
+<path class="not" d="M150 250 L308 250" marker-end="url(#an)"/>
+<g transform="translate(228 250)" stroke="#ef4444" stroke-width="5" stroke-linecap="round">
+  <line x1="-13" y1="-13" x2="13" y2="13"/><line x1="13" y1="-13" x2="-13" y2="13"/>
+</g>
+<text class="lbl" x="228" y="294" style="fill:#b91c1c" text-anchor="middle">not a cause</text>
+
+<!-- question box -->
+<g transform="translate(482 60)">
+  <rect x="0" y="0" width="216" height="250" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text class="lbl" x="16" y="32">Ask:</text>
+  <text class="sub" x="16" y="60">If we stop eating</text>
+  <text class="sub" x="16" y="82">ice cream, will</text>
+  <text class="sub" x="16" y="104">sunburns stop?</text>
+  <text class="lbl" x="16" y="136" style="fill:#b91c1c">No.</text>
+  <line x1="16" y1="156" x2="200" y2="156" stroke="#e2e8f0"/>
+  <text class="sub" x="16" y="184">The sun causes both.</text>
+  <text class="sub" x="16" y="206">Ice cream is</text>
+  <text class="lbl" x="16" y="230" style="fill:#6d28d9">just a clue.</text>
+</g>
+</svg>

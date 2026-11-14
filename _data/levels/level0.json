@@ -1,148 +1,1549 @@
 {
   "level": 0,
   "title": "Notice, count, and ask",
-  "audience": "Early school: grades 1 to 3, with adult reading help when necessary",
+  "audience": "Ages 6 to 9 (grades 1 to 3), learning with a grown-up",
   "intro": "Start with objects, light, choices, and fair tests. These lessons prepare the ideas that later become probability, causal reasoning, and quantum science.",
   "lessons": [
     {
-      "id": "L0-01", "title": "Count what you can see", "objective": "Count objects and compare two recorded totals.", "prerequisites": [],
-      "paragraphs": [
-        "A count tells you how many objects are in a group. Touch each object once as you say its number. Keep the objects still. This helps you avoid counting one object twice.",
-        "A record keeps your count after the objects move. You can draw one mark for each object. Write a name above each group. Another person can then see which count belongs to which group.",
-        "Science starts with careful records. A larger count does not explain why there are more objects. First describe what you saw. Later, you can ask what could have made the groups different."
+      "id": "L0-01",
+      "schema": 2,
+      "title": "Count what you can see",
+      "objective": "I can count a group carefully and write it down so someone else can check it.",
+      "prerequisites": [],
+      "time_minutes": 30,
+      "big_idea": "Count each thing just once, and write your count down so anyone can check it.",
+      "i_can": [
+        "I can touch and move each thing as I count it.",
+        "I can keep my count with tally marks.",
+        "I can tell which of two piles has more."
       ],
-      "equation": "3 + 2 = 5. Three objects and two more objects make five objects.",
-      "example": "Put three red blocks and two blue blocks on a table. Count the red blocks: one, two, three. Count the blue blocks: one, two. There are five blocks in all. The red group has one more block.",
-      "exercise": "Draw four circles and three squares. How many shapes are there? Which group has more shapes?",
-      "solution": "There are seven shapes because four plus three equals seven. The circle group has one more shape than the square group. Count each drawing once to check.",
-      "quiz": {"question": "Which record helps another person check a count?", "options": ["A named group with one mark per object", "A guess with no objects", "A colour with no number"], "answer": 0, "explanation": "The named marks connect the written count to the objects. Another person can count the marks and compare the result."},
-      "sources": ["openstax"], "lab": "chance", "caution": "A count describes this group. It does not by itself explain a cause."
+      "words": [
+        {
+          "word": "tally mark",
+          "meaning": "A short line you draw for each thing you count."
+        },
+        {
+          "word": "check",
+          "meaning": "To look again to see if something is right."
+        }
+      ],
+      "warmup": {
+        "recall_of": null,
+        "prompt": "Look around the room. How many chairs can you see? Count them out loud."
+      },
+      "story_title": "The button mix-up",
+      "picture": {
+        "file": "l0-01-tally.svg",
+        "alt": "Two piles of buttons. Pile A has 12 buttons and 12 tally marks. Pile B has 9 buttons and 9 tally marks. An arrow marked more points to Pile A.",
+        "caption": "Two new piles, like the ones you will count. Each button gets one tally mark. Pile A has 12. Pile B has 9. Pile A has more."
+      },
+      "story": [
+        "Leo finds a jar of buttons. He pours them in a pile on the table. He points and counts fast. \"Thirteen!\" he says. Then he counts again. \"Fifteen?\" Now he has two answers.",
+        "Maya looks at the pile. \"I think you counted some buttons twice,\" she says. \"And you skipped some too. They are all mixed up.\"",
+        "Maya shows him a better way. She touches one button and moves it to a new spot. She says, \"One.\" She moves the next one and says, \"Two.\" Each button moves only once, so it is counted only once.",
+        "For each button, Leo draws a tally mark. After four lines, the fifth line goes across them. That makes a group of five. Groups of five are easy to count again.",
+        "The last number Maya says is fourteen. Leo counts the tally marks and gets fourteen too. Then Leo's dad counts the buttons. Fourteen again! Now anyone can check their count."
+      ],
+      "activity": {
+        "title": "Count and tally",
+        "minutes": 15,
+        "materials": [
+          "Two small piles of things, with 8 to 15 in each, like buttons, blocks, or dry pasta",
+          "Two pieces of paper",
+          "A pencil"
+        ],
+        "steps": [
+          "Make two piles. Call them Pile A and Pile B. Write each name at the top of a paper.",
+          "Start with Pile A. Touch one thing and move it to a new spot. Say, \"One.\"",
+          "Draw one tally mark on the Pile A paper.",
+          "Keep going. Move one thing, say the next number, and draw one mark.",
+          "When you draw the fifth mark, draw it across the other four.",
+          "Write the last number you said under your tally marks.",
+          "Now count Pile B the same way, on its own paper.",
+          "Look at your two numbers. Which pile has more? Circle that number.",
+          "Ask a grown-up to count both piles. Do they get the same numbers?"
+        ],
+        "record": "Two papers, Pile A and Pile B. Each has tally marks in groups of five and the total written below. Circle the pile that has more.",
+        "safety": "Buttons, beads, and dry pasta are small. Keep them away from babies and toddlers, who might put them in their mouths."
+      },
+      "guided": {
+        "prompt": "Leo has these tally marks: one group of five and three more lines. How many things did he count?",
+        "answer": "Eight. Count the group as five, then go on: six, seven, eight."
+      },
+      "try_it": [
+        {
+          "prompt": "You count 7 spoons. Then your little brother spreads them out on the table. How many spoons are there now?",
+          "answer": "There are still 7. Moving things does not change how many there are. You can count again to check."
+        },
+        {
+          "prompt": "Pile A has 10 blocks. Pile B has 12 blocks. Which pile has more? How do you know?",
+          "answer": "Pile B has more, because 12 is more than 10. When you count, you say 12 after you say 10."
+        }
+      ],
+      "talk": [
+        "Why did Leo get two different answers the first time?",
+        "Why is it good to write your count down?",
+        "What things at home would be hard to count? Why?"
+      ],
+      "check": [
+        {
+          "question": "Maya touches each shell and says, \"One, two, three, four, five, six.\" How many shells are there?",
+          "options": [
+            "You have to count again to know",
+            "Six",
+            "Five"
+          ],
+          "answer": 1,
+          "explanation": "The last number you say tells you how many. She said six last, so there are six shells."
+        },
+        {
+          "question": "How do you draw the fifth tally mark?",
+          "options": [
+            "As a line across the first four",
+            "As a circle around the first four",
+            "As one more line standing next to the others"
+          ],
+          "answer": 0,
+          "explanation": "The fifth line goes across the four. Then you can see a group of five at a glance."
+        },
+        {
+          "question": "Leo counts a pile of blocks two times. He gets 9 and then 11. What should he do?",
+          "options": [
+            "Pick 11, because it is the bigger number",
+            "Count again, and move each block as he counts it",
+            "Pick 9, because it came first"
+          ],
+          "answer": 1,
+          "explanation": "Two different answers mean there was a mix-up. Moving each block as you count it stops you from counting one twice or skipping one."
+        }
+      ],
+      "connect": "Careful counting is the first step in this whole course. Later you will count how often something happens, like how many times a coin lands heads. Those counts help you talk about chance. A count that anyone can check is a count people can trust.",
+      "grownups": {
+        "why": "Counting to answer \"how many?\" and comparing two numbers are kindergarten goals in the Common Core (K.CC.5 and K.CC.6) [@ccss_math]. Two habits sit underneath them: say one number for each object, and know that the last number said tells how many. Touch-and-move counting makes the first habit physical. Tally marks add a written record that another person can check, which is the start of honest data.",
+        "misconceptions": [
+          "Counting fast is counting well. (Speed causes skips and double counts; slow down and move each object as you count it.)",
+          "Spreading things out makes more of them. (Spread a counted pile out and count again to show the number stays the same.)",
+          "Two different counts mean somebody did it wrong on purpose. (Mix-ups are normal; a careful recount finds them.)"
+        ],
+        "simplify": "Use one pile of 5 to 10 things and skip the tally. Say each number together as the child moves each object.",
+        "extend": "Use piles of 15 to 25 things. Ask the child to guess the total first, then count and see how close the guess was."
+      },
+      "caution": "This lesson works with small, still groups that are easy to see. Real counts can be harder, for example when things move or hide. A recount by a second person makes a count more trustworthy, but it can still miss things.",
+      "sources": [
+        "ccss_math"
+      ],
+      "lab": "chance"
     },
     {
-      "id": "L0-02", "title": "Make clear groups", "objective": "Sort objects with one stated rule and explain an unclear case.", "prerequisites": ["L0-01"],
-      "paragraphs": [
-        "A group can contain objects that follow a rule. You can put all red objects together. You can also group objects by shape. State the rule before you start to sort the objects.",
-        "One object can follow two rules. A red square is red and square. If you change the rule, its group can change. The object did not change. Your question about the object changed.",
-        "An artificial intelligence system can also sort examples into groups. It needs a clear task and useful examples. A wrong group name can lead to a wrong result, even when a computer works quickly."
+      "id": "L0-02",
+      "schema": 2,
+      "title": "Make clear groups",
+      "objective": "I can sort things using one rule and tell which group has more.",
+      "prerequisites": [
+        "L0-01"
       ],
-      "equation": "A category is a named group. Here the rule is: colour is red.",
-      "example": "Take a red square, a blue square, and a red circle. With the colour rule, two objects are red. With the shape rule, two objects are squares. Each result is correct for its own stated rule.",
-      "exercise": "You have a green triangle, a green circle, and a yellow circle. Sort by colour. Then sort by shape.",
-      "solution": "The colour groups contain two green objects and one yellow object. The shape groups contain one triangle and two circles. Each object belongs to one group for each rule.",
-      "quiz": {"question": "Why can a red square appear in two different sorts?", "options": ["It becomes a new object", "The sorting rule changes", "Counting always fails"], "answer": 1, "explanation": "A colour rule and a shape rule ask different questions. The same object has both properties and can satisfy both rules."},
-      "sources": ["openstax"], "lab": "chance", "caution": "Real categories can overlap. A simple sorting task does not represent every learning problem."
+      "time_minutes": 30,
+      "big_idea": "Sort with one clear rule, then count each group.",
+      "i_can": [
+        "I can pick one rule and use it to sort.",
+        "I can say where the tricky things go.",
+        "I can make a picture graph and find the biggest group."
+      ],
+      "words": [
+        {
+          "word": "sort",
+          "meaning": "To put things into groups that go together."
+        },
+        {
+          "word": "rule",
+          "meaning": "What tells you which group each thing goes in."
+        },
+        {
+          "word": "picture graph",
+          "meaning": "A chart with one square or picture for each thing."
+        }
+      ],
+      "warmup": {
+        "recall_of": "L0-01",
+        "prompt": "Last time you counted piles. How do you make sure you count each thing just once? How do tally marks help?"
+      },
+      "story_title": "The tricky button",
+      "picture": {
+        "file": "l0-02-groups.svg",
+        "alt": "Buttons sorted into three groups: 5 red, 4 blue, and 2 with two colors. Next to them, a picture graph shows one square for each button.",
+        "caption": "The rule is color. Tricky buttons with two colors get their own group. The graph shows red has the most."
+      },
+      "story": [
+        "Maya and Leo open a treasure box full of buttons. \"Let's sort them,\" says Maya. \"Our rule is color. Red ones here. Blue ones there.\"",
+        "It goes well until Leo picks up a button that is half red and half blue. \"It goes with the red ones,\" he says. \"No, blue!\" says Maya. They both hold on to it.",
+        "\"Wait,\" says Maya. \"Our rule does not say what to do with this one.\" So they add to the rule. Buttons with two colors get their own group. Now every button has just one place to go.",
+        "They count each group, one button at a time. Red has 5. Blue has 4. Two colors has 2. Then they make a picture graph with one square for each button. The red row is the longest, so red has the most."
+      ],
+      "activity": {
+        "title": "Sort the treasure box",
+        "minutes": 20,
+        "materials": [
+          "10 to 20 small things, like buttons, blocks, pasta shapes, or toy pieces",
+          "A few bowls or pieces of paper to hold the groups",
+          "Grid paper, or plain paper and a crayon",
+          "A pencil"
+        ],
+        "steps": [
+          "Put all your things in one pile. Look at them closely.",
+          "Pick one rule, like color, size, or shape. Say your rule out loud.",
+          "Look for tricky things that could fit two groups. Decide where they go, before you sort.",
+          "Sort everything into 2, 3, or 4 groups. Use one bowl or paper for each group.",
+          "Count each group. Touch and move each thing, like in the last lesson.",
+          "Make a picture graph. Draw one square for each thing, in a row for each group.",
+          "Look at your graph. Which group has the most? Which has the fewest?",
+          "Mix everything up. Pick a new rule and sort again. Do the groups change?"
+        ],
+        "record": "A picture graph with one row for each group. Draw one square for each thing. Write the group name at the start of each row, and your rule at the top.",
+        "safety": "Keep buttons, beads, and other small things away from babies and toddlers."
+      },
+      "guided": {
+        "prompt": "Leo sorts socks by color. He finds a sock with red and white stripes. Where should it go?",
+        "answer": "The rule has to say. He could make a group for socks with stripes or two colors. Then every sock has just one place to go."
+      },
+      "try_it": [
+        {
+          "prompt": "You sort toy animals by how many legs they have. You have a snake, a duck, a cat, and a dog. Which groups do you make?",
+          "answer": "Make three groups. The snake goes in no legs. The duck goes in two legs. The cat and the dog go in four legs."
+        },
+        {
+          "prompt": "A picture graph shows 6 squares for blocks and 3 squares for balls. Which group has more? How many more?",
+          "answer": "Blocks have more. There are 3 more blocks, because 6 is 3 more than 3."
+        }
+      ],
+      "talk": [
+        "What happened when Maya and Leo found the tricky button?",
+        "Can you sort the same things with a different rule? What changes?",
+        "Where do people sort things at home or at the store?"
+      ],
+      "check": [
+        {
+          "question": "Remember Lesson 1. Why do you move each thing after you count it?",
+          "options": [
+            "So you can count faster",
+            "So you count each thing just once",
+            "So the pile looks neat"
+          ],
+          "answer": 1,
+          "review_of": "L0-01",
+          "explanation": "When you move a thing as you count it, you will not count it twice or skip it."
+        },
+        {
+          "question": "Leo puts all the cars in one group and all the red toys in another group. What is the problem?",
+          "options": [
+            "He should have sorted by size.",
+            "He used two rules, so a red car could go in both groups.",
+            "He needs to make more groups."
+          ],
+          "answer": 1,
+          "explanation": "One rule gives each thing just one place. With two rules, a red car fits both groups."
+        },
+        {
+          "question": "In a picture graph, red has 5 squares and blue has 4 squares. How many more red buttons are there?",
+          "options": [
+            "9",
+            "1",
+            "5"
+          ],
+          "answer": 1,
+          "explanation": "Line up the rows. Red has one square more than blue, so there is 1 more red button. Nine is how many there are in all."
+        }
+      ],
+      "connect": "Sorting and counting groups is how people turn a messy pile into facts they can share. Later in this course you will sort what happens, like heads or tails, and count each group. That helps you see a pattern. A clear rule makes sure everyone counts the same way.",
+      "grownups": {
+        "why": "Sorting objects into categories and counting each one is a kindergarten goal (K.MD.3). Organizing data into up to three categories comes in grade 1 (1.MD.4), and drawing a picture graph with up to four categories comes in grade 2 (2.MD.10) [@ccss_math]. The tricky button teaches a deeper point: a good category rule must say where every object goes, with no object in two places.",
+        "misconceptions": [
+          "One rule can put a thing in two groups. (A clear rule gives each thing exactly one place; add a group for the tricky ones.)",
+          "The group that takes up the most space has the most. (Spread-out groups look bigger; count them, or use squares of the same size in the graph.)",
+          "There is only one right way to sort. (Many rules work; what matters is that the rule is clear and used the same way each time.)"
+        ],
+        "simplify": "Use two groups and about 10 things. Draw the picture graph together, one square at a time.",
+        "extend": "Sort the same things by two different rules and make a graph for each. Ask which rule gave the biggest group, and why the graphs are different."
+      },
+      "caution": "Groups come from the rule people choose. A different rule gives different groups and different counts, so a picture graph only tells you about the rule that was used. Which group is biggest says nothing yet about why.",
+      "sources": [
+        "ccss_math"
+      ],
+      "lab": "chance"
     },
     {
-      "id": "L0-03", "title": "Watch a change", "objective": "Record a state before and after an action without adding an unsupported explanation.", "prerequisites": ["L0-01"],
-      "paragraphs": [
-        "A state describes how something is at one time. A lamp can be on or off. A cup can be empty or full. Write the time with the state when you record a change.",
-        "An action is something you do. You can press a lamp switch and then look at the lamp. Record both the action and the result. This gives more information than a record of the result alone.",
-        "Two events can happen one after the other without one causing the other. A bird can sing before a lamp comes on. That order alone does not show that the bird controls the lamp."
+      "id": "L0-03",
+      "schema": 2,
+      "title": "Watch a change",
+      "objective": "I can tell what I saw before and after a change, without guessing why.",
+      "prerequisites": [
+        "L0-01"
       ],
-      "equation": "Before: off. Action: press the switch. After: on.",
-      "example": "A working battery lamp is off. You press its switch once, and it comes on. You record the starting state, your action, and the final state. Repeat with the same lamp to check whether the pattern continues.",
-      "exercise": "A toy car is still. You push it, and it moves. Write a before, action, and after record.",
-      "solution": "Before: the toy car is still. Action: you push the car. After: the car moves. This record states the observed sequence without claiming that all motion has the same cause.",
-      "quiz": {"question": "What does a before-and-after record show first?", "options": ["Every possible cause", "A law for all objects", "The states and their order"], "answer": 2, "explanation": "The record gives the observed states and their order. More evidence is necessary to compare causes or rule out other changes."},
-      "sources": ["seeing", "hernan"], "lab": "causal", "caution": "One before-and-after record is not a controlled causal experiment."
+      "time_minutes": 30,
+      "big_idea": "Write down what you see before and after a change. Save your ideas about why for later.",
+      "i_can": [
+        "I can draw and write what I see at different times.",
+        "I can tell what I saw apart from why I think it happened.",
+        "I can write my why ideas in their own place."
+      ],
+      "words": [
+        {
+          "word": "observe",
+          "meaning": "To look closely and notice what is there."
+        },
+        {
+          "word": "melt",
+          "meaning": "When something solid, like ice or butter, warms up and turns runny."
+        },
+        {
+          "word": "column",
+          "meaning": "A part of a page that goes from top to bottom."
+        }
+      ],
+      "warmup": {
+        "recall_of": "L0-02",
+        "prompt": "Last time you sorted things with one rule. What rule did you use? Where did the tricky things go?"
+      },
+      "story_title": "The crying ice cube",
+      "picture": {
+        "file": "l0-03-ice.svg",
+        "alt": "An ice cube on a plate at 0, 5, 10, and 15 minutes. The cube gets smaller and the puddle gets bigger. Below is a chart with two columns: I saw, and I think it is because.",
+        "caption": "The cube gets smaller and the puddle gets bigger. What they saw goes on the left. Their why ideas go on the right."
+      },
+      "story": [
+        "Maya puts an ice cube on a plate. After a while, Leo points at it. \"Look, the ice cube is sad. It is crying!\"",
+        "Maya laughs. \"Ice cubes do not feel sad. Let's write only what we can see.\" She looks closely. She writes, \"The cube is smaller. There is water on the plate.\"",
+        "Every five minutes, they observe the cube again. Each time, Maya draws it and writes what she sees. The cube gets smaller and rounder. The puddle gets bigger.",
+        "Leo has ideas about why. \"Maybe the room is warm. Maybe the plate is warm.\" Maya says, \"Good ideas! Let's put them in a different column.\" Now they have two lists: what they saw, and what they think made it happen."
+      ],
+      "activity": {
+        "title": "Ice cube watch",
+        "minutes": 20,
+        "materials": [
+          "One ice cube",
+          "A plate",
+          "A clock or timer",
+          "Paper and a pencil"
+        ],
+        "steps": [
+          "Fold your paper in half. On the left side, write \"I saw.\" On the right side, write \"I think it is because.\"",
+          "Put the ice cube on the plate. Set the plate on a table.",
+          "Observe the cube right away. This is 0 minutes. Draw it and write one thing you see on the left side.",
+          "Set the timer for 5 minutes. When it rings, draw the cube again and write what you see now.",
+          "Do it again at 10 minutes and at 15 minutes.",
+          "Look at your drawings. What changed? What stayed the same?",
+          "Now think about why the ice changed. Write your ideas on the right side only."
+        ],
+        "record": "A paper folded into two columns, I saw and I think it is because. Draw the cube four times, at 0, 5, 10, and 15 minutes.",
+        "safety": "The ice will melt into water on the plate. Keep the plate away from screens, plugs, and cords, and wipe up spills so no one slips."
+      },
+      "guided": {
+        "prompt": "Leo says, \"The ice cube got smaller because the room is warm.\" Which part goes in the I saw column? Which part goes in the other column?",
+        "answer": "\"The ice cube got smaller\" goes in I saw, because you can see it. \"Because the room is warm\" is an idea about why, so it goes in the other column."
+      },
+      "try_it": [
+        {
+          "prompt": "You leave a piece of bread out on a plate overnight. In the morning it is hard. Write one I saw sentence.",
+          "answer": "Something like \"The bread is hard now\" or \"The bread was soft before and is hard now.\" It tells what you saw, not why."
+        },
+        {
+          "prompt": "Sam says, \"The puddle dried up because the sun took the water.\" Is that what Sam saw, or an idea about why?",
+          "answer": "It is both. \"The puddle dried up\" is what Sam saw. \"Because the sun took the water\" is an idea about why, so it goes in the other column."
+        }
+      ],
+      "talk": [
+        "Why did Maya say ice cubes do not feel sad?",
+        "Why is it useful to keep your why ideas in a different place?",
+        "What else changes when you wait and watch? How could you observe it?"
+      ],
+      "check": [
+        {
+          "question": "Which sentence goes in the I saw column?",
+          "options": [
+            "The warm room made the ice melt.",
+            "The ice cube is sad.",
+            "The ice cube got smaller."
+          ],
+          "answer": 2,
+          "explanation": "You can see the cube get smaller. A cube cannot feel sad. The warm room is an idea about why, so it goes in the other column."
+        },
+        {
+          "question": "Leo writes, \"The plate made the ice melt.\" Where should this go?",
+          "options": [
+            "In the I saw column",
+            "In the I think it is because column",
+            "Nowhere, because guesses are bad"
+          ],
+          "answer": 1,
+          "explanation": "It is an idea about why. Ideas are good! They go in their own column, so you can test them later."
+        },
+        {
+          "question": "Remember Lesson 2. You sort socks by color. You find a sock with red and blue stripes. What should your rule say?",
+          "options": [
+            "Leave it out, because it does not fit",
+            "Put it in red one day and blue the next",
+            "Where tricky socks go, like a two colors group"
+          ],
+          "answer": 2,
+          "review_of": "L0-02",
+          "explanation": "A clear rule says where every sock goes, even the tricky ones. Then each sock has just one place."
+        }
+      ],
+      "connect": "Writing what you saw, apart from why, is a habit that scientists use. In the next lesson you will learn a fair way to test a why idea. Later you will see that two things can happen together when one does not cause the other. Careful notes help you tell a clue from a cause.",
+      "grownups": {
+        "why": "Telling an observation apart from an explanation is a core habit in the K-2 science practices, where children make observations to collect data and then use evidence to build explanations [@ngss_appf]. Looking at fixed times (0, 5, 10, and 15 minutes) makes before and after concrete. The ice melts because heat moves into it from the warmer air and plate. The child does not need that answer yet; confirm it after their own ideas are written down.",
+        "misconceptions": [
+          "The ice is sad or wants to melt. (Gently ask: what can you see? Feelings words describe people and animals, not ice.)",
+          "The ice disappears. (The water is right there on the plate; point to the puddle.)",
+          "A guess is only allowed if you are sure. (Guesses are welcome; they simply go in their own column until they are tested.)"
+        ],
+        "simplify": "Observe only at 0 and 15 minutes. The child draws, and the grown-up writes the words the child says.",
+        "extend": "Put a second ice cube on a plate in a sunny spot or near a warm window. Before you test it, ask the child to say which cube will melt first and why, and write that idea in the right column. This leads into fair tests in Lesson 4."
+      },
+      "caution": "Watching a change shows what happened, not why. The ideas in the right column stay untested until a fair test in Lesson 4. How fast the ice melts depends on the size of the cube and how warm the room is, so results will differ from home to home.",
+      "sources": [
+        "ngss_appf"
+      ],
+      "lab": "causal"
     },
     {
-      "id": "L0-04", "title": "Compare fairly", "objective": "Choose a comparison that changes one planned condition.", "prerequisites": ["L0-03"],
-      "paragraphs": [
-        "A fair comparison makes the question clear. Suppose you ask whether a steeper ramp helps a toy car travel farther. Use the same car and floor. Change the ramp height as your planned action.",
-        "Measure distance from the same starting mark each time. Release the car without an extra push. If you change the car and the ramp together, you cannot tell which change explains a different distance.",
-        "Repeat each test because small differences can occur. A wheel can turn slightly, or a floor can have a bump. Repeated results help you see whether the planned change has a stable effect."
+      "id": "L0-04",
+      "schema": 2,
+      "title": "Compare fairly",
+      "objective": "I can plan a fair test that changes only one thing.",
+      "prerequisites": [
+        "L0-03"
       ],
-      "equation": "Comparison: same car, same floor, different ramp height.",
-      "example": "A car travels 40 centimetres after release from a low ramp. It travels 60 centimetres from a higher ramp. You keep the car, floor, and release method the same. This is better evidence than comparing two different cars.",
-      "exercise": "You test whether water helps a plant grow. Name two conditions to keep similar and one condition to change.",
-      "solution": "Use similar plants, soil, light, and test times. Change the planned amount of water. Repeat with more than one plant because plants can differ even when they look similar.",
-      "quiz": {"question": "Which ramp test gives a clearer comparison?", "options": ["Change the ramp height and keep the car", "Change the car, floor, and ramp", "Use no starting mark"], "answer": 0, "explanation": "Keeping the car and other conditions similar makes the ramp-height change easier to study. Repetition still helps assess variation."},
-      "sources": ["seeing", "hernan"], "lab": "causal", "caution": "Keeping visible conditions similar cannot guarantee that all other causes are controlled."
+      "time_minutes": 30,
+      "big_idea": "To find out what a change does, change just one thing and keep everything else the same.",
+      "i_can": [
+        "I can pick one thing to change in a test.",
+        "I can name the things I keep the same.",
+        "I can do a test more than once and compare."
+      ],
+      "words": [
+        {
+          "word": "fair test",
+          "meaning": "A test where you change only one thing, so you can tell what made the difference."
+        },
+        {
+          "word": "result",
+          "meaning": "What happens at the end of a test, like how far a car rolled."
+        }
+      ],
+      "warmup": {
+        "recall_of": "L0-03",
+        "prompt": "Last time you watched a change. Think of one thing you saw before and after. What changed? What stayed the same?"
+      },
+      "story_title": "The ramp race",
+      "picture": {
+        "file": "l0-04-ramps.svg",
+        "alt": "Two ramps side by side. With one book the car rolls 4 tiles; with two books the same car rolls 7 tiles.",
+        "caption": "Same car, same floor, same start line. Only the ramp height changes."
+      },
+      "story": [
+        "Maya and Leo have two toy cars, two boards, and a pile of books for making ramps. Leo says, \"A higher ramp makes a car go farther!\" Maya says, \"How can we find out?\"",
+        "First they try it the messy way. Leo puts his red car on a high ramp. Maya puts her blue car on a low ramp. The red car goes farther, and Leo cheers. But Maya frowns. \"Your car is not my car. Maybe your car is just faster.\"",
+        "So they try again. This time they use the same red car every time. They use the same floor and the same start line. They let go without a push. The only thing they change is how high the ramp is.",
+        "From the low ramp, the car rolls 4 floor tiles. From the high ramp, it rolls 7 tiles. They try each ramp three times, and the high ramp wins every time. Only the ramp changed, so they can say the higher ramp helped this car go farther."
+      ],
+      "activity": {
+        "title": "Ramp race",
+        "minutes": 15,
+        "materials": [
+          "A toy car, or a ball that rolls",
+          "Two hardcover books",
+          "A flat board or a piece of stiff cardboard",
+          "Masking tape or a sticky note for the start line",
+          "Paper and a pencil"
+        ],
+        "steps": [
+          "Lean the board on one book. This is the low ramp.",
+          "Put tape on the floor at the bottom of the ramp. This is the start line.",
+          "Hold the car at the top. Let go. Do not push.",
+          "Where did it stop? Count floor tiles or footsteps, or put a sticky note there.",
+          "Do it two more times. Write down each result.",
+          "Add the second book. Now it is a high ramp. Use the same car and the same start line.",
+          "Do it three times again. Write down each result.",
+          "Look at your results. Which ramp sent the car farther most of the time?"
+        ],
+        "record": "Make a table with two rows, Low ramp and High ramp, and three boxes in each row for your three tries.",
+        "safety": "Use a clear floor away from stairs. Keep small toy parts away from babies and toddlers."
+      },
+      "guided": {
+        "prompt": "Look at Maya and Leo's first try. Which two things changed at the same time?",
+        "answer": "The car changed and the ramp changed. With two changes, they could not tell which one made the difference."
+      },
+      "try_it": [
+        {
+          "prompt": "You want to know if a ball bounces higher on a hard floor or on a rug. What will you change? What will you keep the same?",
+          "answer": "Change the place: floor or rug. Keep the same ball, drop it from the same height, and let go the same way each time, with no throwing."
+        },
+        {
+          "prompt": "Sam folds two paper airplanes. One has sharp folds and one has soft folds. Sam throws the sharp one hard and the soft one gently. Is that fair? How could Sam fix it?",
+          "answer": "It is not fair, because two things changed: the folds and the throw. Sam should throw both planes the same way, from the same spot, a few times each."
+        }
+      ],
+      "talk": [
+        "Why did Maya and Leo try each ramp three times, not just once?",
+        "Can you think of a test that was not fair? What would make it fair?",
+        "What is hard about keeping everything the same?"
+      ],
+      "check": [
+        {
+          "question": "You want to know if water helps a bean plant grow. Which test is fair?",
+          "options": [
+            "Water one plant and look at it a minute later.",
+            "One plant by the window gets water. One plant in a dark closet gets no water.",
+            "Two plants in the same kind of pot by the same window. One gets water and one does not."
+          ],
+          "answer": 2,
+          "explanation": "In the fair test, only the water is different. In the second test the light is different too, so you could not tell what made the difference."
+        },
+        {
+          "question": "Why do we do a test more than once?",
+          "options": [
+            "The first try is always wrong.",
+            "It makes the test take longer.",
+            "One try can come out different just by chance."
+          ],
+          "answer": 2,
+          "explanation": "One try can be odd. A bump on the floor or a wobbly start can change it. If the same thing happens again and again, you can trust it more."
+        },
+        {
+          "question": "Remember Lesson 3. When you watch a change, what do you write down first?",
+          "options": [
+            "What you hoped would happen",
+            "Why it changed",
+            "What it looked like before and after"
+          ],
+          "answer": 2,
+          "review_of": "L0-03",
+          "explanation": "First write what you saw, before and after. The why comes later, after you test it."
+        }
+      ],
+      "connect": "Scientists call a test like this an experiment. Later in this course you will see why it is so useful. When you change one thing on purpose, you can find out what it causes. Much later, you will meet the world of very tiny things. There, measuring something can change it. Then making a fair test becomes a real puzzle.",
+      "grownups": {
+        "why": "This lesson introduces controlled comparison, the core of experimental science. In the Next Generation Science Standards, K-2 investigations build toward simple investigations based on fair tests, and planning investigations in which variables are controlled belongs to the grades 3 to 5 band [@ngss_appf]. So the goal here is the idea of changing one thing, not formal variable control. Young children already learn causes from evidence [@gopnik2000]; a fair test turns that instinct into a method.",
+        "misconceptions": [
+          "Changing several things at once is quicker, so it is better. (It hides which change mattered.)",
+          "One try is enough if the result looks clear. (A single try can be a fluke.)",
+          "If the high ramp won, higher ramps always win. (The result holds for this car on this floor; other cars or floors might differ.)"
+        ],
+        "simplify": "Use one change and two tries for each ramp. Let the child mark stopping spots with sticky notes instead of counting.",
+        "extend": "Try three ramp heights and draw a picture graph of the results [@ccss_math]. Ask: does each extra book add the same distance?"
+      },
+      "caution": "Keeping the things you can see the same does not guarantee that every other cause is the same. A fair test makes a conclusion much more trustworthy, not certain.",
+      "sources": [
+        "ngss_appf",
+        "gopnik2000",
+        "ccss_math"
+      ],
+      "lab": "causal"
     },
     {
-      "id": "L0-05", "title": "Some results are uncertain", "objective": "Distinguish a possible outcome from a certain outcome.", "prerequisites": ["L0-01", "L0-02"],
-      "paragraphs": [
-        "An outcome is a result of a trial. A trial is one try. If a closed bag holds red and blue counters, a draw can give either colour. Before the draw, the result is uncertain.",
-        "Possible means that a result can occur. Certain means that it must occur under the stated conditions. If every counter is red, a counter drawn from that bag must be red, provided the bag has not changed.",
-        "Uncertain does not mean that anything can happen. A bag with only red and blue counters cannot give a green counter under the model. State the possible outcomes before you make a prediction or run a trial."
+      "id": "L0-05",
+      "schema": 2,
+      "title": "Sure, maybe, or never?",
+      "objective": "I can say if something is sure, maybe, or impossible, and try it more than once.",
+      "prerequisites": [
+        "L0-01",
+        "L0-02"
       ],
-      "equation": "Possible outcomes: red or blue. Impossible in this bag: green.",
-      "example": "A bag contains two red counters and one blue counter. You mix them and draw one without looking. Red is possible, and blue is possible. Green is not possible because no green counter is in the bag.",
-      "exercise": "A bag has four yellow counters and no other counters. Is a yellow draw possible, certain, or impossible? What about blue?",
-      "solution": "Yellow is certain and is therefore also possible under the stated conditions. Blue is impossible because there is no blue counter in the unchanged bag.",
-      "quiz": {"question": "A bag contains red and blue counters. What can you claim before one unseen draw?", "options": ["Blue must occur", "Either listed colour can occur", "Green must occur"], "answer": 1, "explanation": "Both colours are present, so either can occur. The list of possible outcomes does not determine this single draw."},
-      "sources": ["openstax"], "lab": "chance", "caution": "The statement assumes that the bag contents are known and unchanged."
+      "time_minutes": 30,
+      "big_idea": "Some things are sure, some can never happen, and many are maybe. You cannot know one coin flip, but many flips show a pattern.",
+      "i_can": [
+        "I can sort things into sure, maybe, and never.",
+        "I can flip a coin many times and keep a tally.",
+        "I can explain why the next flip is still a maybe."
+      ],
+      "words": [
+        {
+          "word": "chance",
+          "meaning": "How likely it is that something will happen."
+        },
+        {
+          "word": "impossible",
+          "meaning": "Can never happen."
+        }
+      ],
+      "warmup": {
+        "recall_of": "L0-04",
+        "prompt": "Last time you made a fair test with a ramp. How many things did you change? Why did you try each ramp more than once?"
+      },
+      "story_title": "The coin with no memory",
+      "picture": {
+        "file": "l0-05-sure-maybe-never.svg",
+        "alt": "A line from never to maybe to sure, with an example under each. Below it, a tally of 20 coin flips: 11 heads and 9 tails.",
+        "caption": "One flip is a maybe. Twenty flips gave 11 heads and 9 tails, close to half and half."
+      },
+      "story": [
+        "Maya and Leo play with a coin. They shake it in a paper cup and tip it onto the table. Heads. Heads again. Then heads a third time!",
+        "Leo is sure he knows what comes next. \"Three heads in a row. The next one must be tails!\" Maya shakes the cup and tips it out. Heads.",
+        "\"But it was tails' turn!\" says Leo. Maya laughs. \"A coin does not keep score. It does not know what it did before. Each flip starts fresh.\"",
+        "So they flip the coin 20 times. Leo makes tally marks. At the end they count 11 heads and 9 tails. That is not exactly half, but it is close.",
+        "\"So we can never know one flip,\" says Leo. \"Right,\" says Maya. \"One flip is a maybe. But lots of flips show us a pattern.\""
+      ],
+      "activity": {
+        "title": "Coin flip tally",
+        "minutes": 15,
+        "materials": [
+          "One coin",
+          "A paper cup",
+          "Paper and a pencil",
+          "Five small paper cards, or scraps of paper"
+        ],
+        "steps": [
+          "Draw two boxes on your paper. Write Heads on one box and Tails on the other.",
+          "Put the coin in the cup. Cover the top with your hand and shake.",
+          "Tip the coin out onto the table. Make a tally mark in the right box.",
+          "Do this 20 times. Group your tally marks in fives, like in Lesson 1.",
+          "Count each box. Which side came up more? Was it close to half and half?",
+          "Now write three new words at the top of a page: Never, Maybe, Sure.",
+          "A grown-up writes five cards, like these: The sun will come up tomorrow. A fish will ride a bike. Your next flip is heads. We will have soup tonight. A dropped cup falls down.",
+          "Read each card. Put it under Never, Maybe, or Sure.",
+          "Talk about it. Why is the next coin flip a maybe?"
+        ],
+        "record": "Your tally of 20 flips, with the count for heads and the count for tails. Then your sorted cards under Never, Maybe, and Sure.",
+        "safety": "Coins are a choking danger. Keep coins away from babies and toddlers, and count the coins back in at the end."
+      },
+      "guided": {
+        "prompt": "Sort these three together. Ice in a hot pan melts. A teddy bear eats lunch by itself. You will see a bird today.",
+        "answer": "The melting ice is sure. The teddy bear eating lunch is never, so it is impossible. Seeing a bird today is a maybe, because it can happen or not."
+      },
+      "try_it": [
+        {
+          "prompt": "Sam flips a coin and gets tails four times in a row. Sam says, \"Heads is next for sure.\" Is Sam right?",
+          "answer": "No. The coin does not remember the last flips. Heads and tails both have the same chance on the next flip. It is a maybe."
+        },
+        {
+          "prompt": "You put 5 red blocks in a bag and no blue ones. You pull one out without looking. Is getting a red block sure, maybe, or never? What about a blue one?",
+          "answer": "A red block is sure, because every block in the bag is red. A blue block is never, because there are no blue blocks in the bag."
+        }
+      ],
+      "talk": [
+        "Why did Leo think tails had to come next? What would you tell him?",
+        "Think of something that will happen tomorrow for sure. Now think of a maybe.",
+        "If you flipped 100 times, do you think you would get close to half heads?"
+      ],
+      "check": [
+        {
+          "question": "A coin lands heads three times in a row. What about the next flip?",
+          "options": [
+            "It must be heads, because heads keeps winning.",
+            "It must be tails, because tails is next.",
+            "It could be heads or tails. No one can know."
+          ],
+          "answer": 2,
+          "explanation": "The coin has no memory. Each flip starts fresh, so the next flip is a maybe."
+        },
+        {
+          "question": "Which one is sure?",
+          "options": [
+            "If you let go of a ball, it falls down.",
+            "Your next coin flip will be heads.",
+            "It will be sunny tomorrow."
+          ],
+          "answer": 0,
+          "explanation": "A ball you let go of falls down every time. Sunny weather and heads are both maybes."
+        },
+        {
+          "question": "Remember Lesson 4. In a fair test, how many things do you change?",
+          "options": [
+            "As many things as you can",
+            "Just one thing",
+            "Two things at once"
+          ],
+          "answer": 1,
+          "review_of": "L0-04",
+          "explanation": "Change just one thing and keep the rest the same. Then you can tell what made the difference."
+        }
+      ],
+      "connect": "Later in this course you will use numbers to talk about chance. You will say how big a maybe is. This helps you make good guesses, even when you cannot be sure.",
+      "grownups": {
+        "why": "This lesson builds everyday chance language (sure, maybe, impossible) and the first idea of probability. A single toss of a fair coin cannot be predicted, but over many tosses the fraction of heads tends to settle near one half, which is how probability describes long-run behavior [@openstax_prob]. Twenty tosses is a small sample, so splits such as 12 to 8 or even 13 to 7 are normal and do not mean the coin is unfair.",
+        "misconceptions": [
+          "After several heads, tails is due. (Each toss is independent; the coin has no memory, so the chance stays the same.)",
+          "Half and half means exactly 10 heads in 20 flips. (It means about half; 9, 11, or 12 heads is normal.)",
+          "Maybe always means fifty-fifty. (Maybe covers everything between never and sure; some maybes are much more likely than others.)"
+        ],
+        "simplify": "Do 10 flips instead of 20 and sort just three cards. Let the grown-up draw the tally boxes.",
+        "extend": "Put the whole family's tallies together for 60 or 100 flips. Is the share of heads closer to half than in one person's 20 flips? Compare the share (for example 52 out of 100), not the difference in counts, which often gets bigger. Then sort cards onto a line from never to sure, with some maybes nearer one end."
+      },
+      "caution": "Twenty flips cannot prove that a coin is fair or that it has no memory; that comes from how coin tosses work, not from one small tally. Real coins can, very rarely, land on their edge, so avoid using \"a coin lands heads or tails\" as a sure example.",
+      "sources": [
+        "openstax_prob"
+      ],
+      "lab": "chance"
     },
     {
-      "id": "L0-06", "title": "Find a pattern and test it", "objective": "Use a stated pattern to make a prediction and check a new case.", "prerequisites": ["L0-01", "L0-03"],
-      "paragraphs": [
-        "A pattern is a rule you notice in examples. The colours red, blue, red, blue suggest an alternating rule. A prediction uses that rule to say what might come next before you look at it.",
-        "A prediction can be wrong. The maker of the pattern might change the rule, or you might have guessed the wrong rule. Record the prediction first. Then compare it with a new result that you did not use.",
-        "Artificial intelligence often learns patterns from examples. A correct answer on familiar examples is not enough. New examples help test whether a system learned a useful rule or only remembered the examples it already saw."
+      "id": "L0-06",
+      "schema": 2,
+      "title": "Find a pattern and test it",
+      "objective": "I can use a pattern to make a guess, then check it.",
+      "prerequisites": [
+        "L0-01",
+        "L0-03"
       ],
-      "equation": "Rule: add 2. Sequence: 2, 4, 6, 8.",
-      "example": "You see the numbers 3, 6, and 9. You propose the rule add three and predict 12. The next hidden number is 12, so this test agrees with your rule. Other rules may still fit the first numbers.",
-      "exercise": "Use the rule add four. Start at 1. Write the next three numbers, then describe how you would check your prediction.",
-      "solution": "The next numbers are 5, 9, and 13. Add four at each step. Compare these predictions with new results made with the stated rule.",
-      "quiz": {"question": "Which result gives a useful new test of a learned rule?", "options": ["The same example copied again", "A score with no answer", "An example kept out of learning"], "answer": 2, "explanation": "An example kept out of learning can test a new prediction. Repeating a remembered answer does not provide the same evidence."},
-      "sources": ["openstax"], "lab": "chance", "caution": "Several rules can fit a short pattern. Agreement with one new case is not a proof."
+      "time_minutes": 30,
+      "big_idea": "A pattern helps you guess what comes next. But a guess is not done until you test it.",
+      "i_can": [
+        "I can measure a cup tower and write the height.",
+        "I can find a pattern and use it to make a guess.",
+        "I can test my guess and say what really happened."
+      ],
+      "words": [
+        {
+          "word": "pattern",
+          "meaning": "Something that happens the same way again and again."
+        },
+        {
+          "word": "predict",
+          "meaning": "To make a careful guess about what will happen."
+        },
+        {
+          "word": "centimeters",
+          "meaning": "Small steps on a ruler, marked cm."
+        }
+      ],
+      "warmup": {
+        "recall_of": "L0-05",
+        "prompt": "Last time you flipped a coin. Can you know what one flip will be? What did many flips show you?"
+      },
+      "story_title": "The cup tower",
+      "picture": {
+        "file": "l0-06-cup-tower.svg",
+        "alt": "Stacks of 1, 2 and 3 paper cups, 9, 10 and 11 cm tall. A dashed stack of 6 cups shows the guess of 14 cm.",
+        "caption": "Maya and Leo's cups. Each new cup added about 1 cm. Your cups may give other numbers."
+      },
+      "story": [
+        "Maya and Leo have a pile of paper cups that are all the same. They want to build a tower by putting one cup inside the next. How tall will 6 cups be?",
+        "Leo measures one cup with a ruler. It is 9 centimeters tall. \"Easy,\" he says. \"Six cups is 9 and 9 and 9 and 9 and 9 and 9. That is 54!\"",
+        "Maya puts a second cup inside the first. She measures again. The tower is only 10 centimeters! \"The new cup sits inside the old one,\" she says. \"Only the top part sticks out.\"",
+        "They add a third cup. Now it is 11 centimeters. Leo sees a pattern. \"The first cup is 9. Each new cup adds 1 more.\" So they predict 6 cups will be 14 centimeters.",
+        "Is the guess right? They build it to find out. The ruler says 14. \"Our pattern passed the test,\" says Maya. \"Now we know it worked for 6 cups.\""
+      ],
+      "activity": {
+        "title": "Cup tower",
+        "minutes": 20,
+        "materials": [
+          "Six paper or plastic cups that are all the same",
+          "A ruler with cm on it",
+          "Paper and a pencil"
+        ],
+        "steps": [
+          "Stand one cup on the table. Hold the ruler straight up next to it, with 0 at the table.",
+          "Read the number at the top of the cup. Write it down.",
+          "Put a second cup inside the first. Measure the tower again. Write it down.",
+          "Add a third cup. Measure and write it down.",
+          "Look at your numbers. How much did each new cup add? That is your pattern.",
+          "Use your pattern to predict how tall 6 cups will be. Write it as My guess.",
+          "Build the tower with 6 cups. Measure it. Write it as What happened.",
+          "Was your guess close? If not, what could have changed?"
+        ],
+        "record": "Make a table with two columns, Cups and Height. Fill in 1, 2, and 3 cups. Then add a row for My guess for 6 cups and a row for What happened.",
+        "safety": "Use empty, dry cups. Build on a table, away from the edge, not on a chair or stairs."
+      },
+      "guided": {
+        "prompt": "Maya and Leo's tower was 9 centimeters with 1 cup, 10 with 2 cups, and 11 with 3 cups. How tall do you think 4 cups will be?",
+        "answer": "12 centimeters. Each new cup added 1 more, so 11 and 1 more is 12. To be sure, you would build it and measure."
+      },
+      "try_it": [
+        {
+          "prompt": "Sam has bigger cups. Sam measures one cup. It is 12 centimeters tall. Each new cup adds 2 centimeters. How tall will 3 cups be?",
+          "answer": "16 centimeters. Start at 12. Add 2 for the second cup to get 14. Add 2 more for the third cup to get 16."
+        },
+        {
+          "prompt": "A bean plant grew 1 cm each day for 3 days. Leo says, \"In 100 days it will be 100 centimeters taller.\" Is that sure?",
+          "answer": "No, it is only a guess. A plant can grow faster or slower, or stop growing. The way to know is to keep measuring and see."
+        }
+      ],
+      "talk": [
+        "Why was Leo's first guess of 54 so far off?",
+        "Your numbers may not match Maya and Leo's. Why could that be?",
+        "Can you think of a pattern that might stop working one day?"
+      ],
+      "check": [
+        {
+          "question": "A tower is 9 cm with 1 cup, 10 cm with 2 cups, and 11 cm with 3 cups. What is a good guess for 6 cups?",
+          "options": [
+            "54 cm",
+            "14 cm",
+            "22 cm"
+          ],
+          "answer": 1,
+          "explanation": "Each new cup adds 1 cm. Count up from 11: 12, 13, 14. The 54 guess forgets that the cups sit inside each other."
+        },
+        {
+          "question": "Why do Maya and Leo build the 6 cup tower after they guess?",
+          "options": [
+            "Because a guess is always wrong",
+            "To test if the pattern really works",
+            "So they do not have to measure"
+          ],
+          "answer": 1,
+          "explanation": "A pattern is a good way to guess, but a guess can be wrong. Building and measuring is the test."
+        },
+        {
+          "question": "Remember Lesson 5. Maya flipped a coin 20 times and got 11 heads. What will her next flip be?",
+          "options": [
+            "Heads, because heads won.",
+            "No one can know. It is a maybe.",
+            "Tails, so it can even out."
+          ],
+          "answer": 1,
+          "review_of": "L0-05",
+          "explanation": "The coin has no memory. Many flips show a pattern, but one flip is still a maybe."
+        }
+      ],
+      "connect": "Later in this course you will look for patterns in numbers and charts. You will learn that a pattern helps you guess what comes next. But a pattern does not tell you why it happens, so you still need to test your ideas.",
+      "grownups": {
+        "why": "Children measure length with a ruler, starting at zero and reading whole centimeters, which matches the grade 2 measurement standard [@ccss_math]. Nested cups make a simple, honest pattern: the first cup gives the full height and each extra cup adds only the rim step. Measuring and writing down each height before predicting continues the K-2 practice of making careful observations [@ngss_appf]. The key habit is treating a prediction for a new case as a real test that the pattern might fail.",
+        "misconceptions": [
+          "Six cups must be six times as tall as one cup. (Nested cups only add the part that sticks out, so measure two or three before you predict.)",
+          "If a pattern worked three times, it will always work. (It is still a guess until you test it on a new case, and patterns can stop working.)",
+          "You measure from the very end of the ruler. (Many rulers have a gap before the 0 line; line up 0 with the table.)"
+        ],
+        "simplify": "If reading a ruler is hard, stand a paper strip beside the tower and draw a pencil line at the top each time; compare the gaps between the lines. Predict 4 cups instead of 6.",
+        "extend": "Predict 10 cups, then build and check. Try a different kind of cup and compare the two patterns. Plot height against number of cups on squared paper."
+      },
+      "caution": "The rim step is rarely perfectly even, and readings to the nearest centimeter can be off by one, so a guess that is close counts as a good result. One successful prediction supports the pattern for this case; it does not prove the pattern works for any number of cups.",
+      "sources": [
+        "ccss_math",
+        "ngss_appf"
+      ],
+      "lab": "chance"
     },
     {
-      "id": "L0-07", "title": "Use light to ask a question", "objective": "Describe a light test and separate an observation from an explanation.", "prerequisites": ["L0-03", "L0-04"],
-      "paragraphs": [
-        "Light helps us see objects and can also be the subject of an experiment. Shine a safe lamp toward a wall. Put a card in the path. You can observe a shadow where the card blocks light.",
-        "Write what you can see before you explain it. You might record a dark region on the wall and its shape. That is an observation. A model is an explanation that tries to connect the card, lamp, and shadow.",
-        "Quantum science studies how physical systems behave, including light in carefully controlled experiments. A shadow alone does not show the full quantum rules. Later lessons use interference and measurement to examine rules that simple everyday pictures cannot capture."
+      "id": "L0-07",
+      "schema": 2,
+      "title": "Use light to ask a question",
+      "objective": "I can test what different things do to light, and write what I saw before I guess why.",
+      "prerequisites": [
+        "L0-03",
+        "L0-04"
       ],
-      "equation": "Test record: lamp position, card position, shadow shape.",
-      "example": "Place a square card between a lamp and a wall. You observe a roughly square shadow. Move the card closer to the lamp and record the changed shadow size. Keep the lamp and wall fixed during the comparison.",
-      "exercise": "A shadow grows when you move a card. Write one observation and one question for a further fair test.",
-      "solution": "Observation: the recorded shadow became larger. A useful question is whether moving the card closer to the lamp increases shadow size while the lamp and wall stay fixed.",
-      "quiz": {"question": "Which sentence is a direct observation?", "options": ["The shadow is wider in this record", "The card has a hidden wish", "Every light experiment has this result"], "answer": 0, "explanation": "The first sentence describes the recorded appearance. The other sentences add an unsupported explanation or extend far beyond this test."},
-      "sources": ["feynman"], "lab": "interference", "caution": "Use a safe lamp. Do not look into a laser or a very bright light."
+      "time_minutes": 30,
+      "big_idea": "We see things when light from them reaches our eyes. Some things let light through, some block it, and some bounce it back.",
+      "i_can": [
+        "I can explain why I cannot see things in a very dark room.",
+        "I can test what different things do to a flashlight beam.",
+        "I can write what I saw before I guess why."
+      ],
+      "words": [
+        {
+          "word": "beam",
+          "meaning": "A long line of light, like from a flashlight."
+        },
+        {
+          "word": "reflect",
+          "meaning": "To bounce light back, like a mirror does."
+        }
+      ],
+      "warmup": {
+        "recall_of": "L0-06",
+        "prompt": "Last time you made a cup tower. What was your guess for 6 cups? How did you test it?"
+      },
+      "story_title": "The lost dinosaur",
+      "picture": {
+        "file": "l0-07-flashlight.svg",
+        "alt": "A flashlight beam shines at four things. It passes through clear plastic, partly passes through wax paper, is blocked by cardboard, and bounces back off a mirror.",
+        "caption": "Same flashlight, four different things. Look at what reaches the wall."
+      },
+      "story": [
+        "It is bedtime and the room is very dark. Leo drops his toy dinosaur. He feels around on the floor, slowly. \"I cannot see it anywhere!\"",
+        "Maya clicks on a flashlight. The beam lands on the dinosaur. \"There it is!\" says Leo. Maya says, \"Light from the flashlight bounced off your dinosaur and into your eyes. In the dark, no light was coming from it.\"",
+        "Then they wonder what other things do to light. They tape white paper to the wall. They hold clear plastic, wax paper, cardboard, and a small mirror in the beam, one at a time.",
+        "When they hold up the cardboard, Leo says, \"The cardboard ate the light!\" Maya shakes her head. \"Let's write what we saw first. I saw no spot on the paper.\" They save the why for later.",
+        "The clear plastic left a bright spot. The wax paper left a soft, dim spot. The mirror sent the spot up to the ceiling. Mirrors reflect light, so the spot bounced back toward their side of the room."
+      ],
+      "activity": {
+        "title": "Flashlight test",
+        "minutes": 20,
+        "materials": [
+          "A flashlight",
+          "A sheet of white paper and some tape",
+          "Clear plastic, like a clear food lid or a sheet protector",
+          "Wax paper or baking paper",
+          "A piece of cardboard",
+          "A small mirror, plastic if you have one",
+          "Paper and a pencil"
+        ],
+        "steps": [
+          "Tape the white paper to a wall. Make the room dim, but not totally dark.",
+          "Make a chart. Write the four things down the side. Make two columns: My guess and I saw.",
+          "Before you test, write your guess for each thing. Will light go through?",
+          "Stand one big step from the wall. Shine the flashlight at the white paper. Look at the bright spot.",
+          "Hold each thing in the beam, one at a time. Keep the flashlight in the same spot each time.",
+          "Look at the paper. Is the spot bright, dim, or gone? Write what you saw.",
+          "For the mirror, tip it a little. Look for a spot on the wall or ceiling. Keep the spot away from faces.",
+          "Sort your four things into groups: lets light through, lets some light through, blocks light, bounces light back."
+        ],
+        "record": "Your chart with two columns, My guess and I saw, for clear plastic, wax paper, cardboard, and the mirror. Then write each thing under one of the four groups.",
+        "safety": "Never shine a flashlight or a mirror spot into anyone's eyes. Use a flashlight, never a laser pointer. Move slowly in a dim room. A grown-up should hold a glass mirror."
+      },
+      "guided": {
+        "prompt": "Maya holds clear plastic in the flashlight beam. What do you think she will see on the white paper?",
+        "answer": "A bright spot, almost as bright as with nothing in the way. Clear plastic lets most of the light through."
+      },
+      "try_it": [
+        {
+          "prompt": "Sam is in a dark room with a sleeping cat. Sam turns on a lamp. Now Sam can see the cat. Why?",
+          "answer": "Light from the lamp bounces off the cat and reaches Sam's eyes. In the dark, no light was coming from the cat."
+        },
+        {
+          "prompt": "Which group would a piece of foil go in? Make a guess, then test it if you can.",
+          "answer": "No spot shows behind the foil. Shiny foil bounces light back, like a mirror. So it goes in bounces light back."
+        }
+      ],
+      "talk": [
+        "Which result surprised you? What did you guess before you tested it?",
+        "Why do we need light to see things?",
+        "Leo said the cardboard ate the light. How could you find out more about what really happens?"
+      ],
+      "check": [
+        {
+          "question": "Why could Leo not see his dinosaur in the dark room?",
+          "options": [
+            "The dark covered the dinosaur like a blanket.",
+            "No light was coming from the dinosaur to his eyes.",
+            "The dinosaur was too small to see."
+          ],
+          "answer": 1,
+          "explanation": "You see something when light from it reaches your eyes. In a very dark room, there is no light to bounce off it."
+        },
+        {
+          "question": "You hold wax paper in the beam. A soft, dim spot shows on the wall. Which group does wax paper go in?",
+          "options": [
+            "Bounces light back",
+            "Blocks light",
+            "Lets some light through"
+          ],
+          "answer": 2,
+          "explanation": "Some light got to the wall, so the spot was dim but not gone. That means wax paper lets some light through."
+        },
+        {
+          "question": "Remember Lesson 3. Leo says, \"The cardboard ate the light.\" What should go in the I saw column?",
+          "options": [
+            "The cardboard is dark inside, so it hides the light.",
+            "There was no spot on the paper behind the cardboard.",
+            "The cardboard ate the light."
+          ],
+          "answer": 1,
+          "review_of": "L0-03",
+          "explanation": "Write what you saw first. Eating or hiding the light is a guess about why, so save it for later."
+        }
+      ],
+      "connect": "Light will come back many times in this course, and it can do surprising things. With very tiny things, measuring something can change it. Writing down what you saw, before you guess why, will help you there.",
+      "grownups": {
+        "why": "This lesson follows two grade 1 expectations: objects can be seen only when they are lit [@ngss_1ps4_2], and different materials placed in a beam of light let most of it through, let some through, block it, or send it back [@ngss_1ps4_3]. The key idea is that we see an object when light from it enters our eyes. Keeping an I saw column apart from guesses about why continues the K-2 practice of making careful observations [@ngss_appf].",
+        "misconceptions": [
+          "Our eyes send something out to see. (Light travels from the object into our eyes.)",
+          "Dark is a thing that fills a room. (Dark just means little or no light is there.)",
+          "Clear things let all the light through. (Most light passes, but some bounces off; that is why you can see a dim reflection in a window.)",
+          "Things that block light do nothing to it. (They bounce some back, which is how we see them, and soak up the rest.)"
+        ],
+        "simplify": "Test just two things, clear plastic and cardboard, and use the words goes through and stops.",
+        "extend": "Test more things from around the house, such as tissue paper, a plastic bag, cloth, or a clear plastic cup of water, set on a towel. Try stacking two sheets of wax paper. Is the spot dimmer?"
+      },
+      "caution": "The four groups are a simplification. Most things do several of these at once: clear plastic also reflects a little, cardboard reflects some light (that is why we can see it), and wax paper scatters the light it lets through. The lesson describes what happens to the beam; it does not yet explain why materials differ.",
+      "sources": [
+        "ngss_1ps4_2",
+        "ngss_1ps4_3",
+        "ngss_appf"
+      ],
+      "lab": "interference"
     },
     {
-      "id": "L0-08", "title": "Store a choice with a bit", "objective": "Use zero and one as labels for two possible recorded states.", "prerequisites": ["L0-02", "L0-03"],
-      "paragraphs": [
-        "A bit is a unit of information with two possible values. We write the values as zero and one. A bit can record which of two labels applies. The labels need a stated meaning to be useful.",
-        "For a lamp record, you can let zero mean off and one mean on. This record is about the lamp. It is not the lamp itself. If someone reverses the meanings, the same written number describes a different state.",
-        "A quantum bit is called a qubit. Its rules are richer than these two labels, and later lessons explain them. Measuring a qubit in a chosen two-outcome measurement can produce a recorded bit. A qubit is not a tiny lamp."
+      "id": "L0-08",
+      "schema": 2,
+      "title": "Store a choice with a bit",
+      "objective": "I can write a yes or no choice as 1 or 0.",
+      "prerequisites": [
+        "L0-02"
       ],
-      "equation": "Record rule: 0 means off; 1 means on.",
-      "example": "Three lamps are on, off, and on. With the stated rule, write 1, 0, 1. A reader who knows the rule can recover the recorded states. Without the rule, the numbers do not identify the lamp meanings.",
-      "exercise": "Let zero mean closed and one mean open. Record three doors that are closed, closed, and open.",
-      "solution": "The record is 0, 0, 1. The first two zeros mean closed, and the final one means open. State the code with the record so another reader can use it.",
-      "quiz": {"question": "What values can one classical bit have?", "options": ["Only ten", "Zero or one", "Any whole sentence at once"], "answer": 1, "explanation": "A classical bit has two possible values, written zero and one. Longer messages require more bits and an agreed way to interpret them."},
-      "sources": ["ibm"], "lab": "qubit", "caution": "A qubit requires quantum state rules. The lamp code is a classical information example."
+      "time_minutes": 30,
+      "big_idea": "A bit holds one choice out of two, like yes or no, on or off, 1 or 0.",
+      "i_can": [
+        "I can store a yes or no answer with a card.",
+        "I can write a row of cards as 1s and 0s.",
+        "I can read a code back the same way it was made."
+      ],
+      "words": [
+        {
+          "word": "bit",
+          "meaning": "One spot that holds one of two choices, like 1 or 0."
+        },
+        {
+          "word": "code",
+          "meaning": "A way to show a message that both people agree on."
+        }
+      ],
+      "warmup": {
+        "recall_of": "L0-07",
+        "prompt": "Last time you used a flashlight. Did cardboard let light through, or block it? What about wax paper?"
+      },
+      "story_title": "The secret card code",
+      "picture": {
+        "file": "l0-08-card-code.svg",
+        "alt": "Four cards in a row under four yes or no questions. Face up cards show a star and the number 1. Face down cards are striped and show 0. The row reads 1 0 1 1.",
+        "caption": "Face up means yes, or 1. Face down means no, or 0. This row says 1, 0, 1, 1."
+      },
+      "story": [
+        "Maya wants to ask Leo four questions. Leo wants to answer without saying a word. Maya has an idea. \"Let's use cards!\"",
+        "First they make a plan. A card face up means yes. A card face down means no. They will always read the cards from left to right.",
+        "Maya asks, \"Do you like rain? Do you have a pet? Is blue your best color? Can you skip?\" Leo puts down four cards. Up, down, up, up.",
+        "Maya reads them. \"Yes, no, yes, yes!\" Leo grins. She got every answer right.",
+        "Then Leo writes the row with numbers. Up is 1, and down is 0. The row says 1 0 1 1. Each card holds one choice out of two. That is a bit."
+      ],
+      "activity": {
+        "title": "Card code",
+        "minutes": 15,
+        "materials": [
+          "Four playing cards, or four paper squares with a star on one side",
+          "Paper and a pencil"
+        ],
+        "steps": [
+          "Agree on the code. Face up means yes. Face down means no.",
+          "Agree to read the cards from left to right.",
+          "Your grown-up asks four yes or no questions. Write them down in order.",
+          "For each question, put down one card, face up or face down.",
+          "Your partner reads the row back as yes or no. Did they get it right?",
+          "Now write your row as numbers. Face up is 1. Face down is 0.",
+          "Swap jobs. Your partner answers, and you read the code."
+        ],
+        "record": "Make a table with four boxes. Write each question above a box. In each box, write 1 or 0.",
+        "safety": "Paper squares are fine. Keep small card boxes and any small parts away from babies and toddlers."
+      },
+      "guided": {
+        "prompt": "A row of cards goes up, up, down, up. How do you write it with numbers?",
+        "answer": "Up is 1 and down is 0, so it is 1 1 0 1. That is four bits."
+      },
+      "try_it": [
+        {
+          "prompt": "Leo's row is 0 0 1 0. Which question got a yes?",
+          "answer": "The third one. It is the only card that shows 1, so it is the only yes."
+        },
+        {
+          "prompt": "Sam reads the cards from right to left by mistake. Will Sam get the right answers?",
+          "answer": "Not always. The order is part of the code. Both people must read the same way."
+        }
+      ],
+      "talk": [
+        "Why did Maya and Leo make a plan before they started?",
+        "What else in your home is on or off, like a light switch?",
+        "How many questions could you answer with ten cards?"
+      ],
+      "check": [
+        {
+          "question": "How many choices can one bit hold at a time?",
+          "options": [
+            "Any number you like.",
+            "One choice out of two.",
+            "Two choices together."
+          ],
+          "answer": 1,
+          "explanation": "A bit is like one card. It is up or it is down. It shows one of two choices."
+        },
+        {
+          "question": "Your code says face up is 1. Your row is down, up, up, down. What do you write?",
+          "options": [
+            "0 1 1 0",
+            "1 0 0 1",
+            "0 1 1 1"
+          ],
+          "answer": 0,
+          "explanation": "Down is 0 and up is 1. So down, up, up, down is 0 1 1 0."
+        },
+        {
+          "question": "Remember Lesson 2. You sort buttons. What should your rule do?",
+          "options": [
+            "Change halfway through the sort.",
+            "Say clearly which group each button goes in.",
+            "Leave out the tricky buttons."
+          ],
+          "answer": 1,
+          "review_of": "L0-02",
+          "explanation": "A good rule is clear, so each thing goes in one group. A card code is like that. Each card is up or down, and never both."
+        }
+      ],
+      "connect": "Computers store pictures, words, and songs using many, many bits. Each bit is one of two choices. Later in this course you will meet a quantum bit. It follows surprising rules, and you will find out what they are.",
+      "grownups": {
+        "why": "This lesson introduces the bit, the smallest unit of information: one choice between two states. Unplugged activities use two-sided cards in a similar way to show how two-state symbols can store information [@csunplugged_binary]. The key ideas are that a code needs an agreement (which side means what) and an order (which card comes first). Computers store information using very many bits.",
+        "misconceptions": [
+          "A 0 means nothing is there. (Here 0 is a real answer, no, just as 1 is yes.)",
+          "Any reader can read the code. (Both people must agree on what each side means and which end to start from.)",
+          "A bit can hold a whole word. (One bit holds only one of two choices; a word needs many bits.)"
+        ],
+        "simplify": "Use two cards and two questions. Say the words yes and no first, then add 1 and 0 at the end.",
+        "extend": "Ask how many different rows four cards can make. Try listing them in an organized way; there are 16. Note that this activity stores answers; it is not yet counting in binary, which comes later."
+      },
+      "caution": "Real computers do not use cards; they keep bits as tiny electrical or magnetic states. The card code shows the idea of a two-choice symbol, not how the hardware works. A quantum bit, met later in the course, behaves differently from an ordinary bit.",
+      "sources": [
+        "csunplugged_binary"
+      ],
+      "lab": "qubit"
     },
     {
-      "id": "L0-09", "title": "Prediction is not control", "objective": "Explain why a useful clue does not necessarily cause the event it predicts.", "prerequisites": ["L0-04", "L0-06"],
-      "paragraphs": [
-        "A clue can help you predict an event. Dark clouds can help you predict rain. Seeing many umbrellas can also be a clue that rain is present. A useful clue need not be a control switch for the event.",
-        "Opening an umbrella does not normally make rain start. Rain can make people open umbrellas instead. To ask about a cause, ask what would change if you deliberately changed the possible cause under suitable conditions.",
-        "A prediction system can learn that umbrellas and rain occur together. A causal system must ask a further question about actions and results. Good decisions need that distinction because acting on a clue may not change the thing you want."
+      "id": "L0-09",
+      "schema": 2,
+      "title": "A clue is not a cause",
+      "objective": "I can explain why a clue is not always a cause.",
+      "prerequisites": [
+        "L0-04",
+        "L0-06"
       ],
-      "equation": "Clue question: will it rain? Action question: what happens if I open an umbrella?",
-      "example": "A child sees wet roads on rainy days and predicts rain from a wet road. A water truck can also wet a road. Making the road wet does not create rain, even though wet roads were useful clues.",
-      "exercise": "Ice cream sales and swimming visits both rise on hot days. Would buying ice cream necessarily cause a person to swim? Name a possible shared cause.",
-      "solution": "Buying ice cream does not necessarily cause swimming. Hot weather can increase both activities. It is a possible shared cause that must be considered before a causal claim.",
-      "quiz": {"question": "What can make two events occur together without one causing the other?", "options": ["A spelling change", "The lack of a record", "A shared cause"], "answer": 2, "explanation": "A shared cause can affect both events. Their association can then help prediction without showing that changing one changes the other."},
-      "sources": ["seeing", "pearl"], "lab": "causal", "caution": "The weather examples teach a distinction. They are not complete physical or social models."
+      "time_minutes": 30,
+      "big_idea": "A clue can tell you about something without making it happen.",
+      "i_can": [
+        "I can ask, \"If I change this on purpose, will that change too?\"",
+        "I can sort pairs into cause or just a clue.",
+        "I can draw arrows to show what causes what."
+      ],
+      "words": [
+        {
+          "word": "cause",
+          "meaning": "Something that makes another thing happen."
+        },
+        {
+          "word": "clue",
+          "meaning": "Something that tells you about another thing, but may not make it happen."
+        }
+      ],
+      "warmup": {
+        "recall_of": "L0-06",
+        "prompt": "In Lesson 6, you found a pattern and made a guess. How did you check if your guess was right?"
+      },
+      "story_title": "Hide the umbrellas",
+      "picture": {
+        "file": "l0-09-clue-cause.svg",
+        "alt": "A sun with two arrows, one to an ice cream cone and one to a sunburned arm. Between the ice cream and the sunburn is an arrow with a red X, labeled not a cause.",
+        "caption": "Sunny days cause both. Ice cream does not cause sunburn."
+      },
+      "story": [
+        "It is raining. Maya and Leo look out the window. Lots of people walk by with umbrellas.",
+        "Leo laughs. \"Every time I see umbrellas, it is raining. Let's hide all the umbrellas. Then the rain will stop!\" Maya giggles. \"That will not work. The rain makes people use umbrellas. Umbrellas do not make rain.\"",
+        "The umbrellas are a clue. They tell you it is raining. But they do not make it rain.",
+        "Later, it is hot and sunny. Leo's mom says the ice cream shop is busy. She says lots of kids get sunburns too. Leo asks, \"Does ice cream cause sunburns?\"",
+        "Maya thinks. \"If we stop eating ice cream, will the sunburns stop?\" No! The sun is the cause of both. Sunny days bring more ice cream and more sunburns. Ice cream is just a clue."
+      ],
+      "activity": {
+        "title": "Clue or cause?",
+        "minutes": 15,
+        "materials": [
+          "Six paper strips or index cards",
+          "A ball that rolls",
+          "Crayons or a pencil",
+          "A sheet of paper for your arrow picture"
+        ],
+        "steps": [
+          "Your grown-up helps you write one pair on each card.",
+          "Use these pairs. Umbrellas and rain. Ice cream and sunburns. Light switch and light. Push a ball and it rolls. Rooster crows and the sun comes up. Clap your hands and you hear a sound.",
+          "Read one card. Ask, \"If I change the first thing on purpose, will the second thing change?\"",
+          "If yes, put the card in the Cause pile.",
+          "If no, put the card in the Just a clue pile.",
+          "Test the safe ones for real. Flip the light switch. Push a ball. Clap your hands.",
+          "Pick the ice cream card. Draw a sun with one arrow to ice cream and one arrow to a sunburn."
+        ],
+        "record": "Make a chart with two columns, Cause and Just a clue. Write or draw each pair in a column. Add your arrow picture.",
+        "safety": "Only flip a light switch with dry hands. Never look straight at the sun. Roll the ball on a clear floor away from stairs."
+      },
+      "guided": {
+        "prompt": "If you open your umbrella inside, will it start to rain outside?",
+        "answer": "No. Rain makes people open umbrellas. Umbrellas do not make rain. So the umbrella is a clue, not a cause, of rain."
+      },
+      "try_it": [
+        {
+          "prompt": "A rooster crows early in the morning, and then the sun comes up. If you make the rooster crow at night, will the sun come up?",
+          "answer": "No. The crowing is just a clue that morning is near. It does not make the sun rise."
+        },
+        {
+          "prompt": "You flip a light switch, and the light comes on. You flip it off, and the light goes off. Is the switch a cause or a clue?",
+          "answer": "A cause. When you change the switch on purpose, the light changes too, again and again."
+        }
+      ],
+      "talk": [
+        "Can you think of two things that often happen together? Does one make the other happen?",
+        "Why was hiding the umbrellas a silly plan?",
+        "How could a fair test help you find out if something is a cause?"
+      ],
+      "check": [
+        {
+          "question": "Many people wear coats on cold days. Do coats make the day cold?",
+          "options": [
+            "Yes, coats make the air cold.",
+            "Yes, because coats and cold days come together.",
+            "No. Cold days make people wear coats."
+          ],
+          "answer": 2,
+          "explanation": "Coats are a clue that it is cold. The cold is the cause. Taking off your coat will not warm up the day."
+        },
+        {
+          "question": "Ice cream sales and sunburns go up on the same days. Why?",
+          "options": [
+            "Hot, sunny days cause both.",
+            "Sunburns make people want ice cream.",
+            "Ice cream causes sunburns."
+          ],
+          "answer": 0,
+          "explanation": "The sun brings both. People buy ice cream when it is hot, and they get sunburns when they play in the sun."
+        },
+        {
+          "question": "Remember Lesson 4. How can you find out if one thing really causes another?",
+          "options": [
+            "Watch one time and guess.",
+            "Change only that one thing and watch what happens.",
+            "Change lots of things at once."
+          ],
+          "answer": 1,
+          "review_of": "L0-04",
+          "explanation": "A fair test changes just one thing on purpose. If the result changes again and again, that thing is likely a cause."
+        }
+      ],
+      "connect": "Later in this course you will draw arrow maps like this for many things. You will learn more ways to tell a cause from a clue. A fair test, like your ramp race, is a strong way to find out. Sometimes a test is not possible, and careful thinking with arrows can help.",
+      "grownups": {
+        "why": "Two things can go together without one causing the other. Sometimes a third thing, a common cause, drives both (sunny weather drives ice cream sales and sunburns); sometimes one does cause the other but only in one direction (rain causes umbrellas, not the reverse). Telling association from causation, and asking what would happen under an intervention, is the heart of causal inference [@pearl]. Young children already learn causal structure from patterns of evidence, including what happens when they act on the world [@gopnik2004]. The question \"If I change this on purpose, will that change?\" is the idea behind the fair test in Lesson 4.",
+        "misconceptions": [
+          "If two things always happen together, one must cause the other. (A third thing may cause both, as the sun does.)",
+          "If A goes with B, then A causes B. (It may be the other way round: rain causes umbrellas.)",
+          "A clue is useless. (Clues help us predict; they just do not tell us what to change.)"
+        ],
+        "simplify": "Use three cards: umbrellas and rain, light switch and light, ice cream and sunburns. Act out the light switch together first.",
+        "extend": "Ask the child to invent a new pair where a third thing causes both, then draw the arrow picture. For example, a cold day causes both coats and frosty windows. Answer key for the six cards: light switch, push a ball, and clap are causes; umbrellas, ice cream, and rooster are clues (rain, the sun, and morning are the real causes)."
+      },
+      "caution": "For most cards the child answers the \"change it on purpose\" question by thinking, not by testing, so the sort is a reasoned guess. Only a real fair test can settle it. Also, a clue can sometimes be a cause too; the lesson teaches that going together does not have to mean causing, not that it never does.",
+      "sources": [
+        "pearl",
+        "gopnik2004"
+      ],
+      "lab": "causal"
     },
     {
-      "id": "L0-10", "title": "Meet the three fields", "objective": "Separate quantum physics, causal reasoning, and artificial intelligence in one learning map.", "prerequisites": ["L0-07", "L0-08", "L0-09"],
-      "paragraphs": [
-        "Quantum physics gives rules for physical systems such as light and atoms. These rules explain experimental results that simple everyday pictures miss. We will learn their mathematics step by step instead of using the word quantum to mean mysterious.",
-        "Causal reasoning asks how actions can change results. Artificial intelligence builds systems that perform tasks such as prediction or classification. A system can predict well and still give a poor answer about the result of an action.",
-        "Quantum Causal AI is a meeting place for research questions across these fields. It is not one finished tool with a guaranteed benefit. You will first learn each field, then study carefully defined combinations and the evidence needed to evaluate them."
+      "id": "L0-10",
+      "schema": 2,
+      "title": "Meet the big ideas",
+      "objective": "I can name the three big ideas of this course.",
+      "prerequisites": [
+        "L0-07",
+        "L0-08",
+        "L0-09"
       ],
-      "equation": "Three questions: how does a system behave; what changes a result; what can a model learn?",
-      "example": "A researcher records results from a light experiment. Quantum physics helps model the experiment. Causal reasoning helps plan which device setting to change. A learning algorithm can fit a model to records. Each part has a different job and check.",
-      "exercise": "Label these tasks: predict a category from examples; compare the effect of changing a setting; model measurements of a qubit.",
-      "solution": "The first task is a learning task. The second asks a causal question. The third uses quantum physics. A research project can combine them, but the labels describe different jobs.",
-      "quiz": {"question": "Which statement is the best starting rule for this course?", "options": ["Define each field and test each claimed combination", "Every quantum model is automatically causal", "A good prediction proves the cause"], "answer": 0, "explanation": "Clear definitions keep the three tasks distinct. Each proposed combination needs its own assumptions, measurements, and evidence for the claimed result."},
-      "sources": ["ibm", "pearl"], "lab": "causal", "caution": "This is a study path. It does not claim a general quantum advantage for causal learning."
+      "time_minutes": 30,
+      "big_idea": "This course joins three big ideas. What makes things happen. The surprising world of very tiny things. Machines that learn from examples.",
+      "i_can": [
+        "I can name the three big ideas of this course.",
+        "I can put an idea in the circle where it fits.",
+        "I can tell three things I learned."
+      ],
+      "words": [
+        {
+          "word": "learning machine",
+          "meaning": "A computer program that finds patterns in lots of examples."
+        },
+        {
+          "word": "overlap",
+          "meaning": "When two shapes share some space."
+        }
+      ],
+      "warmup": {
+        "recall_of": "L0-09",
+        "prompt": "Last time you met clues and causes. Umbrellas come out when it rains. Do umbrellas make the rain?"
+      },
+      "story_title": "The big idea poster",
+      "picture": {
+        "file": "l0-10-big-ideas.svg",
+        "alt": "Three circles that overlap, labeled Causes, Tiny things, and Learning machines, with the notes fair test, surprising rules, and patterns. Numbered spots where two circles overlap say: measuring tiny things can change them; a pattern is not always a cause; computers use bits, and quantum bits come later. The words this course sit in the middle where all three meet.",
+        "caption": "Three big ideas. This course lives in the middle, where all three meet."
+      },
+      "story": [
+        "Maya and Leo want to make a poster. They write one thing they learned on each sticky note. Soon they have a big pile.",
+        "Leo picks up a note. It says, \"Ice cream is just a clue.\" Maya says, \"That one is about causes.\" She draws a circle and writes Causes on it.",
+        "Next is \"A bit holds 1 or 0.\" Maya says, \"Computers store things with bits. Learning machines run on computers.\" Leo adds, \"Later we will meet a quantum bit. It follows the rules of very tiny things.\" So Maya draws two more circles, Tiny things and Learning machines. She makes them overlap.",
+        "The bit note goes where Tiny things and Learning machines overlap. \"A pattern is not always a cause\" goes between Causes and Learning machines.",
+        "Leo points to the very middle, where all three circles meet. \"What goes here?\" Maya smiles and writes, \"This course!\""
+      ],
+      "activity": {
+        "title": "Big ideas sort",
+        "minutes": 20,
+        "materials": [
+          "A big sheet of paper",
+          "Crayons or markers",
+          "Sticky notes or small paper squares"
+        ],
+        "steps": [
+          "Draw three big circles that overlap, like the picture.",
+          "Write a name on each circle. Causes. Tiny things. Learning machines.",
+          "With your grown-up, write one idea on each note. Use five or six ideas.",
+          "Here are some ideas to use. A fair test. A clue is not a cause. Tiny things follow surprising rules. A bit holds 1 or 0. A pattern helps you guess.",
+          "Read each note. Which circle does it fit? Put it there.",
+          "If a note fits two circles, put it where they overlap.",
+          "Write \"this course\" in the middle, where all three circles meet.",
+          "On the back, finish this. Three things I learned in Level 0 are..."
+        ],
+        "record": "Your circle poster, plus three sentences about what you learned.",
+        "safety": "A grown-up handles any scissors. Keep sticky notes and marker caps away from babies and toddlers."
+      },
+      "guided": {
+        "prompt": "Where does the note \"A fair test changes one thing\" go?",
+        "answer": "In the Causes circle. A fair test is how we find out what makes things happen."
+      },
+      "try_it": [
+        {
+          "prompt": "Where does the note \"Light and very tiny things follow surprising rules\" go?",
+          "answer": "In the Tiny things circle. You will learn about those rules later in the course."
+        },
+        {
+          "prompt": "A learning machine finds that umbrellas and rain go together in its examples. Does the pattern show which one is the cause?",
+          "answer": "No. A pattern is not always a cause. So this note can go where Causes and Learning machines overlap."
+        }
+      ],
+      "talk": [
+        "Which big idea are you most excited to learn about? Why?",
+        "Which note was the hardest to place? Where did you put it?",
+        "What is one question you still have?"
+      ],
+      "check": [
+        {
+          "question": "What do learning machines do?",
+          "options": [
+            "They think just like people do.",
+            "They always know why things happen.",
+            "They find patterns in lots of examples."
+          ],
+          "answer": 2,
+          "explanation": "Learning machines look at lots of examples and find patterns. A pattern can help with a guess. It does not always show a cause."
+        },
+        {
+          "question": "Which one is a big idea of this course?",
+          "options": [
+            "Counting, sorting, and coin flips.",
+            "Ramps, flashlights, and cards.",
+            "The surprising world of very tiny things."
+          ],
+          "answer": 2,
+          "explanation": "We used counting, ramps, and cards to practice. But the three big ideas are causes, very tiny things, and learning machines."
+        },
+        {
+          "question": "Remember Lesson 8. The cards are up, down, down. How do you write that?",
+          "options": [
+            "0 1 1",
+            "1 1 0",
+            "1 0 0"
+          ],
+          "answer": 2,
+          "review_of": "L0-08",
+          "explanation": "Face up is 1 and face down is 0. So up, down, down is 1 0 0."
+        }
+      ],
+      "connect": "When you are ready, Level 1 comes next. You will use fractions to talk about chance. You will run more fair tests, look for causes hiding behind clues, and study waves, like ripples on water. All of that helps with the three big ideas.",
+      "grownups": {
+        "why": "This lesson closes Level 0 by naming the three strands the whole course weaves together. The first is causal inference: telling a clue (an association) from a cause, and using interventions like fair tests to find out [@pearl]. The second is the world of the very small: light and the tiniest bits of matter follow rules that differ from everyday experience, and the course later meets the quantum bit, a basic unit of quantum information [@ibm]. The third is machine learning: systems that find patterns in many examples. The overlaps matter most: a learning system finds associations, and an association is not always a cause.",
+        "misconceptions": [
+          "Learning machines think or understand like people. (They find patterns in data; that is useful but different.)",
+          "A quantum bit is just a smaller ordinary bit. (It follows different rules, met in later levels; simple everyday pictures of it can mislead.)",
+          "The flashlight lesson showed the surprising quantum rules. (Lesson 7 was about ordinary light and seeing; the surprising rules come much later.)"
+        ],
+        "simplify": "Use only two circles, Causes and Learning machines, with three notes. Add the third circle another day. A placement key for the suggested notes: a fair test and a clue is not a cause go in Causes; a pattern helps you guess goes in Learning machines; a bit holds 1 or 0 goes where Tiny things and Learning machines overlap; tiny things follow surprising rules goes in Tiny things. The picture's note that measuring tiny things can change them previews a later idea; it is not shown in Level 0.",
+        "extend": "Ask the child to write one new note for each overlap and explain where it goes. Keep the notes for the start of Level 1."
+      },
+      "caution": "This lesson only names the three ideas. It does not teach how quantum systems or learning machines work, and the circle sort has no single right answer for every note. Placement is a way to talk, not a test.",
+      "sources": [
+        "pearl",
+        "ibm"
+      ],
+      "lab": "causal"
     }
-  ]
+  ],
+  "unit": {
+    "big_question": "How do we find out what makes things happen?",
+    "summary": "Children learn to look closely, count carefully, sort, and run small fair tests with things found at home. They practice telling what they saw apart from why it happened. Every later level of the course builds on these habits.",
+    "for_whom": "Children aged about 6 to 9 who can count to 20. A grown-up reads along, helps with materials, and talks through the questions. No screen time is needed for the hands-on parts.",
+    "time": {
+      "lessons": 10,
+      "minutes_per_lesson": 30,
+      "project_sessions": 2,
+      "pace": "Two lessons a week takes about six weeks, including the final project. Any lesson can be split into two sittings: story and activity one day, practice and checks the next. This helps most in the lessons with a 20-minute activity."
+    },
+    "session_flow": [
+      "Warm up: remember the last lesson in two minutes.",
+      "Read the story together.",
+      "Do the hands-on activity and record what happens.",
+      "Practice together, then try two on your own.",
+      "Talk about it, then answer the three check questions. Say your answer out loud before you open a dropdown.",
+      "Grown-ups: read the short guide at the end of the page."
+    ],
+    "outcomes": [
+      {
+        "id": "O1",
+        "text": "I can count a group carefully and write it down so someone else can check it.",
+        "lessons": [
+          "L0-01",
+          "L0-02"
+        ]
+      },
+      {
+        "id": "O2",
+        "text": "I can sort things using one rule and tell which group has more.",
+        "lessons": [
+          "L0-02"
+        ]
+      },
+      {
+        "id": "O3",
+        "text": "I can tell what I saw before and after a change, without guessing why.",
+        "lessons": [
+          "L0-03",
+          "L0-07"
+        ]
+      },
+      {
+        "id": "O4",
+        "text": "I can plan a fair test that changes only one thing.",
+        "lessons": [
+          "L0-04",
+          "PROJECT"
+        ]
+      },
+      {
+        "id": "O5",
+        "text": "I can say if something is sure, maybe, or impossible, and try it more than once.",
+        "lessons": [
+          "L0-05"
+        ]
+      },
+      {
+        "id": "O6",
+        "text": "I can use a pattern to make a guess, then check it.",
+        "lessons": [
+          "L0-06"
+        ]
+      },
+      {
+        "id": "O7",
+        "text": "I can explain why a clue is not always a cause.",
+        "lessons": [
+          "L0-09"
+        ]
+      },
+      {
+        "id": "O8",
+        "text": "I can write a yes or no choice as 1 or 0, and name the three big ideas of this course.",
+        "lessons": [
+          "L0-08",
+          "L0-10"
+        ]
+      }
+    ],
+    "evidence": "Progress shows up three ways. Each lesson ends with three check questions. From Lesson 2 on, one of them looks back at an earlier lesson. Each hands-on activity produces a record (a tally, a table, or a drawing) that a grown-up can look at. The final project uses a four-part checklist.",
+    "materials": [
+      "Small things to count and sort: buttons, blocks, dry pasta, or toy pieces (about 30), and a few bowls",
+      "Paper, pencils, crayons or markers, and grid paper if you have it",
+      "Sticky notes, small paper cards, and masking tape",
+      "A toy car or a ball that rolls, two hardcover books, and a flat board or stiff cardboard",
+      "An ice cube, a plate, and a clock or timer",
+      "One coin and a paper cup",
+      "Six matching paper or plastic cups and a ruler with centimeters",
+      "A flashlight, clear plastic, wax paper, cardboard, white paper, and a small mirror (plastic if you have one)",
+      "Four playing cards or paper squares",
+      "For the final project: a ball or toy car, paper towels and a cup of water, or an ice cube and a plate"
+    ],
+    "safety": "Choose activities that fit the child. Keep small parts and coins away from babies and toddlers. Never point a flashlight or a mirror spot into anyone's eyes, and never look straight at the sun. A grown-up holds anything glass and does the cutting. Keep water away from screens and plugs, and keep activities away from stairs.",
+    "project": {
+      "title": "My own fair test",
+      "summary": "Over two sittings, the child picks a question, plans a fair test, runs it three times, and shares what they found.",
+      "safety": "Roll balls and cars away from stairs. Wipe up water right away so no one slips. Never look straight at the sun.",
+      "questions": [
+        "Does a toy car roll farther on a smooth floor or on carpet?",
+        "Which paper towel soaks up more water, a thick one or a thin one?",
+        "Does an ice cube melt faster on a plate in a sunny spot or in the shade?"
+      ],
+      "steps": [
+        "Pick one question.",
+        "Say what you will change. Say what you will keep the same.",
+        "Guess what will happen and why.",
+        "Do the test three times for each choice. Write every result.",
+        "Draw your results as a picture graph or a bar graph, with one square for each tile or step.",
+        "Tell someone what you found, and one thing you are still not sure about."
+      ],
+      "rubric": [
+        {
+          "part": "My question",
+          "start": "I picked a question with help.",
+          "got": "I picked a question I can test.",
+          "explain": "I can say why the question matters to me."
+        },
+        {
+          "part": "My fair plan",
+          "start": "I changed one thing, with help.",
+          "got": "I changed one thing and kept the rest the same.",
+          "explain": "I can say what could make the test unfair."
+        },
+        {
+          "part": "My record",
+          "start": "I wrote some results.",
+          "got": "I wrote three results for each choice.",
+          "explain": "I can point to results that did not match and say why that is fine."
+        },
+        {
+          "part": "What I found",
+          "start": "I said what happened.",
+          "got": "I said what happened and used my results.",
+          "explain": "I said one thing I am still not sure about."
+        }
+      ]
+    },
+    "udl": [
+      "Every story can be read aloud. Pictures and real objects come before symbols.",
+      "Children can show what they know by talking, drawing, pointing, or writing.",
+      "Each lesson has a way to make it easier and a way to make it harder.",
+      "Activities use cheap household things, so every family can take part."
+    ],
+    "standards": [
+      {
+        "code": "NGSS K-2 practices",
+        "text": "Simple investigations based on fair tests, which provide data to support explanations.",
+        "key": "ngss_appf"
+      },
+      {
+        "code": "NGSS 1-PS4-2",
+        "text": "Objects can be seen only when illuminated.",
+        "key": "ngss_1ps4_2"
+      },
+      {
+        "code": "NGSS 1-PS4-3",
+        "text": "What happens when different materials are placed in a beam of light.",
+        "key": "ngss_1ps4_3"
+      },
+      {
+        "code": "CCSS K.CC.5",
+        "text": "Count to answer \"how many?\" questions.",
+        "key": "ccss_math"
+      },
+      {
+        "code": "CCSS K.CC.6",
+        "text": "Compare the number of objects in two groups: greater than, less than, or equal.",
+        "key": "ccss_math"
+      },
+      {
+        "code": "CCSS K.MD.3",
+        "text": "Classify objects into categories and count each category.",
+        "key": "ccss_math"
+      },
+      {
+        "code": "CCSS 1.MD.4",
+        "text": "Organize, represent, and interpret data with up to three categories.",
+        "key": "ccss_math"
+      },
+      {
+        "code": "CCSS 2.MD.1",
+        "text": "Measure the length of an object with a tool such as a ruler.",
+        "key": "ccss_math"
+      },
+      {
+        "code": "CCSS 2.MD.10",
+        "text": "Draw a picture graph and a bar graph for up to four categories.",
+        "key": "ccss_math"
+      }
+    ],
+    "approach": "The unit was planned backward: first the eight outcomes, then the evidence that shows them, then the lessons [@ubd_whitepaper]. Each lesson moves from remembering what the child knows, to watching an example, to doing, to talking it through [@merrill2002]. Short check questions and a warm-up that looks back are built in on purpose, because practice testing and spaced practice are among the best-supported ways to learn [@dunlosky2013]. Young children already reason about causes from what they see [@gopnik2000; @gopnik2004]; this unit gives that instinct words and a method. Options for different learners follow the Universal Design for Learning guidelines [@udl]. When the child answers a question, let them say their answer before opening it, then open it together and praise the thinking as well as the right answer."
+  }
 }

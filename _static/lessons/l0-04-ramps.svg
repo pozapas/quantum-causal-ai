@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-labelledby="t d">
+<title id="t">A fair ramp test</title>
+<desc id="d">Two ramps side by side. The low ramp uses one book and the car rolls 4 tiles. The high ramp uses two books and the same car rolls 7 tiles. The car, floor, and start line stay the same. Only the ramp height changes.</desc>
+<defs>
+  <linearGradient id="r-board" x1="0" x2="1"><stop offset="0" stop-color="#c4b5fd"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+  <style>
+    .lbl{font:700 18px Inter,"Segoe UI",Arial,sans-serif;fill:#1e1b4b}
+    .sub{font:500 16px Inter,"Segoe UI",Arial,sans-serif;fill:#475569}
+    .tile{fill:#f1f5f9;stroke:#cbd5e1;stroke-width:1}
+    .tile-hit{fill:#cffafe;stroke:#06b6d4;stroke-width:1.2}
+    .book{fill:#93c5fd;stroke:#1e40af;stroke-width:1.5}
+    .book2{fill:#fcd34d;stroke:#92400e;stroke-width:1.5}
+    .car{fill:#ef4444;stroke:#7f1d1d;stroke-width:1.5}
+    .wheel{fill:#1f2937}
+    .start{stroke:#0f172a;stroke-width:3;stroke-dasharray:6 4}
+    .arrow{stroke:#0891b2;stroke-width:2.5;fill:none}
+  </style>
+  <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10z" fill="#0891b2"/></marker>
+</defs>
+<rect width="720" height="360" rx="18" fill="#ffffff"/>
+
+<!-- LOW ramp (top row) -->
+<text class="lbl" x="24" y="36">Low ramp: 1 book</text>
+<g transform="translate(24 60)">
+  <rect class="book" x="0" y="62" width="70" height="18" rx="3"/>
+  <polygon points="0,62 150,80 150,84 0,66" fill="url(#r-board)" stroke="#6d28d9" stroke-width="1.5"/>
+  <line class="start" x1="152" y1="56" x2="152" y2="100"/>
+  <g>
+    <rect class="tile tile-hit" x="152" y="80" width="40" height="12"/><rect class="tile tile-hit" x="192" y="80" width="40" height="12"/>
+    <rect class="tile tile-hit" x="232" y="80" width="40" height="12"/><rect class="tile tile-hit" x="272" y="80" width="40" height="12"/>
+    <rect class="tile" x="312" y="80" width="40" height="12"/><rect class="tile" x="352" y="80" width="40" height="12"/>
+    <rect class="tile" x="392" y="80" width="40" height="12"/><rect class="tile" x="432" y="80" width="40" height="12"/>
+  </g>
+  <g transform="translate(286 62)"><rect class="car" x="0" y="0" width="30" height="14" rx="4"/><circle class="wheel" cx="7" cy="16" r="4"/><circle class="wheel" cx="23" cy="16" r="4"/></g>
+  <path class="arrow" d="M156 110 H306" marker-end="url(#ar)"/>
+  <text class="sub" x="190" y="130">rolled 4 tiles</text>
+</g>
+
+<!-- HIGH ramp (bottom row) -->
+<text class="lbl" x="24" y="196">High ramp: 2 books</text>
+<g transform="translate(24 214)">
+  <rect class="book" x="0" y="62" width="70" height="18" rx="3"/>
+  <rect class="book2" x="0" y="44" width="70" height="18" rx="3"/>
+  <polygon points="0,44 150,80 150,84 0,48" fill="url(#r-board)" stroke="#6d28d9" stroke-width="1.5"/>
+  <line class="start" x1="152" y1="56" x2="152" y2="100"/>
+  <g>
+    <rect class="tile tile-hit" x="152" y="80" width="40" height="12"/><rect class="tile tile-hit" x="192" y="80" width="40" height="12"/>
+    <rect class="tile tile-hit" x="232" y="80" width="40" height="12"/><rect class="tile tile-hit" x="272" y="80" width="40" height="12"/>
+    <rect class="tile tile-hit" x="312" y="80" width="40" height="12"/><rect class="tile tile-hit" x="352" y="80" width="40" height="12"/>
+    <rect class="tile tile-hit" x="392" y="80" width="40" height="12"/><rect class="tile" x="432" y="80" width="40" height="12"/>
+  </g>
+  <g transform="translate(406 62)"><rect class="car" x="0" y="0" width="30" height="14" rx="4"/><circle class="wheel" cx="7" cy="16" r="4"/><circle class="wheel" cx="23" cy="16" r="4"/></g>
+  <path class="arrow" d="M156 110 H426" marker-end="url(#ar)"/>
+  <text class="sub" x="250" y="130">rolled 7 tiles</text>
+</g>
+
+<!-- key -->
+<g transform="translate(520 64)">
+  <rect x="0" y="0" width="180" height="232" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text class="lbl" x="16" y="30">Kept the same</text>
+  <text class="sub" x="16" y="56">same red car</text>
+  <text class="sub" x="16" y="78">same floor</text>
+  <text class="sub" x="16" y="100">same start line</text>
+  <text class="sub" x="16" y="122">no push</text>
+  <line x1="16" y1="140" x2="164" y2="140" stroke="#e2e8f0"/>
+  <text class="lbl" x="16" y="170" fill="#6d28d9">Changed</text>
+  <text class="sub" x="16" y="196">how high the ramp is</text>
+  <text class="sub" x="16" y="218">(1 book or 2 books)</text>
+</g>
+</svg>

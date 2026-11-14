@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-labelledby="t d">
+<title id="t">A cup tower pattern</title>
+<desc id="d">Maya and Leo's paper cups, stacked one inside the next. One cup is 9 cm tall. Two cups are 10 cm. Three cups are 11 cm. A dashed outline of 6 stacked cups shows their guess of 14 cm. A box says the first cup gives 9 cm and each new cup adds 1 cm, so they guess first, then build and check.</desc>
+<defs>
+  <style>
+    .lbl{font:700 18px Inter,"Segoe UI",Arial,sans-serif;fill:#1e1b4b}
+    .sub{font:500 16px Inter,"Segoe UI",Arial,sans-serif;fill:#475569}
+  </style>
+</defs>
+<rect width="720" height="360" rx="18" fill="#ffffff"/>
+<line x1="30" y1="296" x2="530" y2="296" stroke="#94a3b8" stroke-width="2"/>
+<polygon points="65.0,296 115.0,296 127.0,170 53.0,170" fill="#cffafe" stroke="#0891b2" stroke-width="2"/>
+  <rect x="51.0" y="167" width="78" height="6" rx="3" fill="#06b6d4"/>
+<text class="lbl" x="90" y="156" text-anchor="middle">9 cm</text>
+<text class="sub" x="90" y="322" text-anchor="middle">1 cup</text>
+<polygon points="185.0,282 235.0,282 247.0,156 173.0,156" fill="#cffafe" stroke="#0891b2" stroke-width="2"/>
+  <rect x="171.0" y="153" width="78" height="6" rx="3" fill="#06b6d4"/>
+  <polygon points="185.0,296 235.0,296 247.0,170 173.0,170" fill="#cffafe" stroke="#0891b2" stroke-width="2"/>
+  <rect x="171.0" y="167" width="78" height="6" rx="3" fill="#06b6d4"/>
+<text class="lbl" x="210" y="142" text-anchor="middle">10 cm</text>
+<text class="sub" x="210" y="322" text-anchor="middle">2 cups</text>
+<polygon points="305.0,268 355.0,268 367.0,142 293.0,142" fill="#cffafe" stroke="#0891b2" stroke-width="2"/>
+  <rect x="291.0" y="139" width="78" height="6" rx="3" fill="#06b6d4"/>
+  <polygon points="305.0,282 355.0,282 367.0,156 293.0,156" fill="#cffafe" stroke="#0891b2" stroke-width="2"/>
+  <rect x="291.0" y="153" width="78" height="6" rx="3" fill="#06b6d4"/>
+  <polygon points="305.0,296 355.0,296 367.0,170 293.0,170" fill="#cffafe" stroke="#0891b2" stroke-width="2"/>
+  <rect x="291.0" y="167" width="78" height="6" rx="3" fill="#06b6d4"/>
+<text class="lbl" x="330" y="128" text-anchor="middle">11 cm</text>
+<text class="sub" x="330" y="322" text-anchor="middle">3 cups</text>
+<polygon points="445.0,226 495.0,226 507.0,100 433.0,100" fill="#ffffff" stroke="#7c3aed" stroke-width="2" stroke-dasharray="6 4"/>
+  <polygon points="445.0,240 495.0,240 507.0,114 433.0,114" fill="#ffffff" stroke="#7c3aed" stroke-width="2" stroke-dasharray="6 4"/>
+  <polygon points="445.0,254 495.0,254 507.0,128 433.0,128" fill="#ffffff" stroke="#7c3aed" stroke-width="2" stroke-dasharray="6 4"/>
+  <polygon points="445.0,268 495.0,268 507.0,142 433.0,142" fill="#ffffff" stroke="#7c3aed" stroke-width="2" stroke-dasharray="6 4"/>
+  <polygon points="445.0,282 495.0,282 507.0,156 433.0,156" fill="#ffffff" stroke="#7c3aed" stroke-width="2" stroke-dasharray="6 4"/>
+  <polygon points="445.0,296 495.0,296 507.0,170 433.0,170" fill="#ffffff" stroke="#7c3aed" stroke-width="2" stroke-dasharray="6 4"/>
+<text class="lbl" x="470" y="62" text-anchor="middle" fill="#6d28d9">Guess:</text>
+<text class="lbl" x="470" y="86" text-anchor="middle" fill="#6d28d9">14 cm</text>
+<text class="sub" x="470" y="322" text-anchor="middle">6 cups</text>
+<g transform="translate(556 52)">
+  <rect x="0" y="0" width="144" height="252" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text class="lbl" x="14" y="30">Pattern</text>
+  <text class="sub" x="14" y="56">first cup: 9 cm</text>
+  <text class="sub" x="14" y="80">each new cup</text>
+  <text class="sub" x="14" y="104">adds 1 cm</text>
+  <line x1="14" y1="122" x2="130" y2="122" stroke="#e2e8f0"/>
+  <text class="lbl" x="14" y="152" fill="#6d28d9">Test it</text>
+  <text class="sub" x="14" y="178">guess first,</text>
+  <text class="sub" x="14" y="202">then build</text>
+  <text class="sub" x="14" y="226">and check</text>
+</g>
+</svg>

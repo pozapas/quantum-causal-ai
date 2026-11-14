@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-labelledby="t d">
+<title id="t">Count and tally two piles</title>
+<desc id="d">Two piles of buttons. Pile A has 12 buttons. Under it are 12 tally marks: two groups of five, each with a line across, and 2 more lines. The count says 12. Pile B has 9 buttons. Under it are 9 tally marks: one group of five and 4 more lines. The count says 9. A violet arrow between the piles points to Pile A with the word more, because 12 is more than 9. At the bottom it says: touch it, move it, say the number. Each button once.</desc>
+<defs>
+  <style>
+    .lbl{font:700 18px Inter,"Segoe UI",Arial,sans-serif;fill:#1e1b4b}
+    .sub{font:500 16px Inter,"Segoe UI",Arial,sans-serif;fill:#475569}
+    .big{font:700 28px Inter,"Segoe UI",Arial,sans-serif;fill:#1e1b4b}
+    .tally{stroke:#1e1b4b;stroke-width:4;stroke-linecap:round}
+    .slash{stroke:#7c3aed;stroke-width:4;stroke-linecap:round}
+  </style>
+</defs>
+<rect width="720" height="360" rx="18" fill="#ffffff"/>
+<rect x="24" y="20" width="286" height="282" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+<text class="lbl" x="40" y="50">Pile A</text>
+<g transform="translate(80 92)"><circle r="14" fill="#fcd34d" stroke="#92400e" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#92400e"/><circle cx="4" cy="-4" r="2" fill="#92400e"/><circle cx="-4" cy="4" r="2" fill="#92400e"/><circle cx="4" cy="4" r="2" fill="#92400e"/></g>
+<g transform="translate(112 84)"><circle r="14" fill="#93c5fd" stroke="#1e40af" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#1e40af"/><circle cx="4" cy="-4" r="2" fill="#1e40af"/><circle cx="-4" cy="4" r="2" fill="#1e40af"/><circle cx="4" cy="4" r="2" fill="#1e40af"/></g>
+<g transform="translate(144 96)"><circle r="14" fill="#a78bfa" stroke="#5b21b6" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#5b21b6"/><circle cx="4" cy="-4" r="2" fill="#5b21b6"/><circle cx="-4" cy="4" r="2" fill="#5b21b6"/><circle cx="4" cy="4" r="2" fill="#5b21b6"/></g>
+<g transform="translate(176 88)"><circle r="14" fill="#ef4444" stroke="#7f1d1d" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#7f1d1d"/><circle cx="4" cy="-4" r="2" fill="#7f1d1d"/><circle cx="-4" cy="4" r="2" fill="#7f1d1d"/><circle cx="4" cy="4" r="2" fill="#7f1d1d"/></g>
+<g transform="translate(208 100)"><circle r="14" fill="#cffafe" stroke="#0e7490" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#0e7490"/><circle cx="4" cy="-4" r="2" fill="#0e7490"/><circle cx="-4" cy="4" r="2" fill="#0e7490"/><circle cx="4" cy="4" r="2" fill="#0e7490"/></g>
+<g transform="translate(96 120)"><circle r="14" fill="#fcd34d" stroke="#92400e" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#92400e"/><circle cx="4" cy="-4" r="2" fill="#92400e"/><circle cx="-4" cy="4" r="2" fill="#92400e"/><circle cx="4" cy="4" r="2" fill="#92400e"/></g>
+<g transform="translate(128 124)"><circle r="14" fill="#93c5fd" stroke="#1e40af" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#1e40af"/><circle cx="4" cy="-4" r="2" fill="#1e40af"/><circle cx="-4" cy="4" r="2" fill="#1e40af"/><circle cx="4" cy="4" r="2" fill="#1e40af"/></g>
+<g transform="translate(160 122)"><circle r="14" fill="#a78bfa" stroke="#5b21b6" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#5b21b6"/><circle cx="4" cy="-4" r="2" fill="#5b21b6"/><circle cx="-4" cy="4" r="2" fill="#5b21b6"/><circle cx="4" cy="4" r="2" fill="#5b21b6"/></g>
+<g transform="translate(192 128)"><circle r="14" fill="#ef4444" stroke="#7f1d1d" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#7f1d1d"/><circle cx="4" cy="-4" r="2" fill="#7f1d1d"/><circle cx="-4" cy="4" r="2" fill="#7f1d1d"/><circle cx="4" cy="4" r="2" fill="#7f1d1d"/></g>
+<g transform="translate(224 124)"><circle r="14" fill="#cffafe" stroke="#0e7490" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#0e7490"/><circle cx="4" cy="-4" r="2" fill="#0e7490"/><circle cx="-4" cy="4" r="2" fill="#0e7490"/><circle cx="4" cy="4" r="2" fill="#0e7490"/></g>
+<g transform="translate(116 154)"><circle r="14" fill="#fcd34d" stroke="#92400e" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#92400e"/><circle cx="4" cy="-4" r="2" fill="#92400e"/><circle cx="-4" cy="4" r="2" fill="#92400e"/><circle cx="4" cy="4" r="2" fill="#92400e"/></g>
+<g transform="translate(180 156)"><circle r="14" fill="#93c5fd" stroke="#1e40af" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#1e40af"/><circle cx="4" cy="-4" r="2" fill="#1e40af"/><circle cx="-4" cy="4" r="2" fill="#1e40af"/><circle cx="4" cy="4" r="2" fill="#1e40af"/></g>
+<line class="tally" x1="54" y1="196" x2="54" y2="236"/>
+<line class="tally" x1="65" y1="196" x2="65" y2="236"/>
+<line class="tally" x1="76" y1="196" x2="76" y2="236"/>
+<line class="tally" x1="87" y1="196" x2="87" y2="236"/>
+<line class="slash" x1="48" y1="230" x2="93" y2="202"/>
+<line class="tally" x1="120" y1="196" x2="120" y2="236"/>
+<line class="tally" x1="131" y1="196" x2="131" y2="236"/>
+<line class="tally" x1="142" y1="196" x2="142" y2="236"/>
+<line class="tally" x1="153" y1="196" x2="153" y2="236"/>
+<line class="slash" x1="114" y1="230" x2="159" y2="202"/>
+<line class="tally" x1="186" y1="196" x2="186" y2="236"/>
+<line class="tally" x1="197" y1="196" x2="197" y2="236"/>
+<text class="sub" x="40" y="282">Count:</text><text class="big" x="100" y="284">12</text>
+<rect x="410" y="20" width="286" height="282" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+<text class="lbl" x="426" y="50">Pile B</text>
+<g transform="translate(468 98)"><circle r="14" fill="#fcd34d" stroke="#92400e" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#92400e"/><circle cx="4" cy="-4" r="2" fill="#92400e"/><circle cx="-4" cy="4" r="2" fill="#92400e"/><circle cx="4" cy="4" r="2" fill="#92400e"/></g>
+<g transform="translate(500 90)"><circle r="14" fill="#93c5fd" stroke="#1e40af" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#1e40af"/><circle cx="4" cy="-4" r="2" fill="#1e40af"/><circle cx="-4" cy="4" r="2" fill="#1e40af"/><circle cx="4" cy="4" r="2" fill="#1e40af"/></g>
+<g transform="translate(532 100)"><circle r="14" fill="#a78bfa" stroke="#5b21b6" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#5b21b6"/><circle cx="4" cy="-4" r="2" fill="#5b21b6"/><circle cx="-4" cy="4" r="2" fill="#5b21b6"/><circle cx="4" cy="4" r="2" fill="#5b21b6"/></g>
+<g transform="translate(564 92)"><circle r="14" fill="#ef4444" stroke="#7f1d1d" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#7f1d1d"/><circle cx="4" cy="-4" r="2" fill="#7f1d1d"/><circle cx="-4" cy="4" r="2" fill="#7f1d1d"/><circle cx="4" cy="4" r="2" fill="#7f1d1d"/></g>
+<g transform="translate(484 126)"><circle r="14" fill="#cffafe" stroke="#0e7490" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#0e7490"/><circle cx="4" cy="-4" r="2" fill="#0e7490"/><circle cx="-4" cy="4" r="2" fill="#0e7490"/><circle cx="4" cy="4" r="2" fill="#0e7490"/></g>
+<g transform="translate(516 130)"><circle r="14" fill="#fcd34d" stroke="#92400e" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#92400e"/><circle cx="4" cy="-4" r="2" fill="#92400e"/><circle cx="-4" cy="4" r="2" fill="#92400e"/><circle cx="4" cy="4" r="2" fill="#92400e"/></g>
+<g transform="translate(548 126)"><circle r="14" fill="#93c5fd" stroke="#1e40af" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#1e40af"/><circle cx="4" cy="-4" r="2" fill="#1e40af"/><circle cx="-4" cy="4" r="2" fill="#1e40af"/><circle cx="4" cy="4" r="2" fill="#1e40af"/></g>
+<g transform="translate(580 122)"><circle r="14" fill="#a78bfa" stroke="#5b21b6" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#5b21b6"/><circle cx="4" cy="-4" r="2" fill="#5b21b6"/><circle cx="-4" cy="4" r="2" fill="#5b21b6"/><circle cx="4" cy="4" r="2" fill="#5b21b6"/></g>
+<g transform="translate(532 158)"><circle r="14" fill="#ef4444" stroke="#7f1d1d" stroke-width="1.5"/><circle cx="-4" cy="-4" r="2" fill="#7f1d1d"/><circle cx="4" cy="-4" r="2" fill="#7f1d1d"/><circle cx="-4" cy="4" r="2" fill="#7f1d1d"/><circle cx="4" cy="4" r="2" fill="#7f1d1d"/></g>
+<line class="tally" x1="440" y1="196" x2="440" y2="236"/>
+<line class="tally" x1="451" y1="196" x2="451" y2="236"/>
+<line class="tally" x1="462" y1="196" x2="462" y2="236"/>
+<line class="tally" x1="473" y1="196" x2="473" y2="236"/>
+<line class="slash" x1="434" y1="230" x2="479" y2="202"/>
+<line class="tally" x1="506" y1="196" x2="506" y2="236"/>
+<line class="tally" x1="517" y1="196" x2="517" y2="236"/>
+<line class="tally" x1="528" y1="196" x2="528" y2="236"/>
+<line class="tally" x1="539" y1="196" x2="539" y2="236"/>
+<text class="sub" x="426" y="282">Count:</text><text class="big" x="486" y="284">9</text>
+<text class="lbl" x="360" y="146" text-anchor="middle" style="fill:#6d28d9">more</text>
+<path d="M394 164 H334" stroke="#7c3aed" stroke-width="4" fill="none"/><path d="M318 164 L336 153 L336 175 Z" fill="#7c3aed"/>
+<text class="sub" x="360" y="336" text-anchor="middle">Touch it, move it, say the number. Each button once.</text>
+</svg>
