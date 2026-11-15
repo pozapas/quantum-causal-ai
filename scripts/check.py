@@ -79,7 +79,7 @@ def c1_content():
             n_lessons += 1
             ids.add(L["id"])
             prereq[L["id"]] = L["prerequisites"]
-            if L.get("schema") == 2:
+            if L.get("schema") in (2, 3):
                 continue  # coursebook lessons are checked by C10
             page = BOOK / "levels" / f"level-{n}" / f"{L['id']}.md"
             if not page.exists():
@@ -330,7 +330,12 @@ PLACEHOLDER = re.compile(r"\b(TODO|TBD|lorem ipsum|citation needed|XXX)\b", re.I
 def c8_hygiene():
     errs = []
     for f in book_sources():
-        body = "\n".join(ln for ln in text_of(f).splitlines() if not ln.startswith("| C8"))
+        if f.suffix == ".ipynb":  # prose only: code may hold Pauli strings such as "XXX"
+            src = "\n".join("".join(c["source"]) for c in json.loads(f.read_text(encoding="utf-8"))["cells"]
+                            if c["cell_type"] == "markdown")
+        else:
+            src = text_of(f)
+        body = "\n".join(ln for ln in src.splitlines() if not ln.startswith("| C8"))
         for m in PLACEHOLDER.finditer(body):
             errs.append(f"{f.relative_to(BOOK)}: placeholder '{m.group(0)}'")
     attempts = {}
@@ -342,7 +347,7 @@ def c8_hygiene():
     plan = json.loads((BOOK / "PLAN.json").read_text(encoding="utf-8"))
     for u in plan["units"]:
         recs = attempts.get(u["id"], [])
-        if u["id"] in ("integrate", "release-check", "style-ui", "round3-ui", "map-viewer", "level0-release", "levels12-release"):
+        if u["id"] in ("integrate", "release-check", "style-ui", "round3-ui", "map-viewer", "level0-release", "levels12-release", "levels37-release"):
             continue  # judged by this check itself / gated
         if not recs:
             errs.append(f"unit {u['id']}: no attempts logged")
@@ -510,14 +515,31 @@ def c10_coursebook():
         for o in u["outcomes"]:
             if not any(x in ids or x == "PROJECT" for x in o["lessons"]):
                 errs.append(f"level {n}: outcome {o['id']} is practised nowhere")
-        if len(u["project"]["rubric"]) != 4 or not u["materials"] or not u["safety"]:
-            errs.append(f"level {n}: project rubric, materials or safety missing")
+        adv = u.get("tier") == "advanced"
+        if len(u["project"]["rubric"]) != 4 or not u["materials"] or not (u.get("readings") if adv else u["safety"]):
+            errs.append(f"level {n}: project rubric, materials, and safety (or readings) missing")
         unit_md = (BOOK / "levels" / f"level-{n}" / "index.md").read_text(encoding="utf-8")
         for o in u["outcomes"]:
-            if convert.esc(o["text"]) not in unit_md:
+            if (o["text"] if adv else convert.esc(o["text"])) not in unit_md:
                 errs.append(f"level {n}: outcome {o['id']} not on the unit page")
         for L in lv["lessons"]:
             lid = L["id"]
+            if L.get("schema") == 3:
+                import tempfile
+                import nbformat
+                import check_lesson_v3
+                import lesson_v3
+                info["lessons"] += 1
+                with tempfile.TemporaryDirectory() as td:
+                    tf = pathlib.Path(td) / f"{lid}.json"
+                    tf.write_text(json.dumps(L, ensure_ascii=False), encoding="utf-8")
+                    errs += [f"{lid}: {e}" for e in check_lesson_v3.check(tf)]
+                nbp = BOOK / "levels" / f"level-{n}" / f"{lid}.ipynb"
+                if not nbp.exists():
+                    errs.append(f"{lid}: lesson notebook missing (run scripts/convert.py)")
+                elif nbformat.read(str(nbp), 4).metadata.get("qcai", {}).get("inputs") != lesson_v3.inputs_hash(L):
+                    errs.append(f"{lid}: lesson notebook out of date (run scripts/convert.py)")
+                continue
             if L.get("schema") != 2:
                 errs.append(f"{lid}: not yet in coursebook format")
                 continue

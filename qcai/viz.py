@@ -193,3 +193,16 @@ def show(fig, height: int | None = None) -> HTML:
 </script>
 """
     return HTML(html)
+
+
+def show_mpl(fig):
+    """Return a Matplotlib figure as a sharp (2x) PNG output and close it."""
+    import io
+
+    import matplotlib.pyplot as plt
+    from IPython.display import Image
+
+    buf = io.BytesIO()
+    fig.savefig(buf, format="png", dpi=200, bbox_inches="tight", facecolor="white")
+    plt.close(fig)
+    return Image(data=buf.getvalue(), format="png", width=int(fig.get_size_inches()[0] * 96))

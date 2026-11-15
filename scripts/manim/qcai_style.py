@@ -56,3 +56,24 @@ def params(lesson_id: str) -> dict:
 
 
 _ = BLACK  # keep the import used; scenes may rely on manim's palette names
+
+
+# ---------------------------------------------------------------------------------------------
+# Advanced levels (3-7): LaTeX mathematics.  MathTex defaults to white, which is invisible on the
+# course's white background, so always build formulas through these helpers.
+# ---------------------------------------------------------------------------------------------
+def eq(*parts: str, size: int = 44, color: str = INK):
+    """A MathTex formula in the course ink colour; pass several parts to animate them separately."""
+    from manim import MathTex
+    return MathTex(*parts, font_size=size, color=color)
+
+
+def tex(text: str, size: int = 36, color: str = INK):
+    """A Tex line (text with inline $math$) in the course ink colour."""
+    from manim import Tex
+    return Tex(text, font_size=size, color=color)
+
+
+def lesson_v3(lesson_id: str) -> dict:
+    """The schema-3 lesson JSON (draft first).  Use it to read numbers the text also states."""
+    return lesson(lesson_id)

@@ -20,6 +20,13 @@ VIDEO_JS = ("<script id=\"qcai-video\">(function(){var rm=window.matchMedia('(pr
             "new MutationObserver(fix).observe(document.documentElement,{childList:true,subtree:true});"
             "document.addEventListener('DOMContentLoaded',fix);})();</script>")
 
+# Self-links on theorem/definition titles get aria-label "Link to this Definition" while their visible text is
+# "Definition 1 (...)"; the mismatch fails WCAG 2.5.3. Drop the label so the visible text names the link.
+A11Y_JS = ("<script id=\"qcai-a11y\">(function(){function fix(){document.querySelectorAll('a[aria-label^=\"Link to this\"]')"
+           ".forEach(function(a){if(a.textContent.trim())a.removeAttribute('aria-label');});}"
+           "new MutationObserver(fix).observe(document.documentElement,{childList:true,subtree:true});"
+           "document.addEventListener('DOMContentLoaded',fix);})();</script>")
+
 changed = already = 0
 for f in HTML.rglob("*.html"):
     t = f.read_text(encoding="utf-8")
@@ -31,6 +38,8 @@ for f in HTML.rglob("*.html"):
         already += 1
     if 'id="qcai-video"' not in t2 and "</head>" in t2:
         t2 = t2.replace("</head>", VIDEO_JS + "</head>", 1)
+    if 'id="qcai-a11y"' not in t2 and "</head>" in t2:
+        t2 = t2.replace("</head>", A11Y_JS + "</head>", 1)
     if t2 != t:
         f.write_text(t2, encoding="utf-8")
 print(f"light default applied to {changed} pages ({already} already set)")

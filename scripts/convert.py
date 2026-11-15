@@ -12,6 +12,7 @@ import re
 import sys
 
 import coursebook  # schema-2 lessons and unit syllabus pages
+import lesson_v3  # schema-3 lesson notebooks (Levels 3-7) and advanced syllabus pages
 
 BOOK = pathlib.Path(__file__).resolve().parents[1]
 SRC = BOOK.parent / "src" / "data"
@@ -31,6 +32,9 @@ LAB = {
     "bell": ("06-entanglement-bell", "Entanglement and Bell tests"),
     "noise": ("07-noise-channels", "Noise and quantum channels"),
     "gradient": ("08-variational-gradients", "Variational circuits and gradients"),
+    "switch": ("09-quantum-switch", "The quantum switch"),
+    "shadows": ("10-classical-shadows", "Classical shadows"),
+    "qcausal": ("11-quantum-causal-inference", "Quantum causal inference"),
 }
 
 STAGE = ["Grades 1–3", "Grades 4–6", "Grades 7–9", "High-school bridge",
@@ -123,6 +127,9 @@ def lesson_page(level: dict, L: dict, index: dict) -> str:
 
 def level_page(level: dict) -> str:
     n = level["level"]
+    if level.get("unit") and level["unit"].get("tier") == "advanced":
+        return lesson_v3.unit_page_adv(level, esc=esc, icon_md=ICON[n], stage=STAGE[n],
+                                       media_include=f"../../media/_level-{n}.md")
     if level.get("unit"):
         return coursebook.unit_page(level, esc=esc, icon_md=ICON[n], stage=STAGE[n],
                                     media_include=f"../../media/_level-{n}.md")
@@ -178,12 +185,40 @@ def main() -> int:
         (d / "index.md").write_text(level_page(lv), encoding="utf-8")
         children = []
         for L in lv["lessons"]:
+            if L.get("schema") == 3:
+                f = d / f"{L['id']}.ipynb"
+                if lesson_v3.write_lesson(lv, L, nxt, f, icon_md=ICON[lv['level']], stage=STAGE[lv['level']], lab=LAB[L['lab']]):
+                    print("built and executed", f.relative_to(BOOK))
+                (d / f"{L['id']}.md").unlink(missing_ok=True)
+                children.append({"file": f"levels/level-{lv['level']}/{L['id']}.ipynb"})
+                continue
+            (d / f"{L['id']}.ipynb").unlink(missing_ok=True)
             f = d / f"{L['id']}.md"
             f.write_text(lesson_page(lv, L, nxt), encoding="utf-8")
             children.append({"file": f"levels/level-{lv['level']}/{L['id']}.md"})
         toc.append({"file": f"levels/level-{lv['level']}/index.md", "children": children})
     (BOOK / "_data" / "toc-levels.json").write_text(json.dumps(toc, indent=1), encoding="utf-8")
     print(f"wrote {len(order)} lessons in {len(levels)} levels")
+    return 0
+
+
+def build_v3(levels_wanted: set[int], ids: set[str] | None, force: bool = False) -> int:
+    """Build (and execute) schema-3 lesson notebooks for some levels or lesson ids."""
+    levels = [json.loads((SRC / f"level{n}.json").read_text(encoding="utf-8")) for n in range(8)]
+    order = [(L["id"], L["title"]) for lv in levels for L in lv["lessons"]]
+    nxt = {order[i][0]: order[i + 1] for i in range(len(order) - 1)}
+    done = 0
+    for lv in levels:
+        if lv["level"] not in levels_wanted:
+            continue
+        for L in lv["lessons"]:
+            if L.get("schema") == 3 and (not ids or L["id"] in ids):
+                f = OUT / f"level-{lv['level']}" / f"{L['id']}.ipynb"
+                if lesson_v3.write_lesson(lv, L, nxt, f, icon_md=ICON[lv['level']], stage=STAGE[lv['level']],
+                                          lab=LAB[L['lab']], force=force):
+                    print("built and executed", f.relative_to(BOOK))
+                done += 1
+    print(f"{done} schema-3 lessons up to date")
     return 0
 
 

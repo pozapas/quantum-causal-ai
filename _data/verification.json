@@ -1169,5 +1169,596 @@
   "fetched_title": "How to improve Bayesian reasoning without instruction: Frequency formats",
   "jaccard": 1.0,
   "checked_at": "2026-11-14T19:38:10+00:00"
+ },
+ "openstax_polar": {
+  "status": "PASS",
+  "method": "HTTP GET; title and key passage found in the fetched page",
+  "url_checked": "https://openstax.org/books/precalculus-2e/pages/8-5-polar-form-of-complex-numbers",
+  "http": 200,
+  "fetched_title": "8.5 Polar Form of Complex Numbers",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T05:40:58+00:00",
+  "note": "key passage found: 'polar form'"
+ },
+ "openstax_matrices": {
+  "status": "PASS",
+  "method": "HTTP GET; title and key passage found in the fetched page",
+  "url_checked": "https://openstax.org/books/college-algebra-2e/pages/7-5-matrices-and-matrix-operations",
+  "http": 200,
+  "fetched_title": "7.5 Matrices and Matrix Operations",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T05:40:58+00:00",
+  "note": "key passage found: 'matrix'"
+ },
+ "openstax_derivative": {
+  "status": "PASS",
+  "method": "HTTP GET; title and key passage found in the fetched page",
+  "url_checked": "https://openstax.org/books/calculus-volume-1/pages/3-1-defining-the-derivative",
+  "http": 200,
+  "fetched_title": "3.1 Defining the Derivative",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T05:40:58+00:00",
+  "note": "key passage found: 'derivative'"
+ },
+ "openstax_gradient": {
+  "status": "PASS",
+  "method": "HTTP GET; title and key passage found in the fetched page",
+  "url_checked": "https://openstax.org/books/calculus-volume-3/pages/4-6-directional-derivatives-and-the-gradient",
+  "http": 200,
+  "fetched_title": "4.6 Directional Derivatives and the Gradient",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T05:40:58+00:00",
+  "note": "key passage found: 'gradient'"
+ },
+ "openstax_expected": {
+  "status": "PASS",
+  "method": "HTTP GET; title and key passage found in the fetched page",
+  "url_checked": "https://openstax.org/books/introductory-statistics-2e/pages/4-2-mean-or-expected-value-and-standard-deviation",
+  "http": 200,
+  "fetched_title": "4.2 Mean or Expected Value and Standard Deviation",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T05:40:58+00:00",
+  "note": "key passage found: 'expected value'"
+ },
+ "openstax_ci": {
+  "status": "PASS",
+  "method": "HTTP GET; title and key passage found in the fetched page",
+  "url_checked": "https://openstax.org/books/introductory-statistics-2e/pages/8-1-a-single-population-mean-using-the-normal-distribution",
+  "http": 200,
+  "fetched_title": "8.1 A Single Population Mean using the Normal Distribution",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T05:40:58+00:00",
+  "note": "key passage found: 'confidence interval'"
+ },
+ "mml": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1017/9781108679930",
+  "http": 200,
+  "fetched_title": "Mathematics for Machine Learning",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T05:40:58+00:00"
+ },
+ "coverthomas": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1002/047174882X",
+  "http": 200,
+  "fetched_title": "Elements of Information Theory",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T05:40:58+00:00"
+ },
+ "shannon1948": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1002/j.1538-7305.1948.tb01338.x",
+  "http": 200,
+  "fetched_title": "A Mathematical Theory of Communication",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T05:40:58+00:00"
+ },
+ "shor1995": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1103/PhysRevA.52.R2493",
+  "http": 200,
+  "fetched_title": "Scheme for reducing decoherence in quantum computer memory",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T05:40:58+00:00"
+ },
+ "wilson1927": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1080/01621459.1927.10502953",
+  "http": 200,
+  "fetched_title": "Probable Inference, the Law of Succession, and Statistical Inference",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "browncai2001": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1214/ss/1009213286",
+  "http": 200,
+  "fetched_title": "Interval Estimation for a Binomial Proportion",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "hoeffding1963": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1080/01621459.1963.10500830",
+  "http": 200,
+  "fetched_title": "Probability Inequalities for Sums of Bounded Random Variables",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "dunn1961": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1080/01621459.1961.10482090",
+  "http": 200,
+  "fetched_title": "Multiple Comparisons among Means",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "tianpearl2000": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1023/A:1018912507879",
+  "http": 200,
+  "fetched_title": "Probabilities of causation: Bounds and identification",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "kusner2017": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "https://export.arxiv.org/api/query?id_list=1703.06856",
+  "http": 200,
+  "fetched_title": "Counterfactual Fairness",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "pearlbareinboim2014": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1214/14-STS486",
+  "http": 200,
+  "fetched_title": "External Validity: From Do-Calculus to Transportability Across Populations",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "bareinboimpearl2016": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1073/pnas.1510507113",
+  "http": 200,
+  "fetched_title": "Causal inference and the data-fusion problem",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "robins1994": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1080/01621459.1994.10476818",
+  "http": 200,
+  "fetched_title": "Estimation of Regression Coefficients When Some Regressors are not Always Observed",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "chernozhukov2018": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "https://export.arxiv.org/api/query?id_list=1608.00060",
+  "http": 200,
+  "fetched_title": "Double/Debiased Machine Learning for Treatment and Causal Parameters",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "kleinberg2016": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "https://export.arxiv.org/api/query?id_list=1609.05807",
+  "http": 200,
+  "fetched_title": "Inherent Trade-Offs in the Fair Determination of Risk Scores",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "chouldechova2017": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "https://export.arxiv.org/api/query?id_list=1703.00056",
+  "http": 200,
+  "fetched_title": "Fair prediction with disparate impact: A study of bias in recidivism prediction instruments",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "hardt2016": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "https://export.arxiv.org/api/query?id_list=1610.02413",
+  "http": 200,
+  "fetched_title": "Equality of Opportunity in Supervised Learning",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "geirhos2020": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "https://export.arxiv.org/api/query?id_list=2004.07780",
+  "http": 200,
+  "fetched_title": "Shortcut Learning in Deep Neural Networks",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "lauritzen1990": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1002/net.3230200503",
+  "http": 200,
+  "fetched_title": "Independence properties of directed markov fields",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "geiger1990": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1002/net.3230200504",
+  "http": 200,
+  "fetched_title": "Identifying independence in bayesian networks",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "meek1995": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "https://export.arxiv.org/api/query?id_list=1302.4972",
+  "http": 200,
+  "fetched_title": "Causal Inference and Causal Explanation with Background Knowledge",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "huangvaltorta2006": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "https://export.arxiv.org/api/query?id_list=1206.6831",
+  "http": 200,
+  "fetched_title": "Pearl's Calculus of Intervention Is Complete",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "uhler2013": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1214/12-AOS1080",
+  "http": 200,
+  "fetched_title": "Geometry of the faithfulness assumption in causal inference",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "reisach2021": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "https://export.arxiv.org/api/query?id_list=2102.13647",
+  "http": 200,
+  "fetched_title": "Beware of the Simulated DAG! Causal Discovery Benchmarks May Be Easy To Game",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "imbensrubin2015": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1017/CBO9781139025751",
+  "http": 200,
+  "fetched_title": "Causal Inference for Statistics, Social, and Biomedical Sciences",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "neyman1990": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1214/ss/1177012031",
+  "http": 200,
+  "fetched_title": "On the Application of Probability Theory to Agricultural Experiments. Essay on Principles. Section 9",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "rubin1974": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1037/h0037350",
+  "http": 200,
+  "fetched_title": "Estimating causal effects of treatments in randomized and nonrandomized studies.",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "tsirelson1980": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1007/BF00417500",
+  "http": 200,
+  "fetched_title": "Quantum generalizations of Bell's inequality",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "popescu1994": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1007/BF02058098",
+  "http": 200,
+  "fetched_title": "Quantum nonlocality as an axiom",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "giustina2015": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1103/PhysRevLett.115.250401",
+  "http": 200,
+  "fetched_title": "Significant-Loophole-Free Test of Bell’s Theorem with Entangled Photons",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "shalm2015": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1103/PhysRevLett.115.250402",
+  "http": 200,
+  "fetched_title": "Strong Loophole-Free Test of Local Realism",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "werner1989": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1103/PhysRevA.40.4277",
+  "http": 200,
+  "fetched_title": "Quantum states with Einstein-Podolsky-Rosen correlations admitting a hidden-variable model",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "luders1950": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1002/andp.19504430510",
+  "http": 200,
+  "fetched_title": "Über die Zustandsänderung durch den Meßprozeß",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "peres1996": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1103/PhysRevLett.77.1413",
+  "http": 200,
+  "fetched_title": "Separability Criterion for Density Matrices",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "horodecki1996": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1016/S0375-9601(96)00706-2",
+  "http": 200,
+  "fetched_title": "Separability of mixed states: necessary and sufficient conditions",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "choi1975": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1016/0024-3795(75)90075-0",
+  "http": 200,
+  "fetched_title": "Completely positive linear maps on complex matrices",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "fujiwara1999": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1103/PhysRevA.59.3290",
+  "http": 200,
+  "fetched_title": "One-to-one parametrization of quantum channels",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "suresh2023": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "https://export.arxiv.org/api/query?id_list=2302.11783",
+  "http": 200,
+  "fetched_title": "A Semantics for Counterfactuals in Quantum Causal Models",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "fine1982": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1103/PhysRevLett.48.291",
+  "http": 200,
+  "fetched_title": "Hidden Variables, Joint Probability, and the Bell Inequalities",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "branciard2016": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "https://export.arxiv.org/api/query?id_list=1508.01704",
+  "http": 200,
+  "fetched_title": "The simplest causal inequalities and their violation",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "chiribella2012": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "https://export.arxiv.org/api/query?id_list=1109.5154",
+  "http": 200,
+  "fetched_title": "Perfect discrimination of no-signalling channels via quantum superposition of causal structures",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "wierichs2022": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.22331/q-2022-03-30-677",
+  "http": 200,
+  "fetched_title": "General parameter-shift rules for quantum gradients",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "thanasilp2024": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1038/s41467-024-49287-w",
+  "http": 200,
+  "fetched_title": "Exponential concentration in quantum kernel methods",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "tsamardinos2006": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1007/s10994-006-6889-7",
+  "http": 200,
+  "fetched_title": "The max-min hill-climbing Bayesian network structure learning algorithm",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "cerezo2021": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1038/s41467-021-21728-w",
+  "http": 200,
+  "fetched_title": "Cost function dependent barren plateaus in shallow parametrized quantum circuits",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "horodecki1996pra": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1103/PhysRevA.54.1838",
+  "http": 200,
+  "fetched_title": "Information-theoretic aspects of inseparability of mixed states",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "grover1996": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "https://export.arxiv.org/api/query?id_list=quant-ph/9605043",
+  "http": 200,
+  "fetched_title": "A fast quantum mechanical algorithm for database search",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "bbbv1997": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "https://export.arxiv.org/api/query?id_list=quant-ph/9701001",
+  "http": 200,
+  "fetched_title": "Strengths and Weaknesses of Quantum Computing",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "demkowicz2012": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1038/ncomms2067",
+  "http": 200,
+  "fetched_title": "The elusive Heisenberg limit in quantum-enhanced metrology",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:13:50+00:00"
+ },
+ "kaufman2012": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1145/2382577.2382579",
+  "http": 200,
+  "fetched_title": "Leakage in data mining",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T07:15:44+00:00"
+ },
+ "armitage1969": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.2307/2343787",
+  "http": 200,
+  "fetched_title": "Repeated Significance Tests on Accumulating Data",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T09:06:26+00:00"
+ },
+ "howard2021": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1214/20-AOS1991",
+  "http": 200,
+  "fetched_title": "Time-uniform, nonparametric, nonasymptotic confidence sequences",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T09:06:26+00:00"
+ },
+ "lan1983": {
+  "status": "PASS",
+  "method": "Crossref works/<doi>",
+  "url_checked": "https://api.crossref.org/works/10.1093/biomet/70.3.659",
+  "http": 200,
+  "fetched_title": "Discrete sequential boundaries for clinical trials",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T09:06:26+00:00"
+ },
+ "navascues2020": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "https://export.arxiv.org/api/query?id_list=1707.06476",
+  "http": 200,
+  "fetched_title": "The Inflation Technique Completely Solves the Causal Compatibility Problem",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T09:06:26+00:00"
+ },
+ "wolfe2021": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "https://export.arxiv.org/api/query?id_list=1909.10519",
+  "http": 200,
+  "fetched_title": "Quantum Inflation: A General Approach to Quantum Causal Compatibility",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T09:06:26+00:00"
+ },
+ "ligthart2023": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "https://export.arxiv.org/api/query?id_list=2110.14659",
+  "http": 200,
+  "fetched_title": "A convergent inflation hierarchy for quantum causal structures",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T09:06:26+00:00"
+ },
+ "tang2019": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "https://export.arxiv.org/api/query?id_list=1807.04271",
+  "http": 200,
+  "fetched_title": "A quantum-inspired classical algorithm for recommendation systems",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T09:06:26+00:00"
+ },
+ "hjpw2004": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "https://export.arxiv.org/api/query?id_list=quant-ph/0304007",
+  "http": 200,
+  "fetched_title": "Structure of states which satisfy strong subadditivity of quantum entropy with equality",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T09:06:26+00:00"
+ },
+ "cerezo2025": {
+  "status": "PASS",
+  "method": "arXiv API id_list",
+  "url_checked": "https://export.arxiv.org/api/query?id_list=2312.09121",
+  "http": 200,
+  "fetched_title": "Does provable absence of barren plateaus imply classical simulability?",
+  "jaccard": 1.0,
+  "checked_at": "2026-11-15T09:06:46+00:00"
  }
 }

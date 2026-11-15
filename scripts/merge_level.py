@@ -16,7 +16,12 @@ import sys
 
 BOOK = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(BOOK / "scripts"))
-from check_lesson_draft import check  # noqa: E402
+from check_lesson_draft import check as check_v2  # noqa: E402
+from check_lesson_v3 import check as check_v3  # noqa: E402
+
+
+def check(f):
+    return check_v3(f) if json.loads(pathlib.Path(f).read_text(encoding="utf-8")).get("schema") == 3 else check_v2(f)
 
 n = int(sys.argv[1])
 SRC = BOOK.parent / "src" / "data" / f"level{n}.json"
@@ -37,9 +42,13 @@ if bad:
 
 LETTER_RE = re.compile(r"(option|answer) [ABCD]\b|(?<![|(] )(?<!\()\b[ABCD]\)", re.I)  # letter labels, not P(A | B)
 
+LETTER_V3 = re.compile(r"(option|answer) [ABCD]", re.I)
+
+
 def shuffle(L):
     for k, q in enumerate(L["check"]):
-        assert not LETTER_RE.search(q["explanation"]), (L["id"], k)
+        pat = LETTER_V3 if L.get("schema") == 3 else LETTER_RE  # schema 3 explanations contain math such as I(A:B)
+        assert not pat.search(q["explanation"]), (L["id"], k)
         right = q["options"][q["answer"]]
         rng = random.Random(int(hashlib.sha256(f"{L['id']}-{k}".encode()).hexdigest(), 16))
         opts = q["options"][:]

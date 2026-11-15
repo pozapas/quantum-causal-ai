@@ -32,6 +32,20 @@
   ]
  },
  {
+  "id": "armitage1969",
+  "title": "Repeated Significance Tests on Accumulating Data",
+  "authors": "P. Armitage, C. K. McPherson, B. C. Rowe",
+  "year": 1969,
+  "venue": "Journal of the Royal Statistical Society. Series A (General)",
+  "url": "https://doi.org/10.2307/2343787",
+  "kind": "paper",
+  "scope": "Optional stopping inflates false positives",
+  "levels": [
+   7
+  ],
+  "doi": "10.2307/2343787"
+ },
+ {
   "id": "aspect1982",
   "title": "Experimental Realization of Einstein-Podolsky-Rosen-Bohm Gedankenexperiment: A New Violation of Bell's Inequalities",
   "authors": "Alain Aspect, Philippe Grangier, Gérard Roger",
@@ -64,6 +78,20 @@
   ]
  },
  {
+  "id": "bareinboimpearl2016",
+  "title": "Causal inference and the data-fusion problem",
+  "authors": "Elias Bareinboim, Judea Pearl",
+  "year": 2016,
+  "venue": "Proceedings of the National Academy of Sciences",
+  "url": "https://doi.org/10.1073/pnas.1510507113",
+  "kind": "paper",
+  "scope": "Data fusion and transportability overview",
+  "levels": [
+   4
+  ],
+  "doi": "10.1073/pnas.1510507113"
+ },
+ {
   "id": "barrett",
   "title": "Quantum Causal Models",
   "authors": "Jonathan Barrett, Robin Lorenz, Ognyan Oreshkov",
@@ -76,6 +104,19 @@
   "scope": "Quantum processes, conditional independence, and causal structure",
   "levels": [
    6,
+   7
+  ]
+ },
+ {
+  "id": "bbbv1997",
+  "title": "Strengths and Weaknesses of Quantum Computing",
+  "authors": "Charles H. Bennett, Ethan Bernstein, Gilles Brassard, Umesh Vazirani",
+  "year": 1997,
+  "venue": "arXiv:quant-ph/9701001",
+  "url": "https://arxiv.org/abs/quant-ph/9701001",
+  "kind": "paper",
+  "scope": "Optimality of Grover search",
+  "levels": [
    7
   ]
  },
@@ -129,6 +170,33 @@
   ]
  },
  {
+  "id": "branciard2016",
+  "title": "The simplest causal inequalities and their violation",
+  "authors": "Cyril Branciard, Mateus Araújo, Adrien Feix, Fabio Costa, Časlav Brukner",
+  "year": 2015,
+  "venue": "arXiv:1508.01704",
+  "url": "https://arxiv.org/abs/1508.01704",
+  "kind": "paper",
+  "scope": "Simplest causal inequalities",
+  "levels": [
+   6
+  ]
+ },
+ {
+  "id": "browncai2001",
+  "title": "Interval Estimation for a Binomial Proportion",
+  "authors": "Lawrence D. Brown, T. Tony Cai, Anirban DasGupta",
+  "year": 2001,
+  "venue": "Statistical Science",
+  "url": "https://doi.org/10.1214/ss/1009213286",
+  "kind": "paper",
+  "scope": "Coverage of the Wald and alternative binomial intervals",
+  "levels": [
+   3
+  ],
+  "doi": "10.1214/ss/1009213286"
+ },
+ {
   "id": "causallearn",
   "title": "Causal-learn: Causal Discovery in Python",
   "authors": "Yujia Zheng, Biwei Huang, Wei Chen, Joseph Ramsey, Mingming Gong, Ruichu Cai, Shohei Shimizu, Peter Spirtes, Kun Zhang",
@@ -161,6 +229,33 @@
   ]
  },
  {
+  "id": "cerezo2021",
+  "title": "Cost function dependent barren plateaus in shallow parametrized quantum circuits",
+  "authors": "M. Cerezo, Akira Sone, Tyler Volkoff, Lukasz Cincio, Patrick J. Coles",
+  "year": 2021,
+  "venue": "Nature Communications",
+  "url": "https://doi.org/10.1038/s41467-021-21728-w",
+  "kind": "paper",
+  "scope": "Global vs local cost barren plateaus",
+  "levels": [
+   7
+  ],
+  "doi": "10.1038/s41467-021-21728-w"
+ },
+ {
+  "id": "cerezo2025",
+  "title": "Does provable absence of barren plateaus imply classical simulability?",
+  "authors": "M. Cerezo, Martin Larocca, Diego García-Martín, N. L. Diaz, Paolo Braccia, Enrico Fontana, Manuel S. Rudolph, Pablo Bermejo, Aroosa Ijaz, Supanut Thanasilp, Eric R. Anschuetz, Zoë Holmes",
+  "year": 2023,
+  "venue": "arXiv:2312.09121",
+  "url": "https://arxiv.org/abs/2312.09121",
+  "kind": "paper",
+  "scope": "Trainability versus classical simulability",
+  "levels": [
+   7
+  ]
+ },
+ {
   "id": "chaves",
   "title": "Information-Theoretic Implications of Quantum Causal Structures",
   "authors": "Rafael Chaves, Christian Majenz, David Gross",
@@ -177,6 +272,19 @@
   ]
  },
  {
+  "id": "chernozhukov2018",
+  "title": "Double/Debiased Machine Learning for Treatment and Causal Parameters",
+  "authors": "Victor Chernozhukov, Denis Chetverikov, Mert Demirer, Esther Duflo, Christian Hansen, Whitney Newey, James Robins",
+  "year": 2016,
+  "venue": "arXiv:1608.00060",
+  "url": "https://arxiv.org/abs/1608.00060",
+  "kind": "paper",
+  "scope": "Double machine learning and cross-fitting",
+  "levels": [
+   4
+  ]
+ },
+ {
   "id": "chiribella",
   "title": "Theoretical framework for quantum networks",
   "authors": "Giulio Chiribella, Giacomo M. D'Ariano, Paolo Perinotti",
@@ -190,6 +298,47 @@
   "levels": [
    6,
    7
+  ]
+ },
+ {
+  "id": "chiribella2012",
+  "title": "Perfect discrimination of no-signalling channels via quantum superposition of causal structures",
+  "authors": "G. Chiribella",
+  "year": 2011,
+  "venue": "arXiv:1109.5154",
+  "url": "https://arxiv.org/abs/1109.5154",
+  "kind": "paper",
+  "scope": "Switch discriminates commuting from anticommuting unitaries",
+  "levels": [
+   6
+  ]
+ },
+ {
+  "id": "choi1975",
+  "title": "Completely positive linear maps on complex matrices",
+  "authors": "Man-Duen Choi",
+  "year": 1975,
+  "venue": "Linear Algebra and its Applications",
+  "url": "https://doi.org/10.1016/0024-3795(75)90075-0",
+  "kind": "paper",
+  "scope": "Choi's theorem",
+  "levels": [
+   5,
+   6
+  ],
+  "doi": "10.1016/0024-3795(75)90075-0"
+ },
+ {
+  "id": "chouldechova2017",
+  "title": "Fair prediction with disparate impact: A study of bias in recidivism prediction instruments",
+  "authors": "Alexandra Chouldechova",
+  "year": 2017,
+  "venue": "arXiv:1703.00056",
+  "url": "https://arxiv.org/abs/1703.00056",
+  "kind": "paper",
+  "scope": "Incompatibility of fairness criteria under differing base rates",
+  "levels": [
+   4
   ]
  },
  {
@@ -226,6 +375,22 @@
   ]
  },
  {
+  "id": "coverthomas",
+  "title": "Elements of Information Theory",
+  "authors": "Thomas M. Cover, Joy A. Thomas",
+  "year": 2005,
+  "venue": "Wiley",
+  "doi": "10.1002/047174882X",
+  "url": "https://doi.org/10.1002/047174882X",
+  "kind": "book",
+  "scope": "Entropy, relative entropy, mutual information",
+  "levels": [
+   3,
+   5,
+   7
+  ]
+ },
+ {
   "id": "csunplugged_binary",
   "title": "Binary numbers",
   "authors": "CS Unplugged",
@@ -237,6 +402,20 @@
   "levels": [
    0
   ]
+ },
+ {
+  "id": "demkowicz2012",
+  "title": "The elusive Heisenberg limit in quantum-enhanced metrology",
+  "authors": "Rafał Demkowicz-Dobrzański, Jan Kołodyński, Mădălin Guţă",
+  "year": 2012,
+  "venue": "Nature Communications",
+  "url": "https://doi.org/10.1038/ncomms2067",
+  "kind": "paper",
+  "scope": "Noise reduces Heisenberg scaling to a constant factor",
+  "levels": [
+   7
+  ],
+  "doi": "10.1038/ncomms2067"
  },
  {
   "id": "dowhy",
@@ -267,6 +446,20 @@
   "levels": [
    0
   ]
+ },
+ {
+  "id": "dunn1961",
+  "title": "Multiple Comparisons among Means",
+  "authors": "Olive Jean Dunn",
+  "year": 1961,
+  "venue": "Journal of the American Statistical Association",
+  "url": "https://doi.org/10.1080/01621459.1961.10482090",
+  "kind": "paper",
+  "scope": "Bonferroni-type multiple comparison correction",
+  "levels": [
+   3
+  ],
+  "doi": "10.1080/01621459.1961.10482090"
  },
  {
   "id": "encoding",
@@ -304,6 +497,20 @@
   ]
  },
  {
+  "id": "fine1982",
+  "title": "Hidden Variables, Joint Probability, and the Bell Inequalities",
+  "authors": "Arthur Fine",
+  "year": 1982,
+  "venue": "Physical Review Letters",
+  "url": "https://doi.org/10.1103/PhysRevLett.48.291",
+  "kind": "paper",
+  "scope": "CHSH inequalities characterize local correlators",
+  "levels": [
+   6
+  ],
+  "doi": "10.1103/PhysRevLett.48.291"
+ },
+ {
   "id": "fritz2012",
   "title": "Beyond Bell's Theorem: Correlation Scenarios",
   "authors": "Tobias Fritz",
@@ -337,6 +544,47 @@
   ]
  },
  {
+  "id": "fujiwara1999",
+  "title": "One-to-one parametrization of quantum channels",
+  "authors": "Akio Fujiwara, Paul Algoet",
+  "year": 1999,
+  "venue": "Physical Review A",
+  "url": "https://doi.org/10.1103/PhysRevA.59.3290",
+  "kind": "paper",
+  "scope": "Complete positivity conditions for qubit channels",
+  "levels": [
+   5
+  ],
+  "doi": "10.1103/PhysRevA.59.3290"
+ },
+ {
+  "id": "geiger1990",
+  "title": "Identifying independence in bayesian networks",
+  "authors": "Dan Geiger, Thomas Verma, Judea Pearl",
+  "year": 1990,
+  "venue": "Networks",
+  "url": "https://doi.org/10.1002/net.3230200504",
+  "kind": "paper",
+  "scope": "Soundness and completeness of d-separation",
+  "levels": [
+   4
+  ],
+  "doi": "10.1002/net.3230200504"
+ },
+ {
+  "id": "geirhos2020",
+  "title": "Shortcut Learning in Deep Neural Networks",
+  "authors": "Robert Geirhos, Jörn-Henrik Jacobsen, Claudio Michaelis, Richard Zemel, Wieland Brendel, Matthias Bethge, Felix A. Wichmann",
+  "year": 2020,
+  "venue": "arXiv:2004.07780",
+  "url": "https://arxiv.org/abs/2004.07780",
+  "kind": "paper",
+  "scope": "Shortcut learning",
+  "levels": [
+   4
+  ]
+ },
+ {
   "id": "giarmatzi",
   "title": "A quantum causal discovery algorithm",
   "authors": "Christina Giarmatzi, Fabio Costa",
@@ -367,6 +615,20 @@
   ]
  },
  {
+  "id": "giustina2015",
+  "title": "Significant-Loophole-Free Test of Bell’s Theorem with Entangled Photons",
+  "authors": "Marissa Giustina, Marijn A. M. Versteegh, Sören Wengerowsky, Johannes Handsteiner, Armin Hochrainer, Kevin Phelan, Fabian Steinlechner, Johannes Kofler, Jan-Åke Larsson, Carlos Abellán, Waldimar Amaya, Valerio Pruneri, Morgan W. Mitchell, Jörn Beyer, Thomas Gerrits, Adriana E. Lita, Lynden K. Shalm, Sae Woo Nam, Thomas Scheidl, Rupert Ursin, Bernhard Wittmann, Anton Zeilinger",
+  "year": 2015,
+  "venue": "Physical Review Letters",
+  "url": "https://doi.org/10.1103/PhysRevLett.115.250401",
+  "kind": "paper",
+  "scope": "Loophole-free photonic Bell test",
+  "levels": [
+   5
+  ],
+  "doi": "10.1103/PhysRevLett.115.250401"
+ },
+ {
   "id": "gopnik2000",
   "title": "Detecting Blickets: How Young Children Use Information about Novel Causal Powers in Categorization and Induction",
   "authors": "Alison Gopnik, David M Sobel",
@@ -394,6 +656,32 @@
   "levels": [
    0,
    2,
+   4
+  ]
+ },
+ {
+  "id": "grover1996",
+  "title": "A fast quantum mechanical algorithm for database search",
+  "authors": "Lov K. Grover",
+  "year": 1996,
+  "venue": "arXiv:quant-ph/9605043",
+  "url": "https://arxiv.org/abs/quant-ph/9605043",
+  "kind": "paper",
+  "scope": "Grover search query count",
+  "levels": [
+   7
+  ]
+ },
+ {
+  "id": "hardt2016",
+  "title": "Equality of Opportunity in Supervised Learning",
+  "authors": "Moritz Hardt, Eric Price, Nathan Srebro",
+  "year": 2016,
+  "venue": "arXiv:1610.02413",
+  "url": "https://arxiv.org/abs/1610.02413",
+  "kind": "paper",
+  "scope": "Equalized odds and equal opportunity",
+  "levels": [
    4
   ]
  },
@@ -434,6 +722,19 @@
   ]
  },
  {
+  "id": "hjpw2004",
+  "title": "Structure of states which satisfy strong subadditivity of quantum entropy with equality",
+  "authors": "Patrick Hayden, Richard Jozsa, Denes Petz, Andreas Winter",
+  "year": 2003,
+  "venue": "arXiv:quant-ph/0304007",
+  "url": "https://arxiv.org/abs/quant-ph/0304007",
+  "kind": "paper",
+  "scope": "States with vanishing quantum conditional mutual information",
+  "levels": [
+   6
+  ]
+ },
+ {
   "id": "hlp2014",
   "title": "Theory-independent limits on correlations from generalised Bayesian networks",
   "authors": "Joe Henson, Raymond Lal, Matthew F. Pusey",
@@ -447,6 +748,77 @@
   "levels": [
    6,
    7
+  ]
+ },
+ {
+  "id": "hoeffding1963",
+  "title": "Probability Inequalities for Sums of Bounded Random Variables",
+  "authors": "Wassily Hoeffding",
+  "year": 1963,
+  "venue": "Journal of the American Statistical Association",
+  "url": "https://doi.org/10.1080/01621459.1963.10500830",
+  "kind": "paper",
+  "scope": "Hoeffding's inequality",
+  "levels": [
+   3,
+   6,
+   7
+  ],
+  "doi": "10.1080/01621459.1963.10500830"
+ },
+ {
+  "id": "horodecki1996",
+  "title": "Separability of mixed states: necessary and sufficient conditions",
+  "authors": "Michał Horodecki, Paweł Horodecki, Ryszard Horodecki",
+  "year": 1996,
+  "venue": "Physics Letters A",
+  "url": "https://doi.org/10.1016/S0375-9601(96)00706-2",
+  "kind": "paper",
+  "scope": "PPT is sufficient for 2x2 and 2x3",
+  "levels": [
+   5
+  ],
+  "doi": "10.1016/S0375-9601(96)00706-2"
+ },
+ {
+  "id": "horodecki1996pra",
+  "title": "Information-theoretic aspects of inseparability of mixed states",
+  "authors": "Ryszard Horodecki, Michal/ Horodecki",
+  "year": 1996,
+  "venue": "Physical Review A",
+  "url": "https://doi.org/10.1103/PhysRevA.54.1838",
+  "kind": "paper",
+  "scope": "Bell-diagonal states tetrahedron",
+  "levels": [
+   7
+  ],
+  "doi": "10.1103/PhysRevA.54.1838"
+ },
+ {
+  "id": "howard2021",
+  "title": "Time-uniform, nonparametric, nonasymptotic confidence sequences",
+  "authors": "Steven R. Howard, Aaditya Ramdas, Jon McAuliffe, Jasjeet Sekhon",
+  "year": 2021,
+  "venue": "The Annals of Statistics",
+  "url": "https://doi.org/10.1214/20-AOS1991",
+  "kind": "paper",
+  "scope": "Confidence sequences and anytime-valid inference",
+  "levels": [
+   7
+  ],
+  "doi": "10.1214/20-AOS1991"
+ },
+ {
+  "id": "huangvaltorta2006",
+  "title": "Pearl's Calculus of Intervention Is Complete",
+  "authors": "Yimin Huang, Marco Valtorta",
+  "year": 2012,
+  "venue": "arXiv:1206.6831",
+  "url": "https://arxiv.org/abs/1206.6831",
+  "kind": "paper",
+  "scope": "Completeness of do-calculus",
+  "levels": [
+   4
   ]
  },
  {
@@ -486,6 +858,20 @@
   ]
  },
  {
+  "id": "imbensrubin2015",
+  "title": "Causal Inference for Statistics, Social, and Biomedical Sciences",
+  "authors": "Guido W. Imbens, Donald B. Rubin",
+  "year": 2015,
+  "venue": "Cambridge University Press",
+  "url": "https://doi.org/10.1017/CBO9781139025751",
+  "kind": "paper",
+  "scope": "Potential outcomes, Neyman variance for randomized experiments",
+  "levels": [
+   4
+  ],
+  "doi": "10.1017/CBO9781139025751"
+ },
+ {
   "id": "inflation",
   "title": "The Inflation Technique for Causal Inference with Latent Variables",
   "authors": "Elie Wolfe, Robert W. Spekkens, Tobias Fritz",
@@ -519,6 +905,20 @@
   ]
  },
  {
+  "id": "kaufman2012",
+  "title": "Leakage in data mining",
+  "authors": "Shachar Kaufman, Saharon Rosset, Claudia Perlich, Ori Stitelman",
+  "year": 2012,
+  "venue": "ACM Transactions on Knowledge Discovery from Data",
+  "url": "https://doi.org/10.1145/2382577.2382579",
+  "kind": "paper",
+  "scope": "Data leakage",
+  "levels": [
+   7
+  ],
+  "doi": "10.1145/2382577.2382579"
+ },
+ {
   "id": "kernels",
   "title": "Supervised learning with quantum enhanced feature spaces",
   "authors": "Vojtech Havlicek, Antonio D. Córcoles, Kristan Temme, Aram W. Harrow, Abhinav Kandala, Jerry M. Chow, Jay M. Gambetta",
@@ -535,6 +935,60 @@
   ]
  },
  {
+  "id": "kleinberg2016",
+  "title": "Inherent Trade-Offs in the Fair Determination of Risk Scores",
+  "authors": "Jon Kleinberg, Sendhil Mullainathan, Manish Raghavan",
+  "year": 2016,
+  "venue": "arXiv:1609.05807",
+  "url": "https://arxiv.org/abs/1609.05807",
+  "kind": "paper",
+  "scope": "Incompatibility of calibration and balance conditions",
+  "levels": [
+   4
+  ]
+ },
+ {
+  "id": "kusner2017",
+  "title": "Counterfactual Fairness",
+  "authors": "Matt J. Kusner, Joshua R. Loftus, Chris Russell, Ricardo Silva",
+  "year": 2017,
+  "venue": "arXiv:1703.06856",
+  "url": "https://arxiv.org/abs/1703.06856",
+  "kind": "paper",
+  "scope": "Definition of counterfactual fairness",
+  "levels": [
+   4
+  ]
+ },
+ {
+  "id": "lan1983",
+  "title": "Discrete sequential boundaries for clinical trials",
+  "authors": "K. K. GORDON LAN, DAVID L. DEMETS",
+  "year": 1983,
+  "venue": "Biometrika",
+  "url": "https://doi.org/10.1093/biomet/70.3.659",
+  "kind": "paper",
+  "scope": "Alpha-spending functions",
+  "levels": [
+   7
+  ],
+  "doi": "10.1093/biomet/70.3.659"
+ },
+ {
+  "id": "lauritzen1990",
+  "title": "Independence properties of directed markov fields",
+  "authors": "S. L. Lauritzen, A. P. Dawid, B. N. Larsen, H.‐G. Leimer",
+  "year": 1990,
+  "venue": "Networks",
+  "url": "https://doi.org/10.1002/net.3230200503",
+  "kind": "paper",
+  "scope": "Moralization criterion for directed Markov properties",
+  "levels": [
+   4
+  ],
+  "doi": "10.1002/net.3230200503"
+ },
+ {
   "id": "leifer",
   "title": "Towards a Formulation of Quantum Theory as a Causally Neutral Theory of Bayesian Inference",
   "authors": "M. S. Leifer, R. W. Spekkens",
@@ -549,6 +1003,33 @@
    6,
    7
   ]
+ },
+ {
+  "id": "ligthart2023",
+  "title": "A convergent inflation hierarchy for quantum causal structures",
+  "authors": "Laurens T. Ligthart, Mariami Gachechiladze, David Gross",
+  "year": 2021,
+  "venue": "arXiv:2110.14659",
+  "url": "https://arxiv.org/abs/2110.14659",
+  "kind": "paper",
+  "scope": "Convergent quantum inflation hierarchy",
+  "levels": [
+   7
+  ]
+ },
+ {
+  "id": "luders1950",
+  "title": "Über die Zustandsänderung durch den Meßprozeß",
+  "authors": "Gerhart Lüders",
+  "year": 1950,
+  "venue": "Annalen der Physik",
+  "url": "https://doi.org/10.1002/andp.19504430510",
+  "kind": "paper",
+  "scope": "Lüders state-update rule",
+  "levels": [
+   5
+  ],
+  "doi": "10.1002/andp.19504430510"
  },
  {
   "id": "maclean",
@@ -586,6 +1067,19 @@
   ]
  },
  {
+  "id": "meek1995",
+  "title": "Causal Inference and Causal Explanation with Background Knowledge",
+  "authors": "Christopher Meek",
+  "year": 2013,
+  "venue": "arXiv:1302.4972",
+  "url": "https://arxiv.org/abs/1302.4972",
+  "kind": "paper",
+  "scope": "Orientation rules for equivalence classes",
+  "levels": [
+   4
+  ]
+ },
+ {
   "id": "merrill2002",
   "title": "First principles of instruction",
   "authors": "M. David Merrill",
@@ -614,6 +1108,48 @@
    5,
    6
   ]
+ },
+ {
+  "id": "mml",
+  "title": "Mathematics for Machine Learning",
+  "authors": "Marc Peter Deisenroth, A. Aldo Faisal, Cheng Soon Ong",
+  "year": 2020,
+  "venue": "Cambridge University Press",
+  "doi": "10.1017/9781108679930",
+  "url": "https://doi.org/10.1017/9781108679930",
+  "kind": "book",
+  "scope": "Linear algebra, calculus, probability and optimization for machine learning",
+  "levels": [
+   3,
+   7
+  ]
+ },
+ {
+  "id": "navascues2020",
+  "title": "The Inflation Technique Completely Solves the Causal Compatibility Problem",
+  "authors": "Miguel Navascues, Elie Wolfe",
+  "year": 2017,
+  "venue": "arXiv:1707.06476",
+  "url": "https://arxiv.org/abs/1707.06476",
+  "kind": "paper",
+  "scope": "Completeness of the classical inflation hierarchy",
+  "levels": [
+   7
+  ]
+ },
+ {
+  "id": "neyman1990",
+  "title": "On the Application of Probability Theory to Agricultural Experiments. Essay on Principles. Section 9",
+  "authors": "Jerzy Splawa-Neyman, D. M. Dabrowska, T. P. Speed",
+  "year": 1990,
+  "venue": "Statistical Science",
+  "url": "https://doi.org/10.1214/ss/1177012031",
+  "kind": "paper",
+  "scope": "Origin of potential outcomes and Neyman's variance",
+  "levels": [
+   4
+  ],
+  "doi": "10.1214/ss/1177012031"
  },
  {
   "id": "ngss_1ps4_2",
@@ -789,6 +1325,19 @@
   ]
  },
  {
+  "id": "openstax_ci",
+  "title": "8.1 A Single Population Mean using the Normal Distribution",
+  "authors": "Barbara Illowsky and Susan Dean",
+  "year": 2023,
+  "venue": "OpenStax, Introductory Statistics 2e",
+  "url": "https://openstax.org/books/introductory-statistics-2e/pages/8-1-a-single-population-mean-using-the-normal-distribution",
+  "kind": "web",
+  "scope": "Confidence intervals: point estimate, margin of error, confidence level",
+  "levels": [
+   3
+  ]
+ },
+ {
   "id": "openstax_contingency",
   "title": "3.4 Contingency Tables",
   "authors": "Barbara Illowsky and Susan Dean",
@@ -799,6 +1348,19 @@
   "scope": "Two-way (contingency) tables and conditional probabilities read from them",
   "levels": [
    2
+  ]
+ },
+ {
+  "id": "openstax_derivative",
+  "title": "3.1 Defining the Derivative",
+  "authors": "Gilbert Strang and Edwin Herman",
+  "year": 2016,
+  "venue": "OpenStax, Calculus Volume 1",
+  "url": "https://openstax.org/books/calculus-volume-1/pages/3-1-defining-the-derivative",
+  "kind": "web",
+  "scope": "Derivative as a limit of difference quotients; tangent line",
+  "levels": [
+   3
   ]
  },
  {
@@ -816,6 +1378,19 @@
   ]
  },
  {
+  "id": "openstax_expected",
+  "title": "4.2 Mean or Expected Value and Standard Deviation",
+  "authors": "Barbara Illowsky and Susan Dean",
+  "year": 2023,
+  "venue": "OpenStax, Introductory Statistics 2e",
+  "url": "https://openstax.org/books/introductory-statistics-2e/pages/4-2-mean-or-expected-value-and-standard-deviation",
+  "kind": "web",
+  "scope": "Expected value and standard deviation of a discrete random variable",
+  "levels": [
+   3
+  ]
+ },
+ {
   "id": "openstax_functions",
   "title": "3.1 Functions and Function Notation",
   "authors": "Jay Abramson",
@@ -826,6 +1401,20 @@
   "scope": "A function assigns each input exactly one output; function notation",
   "levels": [
    2
+  ]
+ },
+ {
+  "id": "openstax_gradient",
+  "title": "4.6 Directional Derivatives and the Gradient",
+  "authors": "Gilbert Strang and Edwin Herman",
+  "year": 2016,
+  "venue": "OpenStax, Calculus Volume 3",
+  "url": "https://openstax.org/books/calculus-volume-3/pages/4-6-directional-derivatives-and-the-gradient",
+  "kind": "web",
+  "scope": "Directional derivative, gradient, direction of steepest ascent",
+  "levels": [
+   3,
+   7
   ]
  },
  {
@@ -866,6 +1455,32 @@
   "scope": "Linear equations y = a + bx, slope and y-intercept",
   "levels": [
    2
+  ]
+ },
+ {
+  "id": "openstax_matrices",
+  "title": "7.5 Matrices and Matrix Operations",
+  "authors": "Jay Abramson",
+  "year": 2021,
+  "venue": "OpenStax, College Algebra 2e",
+  "url": "https://openstax.org/books/college-algebra-2e/pages/7-5-matrices-and-matrix-operations",
+  "kind": "web",
+  "scope": "Matrix notation, addition, scalar and matrix multiplication",
+  "levels": [
+   3
+  ]
+ },
+ {
+  "id": "openstax_polar",
+  "title": "8.5 Polar Form of Complex Numbers",
+  "authors": "Jay Abramson",
+  "year": 2021,
+  "venue": "OpenStax, Precalculus 2e",
+  "url": "https://openstax.org/books/precalculus-2e/pages/8-5-polar-form-of-complex-numbers",
+  "kind": "web",
+  "scope": "Complex plane, modulus, argument, polar form, products and powers (De Moivre)",
+  "levels": [
+   3
   ]
  },
  {
@@ -955,6 +1570,20 @@
   ]
  },
  {
+  "id": "pearlbareinboim2014",
+  "title": "External Validity: From Do-Calculus to Transportability Across Populations",
+  "authors": "Judea Pearl, Elias Bareinboim",
+  "year": 2014,
+  "venue": "Statistical Science",
+  "url": "https://doi.org/10.1214/14-STS486",
+  "kind": "paper",
+  "scope": "Selection diagrams and transportability",
+  "levels": [
+   4
+  ],
+  "doi": "10.1214/14-STS486"
+ },
+ {
   "id": "pearlcausality",
   "title": "Causality",
   "authors": "Judea Pearl",
@@ -986,6 +1615,21 @@
    4,
    5
   ]
+ },
+ {
+  "id": "peres1996",
+  "title": "Separability Criterion for Density Matrices",
+  "authors": "Asher Peres",
+  "year": 1996,
+  "venue": "Physical Review Letters",
+  "url": "https://doi.org/10.1103/PhysRevLett.77.1413",
+  "kind": "paper",
+  "scope": "Positive partial transpose criterion",
+  "levels": [
+   5,
+   7
+  ],
+  "doi": "10.1103/PhysRevLett.77.1413"
  },
  {
   "id": "peters",
@@ -1050,6 +1694,21 @@
    6,
    7
   ]
+ },
+ {
+  "id": "popescu1994",
+  "title": "Quantum nonlocality as an axiom",
+  "authors": "Sandu Popescu, Daniel Rohrlich",
+  "year": 1994,
+  "venue": "Foundations of Physics",
+  "url": "https://doi.org/10.1007/BF02058098",
+  "kind": "paper",
+  "scope": "PR box, no-signalling CHSH value 4",
+  "levels": [
+   5,
+   6
+  ],
+  "doi": "10.1007/BF02058098"
  },
  {
   "id": "preskill",
@@ -1117,6 +1776,20 @@
   ]
  },
  {
+  "id": "reisach2021",
+  "title": "Beware of the Simulated DAG! Causal Discovery Benchmarks May Be Easy To Game",
+  "authors": "Alexander G. Reisach, Christof Seiler, Sebastian Weichwald",
+  "year": 2021,
+  "venue": "arXiv:2102.13647",
+  "url": "https://arxiv.org/abs/2102.13647",
+  "kind": "paper",
+  "scope": "Varsortability in simulated causal discovery benchmarks",
+  "levels": [
+   4,
+   7
+  ]
+ },
+ {
   "id": "ried2015",
   "title": "Inferring causal structure: a quantum advantage",
   "authors": "Katja Ried, Megan Agnew, Lydia Vermeyden, Dominik Janzing, Robert W. Spekkens, Kevin J. Resch",
@@ -1131,6 +1804,34 @@
    6,
    7
   ]
+ },
+ {
+  "id": "robins1994",
+  "title": "Estimation of Regression Coefficients When Some Regressors are not Always Observed",
+  "authors": "James M. Robins, Andrea Rotnitzky, Lue Ping Zhao",
+  "year": 1994,
+  "venue": "Journal of the American Statistical Association",
+  "url": "https://doi.org/10.1080/01621459.1994.10476818",
+  "kind": "paper",
+  "scope": "Augmented inverse probability weighting",
+  "levels": [
+   4
+  ],
+  "doi": "10.1080/01621459.1994.10476818"
+ },
+ {
+  "id": "rubin1974",
+  "title": "Estimating causal effects of treatments in randomized and nonrandomized studies.",
+  "authors": "Donald B. Rubin",
+  "year": 1974,
+  "venue": "Journal of Educational Psychology",
+  "url": "https://doi.org/10.1037/h0037350",
+  "kind": "paper",
+  "scope": "Potential outcomes for observational studies",
+  "levels": [
+   4
+  ],
+  "doi": "10.1037/h0037350"
  },
  {
   "id": "rubino",
@@ -1215,6 +1916,49 @@
   ]
  },
  {
+  "id": "shalm2015",
+  "title": "Strong Loophole-Free Test of Local Realism",
+  "authors": "Lynden K. Shalm, Evan Meyer-Scott, Bradley G. Christensen, Peter Bierhorst, Michael A. Wayne, Martin J. Stevens, Thomas Gerrits, Scott Glancy, Deny R. Hamel, Michael S. Allman, Kevin J. Coakley, Shellee D. Dyer, Carson Hodge, Adriana E. Lita, Varun B. Verma, Camilla Lambrocco, Edward Tortorici, Alan L. Migdall, Yanbao Zhang, Daniel R. Kumor, William H. Farr, Francesco Marsili, Matthew D. Shaw, Jeffrey A. Stern, Carlos Abellán, Waldimar Amaya, Valerio Pruneri, Thomas Jennewein, Morgan W. Mitchell, Paul G. Kwiat, Joshua C. Bienfang, Richard P. Mirin, Emanuel Knill, Sae Woo Nam",
+  "year": 2015,
+  "venue": "Physical Review Letters",
+  "url": "https://doi.org/10.1103/PhysRevLett.115.250402",
+  "kind": "paper",
+  "scope": "Loophole-free photonic Bell test",
+  "levels": [
+   5
+  ],
+  "doi": "10.1103/PhysRevLett.115.250402"
+ },
+ {
+  "id": "shannon1948",
+  "title": "A Mathematical Theory of Communication",
+  "authors": "C. E. Shannon",
+  "year": 1948,
+  "venue": "Bell System Technical Journal",
+  "doi": "10.1002/j.1538-7305.1948.tb01338.x",
+  "url": "https://doi.org/10.1002/j.1538-7305.1948.tb01338.x",
+  "kind": "paper",
+  "scope": "Founding paper of information theory: entropy of a source",
+  "levels": [
+   3,
+   5
+  ]
+ },
+ {
+  "id": "shor1995",
+  "title": "Scheme for reducing decoherence in quantum computer memory",
+  "authors": "Peter W. Shor",
+  "year": 1995,
+  "venue": "Physical Review A",
+  "doi": "10.1103/PhysRevA.52.R2493",
+  "url": "https://doi.org/10.1103/PhysRevA.52.R2493",
+  "kind": "paper",
+  "scope": "First quantum error-correcting code (nine-qubit code)",
+  "levels": [
+   5
+  ]
+ },
+ {
   "id": "spirtes",
   "title": "Causation, Prediction, and Search",
   "authors": "Spirtes, Glymour, Scheines",
@@ -1232,6 +1976,19 @@
   ]
  },
  {
+  "id": "suresh2023",
+  "title": "A Semantics for Counterfactuals in Quantum Causal Models",
+  "authors": "Ardra Kooderi Suresh, Markus Frembs, Eric G. Cavalcanti",
+  "year": 2023,
+  "venue": "arXiv:2302.11783",
+  "url": "https://arxiv.org/abs/2302.11783",
+  "kind": "paper",
+  "scope": "Counterfactuals in quantum causal models",
+  "levels": [
+   6
+  ]
+ },
+ {
   "id": "switch",
   "title": "Quantum computations without definite causal structure",
   "authors": "G. Chiribella, G. M. D'Ariano, P. Perinotti, B. Valiron",
@@ -1246,6 +2003,76 @@
    6,
    7
   ]
+ },
+ {
+  "id": "tang2019",
+  "title": "A quantum-inspired classical algorithm for recommendation systems",
+  "authors": "Ewin Tang",
+  "year": 2018,
+  "venue": "arXiv:1807.04271",
+  "url": "https://arxiv.org/abs/1807.04271",
+  "kind": "paper",
+  "scope": "Dequantization of recommendation systems",
+  "levels": [
+   7
+  ]
+ },
+ {
+  "id": "thanasilp2024",
+  "title": "Exponential concentration in quantum kernel methods",
+  "authors": "Supanut Thanasilp, Samson Wang, M. Cerezo, Zoë Holmes",
+  "year": 2024,
+  "venue": "Nature Communications",
+  "url": "https://doi.org/10.1038/s41467-024-49287-w",
+  "kind": "paper",
+  "scope": "Exponential concentration of quantum kernels",
+  "levels": [
+   7
+  ],
+  "doi": "10.1038/s41467-024-49287-w"
+ },
+ {
+  "id": "tianpearl2000",
+  "title": "Probabilities of causation: Bounds and identification",
+  "authors": "Jin Tian, Judea Pearl",
+  "year": 2000,
+  "venue": "Annals of Mathematics and Artificial Intelligence",
+  "url": "https://doi.org/10.1023/A:1018912507879",
+  "kind": "paper",
+  "scope": "Bounds on probabilities of causation (PN, PS, PNS)",
+  "levels": [
+   4
+  ],
+  "doi": "10.1023/A:1018912507879"
+ },
+ {
+  "id": "tsamardinos2006",
+  "title": "The max-min hill-climbing Bayesian network structure learning algorithm",
+  "authors": "Ioannis Tsamardinos, Laura E. Brown, Constantin F. Aliferis",
+  "year": 2006,
+  "venue": "Machine Learning",
+  "url": "https://doi.org/10.1007/s10994-006-6889-7",
+  "kind": "paper",
+  "scope": "Structural Hamming distance",
+  "levels": [
+   7
+  ],
+  "doi": "10.1007/s10994-006-6889-7"
+ },
+ {
+  "id": "tsirelson1980",
+  "title": "Quantum generalizations of Bell's inequality",
+  "authors": "B. S. Cirel'son",
+  "year": 1980,
+  "venue": "Letters in Mathematical Physics",
+  "url": "https://doi.org/10.1007/BF00417500",
+  "kind": "paper",
+  "scope": "Tsirelson's bound 2 sqrt 2",
+  "levels": [
+   5,
+   6
+  ],
+  "doi": "10.1007/BF00417500"
  },
  {
   "id": "ubd_whitepaper",
@@ -1272,6 +2099,20 @@
   "levels": [
    0
   ]
+ },
+ {
+  "id": "uhler2013",
+  "title": "Geometry of the faithfulness assumption in causal inference",
+  "authors": "Caroline Uhler, Garvesh Raskutti, Peter Bühlmann, Bin Yu",
+  "year": 2013,
+  "venue": "The Annals of Statistics",
+  "url": "https://doi.org/10.1214/12-AOS1080",
+  "kind": "paper",
+  "scope": "Near-faithfulness violations",
+  "levels": [
+   4
+  ],
+  "doi": "10.1214/12-AOS1080"
  },
  {
   "id": "unravelling",
@@ -1317,6 +2158,62 @@
   "scope": "Operators, channels, entropy, and discrimination",
   "levels": [
    6,
+   7
+  ]
+ },
+ {
+  "id": "werner1989",
+  "title": "Quantum states with Einstein-Podolsky-Rosen correlations admitting a hidden-variable model",
+  "authors": "Reinhard F. Werner",
+  "year": 1989,
+  "venue": "Physical Review A",
+  "url": "https://doi.org/10.1103/PhysRevA.40.4277",
+  "kind": "paper",
+  "scope": "Werner states: entanglement without Bell violation",
+  "levels": [
+   5,
+   6
+  ],
+  "doi": "10.1103/PhysRevA.40.4277"
+ },
+ {
+  "id": "wierichs2022",
+  "title": "General parameter-shift rules for quantum gradients",
+  "authors": "David Wierichs, Josh Izaac, Cody Wang, Cedric Yen-Yu Lin",
+  "year": 2022,
+  "venue": "Quantum",
+  "url": "https://doi.org/10.22331/q-2022-03-30-677",
+  "kind": "paper",
+  "scope": "General parameter-shift rules",
+  "levels": [
+   7
+  ],
+  "doi": "10.22331/q-2022-03-30-677"
+ },
+ {
+  "id": "wilson1927",
+  "title": "Probable Inference, the Law of Succession, and Statistical Inference",
+  "authors": "Edwin B. Wilson",
+  "year": 1927,
+  "venue": "Journal of the American Statistical Association",
+  "url": "https://doi.org/10.1080/01621459.1927.10502953",
+  "kind": "paper",
+  "scope": "Wilson score interval for a binomial proportion",
+  "levels": [
+   3
+  ],
+  "doi": "10.1080/01621459.1927.10502953"
+ },
+ {
+  "id": "wolfe2021",
+  "title": "Quantum Inflation: A General Approach to Quantum Causal Compatibility",
+  "authors": "Elie Wolfe, Alejandro Pozas-Kerstjens, Matan Grinberg, Denis Rosset, Antonio Acín, Miguel Navascues",
+  "year": 2019,
+  "venue": "arXiv:1909.10519",
+  "url": "https://arxiv.org/abs/1909.10519",
+  "kind": "paper",
+  "scope": "Quantum inflation",
+  "levels": [
    7
   ]
  },
