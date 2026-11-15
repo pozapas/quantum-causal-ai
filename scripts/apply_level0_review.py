@@ -101,7 +101,7 @@ save(L)
 
 # ---- L0-08 ------------------------------------------------------------------------
 L = load(8)
-L["story"][0] = "Maya wants to ask Leo four questions. Leo wants to answer without saying a word. Maya has an idea. \"Let's use cards!\""
+L["story"][0] = "Parsa wants to ask Ryan four questions. Ryan wants to answer without saying a word. Parsa has an idea. \"Let's use cards!\""
 L["prerequisites"] = ["L0-02"]
 save(L)
 

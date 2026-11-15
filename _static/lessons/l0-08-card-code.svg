@@ -28,7 +28,7 @@
 </defs>
 <rect width="720" height="360" rx="18" fill="#ffffff"/>
 
-<text class="lbl" x="24" y="34">Maya asks. Leo answers with cards.</text>
+<text class="lbl" x="24" y="34">Parsa asks. Ryan answers with cards.</text>
 
 <!-- questions -->
 <text class="q" x="120" y="74" text-anchor="middle">Like rain?</text>

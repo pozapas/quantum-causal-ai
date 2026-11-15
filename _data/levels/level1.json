@@ -40,11 +40,11 @@
       },
       "story_title": "Sharing a strip and a bag of marbles",
       "story": [
-        "Maya and Leo have one long strip of paper. They fold it in half and color one part. One part is colored, and there are 2 equal parts in all. That is 1 out of 2, or one half.",
-        "Leo folds the strip in half again. Now there are 4 equal parts, and 2 of them are colored. That is 2 out of 4. Maya folds it once more. Now there are 8 equal parts, and 4 are colored: 4 out of 8. \"The colored part never changed,\" says Leo. \"We only cut it into smaller pieces.\" So 1 out of 2, 2 out of 4, and 4 out of 8 are the same amount.",
-        "Next they open a bag of 12 marbles. 3 of the marbles are green. Leo writes 3 out of 12 as a fraction: 3/12. The numerator, 3, counts the green marbles. The denominator, 12, counts all the marbles.",
-        "Maya puts the marbles into 4 equal groups of 3. She puts the 3 green marbles together in one group. Now 1 out of 4 groups is green. So 3 out of 12 is the same as 1 out of 4.",
-        "\"What if the bag had only 6 marbles, with 3 green?\" asks Leo. Then 3 out of 6 would be green, which is one half. The part is the same, but the whole is smaller. That is why you always say what the whole is."
+        "Parsa and Ryan have one long strip of paper. They fold it in half and color one part. One part is colored, and there are 2 equal parts in all. That is 1 out of 2, or one half.",
+        "Ryan folds the strip in half again. Now there are 4 equal parts, and 2 of them are colored. That is 2 out of 4. Parsa folds it once more. Now there are 8 equal parts, and 4 are colored: 4 out of 8. \"The colored part never changed,\" says Ryan. \"We only cut it into smaller pieces.\" So 1 out of 2, 2 out of 4, and 4 out of 8 are the same amount.",
+        "Next they open a bag of 12 marbles. 3 of the marbles are green. Ryan writes 3 out of 12 as a fraction: 3/12. The numerator, 3, counts the green marbles. The denominator, 12, counts all the marbles.",
+        "Parsa puts the marbles into 4 equal groups of 3. He puts the 3 green marbles together in one group. Now 1 out of 4 groups is green. So 3 out of 12 is the same as 1 out of 4.",
+        "\"What if the bag had only 6 marbles, with 3 green?\" asks Ryan. Then 3 out of 6 would be green, which is one half. The part is the same, but the whole is smaller. That is why you always say what the whole is."
       ],
       "animation": {
         "file": "l1-01-fractions.mp4",
@@ -94,8 +94,8 @@
           "answer": "There are 15 blocks in all. The red blocks are 6 out of 15, or 6/15. The bottom number counts all the blocks, not just the blue ones."
         },
         {
-          "prompt": "Leo shades 3 parts of a strip folded into 4 equal parts. Maya shades 6 parts of a strip folded into 8 equal parts. Did they shade the same amount?",
-          "answer": "Yes. Leo shaded 3/4 of his strip. Maya shaded 6/8. Each of Leo's parts is the same as two of Maya's parts, so 3/4 and 6/8 are the same amount."
+          "prompt": "Ryan shades 3 parts of a strip folded into 4 equal parts. Parsa shades 6 parts of a strip folded into 8 equal parts. Did they shade the same amount?",
+          "answer": "Yes. Ryan shaded 3/4 of his strip. Parsa shaded 6/8. Each of Ryan's parts is the same as two of Parsa's parts, so 3/4 and 6/8 are the same amount."
         }
       ],
       "talk": [
@@ -188,11 +188,11 @@
       },
       "story_title": "What are the chances?",
       "story": [
-        "Maya puts 8 counters in a paper bag. They are all the same size and feel the same. 3 are red and 5 are blue. \"If I reach in without looking, what will I get?\" she asks.",
-        "Leo makes a list of the outcomes. Each of the 8 counters is one outcome. Since they feel the same and Maya cannot see, each counter is equally likely to come out. 3 out of 8 outcomes are red. So their model says the probability of red is 3 out of 8. Leo writes it in short as P(red) = 3/8. The P stands for probability.",
-        "\"What about not red?\" asks Maya. Every counter that is not red is blue. That is 5 out of 8. Leo checks it a second way: 1 take away 3 eighths leaves 5 eighths. The two answers match, so P(not red) = 5/8.",
+        "Parsa puts 8 counters in a paper bag. They are all the same size and feel the same. 3 are red and 5 are blue. \"If I reach in without looking, what will I get?\" he asks.",
+        "Ryan makes a list of the outcomes. Each of the 8 counters is one outcome. Since they feel the same and Parsa cannot see, each counter is equally likely to come out. 3 out of 8 outcomes are red. So their model says the probability of red is 3 out of 8. Ryan writes it in short as P(red) = 3/8. The P stands for probability.",
+        "\"What about not red?\" asks Parsa. Every counter that is not red is blue. That is 5 out of 8. Ryan checks it a second way: 1 take away 3 eighths leaves 5 eighths. The two answers match, so P(not red) = 5/8.",
         "Next they try a fair die. It has 6 faces, and each face is equally likely. The probability of rolling a 4 is 1 out of 6. The probability of not rolling a 4 is 5 out of 6.",
-        "\"Can we roll a 7?\" asks Leo. No face shows a 7, so the probability is 0. That is impossible. Rolling a number from 1 to 6 always happens, so its probability is 1. That is certain."
+        "\"Can we roll a 7?\" asks Ryan. No face shows a 7, so the probability is 0. That is impossible. Rolling a number from 1 to 6 always happens, so its probability is 1. That is certain."
       ],
       "animation": {
         "file": "l1-02-model.mp4",
@@ -238,7 +238,7 @@
           "answer": "The probability of orange is 2 out of 5, which is 0.4. It goes a bit to the left of one half on the line."
         },
         {
-          "prompt": "Leo draws a spinner with one big red part and one small blue part. He says red and blue each have a probability of one half, because there are two colors. Is he right?",
+          "prompt": "Ryan draws a spinner with one big red part and one small blue part. He says red and blue each have a probability of one half, because there are two colors. Is he right?",
           "answer": "No. The two parts are not the same size, so red and blue are not equally likely. The arrow will land on the big red part more often. Counting colors only works when each outcome is equally likely."
         }
       ],
@@ -335,10 +335,10 @@
       },
       "story_title": "Does this coin like heads?",
       "story": [
-        "Leo flips a coin 10 times and gets 7 heads. \"This coin likes heads!\" he says. Maya shakes her head. \"Our model says a fair coin lands heads with probability one half. Ten flips is not much. Let's keep going and write down every result.\"",
+        "Ryan flips a coin 10 times and gets 7 heads. \"This coin likes heads!\" he says. Parsa shakes his head. \"Our model says a fair coin lands heads with probability one half. Ten flips is not much. Let's keep going and write down every result.\"",
         "After 20 flips, they have 11 heads. That is 11 out of 20, a little more than half. After 50 flips, they have 25 heads, which is 25 out of 50, exactly one half for a moment.",
         "They keep flipping until they reach 200 flips. They count 101 heads. The relative frequency is 101 out of 200. That is just a tiny bit more than one half.",
-        "\"So it was not a heads-loving coin,\" says Leo. \"The 7 out of 10 was just a wobbly start.\" Maya nods. \"The probability stayed one half the whole time. Our counts got closer to it as we did more trials.\""
+        "\"So it was not a heads-loving coin,\" says Ryan. \"The 7 out of 10 was just a wobbly start.\" Parsa nods. \"The probability stayed one half the whole time. Our counts got closer to it as we did more trials.\""
       ],
       "animation": {
         "file": "l1-03-frequency.mp4",
@@ -389,12 +389,12 @@
           "answer": "The probability of blue is one fourth, or 0.25. The relative frequency is 13 out of 40, which is 0.325. They are different, and that is normal for only 40 spins."
         },
         {
-          "prompt": "Sam rolls a fair die 6 times and never gets a 6. Sam says the die must be broken. What would you tell Sam?",
-          "answer": "Getting no 6 in 6 rolls happens about one time in three, so it is not a sign that the die is broken. The probability of a 6 is one sixth on every roll, but that does not promise one 6 in every 6 rolls. Sam should roll many more times before deciding."
+          "prompt": "Amin rolls a fair die 6 times and never gets a 6. Amin says the die must be broken. What would you tell Amin?",
+          "answer": "Getting no 6 in 6 rolls happens about one time in three, so it is not a sign that the die is broken. The probability of a 6 is one sixth on every roll, but that does not promise one 6 in every 6 rolls. Amin should roll many more times before deciding."
         }
       ],
       "talk": [
-        "Why were 10 flips not enough to judge Leo's coin?",
+        "Why were 10 flips not enough to judge Ryan's coin?",
         "Does a coin remember what it landed on before?",
         "When would you trust counts more than a model? When would you trust the model more?"
       ],
@@ -486,11 +486,11 @@
       },
       "story_title": "Which group are we counting?",
       "story": [
-        "Maya and Leo cut out 24 paper shapes for an art project. Some are squares and some are circles. Some are red and some are blue. They spread them all out on the table.",
-        "Maya counts the red squares. There are 6. \"So 6 out of 24 shapes are red squares,\" she says.",
-        "Then Leo asks a new question: \"Of the squares, what fraction is red?\" Now only the squares matter. Maya pushes the circles to one side. There are 8 squares, and 6 of them are red. The answer is 6 out of 8. The top number stayed 6, but the bottom number changed from 24 to 8. So if Leo picks one square without looking, the probability that it is red is 6 out of 8.",
-        "\"Now try this,\" says Maya. \"Of the red shapes, what fraction are squares?\" This time they keep only the red shapes. There are 10 red shapes, and 6 of them are squares. That is 6 out of 10.",
-        "Leo is surprised. \"Both questions are about red squares, but the answers are different!\" Maya nods. \"The question tells you which group is the whole. Different group, different bottom number.\""
+        "Parsa and Ryan cut out 24 paper shapes for an art project. Some are squares and some are circles. Some are red and some are blue. They spread them all out on the table.",
+        "Parsa counts the red squares. There are 6. \"So 6 out of 24 shapes are red squares,\" he says.",
+        "Then Ryan asks a new question: \"Of the squares, what fraction is red?\" Now only the squares matter. Parsa pushes the circles to one side. There are 8 squares, and 6 of them are red. The answer is 6 out of 8. The top number stayed 6, but the bottom number changed from 24 to 8. So if Ryan picks one square without looking, the probability that it is red is 6 out of 8.",
+        "\"Now try this,\" says Parsa. \"Of the red shapes, what fraction are squares?\" This time they keep only the red shapes. There are 10 red shapes, and 6 of them are squares. That is 6 out of 10.",
+        "Ryan is surprised. \"Both questions are about red squares, but the answers are different!\" Parsa nods. \"The question tells you which group is the whole. Different group, different bottom number.\""
       ],
       "animation": {
         "file": "l1-04-condition.mp4",
@@ -630,13 +630,13 @@
         "recall_of": "L1-04",
         "prompt": "Last time you counted inside a group. A class has 20 kids, and 8 of them wear glasses. Of those 8, 2 wear red shirts. Of the kids with glasses, what fraction wear red shirts? What total do you use?"
       },
-      "story_title": "Leo's favorite plane",
+      "story_title": "Ryan's favorite plane",
       "story": [
-        "Leo has folded two paper planes. Plane A has long, thin wings. Plane B has short, wide wings. He wants to know which design flies farther. Sixteen friends will each throw one plane once.",
-        "\"I will choose who throws which,\" says Leo. Maya frowns. \"You like Plane A best. What if you give it to all the strong throwers? Then Plane A wins because of the throwers, not the wings.\"",
-        "To see the problem, a grown-up gives each friend a made-up throwing strength from 1 to 10. Leo sorts the 8 strongest friends to Plane A. Plane A's group: average 7.6. Plane B's group: average 3.1. That is not a fair test at all.",
-        "So they start over. For each friend, Maya flips a coin. Heads means Plane A, and tails means Plane B. This time the coin gives 8 friends to each plane, but that was luck. Plane A's group: average 5.5. Plane B's group: 42 divided by 8 is 5.25, which rounds to average 5.3.",
-        "\"The averages are close, but not the same,\" says Leo. Maya nods. \"A coin does not promise equal groups. But it does not take sides. If we did this again and again, neither plane would get the strong throwers more often.\""
+        "Ryan has folded two paper planes. Plane A has long, thin wings. Plane B has short, wide wings. He wants to know which design flies farther. Sixteen friends will each throw one plane once.",
+        "\"I will choose who throws which,\" says Ryan. Parsa frowns. \"You like Plane A best. What if you give it to all the strong throwers? Then Plane A wins because of the throwers, not the wings.\"",
+        "To see the problem, a grown-up gives each friend a made-up throwing strength from 1 to 10. Ryan sorts the 8 strongest friends to Plane A. Plane A's group: average 7.6. Plane B's group: average 3.1. That is not a fair test at all.",
+        "So they start over. For each friend, Parsa flips a coin. Heads means Plane A, and tails means Plane B. This time the coin gives 8 friends to each plane, but that was luck. Plane A's group: average 5.5. Plane B's group: 42 divided by 8 is 5.25, which rounds to average 5.3.",
+        "\"The averages are close, but not the same,\" says Ryan. Parsa nods. \"A coin does not promise equal groups. But it does not take sides. If we did this again and again, neither plane would get the strong throwers more often.\""
       ],
       "animation": {
         "file": "l1-05-assign.mp4",
@@ -662,9 +662,9 @@
             6
           ]
         },
-        "caption": "Coin flips split 16 friends into two groups. Then Leo picks the groups himself. The strengths are made up.",
+        "caption": "Coin flips split 16 friends into two groups. Then Ryan picks the groups himself. The strengths are made up.",
         "alt": "Sixteen circles shaded by a made-up throwing strength are sorted into two groups, first by coin flips, giving close averages, then by picking, putting the strong throwers in one group.",
-        "describe": "Sixteen circles stand for friends. Darker circles are stronger throwers, and each shows a made-up strength from 1 to 10. First a coin flip for each friend sends them to Plane A or Plane B, and the labels read average 5.5 and average 5.3. Then Leo picks, and the strong throwers all go to Plane A: average 7.6 against average 3.1."
+        "describe": "Sixteen circles stand for friends. Darker circles are stronger throwers, and each shows a made-up strength from 1 to 10. First a coin flip for each friend sends them to Plane A or Plane B, and the labels read average 5.5 and average 5.3. Then Ryan picks, and the strong throwers all go to Plane A: average 7.6 against average 3.1."
       },
       "activity": {
         "title": "Coin groups or picked groups?",
@@ -699,12 +699,12 @@
           "answer": "No. The game group were already the best spellers, so they might score higher anyway. She could flip a coin for each kid to decide who plays the game. Then good spellers would most likely end up in both groups."
         },
         {
-          "prompt": "Sam flips a coin for 6 friends. Pile A gets strengths 9, 8 and 7. Pile B gets 2, 3 and 4. Did the coin do something wrong?",
+          "prompt": "Amin flips a coin for 6 friends. Pile A gets strengths 9, 8 and 7. Pile B gets 2, 3 and 4. Did the coin do something wrong?",
           "answer": "No. With only 6 friends, a coin can give lopsided groups by luck. Pile A has an average of 8 and pile B has an average of 3. That happens sometimes. With more friends, the averages are usually closer."
         }
       ],
       "talk": [
-        "Why might Leo put the strong throwers on Plane A, even if he does not mean to?",
+        "Why might Ryan put the strong throwers on Plane A, even if he does not mean to?",
         "The coin groups were close but not exactly equal. Is that a problem? Why or why not?",
         "Why does using more friends usually make the coin groups more alike?"
       ],
@@ -792,15 +792,15 @@
       ],
       "warmup": {
         "recall_of": "L1-05",
-        "prompt": "Last time you used a coin to split friends into two groups for a fair test. Why is a coin fairer than letting Leo pick the groups himself?"
+        "prompt": "Last time you used a coin to split friends into two groups for a fair test. Why is a coin fairer than letting Ryan pick the groups himself?"
       },
       "story_title": "Does ice cream make people swim?",
       "story": [
-        "Maya's cousin Sam runs an ice cream stand next to the town pool. Sam keeps a notebook. Each day, Sam writes how many ice creams were sold and how many people went swimming. The numbers in this story are made up, but they look like real ones.",
-        "Leo reads the notebook for 10 made-up days. On days with lots of ice cream sold, lots of people swam. On days with little ice cream sold, few people swam. \"Ice cream makes people want to swim!\" says Leo.",
-        "Maya points to another column in the notebook: hot or cool. There were 5 hot days and 5 cool days. On the hot days, Sam sold 40 to 56 ice creams, and 38 to 49 people swam. On the cool days, Sam sold 12 to 26 ice creams, and only 10 to 16 people swam.",
-        "\"Look only at the hot days,\" says Maya. \"Selling more ice cream does not go with more swimmers. The cool days are the same. The big pattern comes from the weather.\"",
-        "Leo draws arrows. Hot weather points to ice cream sold. Hot weather also points to people swimming. \"So hot weather is a common cause,\" he says. \"Giving out free ice cream on a cold day would not fill the pool.\""
+        "Their cousin Amin runs an ice cream stand next to the town pool. Amin keeps a notebook. Each day, Amin writes how many ice creams were sold and how many people went swimming. The numbers in this story are made up, but they look like real ones.",
+        "Ryan reads the notebook for 10 made-up days. On days with lots of ice cream sold, lots of people swam. On days with little ice cream sold, few people swam. \"Ice cream makes people want to swim!\" says Ryan.",
+        "Parsa points to another column in the notebook: hot or cool. There were 5 hot days and 5 cool days. On the hot days, Amin sold 40 to 56 ice creams, and 38 to 49 people swam. On the cool days, Amin sold 12 to 26 ice creams, and only 10 to 16 people swam.",
+        "\"Look only at the hot days,\" says Parsa. \"Selling more ice cream does not go with more swimmers. The cool days are the same. The big pattern comes from the weather.\"",
+        "Ryan draws arrows. Hot weather points to ice cream sold. Hot weather also points to people swimming. \"So hot weather is a common cause,\" he says. \"Giving out free ice cream on a cold day would not fill the pool.\""
       ],
       "animation": {
         "file": "l1-06-common-cause.mp4",
@@ -905,12 +905,12 @@
           "answer": "No. Age is a likely common cause. Older kids have bigger feet, and older kids have had more years to learn to read."
         },
         {
-          "prompt": "Leo notices that on days when many people wear shorts, many people buy cold drinks. Draw a common-cause diagram for this.",
+          "prompt": "Ryan notices that on days when many people wear shorts, many people buy cold drinks. Draw a common-cause diagram for this.",
           "answer": "Hot weather goes at the top. One arrow goes from hot weather to wearing shorts. Another arrow goes from hot weather to buying cold drinks."
         }
       ],
       "talk": [
-        "If Sam gave away free ice cream on a cold day, would more people swim? How could you find out?",
+        "If Amin gave away free ice cream on a cold day, would more people swim? How could you find out?",
         "Why was it helpful to color the hot days and the cool days differently?",
         "Can you think of two things in your own life that go up and down together? Could a third thing cause both?"
       ],
@@ -1003,11 +1003,11 @@
       },
       "story_title": "The ribbon that stayed put",
       "story": [
-        "Maya ties one end of a long jump rope to a fence post. Leo holds the other end and shakes it up and down. Bumps race along the rope toward the post. The high points are called crests, and the low points are called troughs.",
-        "Maya ties a red ribbon to the middle of the rope. \"Watch the ribbon,\" she says. The bumps travel all the way to the post, but the ribbon does not. It just bobs up and down in the same spot. The wave pattern moves along, while each bit of rope only moves up and down.",
-        "Maya takes a photo, and they copy the wave onto graph paper. First they draw a middle line where the rope rests. Each crest is 2 squares above the middle line, and each trough is 2 squares below it. So the amplitude is 2 squares, not 4. The crests are 8 squares apart, so the wavelength is 8 squares. In 24 squares of rope, they count 3 crests.",
-        "Next Leo shakes harder, but at the same speed. The crests now rise 3 squares above the middle line, so the amplitude is 3 squares. Then he shakes faster. The crests crowd closer together, only 4 squares apart. Faster shaking gives a shorter wavelength.",
-        "Maya's cousin Sam shakes a second rope beside Leo's, with the same size and speed of shakes. If both hands went up and down together, the two waves would be in step. But whenever Leo's hand is at the top, Sam's hand is at the bottom. Sam's wave is half a cycle behind Leo's. Each crest on Leo's rope lines up with a trough on Sam's rope."
+        "Parsa ties one end of a long jump rope to a fence post. Ryan holds the other end and shakes it up and down. Bumps race along the rope toward the post. The high points are called crests, and the low points are called troughs.",
+        "Parsa ties a red ribbon to the middle of the rope. \"Watch the ribbon,\" he says. The bumps travel all the way to the post, but the ribbon does not. It just bobs up and down in the same spot. The wave pattern moves along, while each bit of rope only moves up and down.",
+        "Parsa takes a photo, and they copy the wave onto graph paper. First they draw a middle line where the rope rests. Each crest is 2 squares above the middle line, and each trough is 2 squares below it. So the amplitude is 2 squares, not 4. The crests are 8 squares apart, so the wavelength is 8 squares. In 24 squares of rope, they count 3 crests.",
+        "Next Ryan shakes harder, but at the same speed. The crests now rise 3 squares above the middle line, so the amplitude is 3 squares. Then he shakes faster. The crests crowd closer together, only 4 squares apart. Faster shaking gives a shorter wavelength.",
+        "Their cousin Amin shakes a second rope beside Ryan's, with the same size and speed of shakes. If both hands went up and down together, the two waves would be in step. But whenever Ryan's hand is at the top, Amin's hand is at the bottom. Amin's wave is half a cycle behind Ryan's. Each crest on Ryan's rope lines up with a trough on Amin's rope."
       ],
       "animation": {
         "file": "l1-07-wave.mp4",
@@ -1057,7 +1057,7 @@
           "answer": "The crests are 6 squares apart, so the wavelength is 6 squares. A trough sits halfway between two crests, so a crest and the next trough are 3 squares apart."
         },
         {
-          "prompt": "Leo says, \"The water in a pond wave rushes all the way to the shore.\" Think about the ribbon. What would you tell Leo?",
+          "prompt": "Ryan says, \"The water in a pond wave rushes all the way to the shore.\" Think about the ribbon. What would you tell Ryan?",
           "answer": "The wave pattern travels to the shore, but the water mostly bobs up and down near where it was, like the ribbon on the rope."
         }
       ],
@@ -1154,10 +1154,10 @@
       },
       "story_title": "When two bumps meet",
       "story": [
-        "Maya and Leo stretch a long rope between them. Each one flicks a single bump up toward the other at the same moment. On their graph paper, each bump is 2 squares tall. In the middle, the bumps meet. For an instant, the rope jumps up 4 squares, because 2 plus 2 is 4. Then the bumps pass through each other and keep going.",
-        "Next, Maya flicks a bump up and Leo flicks a bump down, each 2 squares. When they meet, the rope looks flat for an instant. An up of 2 and a down of 2 cancel. The bumps did not break. A moment later, they come out the other side.",
-        "Back at the table, Leo draws a wave on tracing paper, with crests 2 squares high. Maya draws the same wave on another sheet. They lay one on top of the other, in step. At every point they add the heights: 2 up and 2 up make 4 up, and 2 down and 2 down make 4 down. The new wave has twice the amplitude.",
-        "Then Maya slides her sheet half a cycle, 4 squares along. Now each crest sits on a trough. At every point, the two heights are equal and opposite, like up 2 and down 2, so they add to 0. The two waves cancel completely.",
+        "Parsa and Ryan stretch a long rope between them. Each one flicks a single bump up toward the other at the same moment. On their graph paper, each bump is 2 squares tall. In the middle, the bumps meet. For an instant, the rope jumps up 4 squares, because 2 plus 2 is 4. Then the bumps pass through each other and keep going.",
+        "Next, Parsa flicks a bump up and Ryan flicks a bump down, each 2 squares. When they meet, the rope looks flat for an instant. An up of 2 and a down of 2 cancel. The bumps did not break. A moment later, they come out the other side.",
+        "Back at the table, Ryan draws a wave on tracing paper, with crests 2 squares high. Parsa draws the same wave on another sheet. They lay one on top of the other, in step. At every point they add the heights: 2 up and 2 up make 4 up, and 2 down and 2 down make 4 down. The new wave has twice the amplitude.",
+        "Then Parsa slides his sheet half a cycle, 4 squares along. Now each crest sits on a trough. At every point, the two heights are equal and opposite, like up 2 and down 2, so they add to 0. The two waves cancel completely.",
         "Their teacher adds one more rule. For light, brightness goes with the amplitude times itself. Say one light wave has amplitude 1. Then amplitude 1 gives brightness 1, and amplitude 2 gives brightness 4. In step, the brightness is 4 times one wave, not 2 times. Half a cycle apart, amplitude 0 gives brightness 0. The extra light in bright places comes from dark places nearby, where waves cancel."
       ],
       "animation": {
@@ -1303,11 +1303,11 @@
       },
       "story_title": "The coin under the cup",
       "story": [
-        "Maya flips a coin and slaps a cup over it before anyone can see. \"Heads or tails?\" she asks. Leo shrugs. \"I don't know. My chance of guessing right is one half.\" Maya lifts the cup. Tails. \"It was tails the whole time,\" she says. \"I did not know either, but the coin already landed one way.\"",
-        "They play 20 rounds. Leo guesses right 9 times, which is 9 out of 20, close to one half. His chance was one half because he did not know. Every time, the coin under the cup was already heads or already tails.",
+        "Parsa flips a coin and slaps a cup over it before anyone can see. \"Heads or tails?\" he asks. Ryan shrugs. \"I don't know. My chance of guessing right is one half.\" Parsa lifts the cup. Tails. \"It was tails the whole time,\" he says. \"I did not know either, but the coin already landed one way.\"",
+        "They play 20 rounds. Ryan guesses right 9 times, which is 9 out of 20, close to one half. His chance was one half because he did not know. Every time, the coin under the cup was already heads or already tails.",
         "The next day, their teacher shows a picture of the two-path experiment. Light from one lamp shines through two narrow slits onto a wall. The wall shows stripes of light and dark. \"In the two-path experiment with light, some spots stay dark because the amplitudes from the two paths cancel,\" she says.",
         "She gives them simple numbers for one dark spot. With only path 1 open, the chance of light landing there is 1/4. With only path 2 open, it is also 1/4. If chances just added, we would get 1/4 + 1/4 = 1/2. Chances are never below zero, so adding two chances that are above zero can never make zero. But the spot is dark.",
-        "In quantum physics, chances come from amplitudes. Amplitudes add first, then you square the total to get a chance. The amplitude from path 1 is 1/2 up, and the one from path 2 is 1/2 down. Then 1/2 up and 1/2 down add to 0, and 0 × 0 = 0. That is a dark spot. \"Ordinary chances can only add up, but amplitudes can cancel,\" says Maya. \"The coin under the cup was just unknown. Not knowing which way a coin landed is different: the coin already landed one way.\""
+        "In quantum physics, chances come from amplitudes. Amplitudes add first, then you square the total to get a chance. The amplitude from path 1 is 1/2 up, and the one from path 2 is 1/2 down. Then 1/2 up and 1/2 down add to 0, and 0 × 0 = 0. That is a dark spot. \"Ordinary chances can only add up, but amplitudes can cancel,\" says Parsa. \"The coin under the cup was just unknown. Not knowing which way a coin landed is different: the coin already landed one way.\""
       ],
       "animation": {
         "file": "l1-09-chances-and-amplitudes.mp4",
@@ -1353,7 +1353,7 @@
           "answer": "1/2 up and 1/2 up add to 1 up, and 1 × 1 = 1. That is twice as much as 1/4 + 1/4 = 1/2. Where amplitudes add in step, the spot is extra bright."
         },
         {
-          "prompt": "Sam says, \"Until we lift the cup, the coin is half heads and half tails.\" What would you tell Sam?",
+          "prompt": "Amin says, \"Until we lift the cup, the coin is half heads and half tails.\" What would you tell Amin?",
           "answer": "The coin already landed one way, heads or tails. The one half is our chance of guessing right, because we do not know which. Lifting the cup just shows us the side that was already up."
         }
       ],
@@ -1364,7 +1364,7 @@
       ],
       "check": [
         {
-          "question": "Maya hides a coin under a cup. Which sentence is true?",
+          "question": "Parsa hides a coin under a cup. Which sentence is true?",
           "options": [
             "The coin has not picked a side yet.",
             "The coin is heads, because heads comes first.",
@@ -1384,7 +1384,7 @@
           "explanation": "Chances are never below zero, so adding two chances that are above zero can never make zero. An amplitude up and an equal amplitude down cancel."
         },
         {
-          "question": "Remember Lesson 3. Leo guesses the hidden coin right 9 times in 20 rounds. What is 9 out of 20?",
+          "question": "Remember Lesson 3. Ryan guesses the hidden coin right 9 times in 20 rounds. What is 9 out of 20?",
           "options": [
             "The chance a model predicts for each guess",
             "A frequency: what really happened in the rounds",
@@ -1392,7 +1392,7 @@
           ],
           "answer": 1,
           "review_of": "L1-03",
-          "explanation": "9 out of 20 is what Leo really counted, so it is a relative frequency. The model's chance of guessing right is one half."
+          "explanation": "9 out of 20 is what Ryan really counted, so it is a relative frequency. The model's chance of guessing right is one half."
         }
       ],
       "connect": "Later levels of this course come back to amplitudes. You will learn the rules for adding them and check those rules against real experiments.",
@@ -1448,15 +1448,15 @@
       ],
       "warmup": {
         "recall_of": "L1-09",
-        "prompt": "Last time, Maya hid a coin under a cup. Leo's chance of guessing right was one half. Was the coin already heads or tails before Leo looked? Why was his chance still one half?"
+        "prompt": "Last time, Parsa hid a coin under a cup. Ryan's chance of guessing right was one half. Was the coin already heads or tails before Ryan looked? Why was his chance still one half?"
       },
       "story_title": "Testing the dice",
       "story": [
-        "Maya and Leo want to know how often two dice add up to 7. They list every way the dice can land. The first die can show 1 to 6, and so can the second. That makes 36 pairs, and with fair dice each pair is equally likely.",
+        "Parsa and Ryan want to know how often two dice add up to 7. They list every way the dice can land. The first die can show 1 to 6, and so can the second. That makes 36 pairs, and with fair dice each pair is equally likely.",
         "Six of the pairs add to 7. They are 1 and 6, 2 and 5, 3 and 4, 4 and 3, 5 and 2, and 6 and 1. So their model says the chance of a 7 is 6 out of 36, which is one sixth. In 36 rolls, they predict about 6 sevens.",
-        "Before rolling, they write a model card. \"What would make us doubt the dice?\" asks Leo. They agree on a rule: 0 or 1 sevens, or 12 or more. With fair dice, a result that far off happens only about 2 times in 100.",
-        "Then they roll 36 times and tally every sum. They get 3 sevens in 36 rolls. That is 3 out of 36, fewer than 6. Leo groans. \"Is the model wrong?\"",
-        "Maya points to the card. \"We said we would doubt it at 1 or fewer. Three is lower than we guessed, but it is not past our line. We have no reason to doubt the dice yet.\" They write what happened on the card, without changing the rule."
+        "Before rolling, they write a model card. \"What would make us doubt the dice?\" asks Ryan. They agree on a rule: 0 or 1 sevens, or 12 or more. With fair dice, a result that far off happens only about 2 times in 100.",
+        "Then they roll 36 times and tally every sum. They get 3 sevens in 36 rolls. That is 3 out of 36, fewer than 6. Ryan groans. \"Is the model wrong?\"",
+        "Parsa points to the card. \"We said we would doubt it at 1 or fewer. Three is lower than we guessed, but it is not past our line. We have no reason to doubt the dice yet.\" They write what happened on the card, without changing the rule."
       ],
       "animation": {
         "file": "l1-10-model-card.mp4",
@@ -1499,17 +1499,17 @@
       },
       "try_it": [
         {
-          "prompt": "Sam says, \"My lucky model says something will happen.\" Sam will not say what or when. Is this a good model? Why or why not?",
+          "prompt": "Amin says, \"My lucky model says something will happen.\" Amin will not say what or when. Is this a good model? Why or why not?",
           "answer": "No. No test could ever prove it wrong, because almost anything counts as something happening. A good model makes a clear prediction that could turn out false."
         },
         {
-          "prompt": "Leo rolls two dice 36 times and gets 0 sevens. Using the rule on the card, what should he write under what happened?",
+          "prompt": "Ryan rolls two dice 36 times and gets 0 sevens. Using the rule on the card, what should he write under what happened?",
           "answer": "Zero is inside the doubt rule of 0 or 1 sevens. He should write that he got 0 sevens and that he now doubts the model. Next he could check the dice and roll again."
         }
       ],
       "talk": [
         "Why should you write your doubt rule before you roll, not after?",
-        "Maya and Leo got 3 sevens, not 6. Why is that not enough to call the dice unfair?",
+        "Parsa and Ryan got 3 sevens, not 6. Why is that not enough to call the dice unfair?",
         "If four friends each roll two dice 36 times, will they all get the same number of sevens? Why not?"
       ],
       "check": [

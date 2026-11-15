@@ -97,8 +97,8 @@ class FairAssignment(Scene):
         self.play(FadeOut(sub), FadeIn(note), run_time=0.6)
         self.wait(2.0)
 
-        # step 2: Leo picks
-        sub2 = label("Step 2: Leo picks. The strongest 8 go to Plane A.", 28, INK).move_to(note)
+        # step 2: Ryan picks
+        sub2 = label("Step 2: Ryan picks. The strongest 8 go to Plane A.", 28, INK).move_to(note)
         self.play(FadeOut(note), FadeOut(ca), FadeOut(cb), FadeIn(sub2), run_time=0.6)
         na = nb = 0
         moves = []

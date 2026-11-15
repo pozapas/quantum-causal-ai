@@ -109,7 +109,7 @@ class FunctionResiduals(Scene):
         self.play(*[FadeOut(m) for m in (d1, ar1, cap1, ok1, d2, ar2, cap2, no2, two)], run_time=0.6)
 
         # Part 3: prediction vs measurement
-        title2 = label("Leo's plant: model line vs measured dots (made-up numbers)", 32, INK, "BOLD").to_edge(UP, buff=0.35)
+        title2 = label("Ryan's plant: model line vs measured dots (made-up numbers)", 32, INK, "BOLD").to_edge(UP, buff=0.35)
         self.play(FadeOut(title), FadeIn(title2), run_time=0.7)
         weeks, meas = p["weeks"], p["measured"]
         ax = Axes(x_range=[0, weeks[-1] + 0.5, 1], y_range=[4, 16, 2], x_length=6.2, y_length=5.0,
