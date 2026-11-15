@@ -15,7 +15,7 @@ NEW = """const theme = 'light'; /* course default; a saved choice still wins */"
 # Lesson animations play muted and looped; give every video standard controls so it can be
 # paused, and start paused for readers who ask for reduced motion (WCAG 2.2.2).
 VIDEO_JS = ("<script id=\"qcai-video\">(function(){var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;"
-            "function fix(){document.querySelectorAll('video').forEach(function(v){if(!v.hasAttribute('controls'))v.setAttribute('controls','');"
+            "function fix(){document.querySelectorAll('video').forEach(function(v){if(v.closest('[data-qt]'))return;if(!v.hasAttribute('controls'))v.setAttribute('controls','');"
             "if(rm&&!v.dataset.qcaiRm){v.dataset.qcaiRm='1';v.removeAttribute('autoplay');v.pause();}});}"
             "new MutationObserver(fix).observe(document.documentElement,{childList:true,subtree:true});"
             "document.addEventListener('DOMContentLoaded',fix);})();</script>")

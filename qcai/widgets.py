@@ -345,3 +345,13 @@ def placement(base: str = "./") -> HTML:
 </div>
 <script>{PLACE_JS.replace("__ID__", wid).replace("__DATA__", json.dumps(data, ensure_ascii=False))}</script>"""
     return HTML(html)
+
+
+# ---------------------------------------------------------------------------
+# Course trailer: the shared player in qcai/trailer.html (also copied to the author's site)
+# ---------------------------------------------------------------------------
+
+def trailer() -> HTML:
+    """A 45-second course trailer with sound and full-screen buttons (video served by pozapas.github.io)."""
+    player = (ROOT / "qcai" / "trailer.html").read_text(encoding="utf-8")
+    return HTML('<div style="margin:1.25rem 0 .25rem">' + player + "</div>")
