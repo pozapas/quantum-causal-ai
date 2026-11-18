@@ -228,18 +228,11 @@ def unit_page_adv(level: dict, *, esc, icon_md: str, stage: str, media_include: 
         *[f"{i}. {s}" for i, s in enumerate(u["session_flow"], 1)], "",
         "## Learning outcomes", "", "| | By the end you can... | Practised in |", "|---|---|---|",
         *[f"| {o['id']} | {o['text']} | {cell(o['lessons'])} |" for o in u["outcomes"]], "",
-        "## Lessons", "", "| Lesson | Big idea | Media |", "|---|---|---|",
+        "## Lessons", "", "| Lesson | Big idea | Worked example |", "|---|---|---|",
     ]
     for L in level["lessons"]:
-        kinds = []
-        if L.get("schema") == 3:
-            bt = [b["type"] for b in blocks(L)]
-            for k, name in (("animation", "animations"), ("interactive", "interactive"), ("figure", "figures"),
-                            ("diagram", "diagrams"), ("code", "code")):
-                c = bt.count(k)
-                if c:
-                    kinds.append(f"{c} {name}" if k in ("animation", "figure", "diagram") else name)
-        out.append(f"| [{L['id']} · {L['title']}](#lesson-{L['id'].lower()}) | {L.get('big_idea', L['objective'])} | {', '.join(kinds)} |")
+        ex = L.get("worked_example", {}).get("title", "") if L.get("schema") == 3 else ""
+        out.append(f"| [{L['id']} · {L['title']}](#lesson-{L['id'].lower()}) | {L.get('big_idea', L['objective'])} | {ex} |")
     p = u["project"]
     out += ["", f"## Capstone: {p['title']}", "", p["summary"], "", "**Choose a question, or propose your own:**", ""]
     out += [f"- {q}" for q in p["questions"]]
